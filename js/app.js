@@ -244,6 +244,16 @@ function getMaterialById(id) {
   return allMaterials.find((material) => material.id === id) || null;
 }
 
+function sanitizeExternalUrl(url) {
+  if (typeof url !== "string" || !url.trim()) return null;
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "http:" || parsed.protocol === "https:" ? parsed.href : null;
+  } catch (error) {
+    return null;
+  }
+}
+
 function getMaterialSourceEntries(material) {
   const rawSources = material.sources;
   const sourceCatalog = dbData?.sources || {};
@@ -267,7 +277,7 @@ function getMaterialSourceEntries(material) {
         return {
           label,
           text: text || label,
-          url: source.url || null,
+          url: sanitizeExternalUrl(source.url),
         };
       }
       const label = String(source);
@@ -294,7 +304,7 @@ function getMaterialSourceEntries(material) {
       return {
         label,
         text: text || label,
-        url: source.url || null,
+        url: sanitizeExternalUrl(source.url),
       };
     });
   }
