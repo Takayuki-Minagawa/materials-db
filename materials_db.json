@@ -1,7 +1,7 @@
 {
   "schema_version": "1.35.0",
   "created_at": "2026-03-28",
-  "title": "FEM Solid Structural Materials Database",
+  "title": "Structural Materials Properties Database",
   "scope": {
     "analysis_domain": "solid structural analysis",
     "intended_solvers": [
