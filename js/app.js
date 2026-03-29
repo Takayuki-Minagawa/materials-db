@@ -287,31 +287,45 @@ function openDetail(m) {
     }
   });
 
-  // Thermal Properties
-  if (other.thermal_properties) {
-    html += renderKeyValueSection(other.thermal_properties, lang === "ja" ? "熱特性" : "Thermal Properties");
-  }
+  // All remaining other keys (except already-rendered ones)
+  const skipOtherKeys = new Set([
+    "condition", "validation_tier", "notes",
+    "ansys_mapping", "abaqus_mapping", "dolfinx_mapping", "lsdyna_mapping",
+  ]);
+  const otherKeyLabels = {
+    thermal_properties:                  { ja: "熱特性",             en: "Thermal Properties" },
+    physical_properties:                 { ja: "物理特性",           en: "Physical Properties" },
+    additional_properties:               { ja: "追加特性",           en: "Additional Properties" },
+    beam_reference_design_values:        { ja: "梁設計基準値",       en: "Beam Reference Design Values" },
+    column_reference_design_values:      { ja: "柱設計基準値",       en: "Column Reference Design Values" },
+    panel_reference_design_values:       { ja: "パネル設計基準値",   en: "Panel Reference Design Values" },
+    panel_reference_test_values:         { ja: "パネル試験基準値",   en: "Panel Reference Test Values" },
+    product_form:                        { ja: "製品形態",           en: "Product Form" },
+    electrical_properties:               { ja: "電気特性",           en: "Electrical Properties" },
+    equivalent_linear_beam_material:     { ja: "等価線形梁材料",     en: "Equivalent Linear Beam Material" },
+    equivalent_linear_beam_column_material: { ja: "等価線形梁柱材料", en: "Equivalent Linear Beam-Column Material" },
+    equivalent_plate_properties:         { ja: "等価板特性",         en: "Equivalent Plate Properties" },
+    panel_grade_requirements:            { ja: "パネル等級要件",     en: "Panel Grade Requirements" },
+    dimensional_tolerances:              { ja: "寸法公差",           en: "Dimensional Tolerances" },
+    chemical_resistance:                 { ja: "耐薬品性",           en: "Chemical Resistance" },
+    environmental_reference_data:        { ja: "環境参考データ",     en: "Environmental Reference Data" },
+    durability_reference_data:           { ja: "耐久性参考データ",   en: "Durability Reference Data" },
+    tribology_reference_data:            { ja: "トライボロジー参考データ", en: "Tribology Reference Data" },
+  };
 
-  // Physical Properties
-  if (other.physical_properties) {
-    html += renderKeyValueSection(other.physical_properties, lang === "ja" ? "物理特性" : "Physical Properties");
-  }
-
-  // Additional Properties
-  if (other.additional_properties) {
-    html += renderKeyValueSection(other.additional_properties, lang === "ja" ? "追加特性" : "Additional Properties");
-  }
-
-  // Beam/Column/Panel reference design values
-  if (other.beam_reference_design_values) {
-    html += renderKeyValueSection(other.beam_reference_design_values, lang === "ja" ? "梁設計基準値" : "Beam Reference Design Values");
-  }
-  if (other.column_reference_design_values) {
-    html += renderKeyValueSection(other.column_reference_design_values, lang === "ja" ? "柱設計基準値" : "Column Reference Design Values");
-  }
-  if (other.panel_reference_design_values) {
-    html += renderKeyValueSection(other.panel_reference_design_values, lang === "ja" ? "パネル設計基準値" : "Panel Reference Design Values");
-  }
+  Object.entries(other).forEach(([key, val]) => {
+    if (skipOtherKeys.has(key) || val == null) return;
+    const label = otherKeyLabels[key];
+    const title = label ? (lang === "ja" ? label.ja : label.en) : key.replace(/_/g, " ");
+    if (typeof val === "string" || typeof val === "number" || typeof val === "boolean") {
+      html += `<div class="detail-section">
+        <div class="detail-section-title">${esc(title)}</div>
+        <p style="font-size:0.85rem">${esc(String(val))}</p>
+      </div>`;
+    } else if (typeof val === "object") {
+      html += renderKeyValueSection(val, title);
+    }
+  });
 
   // Notes
   if (other.notes && other.notes.length) {
@@ -504,20 +518,64 @@ function renderNonlinearModels(nl) {
 }
 
 function renderSolverMapping(mapping, solverName) {
-  let rows = "";
+  let html = `<div class="detail-section"><div class="detail-section-title">${esc(solverName)} Mapping</div>`;
+  let hasContent = false;
+
   Object.entries(mapping).forEach(([k, v]) => {
-    if (v != null && typeof v !== "object") {
-      rows += `<tr><td>${esc(k)}</td><td>${esc(String(v))}</td></tr>`;
-    } else if (Array.isArray(v)) {
-      rows += `<tr><td>${esc(k)}</td><td>${v.map((x) => esc(String(x))).join(", ")}</td></tr>`;
+    if (v == null) return;
+
+    // Array of objects (e.g. variants_by_thickness_mm)
+    if (Array.isArray(v) && v.length > 0 && typeof v[0] === "object") {
+      hasContent = true;
+      html += `<div class="detail-subsection">${esc(k)}</div>`;
+      const cols = Object.keys(v[0]);
+      html += `<table class="detail-table"><thead><tr>${cols.map((c) => `<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>`;
+      v.forEach((row) => {
+        html += `<tr>${cols.map((c) => {
+          const cell = row[c];
+          if (Array.isArray(cell)) return `<td>${cell.join(" - ")}</td>`;
+          if (typeof cell === "number" && String(c).includes("_pa")) return `<td>${formatStress(cell)}</td>`;
+          return `<td>${cell != null ? esc(String(cell)) : "-"}</td>`;
+        }).join("")}</tr>`;
+      });
+      html += `</tbody></table>`;
+    }
+    // Simple array of scalars
+    else if (Array.isArray(v)) {
+      hasContent = true;
+      html += `<table class="detail-table"><tbody><tr><td>${esc(k)}</td><td>${v.map((x) => esc(String(x))).join(", ")}</td></tr></tbody></table>`;
+    }
+    // Nested object (e.g. linear_mp, beam_section_reference)
+    else if (typeof v === "object") {
+      hasContent = true;
+      html += `<div class="detail-subsection">${esc(k)}</div>`;
+      let rows = "";
+      Object.entries(v).forEach(([pk, pv]) => {
+        if (pv == null) return;
+        if (Array.isArray(pv)) {
+          rows += `<tr><td>${esc(pk)}</td><td>${pv.map((x) => typeof x === "object" ? JSON.stringify(x) : esc(String(x))).join(", ")}</td></tr>`;
+        } else if (typeof pv === "object") {
+          rows += `<tr><td>${esc(pk)}</td><td>${esc(JSON.stringify(pv))}</td></tr>`;
+        } else {
+          const display = typeof pv === "number" && pk.includes("_pa") ? formatStress(pv)
+            : typeof pv === "number" && pk.includes("_kg_m3") ? formatDensity(pv)
+            : (typeof pv === "number" ? pv : esc(String(pv)));
+          rows += `<tr><td>${esc(pk)}</td><td>${display}</td></tr>`;
+        }
+      });
+      if (rows) {
+        html += `<table class="detail-table"><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>${rows}</tbody></table>`;
+      }
+    }
+    // Scalar
+    else {
+      hasContent = true;
+      html += `<table class="detail-table"><tbody><tr><td>${esc(k)}</td><td>${esc(String(v))}</td></tr></tbody></table>`;
     }
   });
-  if (!rows) return "";
-  return `<div class="detail-section">
-    <div class="detail-section-title">${esc(solverName)} Mapping</div>
-    <table class="detail-table"><thead><tr><th>Parameter</th><th>Value</th></tr></thead>
-    <tbody>${rows}</tbody></table>
-  </div>`;
+
+  html += `</div>`;
+  return hasContent ? html : "";
 }
 
 function renderKeyValueSection(obj, title) {
