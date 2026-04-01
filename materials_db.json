@@ -3892,6 +3892,208 @@
       "info_used": [
         "green MOE, MOR, compression parallel, compression perpendicular, and dry specific gravity for Maclura pomifera (osage orange)"
       ]
+    },
+    "ssab_hardox_500": {
+      "title": "Hardox 500 - SSAB",
+      "publisher": "SSAB",
+      "url": "https://www.ssab.com/en/brands-and-products/hardox/product-program/500",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "typical yield strength for sheet and plate",
+        "hardness range by thickness"
+      ]
+    },
+    "outokumpu_moda_430_4016": {
+      "title": "Outokumpu Moda range datasheet - Stainless steels for mildly corrosive environments",
+      "publisher": "Outokumpu",
+      "url": "https://www.outokumpu.com/-/media/files/products/moda/outokumpu-moda-range-datasheet.pdf?hash=3B0AA448B73C788C442524B699DB81BC&modified=20251117111925&revision=64f57b67-1c19-484d-b730-c3f666cec49b",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "Moda 430/4016 cold-rolled coil and sheet yield strength, tensile strength, and elongation at 20 C",
+        "Moda 430/4016 density and modulus of elasticity at 20 C"
+      ]
+    },
+    "specialmetals_aqueous_corrosion_handbook": {
+      "title": "High-Performance Alloys for Resistance to Aqueous Corrosion",
+      "publisher": "Special Metals",
+      "url": "https://www.specialmetals.com/documents/aqueous-corrosion-handbook.pdf",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "INCONEL 600 density",
+        "INCONEL 600 nominal room-temperature annealed tensile strength",
+        "INCONEL 600 0.2 percent yield strength",
+        "INCONEL 600 elongation"
+      ]
+    },
+    "specialmetals_inconel_600": {
+      "title": "INCONEL alloy 600 Technical Bulletin",
+      "publisher": "Special Metals",
+      "url": "https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-600.pdf",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "room-temperature Young's modulus at 22 C",
+        "room-temperature Poisson's ratio at 22 C"
+      ]
+    },
+    "wieland_b15_c51000": {
+      "title": "Wieland-B15",
+      "publisher": "Wieland",
+      "url": "https://www.wieland.com/en/content/download/9884/file/B15_RP_EN.pdf",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "C51000 density",
+        "modulus of elasticity",
+        "Poisson's ratio",
+        "H03 temper tensile strength range",
+        "H03 yield strength",
+        "H03 elongation"
+      ]
+    },
+    "jfe_low_yield_point_steel_report": {
+      "title": "Overview and Application of Steel Materials for High-Rise Buildings",
+      "publisher": "JFE Steel",
+      "url": "https://www.jfe-steel.co.jp/en/research/report/014/pdf/014-02-2.pdf",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "JFE-LY100 yield point range",
+        "JFE-LY100 tensile strength range",
+        "JFE-LY100 elongation minimum",
+        "JFE-LY225 yield point range",
+        "JFE-LY225 tensile strength range",
+        "JFE-LY225 elongation minimum"
+      ]
+    },
+    "indium_solder_alloy_directory": {
+      "title": "Solder Alloy Directory 97720 (A4) R9.pdf",
+      "publisher": "Indium Corporation",
+      "url": "https://www.indium.com/library/solder-alloy-directory-97720-a4-r9-pdf/",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "100Sn density",
+        "100Sn tensile strength",
+        "100Sn Young's modulus",
+        "100Sn elongation",
+        "63Sn/37Pb density",
+        "63Sn/37Pb tensile strength",
+        "63Sn/37Pb Young's modulus",
+        "63Sn/37Pb elongation",
+        "96.5Sn/3Ag/0.5Cu density",
+        "96.5Sn/3Ag/0.5Cu tensile strength",
+        "96.5Sn/3Ag/0.5Cu Young's modulus",
+        "96.5Sn/3Ag/0.5Cu elongation"
+      ]
+    },
+    "nist_leadfree_solder_database": {
+      "title": "Database for Solder Properties with Emphasis on New Lead-free Solders",
+      "publisher": "National Institute of Standards and Technology",
+      "url": "https://www.msed.nist.gov/solder/NIST_LeadfreeSolder_v4.pdf",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "Sn-37Pb tensile Young's modulus",
+        "Sn-37Pb tensile yield strength",
+        "Sn-37Pb Poisson's ratio at 20 C",
+        "SnAgCu yield stress at 25 C",
+        "SnAgCu dynamic Young's modulus at 25 C",
+        "SnAgCu dynamic Poisson's ratio polynomial coefficients"
+      ]
+    },
+    "nipponsteel_f10t_catalog": {
+      "title": "Ni-type highly weathering steel product and high-strength bolts",
+      "publisher": "NIPPON STEEL",
+      "url": "https://www.nipponsteel.com/product/catalog_download/__icsFiles/afieldfile/2025/09/10/A009.pdf",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "F10T yield strength class",
+        "F10T tensile strength range",
+        "F10T elongation minimum",
+        "F10T reduction of area minimum",
+        "F10T hardness range",
+        "F10T minimum tension load for M16 to M24"
+      ]
+    },
+    "astm_f3125_store": {
+      "title": "F3125/F3125M Standard Specification for High Strength Structural Bolts and Assemblies, Steel and Alloy Steel, Heat Treated, Inch Dimensions 120 ksi, 144 ksi, and 150 ksi Minimum Tensile Strength, and Metric Dimensions 830 MPa and 1040 MPa Minimum Tensile Strength",
+      "publisher": "ASTM International",
+      "url": "https://store.astm.org/f3125_f3125m-25a.html",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "current ASTM F3125 specification scope and title",
+        "120 ksi and 150 ksi minimum tensile strength class naming"
+      ]
+    },
+    "portlandbolt_astm_f3125": {
+      "title": "ASTM F3125",
+      "publisher": "Portland Bolt",
+      "url": "https://www.portlandbolt.com/technical/specifications/astm-f3125/",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "A325 and A490 withdrawal and consolidation into F3125",
+        "A325 tensile minimum",
+        "A325 yield minimum",
+        "A325 elongation minimum",
+        "A325 reduction of area minimum",
+        "A490 tensile range",
+        "A490 yield minimum",
+        "A490 elongation minimum",
+        "A490 reduction of area minimum",
+        "applicable size range 1/2 in through 1-1/2 in"
+      ]
+    },
+    "astm_a193_store": {
+      "title": "A193/A193M Standard Specification for Alloy-Steel and Stainless Steel Bolting Materials for High Temperature or High Pressure Service and Other Special Purpose Applications",
+      "publisher": "ASTM International",
+      "url": "https://store.astm.org/standards/a193",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "A193 scope for alloy-steel and stainless steel bolting materials",
+        "coverage of bars, bolts, screws, studs, stud bolts, and wire for high temperature or high pressure service"
+      ]
+    },
+    "portlandbolt_astm_a193": {
+      "title": "ASTM A193",
+      "publisher": "Portland Bolt",
+      "url": "https://www.portlandbolt.com/technical/specifications/astm-a193/",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "B7 grade description as AISI 4140/4142 quenched and tempered alloy steel",
+        "B7 tensile minimum up to 2-1/2 in",
+        "B7 yield minimum up to 2-1/2 in",
+        "B7 elongation minimum up to 2-1/2 in",
+        "B7 reduction of area minimum up to 2-1/2 in",
+        "B7 hardness maximum up to 2-1/2 in"
+      ]
+    },
+    "nipponsteel_durgrip_u023en": {
+      "title": "DURGRIP(TM) Hot dip galvanized sheet steel",
+      "publisher": "NIPPON STEEL",
+      "url": "https://www.nipponsteel.com/product/catalog_download/__icsFiles/afieldfile/2025/09/11/U023en.pdf",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "NSGCC yield point or yield resistance",
+        "NSGCC tensile strength",
+        "NSGCC elongation at 1.0 mm to less than 1.6 mm",
+        "NSGC400 yield point or yield resistance",
+        "NSGC400 tensile strength",
+        "NSGC400 elongation at 1.0 mm to less than 1.6 mm",
+        "NSGC570 yield point or yield resistance",
+        "NSGC570 tensile strength",
+        "NSGC570 order consultation note"
+      ]
+    },
+    "nsbluescope_truecore_g550": {
+      "title": "TRUECORE(R) G550 Steel",
+      "publisher": "NS BlueScope",
+      "url": "https://assets.nsbluescope.com/f/247285/f822d67e8b/truecore-technical-data-sheet.pdf",
+      "accessed_at": "2026-04-01",
+      "info_used": [
+        "G550 minimum yield strength",
+        "G550 minimum tensile strength",
+        "G550 typical tensile range over 0.60 mm",
+        "G550 elongation on 50 mm over 0.60 mm",
+        "G550 AZ150 coating class",
+        "G550 preferred base metal thickness range",
+        "G550 typical use for structural steel building frame"
+      ]
     }
   },
   "materials": [
@@ -5184,6 +5386,1371 @@
         ],
         "inferences": [
           "The cited R270 temper lists tensile strength as a range from 270 MPa to 350 MPa; the lower bound is stored here as a conservative reference value."
+        ]
+      }
+    },
+    {
+      "id": "steel_ssab_hardox_500",
+      "name": "Hardox 500",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "耐摩耗鋼",
+        "subcategory_en": "wear resistant steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "typical_yield_strength_pa": 1400000000,
+          "yield_strength_guarantee_status": "typical_not_guaranteed",
+          "hardness_hbw_by_thickness": [
+            {
+              "thickness_mm": [
+                2.0,
+                32.0
+              ],
+              "min": 470,
+              "max": 530
+            },
+            {
+              "thickness_mm": [
+                32.1,
+                103.0
+              ],
+              "min": 450,
+              "max": 540
+            }
+          ]
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 1400000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "SSAB lists yield as typical, not guaranteed. For qualification-critical work, replace with mill-certificate or test data."
+            ],
+            "source_ids": [
+              "ssab_hardox_500",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "plate or sheet",
+        "validation_tier": "official_source_with_typical_yield",
+        "notes": [
+          "This extends the abrasion-resistant steel series above the stored Hardox 450 entry with a harder 500 HBW class option.",
+          "No official post-yield hardening curve was inserted here."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 1400000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 1400000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "ssab_steel_general",
+          "ssab_hardox_500"
+        ]
+      }
+    },
+    {
+      "id": "stainless_430_1p4016_cold_rolled_reference",
+      "name": "430 / 1.4016 ferritic stainless reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "フェライト系ステンレス鋼",
+        "subcategory_en": "ferritic stainless steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7700,
+          "youngs_modulus_pa": 220000000000,
+          "poissons_ratio": 0.27
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 280000000,
+          "ultimate_tensile_strength_pa": 430000000,
+          "elongation_percent": 20
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 280000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "The cited tensile strength for cold-rolled sheet is 430 to 600 MPa; the lower bound is stored here as a conservative reference value."
+            ],
+            "source_ids": [
+              "outokumpu_moda_430_4016",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "cold-rolled coil and sheet, EN 10088-2 Table 4 values for Moda 430/4016",
+        "validation_tier": "official_source_with_inferred_nu",
+        "notes": [
+          "This adds a ferritic stainless option with higher stiffness and lower nickel content than the stored austenitic SUS304 and SUS316 references.",
+          "Use certified product-form data if local forming history or anisotropy matters."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 220000000000,
+            "PRXY": 0.27,
+            "DENS_kg_m3": 7700
+          },
+          "tb_biso": {
+            "yield_stress_pa": 280000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 220000000000,
+            "nu": 0.27
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 280000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "outokumpu_moda_430_4016"
+        ],
+        "inferences": [
+          "Poisson ratio is not listed in the cited Outokumpu datasheet. 0.27 is inserted as a common engineering default for ferritic stainless 430 and should be verified before production use.",
+          "The cited tensile strength for cold-rolled sheet is 430 to 600 MPa; the lower bound is stored here as a conservative reference value."
+        ]
+      }
+    },
+    {
+      "id": "nickel_inconel_600_annealed_reference",
+      "name": "INCONEL 600 annealed reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "ニッケル合金",
+        "subcategory_en": "nickel alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8470,
+          "youngs_modulus_pa": 214000000000,
+          "poissons_ratio": 0.324
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 345000000,
+          "ultimate_tensile_strength_pa": 689000000,
+          "elongation_percent": 40,
+          "hardness_brinell": 170
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 345000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "These are nominal room-temperature annealed values from Special Metals, not a product-form-specific true stress-plastic strain curve."
+            ],
+            "source_ids": [
+              "specialmetals_aqueous_corrosion_handbook",
+              "specialmetals_inconel_600",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "annealed material, nominal room-temperature properties",
+        "validation_tier": "official_source",
+        "notes": [
+          "This adds a corrosion- and heat-resistant nickel alloy reference below the higher-strength stored INCONEL 718 entry.",
+          "The stored values are nominal annealed room-temperature properties, not a product-form-specific true stress-plastic strain curve."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 214000000000,
+            "PRXY": 0.324,
+            "DENS_kg_m3": 8470
+          },
+          "tb_biso": {
+            "yield_stress_pa": 345000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 214000000000,
+            "nu": 0.324
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 345000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "specialmetals_aqueous_corrosion_handbook",
+          "specialmetals_inconel_600"
+        ]
+      }
+    },
+    {
+      "id": "bronze_c51000_h03_reference",
+      "name": "C51000 phosphor bronze H03 reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "青銅",
+        "subcategory_en": "bronze"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8850,
+          "youngs_modulus_pa": 120000000000,
+          "poissons_ratio": 0.34
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 420000000,
+          "ultimate_tensile_strength_pa": 470000000,
+          "elongation_percent": 10
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 420000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Wieland lists H03 tensile strength as a range from 470 MPa to 545 MPa; the lower bound is stored here as a conservative reference value.",
+              "This is a rolled-strip temper reference and should not be treated as a cast bronze material card."
+            ],
+            "source_ids": [
+              "wieland_b15_c51000",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "rolled products, H03 temper",
+        "validation_tier": "official_source_with_lower_bound_strength_selection",
+        "notes": [
+          "This adds a spring-capable phosphor bronze option that is materially stronger than the stored copper and brass references.",
+          "Use product-specific hardening data if cyclic spring behavior or forming must be captured."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 120000000000,
+            "PRXY": 0.34,
+            "DENS_kg_m3": 8850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 420000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 120000000000,
+            "nu": 0.34
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 420000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "wieland_b15_c51000"
+        ],
+        "inferences": [
+          "The cited H03 temper lists tensile strength as a range from 470 MPa to 545 MPa; the lower bound is stored here as a conservative reference value."
+        ]
+      }
+    },
+    {
+      "id": "steel_jfe_ly100_reference",
+      "name": "JFE-LY100 reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "低降伏点鋼",
+        "subcategory_en": "low yield point steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 80000000,
+          "ultimate_tensile_strength_pa": 200000000,
+          "elongation_min_percent": 50
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 80000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "JFE lists JFE-LY100 yield point as 80 MPa to 120 MPa and tensile strength as 200 MPa to 300 MPa. The lower bounds are stored here as conservative starter values.",
+              "Elastic constants are not listed in the cited JFE report. Representative isotropic steel values were inserted to complete the linear elastic mapping."
+            ],
+            "source_ids": [
+              "jfe_low_yield_point_steel_report",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "plate, low yield point steel for hysteretic dampers",
+        "validation_tier": "official_source_with_lower_bound_strength_selection_and_representative_steel_elastic_constants",
+        "notes": [
+          "This adds a very low-yield steel option intended for energy-dissipation members and seismic dampers.",
+          "Replace the perfect-plastic starter model with measured cyclic data if hysteresis loop shape or low-cycle fatigue life matters."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 80000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 80000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "jfe_low_yield_point_steel_report",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Elastic constants are not listed in the cited JFE report. Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative isotropic steel values.",
+          "The cited JFE report provides strength ranges. The lower bound of each range is stored here as a conservative starter value."
+        ]
+      }
+    },
+    {
+      "id": "steel_jfe_ly225_reference",
+      "name": "JFE-LY225 reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "低降伏点鋼",
+        "subcategory_en": "low yield point steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 205000000,
+          "ultimate_tensile_strength_pa": 300000000,
+          "elongation_min_percent": 40
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 205000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "JFE lists JFE-LY225 yield point as 205 MPa to 245 MPa and tensile strength as 300 MPa to 400 MPa. The lower bounds are stored here as conservative starter values.",
+              "Elastic constants are not listed in the cited JFE report. Representative isotropic steel values were inserted to complete the linear elastic mapping."
+            ],
+            "source_ids": [
+              "jfe_low_yield_point_steel_report",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "plate, low yield point steel for hysteretic dampers",
+        "validation_tier": "official_source_with_lower_bound_strength_selection_and_representative_steel_elastic_constants",
+        "notes": [
+          "This card adds the higher-strength low-yield-point damper steel option published by JFE.",
+          "Replace the perfect-plastic starter model with measured cyclic data if hysteresis loop shape or low-cycle fatigue life matters."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 205000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 205000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "jfe_low_yield_point_steel_report",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Elastic constants are not listed in the cited JFE report. Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative isotropic steel values.",
+          "The cited JFE report provides strength ranges. The lower bound of each range is stored here as a conservative starter value."
+        ]
+      }
+    },
+    {
+      "id": "tin_pure_reference",
+      "name": "Pure tin reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "錫",
+        "subcategory_en": "tin"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7280,
+          "youngs_modulus_pa": 42058036000,
+          "poissons_ratio": 0.36
+        },
+        "strength_data": {
+          "ultimate_tensile_strength_pa": 19305328,
+          "elongation_percent": 60
+        },
+        "nonlinear_models": {
+          "elastic_reference_only": {
+            "recommended": true,
+            "notes": [
+              "The cited primary sources used here do not provide a consistent room-temperature tensile yield strength for pure tin. Keep this entry linear-elastic until test data or a project-specific plasticity and creep model is available.",
+              "Pure tin can creep significantly at room temperature because of its low melting temperature. Replace this starter card early for sustained-load analysis."
+            ],
+            "source_ids": [
+              "indium_solder_alloy_directory",
+              "nist_leadfree_solder_database"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "elemental tin / 100Sn reference",
+        "validation_tier": "official_source_with_inferred_nu_and_no_direct_yield",
+        "notes": [
+          "This adds an elemental tin reference distinct from the tin-based solder alloys.",
+          "Only the linear elastic mapping is made solver-ready here because no directly quoted room-temperature yield strength was found in the cited primary sources."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 42058036000,
+            "PRXY": 0.36,
+            "DENS_kg_m3": 7280
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 42058036000,
+            "nu": 0.36
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "indium_solder_alloy_directory",
+          "nist_leadfree_solder_database"
+        ],
+        "inferences": [
+          "Poisson ratio 0.36 is inserted as a representative tin-rich engineering value between the NIST Sn-37Pb eutectic value of 0.4 at 20 C and the NIST SnAgCu as-cast value of about 0.335 at 25 C. Verify before production use.",
+          "No direct room-temperature tensile yield strength was found in the cited primary sources, so no plastic yield parameter is stored for pure tin."
+        ]
+      }
+    },
+    {
+      "id": "solder_sn63pb37_eutectic_reference",
+      "name": "Sn63/Pb37 eutectic solder reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "はんだ",
+        "subcategory_en": "solder"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8400,
+          "youngs_modulus_pa": 34473800000,
+          "poissons_ratio": 0.4
+        },
+        "strength_data": {
+          "yield_strength_pa": 30200000,
+          "ultimate_tensile_strength_pa": 51710700,
+          "elongation_percent": 36
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 30200000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "The exact 63Sn/37Pb Indium row does not list yield strength or Poisson ratio. Room-temperature eutectic Sn-37Pb values from NIST are inserted for those fields.",
+              "This is a low-strength solder starter card. Replace it with viscoplastic or creep-capable data for service-life predictions."
+            ],
+            "source_ids": [
+              "indium_solder_alloy_directory",
+              "nist_leadfree_solder_database",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "eutectic tin-lead solder, 63Sn/37Pb",
+        "validation_tier": "official_source_with_cross_source_yield_and_nu",
+        "notes": [
+          "Density, Young's modulus, tensile strength, and elongation come from the exact Indium 63Sn/37Pb alloy row.",
+          "Yield strength and Poisson ratio come from the NIST eutectic Sn-37Pb database. This alloy is lead-bearing and not RoHS-compliant."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 34473800000,
+            "PRXY": 0.4,
+            "DENS_kg_m3": 8400
+          },
+          "tb_biso": {
+            "yield_stress_pa": 30200000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 34473800000,
+            "nu": 0.4
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 30200000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "indium_solder_alloy_directory",
+          "nist_leadfree_solder_database"
+        ],
+        "inferences": [
+          "Yield strength and Poisson ratio are taken from NIST eutectic Sn-37Pb data because the Indium 63Sn/37Pb row does not list those fields.",
+          "Density, Young's modulus, tensile strength, and elongation come from the exact Indium 63Sn/37Pb row."
+        ]
+      }
+    },
+    {
+      "id": "solder_sac305_reference",
+      "name": "SAC305 solder reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "はんだ",
+        "subcategory_en": "solder"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7350,
+          "youngs_modulus_pa": 47573844000,
+          "poissons_ratio": 0.335
+        },
+        "strength_data": {
+          "yield_strength_pa": 31835000,
+          "ultimate_tensile_strength_pa": 39576000,
+          "elongation_percent": 49
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 31835000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "The exact Indium SAC305 row does not list yield strength or Poisson ratio. Representative SnAgCu room-temperature values from the NIST database are inserted for those fields.",
+              "This is a low-strength lead-free solder starter card. Replace it with viscoplastic or creep-capable data for service-life predictions."
+            ],
+            "source_ids": [
+              "indium_solder_alloy_directory",
+              "nist_leadfree_solder_database",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "near-eutectic lead-free solder, 96.5Sn/3Ag/0.5Cu",
+        "validation_tier": "official_source_with_representative_snagcu_yield_and_nu",
+        "notes": [
+          "Density, Young's modulus, tensile strength, and elongation come from the exact Indium SAC305 alloy row.",
+          "Yield strength and Poisson ratio come from representative NIST SnAgCu data at 25 C because the exact SAC305 row does not list those fields."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 47573844000,
+            "PRXY": 0.335,
+            "DENS_kg_m3": 7350
+          },
+          "tb_biso": {
+            "yield_stress_pa": 31835000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 47573844000,
+            "nu": 0.335
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 31835000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "indium_solder_alloy_directory",
+          "nist_leadfree_solder_database"
+        ],
+        "inferences": [
+          "Yield strength 31.835 MPa comes from representative NIST SnAgCu as-cast data at 25 C, not from an exact SAC305 product row.",
+          "Poisson ratio 0.335 is derived from the NIST SnAgCu as-cast polynomial at 25 C, while density, Young's modulus, tensile strength, and elongation come from the exact Indium SAC305 row."
+        ]
+      }
+    },
+    {
+      "id": "bolt_jis_f10t_reference",
+      "name": "JIS F10T high-strength bolt reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "高力ボルト",
+        "subcategory_en": "high-strength structural bolt"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 900000000,
+          "ultimate_tensile_strength_pa": 1000000000,
+          "elongation_min_percent": 14,
+          "reduction_of_area_min_percent": 40,
+          "hardness_hrc_min": 27,
+          "hardness_hrc_max": 38
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 900000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "The cited NIPPON STEEL catalog lists F10T class yield strength as 900 MPa or higher and tensile strength as 1000 MPa to 1200 MPa. The lower bounds are stored here as conservative starter values.",
+              "These are bolt-product minimum requirements. Thread-root stress concentration, tightening preload, and delayed-fracture behavior are not represented in this continuum card."
+            ],
+            "source_ids": [
+              "nipponsteel_f10t_catalog",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "heat-treated JIS class 10T high-strength bolt set",
+        "product_form": "high-strength hex bolt / bolt set",
+        "validation_tier": "official_source_with_lower_bound_strength_selection_and_representative_steel_elastic_constants",
+        "notes": [
+          "This card covers the common Japanese F10T strength class used for structural high-strength bolting.",
+          "The same strength class also underlies torque-shear variants such as S10T, but geometry-specific installation behavior is outside this material card."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 900000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 900000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "nipponsteel_f10t_catalog",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative structural steel elastic constants because the cited bolt catalog focuses on strength-class requirements.",
+          "The tensile strength class is 1000 MPa to 1200 MPa; the lower bound is stored here as a conservative starter value."
+        ]
+      }
+    },
+    {
+      "id": "bolt_astm_f3125_grade_a325_reference",
+      "name": "ASTM F3125 Grade A325 reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "高力ボルト",
+        "subcategory_en": "high-strength structural bolt"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 634317670.971489,
+          "ultimate_tensile_strength_pa": 827370875.1802033,
+          "elongation_min_percent": 14,
+          "reduction_of_area_min_percent": 35
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 634317670.971489,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "ASTM officially consolidated legacy A325 bolts into ASTM F3125 in 2016. This card stores the current F3125 Grade A325 minimum mechanical requirements.",
+              "These are bolt-product minimum requirements for 1/2 in through 1-1/2 in heavy hex structural bolts. Thread-root stress concentration, tightening preload, and slip-critical joint behavior are not represented in this continuum card."
+            ],
+            "source_ids": [
+              "astm_f3125_store",
+              "portlandbolt_astm_f3125",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM F3125 Grade A325, 120 ksi class",
+        "product_form": "heavy hex structural bolt",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "This card uses the current ASTM F3125 Grade A325 naming instead of the withdrawn standalone ASTM A325 specification.",
+          "A325 remains a common field name in structural design, so the legacy grade name is kept in the material name for searchability."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 634317670.971489,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 634317670.971489,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "astm_f3125_store",
+          "portlandbolt_astm_f3125",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative structural steel elastic constants because the cited ASTM/manufacturer sources focus on mechanical requirement tables."
+        ]
+      }
+    },
+    {
+      "id": "bolt_astm_f3125_grade_a490_reference",
+      "name": "ASTM F3125 Grade A490 reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "高力ボルト",
+        "subcategory_en": "high-strength structural bolt"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 896318448.111887,
+          "ultimate_tensile_strength_pa": 1034213593.9752543,
+          "elongation_min_percent": 14,
+          "reduction_of_area_min_percent": 40
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 896318448.111887,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "ASTM officially consolidated legacy A490 bolts into ASTM F3125 in 2016. This card stores the current F3125 Grade A490 lower-bound mechanical requirements.",
+              "F3125 lists A490 tensile strength as 150 ksi to 173 ksi. The lower bound is stored here as a conservative starter value."
+            ],
+            "source_ids": [
+              "astm_f3125_store",
+              "portlandbolt_astm_f3125",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM F3125 Grade A490, 150 ksi class",
+        "product_form": "heavy hex structural bolt",
+        "validation_tier": "official_source_with_lower_bound_strength_selection_and_representative_steel_elastic_constants",
+        "notes": [
+          "This card uses the current ASTM F3125 Grade A490 naming instead of the withdrawn standalone ASTM A490 specification.",
+          "These are bolt-product minimum requirements for 1/2 in through 1-1/2 in heavy hex structural bolts. Thread-root stress concentration, preload relaxation, and fracture mechanics are not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 896318448.111887,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 896318448.111887,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "astm_f3125_store",
+          "portlandbolt_astm_f3125",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative structural steel elastic constants because the cited ASTM/manufacturer sources focus on mechanical requirement tables.",
+          "The tensile strength class is 150 ksi to 173 ksi; the lower bound is stored here as a conservative starter value."
+        ]
+      }
+    },
+    {
+      "id": "bolt_astm_a193_b7_upto_2p5in_reference",
+      "name": "ASTM A193 Grade B7 reference (up to 2-1/2 in)",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "スタッドボルト",
+        "subcategory_en": "alloy steel stud bolt"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 723949515.782678,
+          "ultimate_tensile_strength_pa": 861844661.646045,
+          "elongation_min_percent": 16,
+          "reduction_of_area_min_percent": 50,
+          "hardness_hrc_max": 35
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 723949515.782678,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "ASTM A193 Grade B7 covers alloy steel bolting for high-temperature or high-pressure service. Portland Bolt identifies B7 as quenched-and-tempered AISI 4140/4142 alloy steel.",
+              "This reference stores the minimum mechanical requirements for the common size range up to 2-1/2 in diameter. Larger diameters have lower minimum strengths and should be stored as a separate card if needed."
+            ],
+            "source_ids": [
+              "astm_a193_store",
+              "portlandbolt_astm_a193",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A193 Grade B7, quenched and tempered, up to 2-1/2 in diameter",
+        "product_form": "stud bolt / threaded rod / pressure-boundary bolting",
+        "validation_tier": "official_source_with_size_limit_and_representative_steel_elastic_constants",
+        "notes": [
+          "This card is intended for pressure-vessel, flange, and valve bolting rather than slip-critical structural joints.",
+          "Do not reuse this up-to-2-1/2 in card for larger B7 diameters without checking the lower minimums in the governing specification."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 723949515.782678,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 723949515.782678,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "astm_a193_store",
+          "portlandbolt_astm_a193",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative steel elastic constants because the cited ASTM/manufacturer sources focus on grade requirements rather than elastic constants."
+        ]
+      }
+    },
+    {
+      "id": "galvanized_sgcc_nsgcc_reference",
+      "name": "SGCC / NSGCC reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "溶融亜鉛めっき鋼板",
+        "subcategory_en": "hot-dip galvanized steel sheet"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 205000000,
+          "ultimate_tensile_strength_pa": 270000000,
+          "elongation_percent": 37
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 205000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "The cited NIPPON STEEL catalog stores NSGCC as a company specification with 205 MPa yield and 270 MPa tensile strength. A representative elongation of 37 percent was taken from the 1.0 mm to less than 1.6 mm thickness row relevant to light-gauge steel-house members.",
+              "This commercial galvanized grade is useful for non-structural trims, secondary members, and enclosure parts, but it is not the preferred primary framing grade for steel-house studs."
+            ],
+            "source_ids": [
+              "nipponsteel_durgrip_u023en",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "cold-rolled base metal, hot-dip galvanized sheet, representative 1.0 mm to less than 1.6 mm elongation row",
+        "product_form": "light-gauge sheet and formed accessories",
+        "validation_tier": "official_source_with_representative_thickness_selection_and_representative_steel_elastic_constants",
+        "notes": [
+          "This card gives a search-friendly SGCC equivalent for ordinary galvanized sheet often used around steel-house envelopes and non-primary light-gauge parts.",
+          "The coating mass is order-dependent and is not folded into the stored density."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 205000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 205000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "nipponsteel_durgrip_u023en",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative steel elastic constants because the cited galvanized-sheet catalog focuses on strength-class data.",
+          "Elongation 37 percent was selected from the 1.0 mm to less than 1.6 mm thickness row as a representative steel-house gauge."
+        ]
+      }
+    },
+    {
+      "id": "galvanized_sgc400_nsgc400_reference",
+      "name": "SGC400 / NSGC400 reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "溶融亜鉛めっき鋼板",
+        "subcategory_en": "hot-dip galvanized steel sheet"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 295000000,
+          "ultimate_tensile_strength_pa": 400000000,
+          "elongation_percent": 18
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 295000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "The cited NIPPON STEEL catalog stores NSGC400 as the 400 MPa class structural galvanized sheet. Elongation 18 percent corresponds to the 1.0 mm to less than 1.6 mm thickness row relevant to light-gauge framing.",
+              "This is a practical lower-strength structural choice for cold-formed steel-house studs, runners, and secondary framing members."
+            ],
+            "source_ids": [
+              "nipponsteel_durgrip_u023en",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "cold-rolled base metal, structural galvanized sheet, representative 1.0 mm to less than 1.6 mm elongation row",
+        "product_form": "cold-formed light-gauge framing sheet",
+        "validation_tier": "official_source_with_representative_thickness_selection_and_representative_steel_elastic_constants",
+        "notes": [
+          "This card is closer to structural steel-house framing than SGCC because it belongs to the structural galvanized sheet strength classes.",
+          "The coating mass is order-dependent and is not folded into the stored density."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 295000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 295000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "nipponsteel_durgrip_u023en",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative steel elastic constants because the cited galvanized-sheet catalog focuses on strength-class data.",
+          "Elongation 18 percent was selected from the 1.0 mm to less than 1.6 mm thickness row as a representative steel-house gauge."
+        ]
+      }
+    },
+    {
+      "id": "galvanized_sgc570_nsgc570_reference",
+      "name": "SGC570 / NSGC570 reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "溶融亜鉛めっき鋼板",
+        "subcategory_en": "hot-dip galvanized steel sheet"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 560000000,
+          "ultimate_tensile_strength_pa": 570000000
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 560000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "The cited NIPPON STEEL catalog stores NSGC570 as the 570 MPa class structural galvanized sheet with 560 MPa minimum yield resistance and 570 MPa minimum tensile strength.",
+              "The catalog states that NSGC570 should be discussed with the producer for each order. No representative elongation value was inserted because the cited table does not publish one for this grade."
+            ],
+            "source_ids": [
+              "nipponsteel_durgrip_u023en",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "cold-rolled base metal, structural galvanized sheet, high-strength 570 class",
+        "product_form": "cold-formed light-gauge framing sheet",
+        "validation_tier": "official_source_with_no_published_elongation_and_representative_steel_elastic_constants",
+        "notes": [
+          "This is the high-strength galvanized sheet class most directly aligned with steel-house load-bearing studs and tracks.",
+          "The coating mass is order-dependent and is not folded into the stored density."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 560000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 560000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "nipponsteel_durgrip_u023en",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative steel elastic constants because the cited galvanized-sheet catalog focuses on strength-class data.",
+          "No elongation value is stored because the cited catalog does not publish a representative elongation for NSGC570."
+        ]
+      }
+    },
+    {
+      "id": "aluzinc_truecore_g550_reference",
+      "name": "TRUECORE G550 reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "亜鉛アルミニウム合金めっき鋼板",
+        "subcategory_en": "aluminium-zinc alloy coated steel sheet"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 550000000,
+          "ultimate_tensile_strength_pa": 570000000,
+          "elongation_percent": 2,
+          "coating_mass_min_g_m2": 150
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 550000000,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "TRUECORE G550 is an aluminium-zinc alloy-coated structural sheet with guaranteed minimum yield strength 550 MPa and minimum tensile strength 570 MPa.",
+              "The official datasheet explicitly describes limited ductility. Replace this perfect-plastic starter card with tested cold-formed section data if local buckling, corner strengthening, or post-buckling response matters."
+            ],
+            "source_ids": [
+              "nsbluescope_truecore_g550",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "AZ150 aluminium-zinc alloy coating, preferred base metal thickness 0.45 mm to 1.20 mm",
+        "product_form": "cold-formed steel-house framing sheet",
+        "validation_tier": "official_source_with_limited_ductility_and_representative_steel_elastic_constants",
+        "notes": [
+          "This card represents the high-strength coated sheet widely used in light-gauge structural frames where the product is not visible.",
+          "The coating mass is listed explicitly as AZ150 minimum 150 g/m2, but the coating contribution is not folded into the stored density."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 550000000,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 550000000,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "nsbluescope_truecore_g550",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative steel elastic constants because the cited coated-sheet datasheet focuses on strength and coating requirements.",
+          "The stored elongation is the guaranteed minimum over 0.60 mm thickness from the official datasheet and should not be extrapolated to thinner gauges without checking the supplier data."
         ]
       }
     },
@@ -7279,9 +8846,9 @@
       "id": "wood_balsam_fir_clear_12pct_reference",
       "name": "Balsam fir clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -7398,9 +8965,9 @@
       "id": "wood_black_spruce_clear_12pct_reference",
       "name": "Black spruce clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -7517,9 +9084,9 @@
       "id": "wood_white_fir_clear_12pct_reference",
       "name": "White fir clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -7636,9 +9203,9 @@
       "id": "wood_pitch_pine_clear_12pct_reference",
       "name": "Pitch pine clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -7755,9 +9322,9 @@
       "id": "wood_shortleaf_pine_clear_12pct_reference",
       "name": "Shortleaf pine clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -7874,9 +9441,9 @@
       "id": "wood_virginia_pine_clear_12pct_reference",
       "name": "Virginia pine clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -7993,9 +9560,9 @@
       "id": "wood_eastern_redcedar_clear_12pct_reference",
       "name": "Eastern redcedar clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -8113,9 +9680,9 @@
       "id": "wood_atlantic_white_cedar_clear_12pct_reference",
       "name": "Atlantic white cedar clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -8232,9 +9799,9 @@
       "id": "wood_incense_cedar_clear_12pct_reference",
       "name": "Incense-cedar clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -8351,9 +9918,9 @@
       "id": "wood_white_oak_clear_12pct_reference",
       "name": "White oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -8470,9 +10037,9 @@
       "id": "wood_northern_red_oak_clear_12pct_reference",
       "name": "Northern red oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -8589,9 +10156,9 @@
       "id": "wood_sassafras_clear_12pct_reference",
       "name": "Sassafras clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -8708,9 +10275,9 @@
       "id": "wood_black_willow_clear_12pct_reference",
       "name": "Black willow clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -8827,9 +10394,9 @@
       "id": "wood_bigleaf_maple_clear_12pct_reference",
       "name": "Bigleaf maple clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -8946,9 +10513,9 @@
       "id": "wood_black_maple_clear_12pct_reference",
       "name": "Black maple clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -9065,9 +10632,9 @@
       "id": "wood_red_maple_clear_12pct_reference",
       "name": "Red maple clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -9184,9 +10751,9 @@
       "id": "wood_silver_maple_clear_12pct_reference",
       "name": "Silver maple clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -9303,9 +10870,9 @@
       "id": "wood_sugar_maple_clear_12pct_reference",
       "name": "Sugar maple clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -9422,9 +10989,9 @@
       "id": "wood_white_ash_clear_12pct_reference",
       "name": "White ash clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -9541,9 +11108,9 @@
       "id": "wood_oregon_ash_clear_12pct_reference",
       "name": "Oregon ash clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -9660,9 +11227,9 @@
       "id": "wood_black_ash_clear_12pct_reference",
       "name": "Black ash clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -9779,9 +11346,9 @@
       "id": "wood_green_ash_clear_12pct_reference",
       "name": "Green ash clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -9898,9 +11465,9 @@
       "id": "wood_pumpkin_ash_clear_12pct_reference",
       "name": "Pumpkin ash clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -10017,9 +11584,9 @@
       "id": "wood_blue_ash_clear_12pct_reference",
       "name": "Blue ash clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -10136,9 +11703,9 @@
       "id": "wood_winged_elm_clear_12pct_reference",
       "name": "Winged elm clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -10255,9 +11822,9 @@
       "id": "wood_american_elm_clear_12pct_reference",
       "name": "American elm clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -10374,9 +11941,9 @@
       "id": "wood_cedar_elm_clear_12pct_reference",
       "name": "Cedar elm clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -10493,9 +12060,9 @@
       "id": "wood_slippery_elm_clear_12pct_reference",
       "name": "Slippery elm clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -10612,9 +12179,9 @@
       "id": "wood_rock_elm_clear_12pct_reference",
       "name": "Rock elm clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -10731,9 +12298,9 @@
       "id": "wood_balsam_poplar_clear_12pct_reference",
       "name": "Balsam poplar clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -10850,9 +12417,9 @@
       "id": "wood_eastern_cottonwood_clear_12pct_reference",
       "name": "Eastern cottonwood clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -10969,9 +12536,9 @@
       "id": "wood_black_cottonwood_clear_12pct_reference",
       "name": "Black cottonwood clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -11088,9 +12655,9 @@
       "id": "wood_black_cherry_clear_12pct_reference",
       "name": "Black cherry clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -11207,9 +12774,9 @@
       "id": "wood_american_sycamore_clear_12pct_reference",
       "name": "American sycamore clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -14542,7 +16109,7 @@
       "id": "engineered_wood_nordic_xlam_e1_78_3s_reference",
       "name": "Nordic X-Lam E1 78-3s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -14632,7 +16199,7 @@
       "id": "engineered_wood_nordic_xlam_e1_89_3s_reference",
       "name": "Nordic X-Lam E1 89-3s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -14722,7 +16289,7 @@
       "id": "engineered_wood_nordic_xlam_e1_105_3s_reference",
       "name": "Nordic X-Lam E1 105-3s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -14812,7 +16379,7 @@
       "id": "engineered_wood_nordic_xlam_e1_131_5s_reference",
       "name": "Nordic X-Lam E1 131-5s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -14902,7 +16469,7 @@
       "id": "engineered_wood_nordic_xlam_e1_140_4s_reference",
       "name": "Nordic X-Lam E1 140-4s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -14992,7 +16559,7 @@
       "id": "engineered_wood_nordic_xlam_e1_140_4l_reference",
       "name": "Nordic X-Lam E1 140-4l panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15082,7 +16649,7 @@
       "id": "engineered_wood_nordic_xlam_e1_143_5s_reference",
       "name": "Nordic X-Lam E1 143-5s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15172,7 +16739,7 @@
       "id": "engineered_wood_nordic_xlam_e1_175_5s_reference",
       "name": "Nordic X-Lam E1 175-5s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15262,7 +16829,7 @@
       "id": "engineered_wood_nordic_xlam_e1_197_7s_reference",
       "name": "Nordic X-Lam E1 197-7s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15352,7 +16919,7 @@
       "id": "engineered_wood_nordic_xlam_e1_213_7l_reference",
       "name": "Nordic X-Lam E1 213-7l panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15442,7 +17009,7 @@
       "id": "engineered_wood_nordic_xlam_e1_220_7s_reference",
       "name": "Nordic X-Lam E1 220-7s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15532,7 +17099,7 @@
       "id": "engineered_wood_nordic_xlam_e1_245_7s_reference",
       "name": "Nordic X-Lam E1 245-7s panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15622,7 +17189,7 @@
       "id": "engineered_wood_nordic_xlam_e1_245_7l_reference",
       "name": "Nordic X-Lam E1 245-7l panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15712,7 +17279,7 @@
       "id": "engineered_wood_nordic_xlam_e1_267_9l_reference",
       "name": "Nordic X-Lam E1 267-9l panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15802,7 +17369,7 @@
       "id": "engineered_wood_nordic_xlam_e1_315_9l_reference",
       "name": "Nordic X-Lam E1 315-9l panel reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15892,7 +17459,7 @@
       "id": "engineered_wood_pwt_xply_lvl_1_3e_1550fb_reference",
       "name": "PWT X-ply LVL 1.3E 1550Fb reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -15985,7 +17552,7 @@
       "id": "engineered_wood_pwt_lvl_1_5e_2250fb_reference",
       "name": "PWT LVL 1.5E 2250Fb reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16078,7 +17645,7 @@
       "id": "engineered_wood_pwt_lvl_1_55e_2250fb_reference",
       "name": "PWT LVL 1.55E 2250Fb reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16171,7 +17738,7 @@
       "id": "engineered_wood_pwt_lvl_1_6e_2250fb_reference",
       "name": "PWT LVL 1.6E 2250Fb reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16264,7 +17831,7 @@
       "id": "engineered_wood_pwt_lvl_2_0e_2900fb_reference",
       "name": "PWT LVL 2.0E 2900Fb reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16357,7 +17924,7 @@
       "id": "engineered_wood_pwt_lvl_2_1e_3100fb_reference",
       "name": "PWT LVL 2.1E 3100Fb reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16450,7 +18017,7 @@
       "id": "engineered_wood_pwt_lvl_2_2e_3100fb_reference",
       "name": "PWT LVL 2.2E 3100Fb reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16543,7 +18110,7 @@
       "id": "engineered_wood_pwt_lvl_2_3e_3100fb_reference",
       "name": "PWT LVL 2.3E 3100Fb reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16636,7 +18203,7 @@
       "id": "engineered_wood_pwt_treated_lvl_2_0e_dry_use_reference",
       "name": "PWT treated LVL 2.0E dry-use reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16729,7 +18296,7 @@
       "id": "engineered_wood_pwt_treated_lvl_2_0e_wet_use_reference",
       "name": "PWT treated LVL 2.0E wet-use reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16822,7 +18389,7 @@
       "id": "engineered_wood_rosboro_24f_v4_df_treated_glulam_reference",
       "name": "Rosboro 24F-V4 DF treated glulam reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -16939,7 +18506,7 @@
       "id": "engineered_wood_rosboro_24f_v8_df_treated_glulam_reference",
       "name": "Rosboro 24F-V8 DF treated glulam reference",
       "classification": {
-        "category_ja": "木材",
+        "category_ja": "木質",
         "category_en": "Wood",
         "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
@@ -17056,9 +18623,9 @@
       "id": "engineered_wood_roseburg_rigidlam_lvl_1_4e_df_reference",
       "name": "Roseburg RigidLam LVL 1.4E DF reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -17159,9 +18726,9 @@
       "id": "engineered_wood_roseburg_rigidlam_lvl_1_6e_df_reference",
       "name": "Roseburg RigidLam LVL 1.6E DF reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -17265,9 +18832,9 @@
       "id": "engineered_wood_roseburg_rigidlam_lvl_2_1e_df_reference",
       "name": "Roseburg RigidLam LVL 2.1E DF reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -17371,9 +18938,9 @@
       "id": "engineered_wood_roseburg_rigidlam_lvl_2_3e_df_reference",
       "name": "Roseburg RigidLam LVL 2.3E DF reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -17477,9 +19044,9 @@
       "id": "engineered_wood_roseburg_rigidlam_lvl_2_1e_sp_reference",
       "name": "Roseburg RigidLam LVL 2.1E SP reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -17583,9 +19150,9 @@
       "id": "engineered_wood_rosboro_20f_v7_df_glulam_reference",
       "name": "Rosboro 20F-V7 DF glulam reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -17702,9 +19269,9 @@
       "id": "engineered_wood_rosboro_20f_v12_ac_glulam_reference",
       "name": "Rosboro 20F-V12 AC glulam reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -17821,9 +19388,9 @@
       "id": "engineered_wood_rosboro_20f_v13_ac_glulam_reference",
       "name": "Rosboro 20F-V13 AC glulam reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -17940,9 +19507,9 @@
       "id": "engineered_wood_rosboro_24f_v8m4_df_glulam_reference",
       "name": "Rosboro 24F-V8M4 DF hybrid glulam reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -18047,9 +19614,9 @@
       "id": "engineered_wood_rosboro_30f_e2m3_sp_glulam_reference",
       "name": "Rosboro 30F-E2M3 SP hybrid glulam reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -18154,9 +19721,9 @@
       "id": "engineered_wood_rosboro_30f_e_df2_glulam_reference",
       "name": "Rosboro 30F-E DF2 hybrid glulam reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -18261,9 +19828,9 @@
       "id": "engineered_wood_roseburg_rigidlam_lvl_1_9e_df_reference",
       "name": "Roseburg RigidLam LVL 1.9E DF reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -18364,9 +19931,9 @@
       "id": "engineered_wood_roseburg_rigidlam_lvl_2_4e_df_reference",
       "name": "Roseburg RigidLam LVL 2.4E DF reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -18467,9 +20034,9 @@
       "id": "engineered_wood_roseburg_rigidlam_stud_1_6e_2x4_reference",
       "name": "Roseburg RigidLam LVL stud 1.6E 2x4 reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -18560,9 +20127,9 @@
       "id": "engineered_wood_roseburg_rigidlam_stud_2_1e_2x4_reference",
       "name": "Roseburg RigidLam LVL stud 2.1E 2x4 reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -18653,9 +20220,9 @@
       "id": "engineered_wood_roseburg_rigidlam_stud_1_6e_2x6_reference",
       "name": "Roseburg RigidLam LVL stud 1.6E 2x6 reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -18746,9 +20313,9 @@
       "id": "engineered_wood_roseburg_rigidlam_stud_2_1e_2x6_reference",
       "name": "Roseburg RigidLam LVL stud 2.1E 2x6 reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -18839,9 +20406,9 @@
       "id": "engineered_wood_roseburg_rigidrim_lvl_1_4e_reference",
       "name": "Roseburg RigidRim LVL 1.4E rimboard reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "??????????",
+        "subcategory_ja": "エンジニアードウッド",
         "subcategory_en": "engineered_wood"
       },
       "properties": {
@@ -40178,9 +41745,9 @@
       "id": "wood_american_beech_clear_12pct_reference",
       "name": "American beech clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -40297,9 +41864,9 @@
       "id": "wood_american_basswood_clear_12pct_reference",
       "name": "American basswood clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -40416,9 +41983,9 @@
       "id": "wood_sweet_birch_clear_12pct_reference",
       "name": "Sweet birch clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -40535,9 +42102,9 @@
       "id": "wood_paper_birch_clear_12pct_reference",
       "name": "Paper birch clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -40654,9 +42221,9 @@
       "id": "wood_alaska_paper_birch_clear_12pct_reference",
       "name": "Alaska paper birch clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -40773,9 +42340,9 @@
       "id": "wood_gray_birch_clear_12pct_reference",
       "name": "Gray birch clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -40892,9 +42459,9 @@
       "id": "wood_pignut_hickory_clear_12pct_reference",
       "name": "Pignut hickory clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -41011,9 +42578,9 @@
       "id": "wood_shellbark_hickory_clear_12pct_reference",
       "name": "Shellbark hickory clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -41130,9 +42697,9 @@
       "id": "wood_shagbark_hickory_clear_12pct_reference",
       "name": "Shagbark hickory clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -41249,9 +42816,9 @@
       "id": "wood_mockernut_hickory_clear_12pct_reference",
       "name": "Mockernut hickory clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -41368,9 +42935,9 @@
       "id": "wood_water_hickory_clear_12pct_reference",
       "name": "Water hickory clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -41489,9 +43056,9 @@
       "id": "wood_bitternut_hickory_clear_12pct_reference",
       "name": "Bitternut hickory clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -41610,9 +43177,9 @@
       "id": "wood_pecan_clear_12pct_reference",
       "name": "Pecan clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -41729,9 +43296,9 @@
       "id": "wood_nutmeg_hickory_clear_12pct_reference",
       "name": "Nutmeg hickory clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -41850,9 +43417,9 @@
       "id": "wood_water_tupelo_clear_12pct_reference",
       "name": "Water tupelo clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -41969,9 +43536,9 @@
       "id": "wood_black_tupelo_clear_12pct_reference",
       "name": "Black tupelo clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -42088,9 +43655,9 @@
       "id": "wood_hackberry_clear_12pct_reference",
       "name": "Hackberry clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -42207,9 +43774,9 @@
       "id": "wood_black_locust_clear_12pct_reference",
       "name": "Black locust clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -42326,9 +43893,9 @@
       "id": "wood_bigtooth_aspen_clear_12pct_reference",
       "name": "Bigtooth aspen clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -42445,9 +44012,9 @@
       "id": "wood_quaking_aspen_clear_12pct_reference",
       "name": "Quaking aspen clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -42564,9 +44131,9 @@
       "id": "wood_scarlet_oak_clear_12pct_reference",
       "name": "Scarlet oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -42683,9 +44250,9 @@
       "id": "wood_southern_red_oak_clear_12pct_reference",
       "name": "Southern red oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -42802,9 +44369,9 @@
       "id": "wood_cherrybark_oak_clear_12pct_reference",
       "name": "Cherrybark oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -42921,9 +44488,9 @@
       "id": "wood_laurel_oak_clear_12pct_reference",
       "name": "Laurel oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -43040,9 +44607,9 @@
       "id": "wood_water_oak_clear_12pct_reference",
       "name": "Water oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -43159,9 +44726,9 @@
       "id": "wood_pin_oak_clear_12pct_reference",
       "name": "Pin oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -43278,9 +44845,9 @@
       "id": "wood_willow_oak_clear_12pct_reference",
       "name": "Willow oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -43397,9 +44964,9 @@
       "id": "wood_black_oak_clear_12pct_reference",
       "name": "Black oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -43516,9 +45083,9 @@
       "id": "wood_swamp_white_oak_clear_12pct_reference",
       "name": "Swamp white oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -43635,9 +45202,9 @@
       "id": "wood_overcup_oak_clear_12pct_reference",
       "name": "Overcup oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -43754,9 +45321,9 @@
       "id": "wood_bur_oak_clear_12pct_reference",
       "name": "Bur oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -43873,9 +45440,9 @@
       "id": "wood_swamp_chestnut_oak_clear_12pct_reference",
       "name": "Swamp chestnut oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -43992,9 +45559,9 @@
       "id": "wood_chestnut_oak_clear_12pct_reference",
       "name": "Chestnut oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -44111,9 +45678,9 @@
       "id": "wood_post_oak_clear_12pct_reference",
       "name": "Post oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -44230,9 +45797,9 @@
       "id": "wood_live_oak_clear_12pct_reference",
       "name": "Live oak clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -44349,9 +45916,9 @@
       "id": "wood_white_spruce_clear_12pct_reference",
       "name": "White spruce clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -44468,9 +46035,9 @@
       "id": "wood_red_spruce_clear_12pct_reference",
       "name": "Red spruce clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -44587,9 +46154,9 @@
       "id": "wood_engelmann_spruce_clear_12pct_reference",
       "name": "Engelmann spruce clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -44706,9 +46273,9 @@
       "id": "wood_grand_fir_clear_12pct_reference",
       "name": "Grand fir clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -44825,9 +46392,9 @@
       "id": "wood_noble_fir_clear_12pct_reference",
       "name": "Noble fir clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -44944,9 +46511,9 @@
       "id": "wood_eastern_white_pine_clear_12pct_reference",
       "name": "Eastern white pine clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -45063,9 +46630,9 @@
       "id": "wood_western_white_pine_clear_12pct_reference",
       "name": "Western white pine clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -45182,9 +46749,9 @@
       "id": "wood_limber_pine_clear_12pct_reference",
       "name": "Limber pine clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -45301,9 +46868,9 @@
       "id": "wood_jeffrey_pine_clear_12pct_reference",
       "name": "Jeffrey pine clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -45420,9 +46987,9 @@
       "id": "wood_eastern_hemlock_clear_12pct_reference",
       "name": "Eastern hemlock clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -45539,9 +47106,9 @@
       "id": "wood_mountain_hemlock_clear_12pct_reference",
       "name": "Mountain hemlock clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -45658,9 +47225,9 @@
       "id": "wood_port_orford_cedar_clear_12pct_reference",
       "name": "Port-Orford-cedar clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -45777,9 +47344,9 @@
       "id": "wood_alaska_cedar_clear_12pct_reference",
       "name": "Alaska cedar clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -45896,9 +47463,9 @@
       "id": "wood_slash_pine_clear_12pct_reference",
       "name": "Slash pine clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -46015,9 +47582,9 @@
       "id": "wood_sand_pine_clear_12pct_reference",
       "name": "Sand pine clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -46134,9 +47701,9 @@
       "id": "wood_tamarack_clear_12pct_reference",
       "name": "Tamarack clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -46253,9 +47820,9 @@
       "id": "wood_douglas_fir_coast_clear_12pct_reference",
       "name": "Douglas-fir coast clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -46372,9 +47939,9 @@
       "id": "wood_douglas_fir_interior_west_clear_12pct_reference",
       "name": "Douglas-fir interior west clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -46491,9 +48058,9 @@
       "id": "wood_douglas_fir_interior_north_clear_12pct_reference",
       "name": "Douglas-fir interior north clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -46610,9 +48177,9 @@
       "id": "wood_douglas_fir_interior_south_clear_12pct_reference",
       "name": "Douglas-fir interior south clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
@@ -46729,9 +48296,9 @@
       "id": "wood_redwood_second_growth_clear_12pct_reference",
       "name": "Redwood second-growth clear wood reference",
       "classification": {
-        "category_ja": "??",
+        "category_ja": "木質",
         "category_en": "Wood",
-        "subcategory_ja": "????",
+        "subcategory_ja": "天然木材",
         "subcategory_en": "wood"
       },
       "properties": {
