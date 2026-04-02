@@ -12,6 +12,12 @@ let compareIds = [];
 let favoriteIds = new Set();
 let recentIds = [];
 let comparePanelOpen = false;
+let analysisPanelType = null;
+let viewMode = "grid";
+let unitSystem = "si";
+let rangeFilters = {};
+let solverFilterSet = new Set();
+let rangeFilterDebounce = null;
 let toastTimer = null;
 let searchDebounce = null;
 
@@ -127,6 +133,31 @@ const uiText = {
   compareSources: { ja: "出典数", en: "Sources" },
   themeTitle: { ja: "ダークモード切替", en: "Toggle dark mode" },
   langTitle: { ja: "表示言語切替", en: "Switch language" },
+  unitTitle: { ja: "単位系切替", en: "Toggle unit system" },
+  solverFilterHeading: { ja: "ソルバー", en: "Solver" },
+  rangeFilterHeading: { ja: "数値範囲", en: "Numeric Range" },
+  analysis: { ja: "分析", en: "Analysis" },
+  scatterPlot: { ja: "散布図 (Ashby)", en: "Scatter Plot (Ashby)" },
+  histogramLabel: { ja: "ヒストグラム", en: "Histogram" },
+  dashboardLabel: { ja: "統計ダッシュボード", en: "Statistics Dashboard" },
+  exportLabel: { ja: "エクスポート", en: "Export" },
+  exportCSVLabel: { ja: "CSV ダウンロード", en: "Download CSV" },
+  exportJSONLabel: { ja: "JSON ダウンロード", en: "Download JSON" },
+  similarMaterials: { ja: "類似材料", en: "Similar Materials" },
+  thicknessChart: { ja: "板厚別物性チャート", en: "Thickness Property Chart" },
+  copySolverCard: { ja: "ソルバーカードをコピー", en: "Copy Solver Card" },
+  copiedSolverCard: { ja: "ソルバーカードをコピーしました", en: "Copied solver card" },
+  radarChart: { ja: "レーダーチャート", en: "Radar Chart" },
+  xAxis: { ja: "X 軸", en: "X Axis" },
+  yAxis: { ja: "Y 軸", en: "Y Axis" },
+  logScale: { ja: "対数", en: "Log" },
+  property: { ja: "物性", en: "Property" },
+  downloadedCSV: { ja: "CSV をダウンロードしました", en: "Downloaded CSV" },
+  downloadedJSON: { ja: "JSON をダウンロードしました", en: "Downloaded JSON" },
+  viewGrid: { ja: "グリッド", en: "Grid" },
+  viewTable: { ja: "テーブル", en: "Table" },
+  rangeMin: { ja: "最小", en: "Min" },
+  rangeMax: { ja: "最大", en: "Max" },
 };
 
 const sortOptions = [
@@ -177,16 +208,11 @@ function subcatLabel(material) {
 }
 
 function formatStress(value) {
-  if (value == null) return "-";
-  if (Math.abs(value) >= 1e9) return `${(value / 1e9).toFixed(1)} GPa`;
-  if (Math.abs(value) >= 1e6) return `${(value / 1e6).toFixed(1)} MPa`;
-  if (Math.abs(value) >= 1e3) return `${(value / 1e3).toFixed(1)} kPa`;
-  return `${value.toFixed(2)} Pa`;
+  return Features.formatStressWithUnit(value, unitSystem);
 }
 
 function formatDensity(value) {
-  if (value == null) return "-";
-  return `${value.toLocaleString()} kg/m\u00B3`;
+  return Features.formatDensityWithUnit(value, unitSystem);
 }
 
 function esc(value) {
@@ -334,6 +360,12 @@ function getScopedMaterials() {
     const classification = material.classification || {};
     if (selectedCategory && classification.category_en !== selectedCategory) return false;
     if (selectedSubcategory && classification.subcategory_en !== selectedSubcategory) return false;
+    if (!Features.materialsMatchRangeFilters(material, rangeFilters)) return false;
+    if (solverFilterSet.size > 0) {
+      for (const solver of solverFilterSet) {
+        if (!Features.materialHasSolver(material, solver)) return false;
+      }
+    }
     return true;
   });
 }
@@ -466,6 +498,13 @@ function buildUrlFromState() {
   if (sortKey !== "name_asc") params.set("sort", sortKey);
   if (selectedMaterialId) params.set("id", selectedMaterialId);
   if (compareIds.length) params.set("compare", compareIds.join(","));
+  if (viewMode !== "grid") params.set("view", viewMode);
+  if (unitSystem !== "si") params.set("unit", unitSystem);
+  if (solverFilterSet.size > 0) params.set("solvers", [...solverFilterSet].join(","));
+  for (const [k, v] of Object.entries(rangeFilters)) {
+    if (v && v.min != null) params.set(`r_${k}_min`, String(v.min));
+    if (v && v.max != null) params.set(`r_${k}_max`, String(v.max));
+  }
   const query = params.toString();
   return `${window.location.pathname}${query ? `?${query}` : ""}`;
 }
@@ -490,6 +529,17 @@ function readUrlState() {
     .split(",")
     .map((id) => id.trim())
     .filter(Boolean);
+  viewMode = params.get("view") === "table" ? "table" : "grid";
+  unitSystem = params.get("unit") === "imperial" ? "imperial" : "si";
+  const solversParam = params.get("solvers");
+  solverFilterSet = solversParam ? new Set(solversParam.split(",").filter(Boolean)) : new Set();
+  rangeFilters = {};
+  for (const [k, v] of params.entries()) {
+    const mMin = k.match(/^r_(.+)_min$/);
+    const mMax = k.match(/^r_(.+)_max$/);
+    if (mMin) { const key = mMin[1]; if (!rangeFilters[key]) rangeFilters[key] = {}; rangeFilters[key].min = parseFloat(v); }
+    if (mMax) { const key = mMax[1]; if (!rangeFilters[key]) rangeFilters[key] = {}; rangeFilters[key].max = parseFloat(v); }
+  }
 }
 
 function readStoredArray(key) {
@@ -666,6 +716,25 @@ function applyLanguageToStaticText() {
   document.getElementById("langLabel").textContent = lang === "ja" ? "EN" : "JA";
   document.getElementById("langToggle").title = t("langTitle");
   document.getElementById("themeToggle").title = t("themeTitle");
+  document.getElementById("unitLabel").textContent = unitSystem === "si" ? "SI" : "US";
+  document.getElementById("unitToggle").title = t("unitTitle");
+  document.getElementById("solverFilterHeading").textContent = t("solverFilterHeading");
+  document.getElementById("rangeFilterHeading").textContent = t("rangeFilterHeading");
+  document.getElementById("analysisBtn").textContent = t("analysis") + " \u25BE";
+  document.getElementById("exportBtn").textContent = t("exportLabel") + " \u25BE";
+  document.getElementById("viewGridBtn").title = t("viewGrid");
+  document.getElementById("viewTableBtn").title = t("viewTable");
+  // Update dropdown items language
+  const scatterItem = document.querySelector('[data-chart="scatter"]');
+  if (scatterItem) scatterItem.textContent = t("scatterPlot");
+  const histItem = document.querySelector('[data-chart="histogram"]');
+  if (histItem) histItem.textContent = t("histogramLabel");
+  const dashItem = document.querySelector('[data-chart="dashboard"]');
+  if (dashItem) dashItem.textContent = t("dashboardLabel");
+  const csvBtn = document.getElementById("exportCSVBtn");
+  if (csvBtn) csvBtn.textContent = t("exportCSVLabel");
+  const jsonBtn = document.getElementById("exportJSONBtn");
+  if (jsonBtn) jsonBtn.textContent = t("exportJSONLabel");
   renderSortOptions();
 }
 
@@ -812,11 +881,282 @@ function getEmptyStateMessage() {
   return t("noResults");
 }
 
+/* ===== Solver & Range Filters ===== */
+function renderSolverFilters() {
+  const container = document.getElementById("solverFilters");
+  container.innerHTML = Features.SOLVER_KEYS.map(key => {
+    const checked = solverFilterSet.has(key) ? "checked" : "";
+    return `<label class="solver-filter-item"><input type="checkbox" value="${key}" ${checked}> ${Features.SOLVER_LABELS[key]}</label>`;
+  }).join("");
+  container.querySelectorAll("input[type=checkbox]").forEach(cb => {
+    cb.addEventListener("change", () => {
+      if (cb.checked) solverFilterSet.add(cb.value);
+      else solverFilterSet.delete(cb.value);
+      refreshApp();
+    });
+  });
+}
+
+function renderRangeFilters() {
+  const container = document.getElementById("rangeFilters");
+  const rangeProps = ["youngs_modulus", "density", "yield_strength"];
+  container.innerHTML = rangeProps.map(propKey => {
+    const def = Features.PROPERTY_DEFS.find(d => d.key === propKey);
+    if (!def) return "";
+    const range = Features.getPropertyRange(allMaterials, propKey);
+    if (!range) return "";
+    const label = def.label[lang];
+    const unitLabel = def.unit === "stress" ? (unitSystem === "imperial" ? "psi" : "Pa") :
+                      def.unit === "density" ? (unitSystem === "imperial" ? "lb/ft³" : "kg/m³") : "";
+    const current = rangeFilters[propKey] || {};
+    const minVal = current.min != null ? current.min : "";
+    const maxVal = current.max != null ? current.max : "";
+    return `<div class="range-filter-item" data-prop="${propKey}">
+      <div class="range-filter-header">
+        <span class="range-filter-label">${esc(label)}</span>
+        <span class="range-filter-values">${Charts.fmtAxis(range.min)} – ${Charts.fmtAxis(range.max)}</span>
+      </div>
+      <div class="range-filter-inputs">
+        <input type="number" class="range-min-input" placeholder="${t("rangeMin")}" value="${minVal}" step="any">
+        <span class="range-sep">–</span>
+        <input type="number" class="range-max-input" placeholder="${t("rangeMax")}" value="${maxVal}" step="any">
+        <span class="range-filter-unit">${esc(unitLabel)}</span>
+      </div>
+    </div>`;
+  }).join("");
+
+  container.querySelectorAll(".range-filter-item").forEach(item => {
+    const propKey = item.dataset.prop;
+    const minInput = item.querySelector(".range-min-input");
+    const maxInput = item.querySelector(".range-max-input");
+    const handler = () => {
+      clearTimeout(rangeFilterDebounce);
+      rangeFilterDebounce = setTimeout(() => {
+        const minVal = minInput.value.trim() ? parseFloat(minInput.value) : null;
+        const maxVal = maxInput.value.trim() ? parseFloat(maxInput.value) : null;
+        if ((minVal != null && !isFinite(minVal)) || (maxVal != null && !isFinite(maxVal))) return;
+        if (minVal == null && maxVal == null) { delete rangeFilters[propKey]; }
+        else { rangeFilters[propKey] = { min: minVal, max: maxVal }; }
+        refreshApp();
+      }, 350);
+    };
+    minInput.addEventListener("input", handler);
+    maxInput.addEventListener("input", handler);
+  });
+}
+
+/* ===== Table View ===== */
+function renderTableView(materials) {
+  const table = document.getElementById("materialTable");
+  const cols = [
+    { key: "name", label: lang === "ja" ? "材料名" : "Name" },
+    { key: "category", label: lang === "ja" ? "大分類" : "Category" },
+    { key: "subcategory", label: lang === "ja" ? "中分類" : "Subcategory" },
+    { key: "E", label: "E" },
+    { key: "nu", label: "ν" },
+    { key: "rho", label: "ρ" },
+    { key: "yield", label: "σy" },
+    { key: "uts", label: "σUTS" },
+    { key: "fav", label: "★" },
+  ];
+
+  let html = `<thead><tr>${cols.map(c => `<th>${esc(c.label)}</th>`).join("")}</tr></thead><tbody>`;
+  for (const m of materials) {
+    const E = getPrimaryYoungsModulus(m), rho = getPrimaryDensity(m), yld = getPrimaryYieldStrength(m);
+    const uts = m.properties?.strength_data?.ultimate_tensile_strength_pa;
+    const nu = m.properties?.linear_elastic?.poissons_ratio;
+    const isFav = favoriteIds.has(m.id);
+    html += `<tr data-id="${esc(m.id)}">
+      <td><strong>${esc(m.name)}</strong></td>
+      <td>${esc(catLabel(m))}</td>
+      <td>${esc(subcatLabel(m))}</td>
+      <td>${E != null ? formatStress(E) : "-"}</td>
+      <td>${nu != null ? nu : "-"}</td>
+      <td>${rho != null ? formatDensity(rho) : "-"}</td>
+      <td>${yld != null ? formatStress(yld) : "-"}</td>
+      <td>${uts != null ? formatStress(uts) : "-"}</td>
+      <td><button class="icon-btn card-favorite-btn ${isFav ? "active" : ""}" data-id="${esc(m.id)}" type="button">${isFav ? "★" : "☆"}</button></td>
+    </tr>`;
+  }
+  html += "</tbody>";
+  table.innerHTML = html;
+
+  table.querySelectorAll("tbody tr").forEach(row => {
+    row.addEventListener("click", e => {
+      if (e.target.closest(".card-favorite-btn")) return;
+      const m = getMaterialById(row.dataset.id);
+      if (m) openDetail(m);
+    });
+  });
+  table.querySelectorAll(".card-favorite-btn").forEach(btn => {
+    btn.addEventListener("click", e => { e.stopPropagation(); toggleFavorite(btn.dataset.id); });
+  });
+}
+
+/* ===== Analysis Panel ===== */
+function openAnalysisPanel(type) {
+  analysisPanelType = type;
+  if (selectedMaterialId) closeDetail({ syncUrl: false });
+  if (comparePanelOpen) closeComparePanel({ syncUrl: false });
+
+  const panel = document.getElementById("analysisPanel");
+  const overlay = document.getElementById("analysisOverlay");
+  renderAnalysisContent(type);
+  panel.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+  requestAnimationFrame(() => { panel.classList.add("open"); overlay.classList.add("open"); });
+}
+
+function closeAnalysisPanel() {
+  analysisPanelType = null;
+  const panel = document.getElementById("analysisPanel");
+  const overlay = document.getElementById("analysisOverlay");
+  panel.classList.remove("open"); overlay.classList.remove("open");
+  setTimeout(() => { panel.classList.add("hidden"); overlay.classList.add("hidden"); }, 250);
+}
+
+function renderAnalysisContent(type) {
+  const panel = document.getElementById("analysisPanel");
+  const materials = getFilteredMaterials();
+
+  if (type === "scatter") {
+    const defs = Features.PROPERTY_DEFS;
+    panel.innerHTML = `<div class="analysis-header">
+      <div class="analysis-title">${esc(t("scatterPlot"))}</div>
+      <div class="analysis-controls">
+        <label>${t("xAxis")}: <select id="scatterXSelect">${defs.map((d, i) => `<option value="${i}"${i === 0 ? " selected" : ""}>${esc(d.label[lang])}</option>`).join("")}</select></label>
+        <label>${t("yAxis")}: <select id="scatterYSelect">${defs.map((d, i) => `<option value="${i}"${i === 1 ? " selected" : ""}>${esc(d.label[lang])}</option>`).join("")}</select></label>
+        <label><input type="checkbox" id="scatterLogX"> ${t("logScale")} X</label>
+        <label><input type="checkbox" id="scatterLogY"> ${t("logScale")} Y</label>
+        <button class="toolbar-btn subtle" onclick="closeAnalysisPanel()" type="button">${t("close")}</button>
+      </div>
+    </div><div class="analysis-body" id="scatterBody"></div>`;
+
+    const render = () => {
+      const xi = parseInt(document.getElementById("scatterXSelect").value);
+      const yi = parseInt(document.getElementById("scatterYSelect").value);
+      Charts.renderScatterPlot(document.getElementById("scatterBody"), materials, {
+        getX: defs[xi].get, getY: defs[yi].get,
+        xLabel: defs[xi].label[lang], yLabel: defs[yi].label[lang],
+        logX: document.getElementById("scatterLogX").checked,
+        logY: document.getElementById("scatterLogY").checked,
+        onClickPoint: m => { closeAnalysisPanel(); openDetail(m); },
+      });
+    };
+    render();
+    ["scatterXSelect", "scatterYSelect", "scatterLogX", "scatterLogY"].forEach(id =>
+      document.getElementById(id).addEventListener("change", render));
+
+  } else if (type === "histogram") {
+    const defs = Features.PROPERTY_DEFS;
+    panel.innerHTML = `<div class="analysis-header">
+      <div class="analysis-title">${esc(t("histogramLabel"))}</div>
+      <div class="analysis-controls">
+        <label>${t("property")}: <select id="histPropSelect">${defs.map((d, i) => `<option value="${i}">${esc(d.label[lang])}</option>`).join("")}</select></label>
+        <button class="toolbar-btn subtle" onclick="closeAnalysisPanel()" type="button">${t("close")}</button>
+      </div>
+    </div><div class="analysis-body" id="histBody"></div>`;
+
+    const render = () => {
+      const pi = parseInt(document.getElementById("histPropSelect").value);
+      const def = defs[pi];
+      const data = materials.map(m => ({ value: def.get(m), cat: m.classification?.category_en || "Other" })).filter(d => d.value != null && isFinite(d.value));
+      Charts.renderHistogram(document.getElementById("histBody"), data, { xLabel: def.label[lang] });
+    };
+    render();
+    document.getElementById("histPropSelect").addEventListener("change", render);
+
+  } else if (type === "dashboard") {
+    const stats = Features.computeCategoryStats(materials);
+    const cats = Object.keys(stats).sort((a, b) => stats[b].count - stats[a].count);
+
+    let tableRows = cats.map(cat => {
+      const s = stats[cat];
+      return `<tr><td><span class="chart-legend-dot" style="background:${Charts.getCatColor(cat)};display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-right:4px"></span>${esc(cat)}</td>
+        <td>${s.count}</td>
+        <td>${s.E_avg ? formatStress(s.E_avg) : "-"}</td>
+        <td>${s.density_avg ? formatDensity(s.density_avg) : "-"}</td>
+        <td>${s.yield_avg ? formatStress(s.yield_avg) : "-"}</td></tr>`;
+    }).join("");
+
+    panel.innerHTML = `<div class="analysis-header">
+      <div class="analysis-title">${esc(t("dashboardLabel"))}</div>
+      <div class="analysis-controls">
+        <button class="toolbar-btn subtle" onclick="closeAnalysisPanel()" type="button">${t("close")}</button>
+      </div>
+    </div>
+    <div class="analysis-body">
+      <table class="dashboard-stats-table">
+        <thead><tr><th>${lang === "ja" ? "カテゴリ" : "Category"}</th><th>${lang === "ja" ? "件数" : "Count"}</th><th>${lang === "ja" ? "平均 E" : "Avg E"}</th><th>${lang === "ja" ? "平均密度" : "Avg Density"}</th><th>${lang === "ja" ? "平均σy" : "Avg σy"}</th></tr></thead>
+        <tbody>${tableRows}</tbody>
+      </table>
+      <div class="dashboard-grid">
+        <div class="dashboard-card"><div class="dashboard-card-title">${lang === "ja" ? "カテゴリ別 平均ヤング率" : "Avg Young's Modulus by Category"}</div><div id="dashBarE"></div></div>
+        <div class="dashboard-card"><div class="dashboard-card-title">${lang === "ja" ? "カテゴリ別 平均密度" : "Avg Density by Category"}</div><div id="dashBarDensity"></div></div>
+        <div class="dashboard-card"><div class="dashboard-card-title">${lang === "ja" ? "カテゴリ別 平均降伏強度" : "Avg Yield Strength by Category"}</div><div id="dashBarYield"></div></div>
+        <div class="dashboard-card"><div class="dashboard-card-title">${lang === "ja" ? "カテゴリ別 材料件数" : "Material Count by Category"}</div><div id="dashBarCount"></div></div>
+      </div>
+    </div>`;
+
+    requestAnimationFrame(() => {
+      const mkData = (prop) => cats.filter(c => stats[c][`${prop}_avg`]).map(c => ({ label: c, value: stats[c][`${prop}_avg`], color: Charts.getCatColor(c) }));
+      Charts.renderBarChart(document.getElementById("dashBarE"), mkData("E"), { yLabel: "E" });
+      Charts.renderBarChart(document.getElementById("dashBarDensity"), mkData("density"), { yLabel: "ρ" });
+      Charts.renderBarChart(document.getElementById("dashBarYield"), mkData("yield"), { yLabel: "σy" });
+      Charts.renderBarChart(document.getElementById("dashBarCount"), cats.map(c => ({ label: c, value: stats[c].count, color: Charts.getCatColor(c) })), { yLabel: "Count" });
+    });
+  }
+}
+
+/* ===== Export Functions ===== */
+function exportCSV() {
+  const materials = getFilteredMaterials();
+  const csv = Features.buildCSV(materials);
+  Features.downloadFile(csv, "materials_export.csv", "text/csv;charset=utf-8");
+  showToast(t("downloadedCSV"));
+}
+
+function exportJSON() {
+  const materials = getFilteredMaterials();
+  const json = JSON.stringify(materials, null, 2);
+  Features.downloadFile(json, "materials_export.json", "application/json");
+  showToast(t("downloadedJSON"));
+}
+
+/* ===== Unit Toggle ===== */
+function toggleUnitSystem() {
+  unitSystem = unitSystem === "si" ? "imperial" : "si";
+  document.getElementById("unitLabel").textContent = unitSystem === "si" ? "SI" : "US";
+  refreshApp();
+}
+
+
 function renderMaterials() {
   const container = document.getElementById("materialList");
+  const tableWrap = document.getElementById("materialTableWrap");
   const scopedMaterials = getScopedMaterials();
   const filteredMaterials = sortMaterials(filterMaterialsBySearch(scopedMaterials));
   updateMaterialCount(filteredMaterials.length, scopedMaterials.length);
+
+  // View mode toggle
+  const gridBtn = document.getElementById("viewGridBtn");
+  const tableBtn = document.getElementById("viewTableBtn");
+  gridBtn.classList.toggle("active", viewMode === "grid");
+  tableBtn.classList.toggle("active", viewMode === "table");
+
+  if (viewMode === "table") {
+    container.classList.add("hidden");
+    tableWrap.classList.remove("hidden");
+    if (filteredMaterials.length === 0) {
+      document.getElementById("materialTable").innerHTML = `<tbody><tr><td colspan="9" style="text-align:center;padding:2rem;color:var(--text-secondary)">${esc(getEmptyStateMessage())}</td></tr></tbody>`;
+    } else {
+      renderTableView(filteredMaterials);
+    }
+    return;
+  }
+
+  container.classList.remove("hidden");
+  tableWrap.classList.add("hidden");
 
   if (filteredMaterials.length === 0) {
     container.innerHTML = `<div class="no-results">${esc(getEmptyStateMessage())}</div>`;
@@ -1008,6 +1348,33 @@ function buildDetailMarkup(material) {
     </div>`;
   }
 
+  /* Solver Card Copy (Feature 10) */
+  const availableSolvers = Features.SOLVER_KEYS.filter(k => other[`${k}_mapping`]);
+  if (availableSolvers.length) {
+    html += `<div class="detail-section">
+      <div class="detail-section-title">${esc(t("copySolverCard"))}</div>
+      <div class="solver-card-btns">${availableSolvers.map(s =>
+        `<button class="solver-card-btn" data-solver="${s}" type="button">${Features.SOLVER_LABELS[s]}</button>`
+      ).join("")}</div>
+    </div>`;
+  }
+
+  /* Thickness Chart (Feature 12) */
+  const strengthData = properties.strength_data || {};
+  const hasThicknessData = strengthData.yield_strength_by_thickness_pa || strengthData.ultimate_tensile_strength_by_thickness_pa;
+  if (hasThicknessData) {
+    html += `<div class="detail-section">
+      <div class="detail-section-title">${esc(t("thicknessChart"))}</div>
+      <div id="detailThicknessChart"></div>
+    </div>`;
+  }
+
+  /* Similar Materials (Feature 11) */
+  html += `<div class="detail-section">
+    <div class="detail-section-title">${esc(t("similarMaterials"))}</div>
+    <div id="detailSimilarMaterials" class="similar-materials-list"></div>
+  </div>`;
+
   return html;
 }
 
@@ -1046,6 +1413,85 @@ function attachDetailListeners(material) {
         .join("\n");
       copyText(text, t("copiedSources"));
     });
+  }
+
+  // Solver card copy buttons (Feature 10)
+  document.querySelectorAll(".solver-card-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const card = Features.generateSolverCard(material, btn.dataset.solver);
+      if (card) copyText(card, t("copiedSolverCard"));
+    });
+  });
+
+  // Thickness chart (Feature 12)
+  const thicknessContainer = document.getElementById("detailThicknessChart");
+  if (thicknessContainer) {
+    const sd = material.properties?.strength_data || {};
+    const datasets = [];
+    if (sd.yield_strength_by_thickness_pa) {
+      datasets.push({
+        label: lang === "ja" ? "降伏強度" : "Yield Strength",
+        color: "#2563eb",
+        points: sd.yield_strength_by_thickness_pa.map(e => ({
+          x: (e.thickness_mm[0] + e.thickness_mm[1]) / 2,
+          y: e.value
+        }))
+      });
+    }
+    if (sd.ultimate_tensile_strength_by_thickness_pa) {
+      datasets.push({
+        label: lang === "ja" ? "引張強度 (min)" : "UTS (min)",
+        color: "#ef4444",
+        points: sd.ultimate_tensile_strength_by_thickness_pa.map(e => ({
+          x: (e.thickness_mm[0] + e.thickness_mm[1]) / 2,
+          y: e.min
+        }))
+      });
+      datasets.push({
+        label: lang === "ja" ? "引張強度 (max)" : "UTS (max)",
+        color: "#f97316",
+        points: sd.ultimate_tensile_strength_by_thickness_pa.map(e => ({
+          x: (e.thickness_mm[0] + e.thickness_mm[1]) / 2,
+          y: e.max
+        }))
+      });
+    }
+    if (datasets.length) {
+      Charts.renderLineChart(thicknessContainer, datasets, {
+        xLabel: lang === "ja" ? "板厚 (mm)" : "Thickness (mm)",
+        yLabel: lang === "ja" ? "応力 (Pa)" : "Stress (Pa)",
+        width: Math.min(thicknessContainer.clientWidth || 500, 600),
+      });
+    }
+  }
+
+  // Similar materials (Feature 11)
+  const similarContainer = document.getElementById("detailSimilarMaterials");
+  if (similarContainer) {
+    const similars = Features.findSimilarMaterials(material, allMaterials, 5);
+    if (similars.length === 0) {
+      similarContainer.innerHTML = `<div style="color:var(--text-secondary);font-size:0.82rem;">${lang === "ja" ? "類似材料が見つかりません" : "No similar materials found"}</div>`;
+    } else {
+      similarContainer.innerHTML = similars.map(s => {
+        const E = getPrimaryYoungsModulus(s.material);
+        const rho = getPrimaryDensity(s.material);
+        const similarity = Math.max(0, (1 - s.distance) * 100).toFixed(0);
+        return `<div class="similar-material-item" data-id="${esc(s.material.id)}">
+          <div>
+            <div class="similar-material-name">${esc(s.material.name)}</div>
+            <div class="similar-material-meta">${esc(catLabel(s.material))} | E: ${E != null ? formatStress(E) : "-"} | ρ: ${rho != null ? formatDensity(rho) : "-"}</div>
+          </div>
+          <div class="similar-material-dist">${similarity}%</div>
+        </div>`;
+      }).join("");
+      similarContainer.querySelectorAll(".similar-material-item").forEach(item => {
+        item.addEventListener("click", () => {
+          const m = getMaterialById(item.dataset.id);
+          if (m) openDetail(m);
+        });
+      });
+    }
   }
 }
 
@@ -1303,8 +1749,45 @@ function renderComparePanel() {
     });
   });
 
-  html += `</tbody></table></div></div>`;
+  html += `</tbody></table></div>`;
+
+  // Radar Chart (Feature 3)
+  html += `<div class="compare-radar-section"><div class="compare-radar-title">${esc(t("radarChart"))}</div><div id="compareRadarChart"></div></div>`;
+
+  html += `</div>`;
   panel.innerHTML = html;
+
+  // Render radar chart
+  requestAnimationFrame(() => {
+    const radarContainer = document.getElementById("compareRadarChart");
+    if (radarContainer && materials.length >= 2) {
+      const radarProps = ["youngs_modulus", "density", "yield_strength", "uts", "compressive", "poissons_ratio"];
+      const radarDefs = radarProps.map(k => Features.PROPERTY_DEFS.find(d => d.key === k)).filter(Boolean);
+      const axisLabels = radarDefs.map(d => d.label[lang]);
+
+      // Get global min/max for normalization
+      const allVals = radarDefs.map(def => {
+        const vs = allMaterials.map(m => def.get(m)).filter(v => v != null && isFinite(v));
+        return vs.length ? { min: Math.min(...vs), max: Math.max(...vs) } : { min: 0, max: 1 };
+      });
+
+      const datasets = materials.map((m, idx) => {
+        const colors = ["#2563eb", "#ef4444", "#10b981", "#f59e0b"];
+        return {
+          label: m.name,
+          color: colors[idx % colors.length],
+          values: radarDefs.map((def, i) => {
+            const v = def.get(m);
+            if (v == null) return 0;
+            const { min, max } = allVals[i];
+            return max === min ? 0.5 : (v - min) / (max - min);
+          })
+        };
+      });
+
+      Charts.renderRadarChart(radarContainer, datasets, axisLabels);
+    }
+  });
 
   const compareCloseButton = document.getElementById("compareCloseBtn");
   if (compareCloseButton) compareCloseButton.addEventListener("click", () => closeComparePanel());
@@ -1670,7 +2153,8 @@ function updateThemeIcon() {
 function initKeyboard() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      if (comparePanelOpen) closeComparePanel();
+      if (analysisPanelType) closeAnalysisPanel();
+      else if (comparePanelOpen) closeComparePanel();
       else closeDetail();
     }
     if ((event.key === "/" || event.key === "f") && !event.ctrlKey && !event.metaKey) {
@@ -1700,6 +2184,8 @@ function refreshApp() {
   renderSortOptions();
   renderMaterials();
   renderCompareBar();
+  renderSolverFilters();
+  renderRangeFilters();
 
   if (selectedMaterialId) {
     const selectedMaterial = getMaterialById(selectedMaterialId);
@@ -1736,8 +2222,10 @@ async function init() {
 
   document.getElementById("themeToggle").addEventListener("click", toggleTheme);
   document.getElementById("langToggle").addEventListener("click", toggleLang);
+  document.getElementById("unitToggle").addEventListener("click", toggleUnitSystem);
   document.getElementById("overlay").addEventListener("click", () => closeDetail());
   document.getElementById("compareOverlay").addEventListener("click", () => closeComparePanel());
+  document.getElementById("analysisOverlay").addEventListener("click", () => closeAnalysisPanel());
 
   document.getElementById("sortSelect").addEventListener("change", (event) => {
     sortKey = event.target.value;
@@ -1751,6 +2239,46 @@ async function init() {
   document.getElementById("openCompareBtn").addEventListener("click", () => openComparePanel());
   document.getElementById("compareBarOpenBtn").addEventListener("click", () => openComparePanel());
   document.getElementById("compareBarClearBtn").addEventListener("click", () => clearCompare());
+
+  // View toggle (Feature 8)
+  document.getElementById("viewGridBtn").addEventListener("click", () => { viewMode = "grid"; refreshApp(); });
+  document.getElementById("viewTableBtn").addEventListener("click", () => { viewMode = "table"; refreshApp(); });
+
+  // Analysis dropdown (Features 1, 2, 4)
+  document.getElementById("analysisBtn").addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("analysisDropdown").classList.toggle("hidden");
+    document.getElementById("exportDropdown").classList.add("hidden");
+  });
+  document.querySelectorAll("#analysisDropdown .toolbar-dropdown-item").forEach(item => {
+    item.addEventListener("click", () => {
+      document.getElementById("analysisDropdown").classList.add("hidden");
+      openAnalysisPanel(item.dataset.chart);
+    });
+  });
+
+  // Export dropdown (Feature 9)
+  document.getElementById("exportBtn").addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("exportDropdown").classList.toggle("hidden");
+    document.getElementById("analysisDropdown").classList.add("hidden");
+  });
+  document.getElementById("exportCSVBtn").addEventListener("click", () => {
+    document.getElementById("exportDropdown").classList.add("hidden");
+    exportCSV();
+  });
+  document.getElementById("exportJSONBtn").addEventListener("click", () => {
+    document.getElementById("exportDropdown").classList.add("hidden");
+    exportJSON();
+  });
+
+  // Close dropdowns on outside click
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".toolbar-dropdown-wrap")) {
+      document.getElementById("analysisDropdown").classList.add("hidden");
+      document.getElementById("exportDropdown").classList.add("hidden");
+    }
+  });
 
   document.getElementById("searchInput").addEventListener("input", (event) => {
     clearTimeout(searchDebounce);

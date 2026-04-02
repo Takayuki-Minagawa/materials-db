@@ -22,6 +22,9 @@
       </div>
     </div>
     <div class="header-right">
+      <button class="toggle-btn" id="unitToggle" title="単位系切替" type="button">
+        <span id="unitLabel">SI</span>
+      </button>
       <button class="toggle-btn" id="langToggle" title="Switch language" type="button">
         <span id="langLabel">EN</span>
       </button>
@@ -50,6 +53,14 @@
         <h3 class="sidebar-heading" id="subcategoryHeading">中分類</h3>
         <ul class="category-list" id="subcategoryList"></ul>
       </div>
+      <div class="sidebar-section">
+        <h3 class="sidebar-heading" id="solverFilterHeading">ソルバー</h3>
+        <div class="solver-filters" id="solverFilters"></div>
+      </div>
+      <div class="sidebar-section">
+        <h3 class="sidebar-heading" id="rangeFilterHeading">数値範囲</h3>
+        <div class="range-filters" id="rangeFilters"></div>
+      </div>
     </aside>
 
     <main class="main">
@@ -57,8 +68,27 @@
         <div class="toolbar-group">
           <label class="toolbar-label" id="sortLabel" for="sortSelect">並び替え</label>
           <select class="toolbar-select" id="sortSelect"></select>
+          <div class="view-toggle-group">
+            <button class="view-toggle-btn active" id="viewGridBtn" type="button" title="グリッド">▦</button>
+            <button class="view-toggle-btn" id="viewTableBtn" type="button" title="テーブル">☰</button>
+          </div>
         </div>
         <div class="toolbar-actions">
+          <div class="toolbar-dropdown-wrap">
+            <button class="toolbar-btn" id="analysisBtn" type="button">分析 ▾</button>
+            <div class="toolbar-dropdown hidden" id="analysisDropdown">
+              <button class="toolbar-dropdown-item" data-chart="scatter" type="button">散布図 (Ashby)</button>
+              <button class="toolbar-dropdown-item" data-chart="histogram" type="button">ヒストグラム</button>
+              <button class="toolbar-dropdown-item" data-chart="dashboard" type="button">統計ダッシュボード</button>
+            </div>
+          </div>
+          <div class="toolbar-dropdown-wrap">
+            <button class="toolbar-btn" id="exportBtn" type="button">エクスポート ▾</button>
+            <div class="toolbar-dropdown hidden" id="exportDropdown">
+              <button class="toolbar-dropdown-item" id="exportCSVBtn" type="button">CSV ダウンロード</button>
+              <button class="toolbar-dropdown-item" id="exportJSONBtn" type="button">JSON ダウンロード</button>
+            </div>
+          </div>
           <button class="toolbar-btn" id="copyViewLinkBtn" type="button">表示を共有</button>
           <button class="toolbar-btn" id="openCompareBtn" type="button">
             <span id="compareButtonText">比較</span>
@@ -67,6 +97,9 @@
         </div>
       </div>
       <div class="material-list" id="materialList"></div>
+      <div class="material-table-wrap hidden" id="materialTableWrap">
+        <table class="material-table" id="materialTable"></table>
+      </div>
       <div class="material-detail hidden" id="materialDetail"></div>
     </main>
   </div>
@@ -87,6 +120,11 @@
   <div class="compare-panel hidden" id="comparePanel"></div>
   <div class="toast hidden" id="toast"></div>
 
+  <div class="analysis-overlay hidden" id="analysisOverlay"></div>
+  <div class="analysis-panel hidden" id="analysisPanel"></div>
+
+  <script src="js/charts.js"></script>
+  <script src="js/features.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
