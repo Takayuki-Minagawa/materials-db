@@ -412,8 +412,8 @@ function getPrimaryYoungsModulus(material) {
   const properties = material.properties || {};
   return (
     properties.linear_elastic?.youngs_modulus_pa ??
-    properties.orthotropic_elastic?.E_x_pa ??
-    properties.orthotropic_elastic_partial?.E_x_pa ??
+    properties.orthotropic_elastic?.EX_pa ??
+    properties.orthotropic_elastic_partial?.E1_pa ??
     null
   );
 }
@@ -422,8 +422,8 @@ function getPrimaryDensity(material) {
   const properties = material.properties || {};
   return (
     properties.linear_elastic?.density_kg_m3 ??
-    properties.orthotropic_elastic?.density_kg_m3 ??
-    properties.orthotropic_elastic_partial?.density_kg_m3 ??
+    properties.orthotropic_elastic?.reference_density_kg_m3_approx ??
+    properties.orthotropic_elastic_partial?.laminate_density_kg_m3 ??
     null
   );
 }
@@ -909,12 +909,25 @@ function renderRangeFilters() {
     const unitLabel = def.unit === "stress" ? (unitSystem === "imperial" ? "psi" : "Pa") :
                       def.unit === "density" ? (unitSystem === "imperial" ? "lb/ft³" : "kg/m³") : "";
     const current = rangeFilters[propKey] || {};
-    const minVal = current.min != null ? current.min : "";
-    const maxVal = current.max != null ? current.max : "";
+    const imperialStress = unitSystem === "imperial" && def.unit === "stress";
+    const imperialDensity = unitSystem === "imperial" && def.unit === "density";
+    let displayMin = current.min, displayMax = current.max;
+    if (imperialStress) {
+      if (displayMin != null) displayMin *= 0.000145038;
+      if (displayMax != null) displayMax *= 0.000145038;
+    } else if (imperialDensity) {
+      if (displayMin != null) displayMin *= 0.062428;
+      if (displayMax != null) displayMax *= 0.062428;
+    }
+    const minVal = displayMin != null ? displayMin : "";
+    const maxVal = displayMax != null ? displayMax : "";
+    let rangeDispMin = range.min, rangeDispMax = range.max;
+    if (imperialStress) { rangeDispMin *= 0.000145038; rangeDispMax *= 0.000145038; }
+    else if (imperialDensity) { rangeDispMin *= 0.062428; rangeDispMax *= 0.062428; }
     return `<div class="range-filter-item" data-prop="${propKey}">
       <div class="range-filter-header">
         <span class="range-filter-label">${esc(label)}</span>
-        <span class="range-filter-values">${Charts.fmtAxis(range.min)} – ${Charts.fmtAxis(range.max)}</span>
+        <span class="range-filter-values">${Charts.fmtAxis(rangeDispMin)} – ${Charts.fmtAxis(rangeDispMax)}</span>
       </div>
       <div class="range-filter-inputs">
         <input type="number" class="range-min-input" placeholder="${t("rangeMin")}" value="${minVal}" step="any">
@@ -932,9 +945,19 @@ function renderRangeFilters() {
     const handler = () => {
       clearTimeout(rangeFilterDebounce);
       rangeFilterDebounce = setTimeout(() => {
-        const minVal = minInput.value.trim() ? parseFloat(minInput.value) : null;
-        const maxVal = maxInput.value.trim() ? parseFloat(maxInput.value) : null;
+        let minVal = minInput.value.trim() ? parseFloat(minInput.value) : null;
+        let maxVal = maxInput.value.trim() ? parseFloat(maxInput.value) : null;
         if ((minVal != null && !isFinite(minVal)) || (maxVal != null && !isFinite(maxVal))) return;
+        const defH = Features.PROPERTY_DEFS.find(d => d.key === propKey);
+        if (unitSystem === "imperial" && defH) {
+          if (defH.unit === "stress") {
+            if (minVal != null) minVal /= 0.000145038;
+            if (maxVal != null) maxVal /= 0.000145038;
+          } else if (defH.unit === "density") {
+            if (minVal != null) minVal /= 0.062428;
+            if (maxVal != null) maxVal /= 0.062428;
+          }
+        }
         if (minVal == null && maxVal == null) { delete rangeFilters[propKey]; }
         else { rangeFilters[propKey] = { min: minVal, max: maxVal }; }
         refreshApp();

@@ -4,9 +4,9 @@ const Features = (() => {
   /* -- Property Definitions (shared across features) -- */
   const PROPERTY_DEFS = [
     { key: "youngs_modulus", label: { ja: "ヤング率 (E)", en: "Young's Modulus (E)" }, unit: "stress",
-      get: m => m.properties?.linear_elastic?.youngs_modulus_pa ?? m.properties?.orthotropic_elastic?.E_x_pa ?? m.properties?.orthotropic_elastic_partial?.E_x_pa ?? null },
+      get: m => m.properties?.linear_elastic?.youngs_modulus_pa ?? m.properties?.orthotropic_elastic?.EX_pa ?? m.properties?.orthotropic_elastic_partial?.E1_pa ?? null },
     { key: "density", label: { ja: "密度 (ρ)", en: "Density (ρ)" }, unit: "density",
-      get: m => m.properties?.linear_elastic?.density_kg_m3 ?? m.properties?.orthotropic_elastic?.density_kg_m3 ?? m.properties?.orthotropic_elastic_partial?.density_kg_m3 ?? null },
+      get: m => m.properties?.linear_elastic?.density_kg_m3 ?? m.properties?.orthotropic_elastic?.reference_density_kg_m3_approx ?? m.properties?.orthotropic_elastic_partial?.laminate_density_kg_m3 ?? null },
     { key: "yield_strength", label: { ja: "降伏強度 (σy)", en: "Yield Strength (σy)" }, unit: "stress",
       get: m => { const s = m.properties?.strength_data; if (!s) return null; if (s.yield_strength_pa != null) return s.yield_strength_pa; if (Array.isArray(s.yield_strength_by_thickness_pa)) return s.yield_strength_by_thickness_pa.reduce((mx, e) => e.value != null ? (mx == null ? e.value : Math.max(mx, e.value)) : mx, null); return null; } },
     { key: "uts", label: { ja: "引張強度 (σUTS)", en: "UTS (σUTS)" }, unit: "stress",
@@ -129,11 +129,18 @@ const Features = (() => {
 
   /* -- Solver Card Generation -- */
   function generateSolverCard(material, solver) {
-    const le = material.properties?.linear_elastic || {};
+    const le = material.properties?.linear_elastic;
+    const oe = material.properties?.orthotropic_elastic || material.properties?.orthotropic_elastic_partial;
     const name = material.name || material.id;
-    const E = le.youngs_modulus_pa || 0, nu = le.poissons_ratio || 0, rho = le.density_kg_m3 || 0;
-    const G = le.shear_modulus_pa;
     const mapping = material.other?.[`${solver}_mapping`] || {};
+
+    if (!le && oe) {
+      return generateOrthotropicCard(oe, name, material.id, solver, mapping);
+    }
+
+    const props = le || {};
+    const E = props.youngs_modulus_pa || 0, nu = props.poissons_ratio || 0, rho = props.density_kg_m3 || 0;
+    const G = props.shear_modulus_pa;
 
     switch (solver) {
       case "ansys": {
@@ -152,6 +159,90 @@ const Features = (() => {
       }
       case "dolfinx": {
         return `# Material: ${name}\n# ID: ${material.id}\nE = ${E}  # Young's Modulus [Pa]\nnu = ${nu}  # Poisson's Ratio\nrho = ${rho}  # Density [kg/m³]\nmu = E / (2 * (1 + nu))  # Shear Modulus\nlmbda = E * nu / ((1 + nu) * (1 - 2 * nu))  # Lamé parameter\n`;
+      }
+      default: return JSON.stringify(mapping, null, 2);
+    }
+  }
+
+  function generateOrthotropicCard(oe, name, id, solver, mapping) {
+    const EX = oe.EX_pa ?? oe.E1_pa ?? null;
+    const EY = oe.EY_pa ?? oe.E2_pa ?? null;
+    const EZ = oe.EZ_pa ?? oe.E3_pa ?? null;
+    const GXY = oe.GXY_pa ?? oe.G12_pa ?? null;
+    const GYZ = oe.GYZ_pa ?? oe.G23_pa ?? null;
+    const GXZ = oe.GXZ_pa ?? oe.G13_pa ?? null;
+    const nuXY = oe.PRXY ?? oe.nu12 ?? null;
+    const nuYZ = oe.PRYZ ?? oe.nu23 ?? null;
+    const nuXZ = oe.PRXZ ?? oe.nu13 ?? null;
+    const rho = oe.reference_density_kg_m3_approx ?? oe.density_kg_m3 ?? oe.laminate_density_kg_m3 ?? null;
+    const missing = oe.missing_parameters;
+    const isPartial = missing && missing.length > 0;
+
+    switch (solver) {
+      case "ansys": {
+        let c = `! Material: ${name}\n! ID: ${id}\n! Orthotropic\n`;
+        if (isPartial) c += `! WARNING: Incomplete data – missing: ${missing.join(", ")}\n`;
+        if (EX != null) c += `MP,EX,1,${EX}\n`;
+        if (EY != null) c += `MP,EY,1,${EY}\n`;
+        if (EZ != null) c += `MP,EZ,1,${EZ}\n`;
+        if (nuXY != null) c += `MP,PRXY,1,${nuXY}\n`;
+        if (nuYZ != null) c += `MP,PRYZ,1,${nuYZ}\n`;
+        if (nuXZ != null) c += `MP,PRXZ,1,${nuXZ}\n`;
+        if (GXY != null) c += `MP,GXY,1,${GXY}\n`;
+        if (GYZ != null) c += `MP,GYZ,1,${GYZ}\n`;
+        if (GXZ != null) c += `MP,GXZ,1,${GXZ}\n`;
+        if (rho != null) c += `MP,DENS,1,${rho}\n`;
+        return c;
+      }
+      case "abaqus": {
+        if (isPartial) {
+          let c = `** Material: ${name}\n** ID: ${id}\n** Orthotropic (partial data)\n** WARNING: Incomplete data – missing: ${missing.join(", ")}\n`;
+          c += `*MATERIAL, NAME=${id.toUpperCase()}\n`;
+          if (EX != null) c += `**   E1 = ${EX}\n`;
+          if (EY != null) c += `**   E2 = ${EY}\n`;
+          if (EZ != null) c += `**   E3 = ${EZ}\n`;
+          if (nuXY != null) c += `**   Nu12 = ${nuXY}\n`;
+          if (nuXZ != null) c += `**   Nu13 = ${nuXZ}\n`;
+          if (nuYZ != null) c += `**   Nu23 = ${nuYZ}\n`;
+          if (GXY != null) c += `**   G12 = ${GXY}\n`;
+          if (GXZ != null) c += `**   G13 = ${GXZ}\n`;
+          if (GYZ != null) c += `**   G23 = ${GYZ}\n`;
+          if (rho != null) c += `*DENSITY\n${rho},\n`;
+          return c;
+        }
+        return `** Material: ${name}\n** ID: ${id}\n** Orthotropic\n*MATERIAL, NAME=${id.toUpperCase()}\n*ELASTIC, TYPE=ENGINEERING CONSTANTS\n${EX}, ${EY}, ${EZ}, ${nuXY}, ${nuXZ}, ${nuYZ}, ${GXY}, ${GXZ}\n${GYZ},\n*DENSITY\n${rho},\n`;
+      }
+      case "lsdyna": {
+        if (isPartial) {
+          let c = `$ Material: ${name}\n$ ID: ${id}\n$ Orthotropic (partial data)\n$ WARNING: Incomplete data – missing: ${missing.join(", ")}\n`;
+          if (EX != null) c += `$   EA = ${EX}\n`;
+          if (EY != null) c += `$   EB = ${EY}\n`;
+          if (EZ != null) c += `$   EC = ${EZ}\n`;
+          if (nuXY != null) c += `$   PRBA = ${nuXY}\n`;
+          if (nuXZ != null) c += `$   PRCA = ${nuXZ}\n`;
+          if (nuYZ != null) c += `$   PRCB = ${nuYZ}\n`;
+          if (GXY != null) c += `$   GAB = ${GXY}\n`;
+          if (GYZ != null) c += `$   GBC = ${GYZ}\n`;
+          if (GXZ != null) c += `$   GCA = ${GXZ}\n`;
+          if (rho != null) c += `$   RO = ${rho}\n`;
+          return c;
+        }
+        return `$ Material: ${name}\n$ ID: ${id}\n$ Orthotropic\n*MAT_ORTHOTROPIC_ELASTIC\n$      MID        RO        EA        EB        EC      PRBA      PRCA      PRCB\n         1  ${rho}  ${EX}  ${EY}  ${EZ}  ${nuXY}  ${nuXZ}  ${nuYZ}\n$      GAB       GBC       GCA\n  ${GXY}  ${GYZ}  ${GXZ}\n`;
+      }
+      case "dolfinx": {
+        let c = `# Material: ${name}\n# ID: ${id}\n# Orthotropic\n`;
+        if (isPartial) c += `# WARNING: Incomplete data – missing: ${missing.join(", ")}\n`;
+        if (EX != null) c += `EX = ${EX}  # Young's Modulus X [Pa]\n`;
+        if (EY != null) c += `EY = ${EY}  # Young's Modulus Y [Pa]\n`;
+        if (EZ != null) c += `EZ = ${EZ}  # Young's Modulus Z [Pa]\n`;
+        if (nuXY != null) c += `nu_xy = ${nuXY}  # Poisson's Ratio XY\n`;
+        if (nuYZ != null) c += `nu_yz = ${nuYZ}  # Poisson's Ratio YZ\n`;
+        if (nuXZ != null) c += `nu_xz = ${nuXZ}  # Poisson's Ratio XZ\n`;
+        if (GXY != null) c += `G_xy = ${GXY}  # Shear Modulus XY [Pa]\n`;
+        if (GYZ != null) c += `G_yz = ${GYZ}  # Shear Modulus YZ [Pa]\n`;
+        if (GXZ != null) c += `G_xz = ${GXZ}  # Shear Modulus XZ [Pa]\n`;
+        if (rho != null) c += `rho = ${rho}  # Density [kg/m³]\n`;
+        return c;
       }
       default: return JSON.stringify(mapping, null, 2);
     }
