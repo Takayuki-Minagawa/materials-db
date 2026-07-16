@@ -5100,6 +5100,520 @@
         "Abaqus Hashin requires Xt, Xc, Yt, Yc, longitudinal shear strength SL and transverse shear strength ST",
         "PLY FABRIC is the separate Abaqus/Explicit initiation criterion for bidirectional fabric-reinforced composites"
       ]
+    },
+    "royal_armament_research_and_development_establishment_uk_mod_via_dtic": {
+      "title": "The Basic Ply Properties of a Kevlar 49/Epoxy Resin Composite System, RARDE Report 11/83 (M L C Jones, Nov 1983), DTIC AD-A136 614",
+      "publisher": "Royal Armament Research and Development Establishment (UK MoD), via DTIC / Internet Archive",
+      "url": "https://archive.org/download/DTIC_ADA136614/DTIC_ADA136614.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density (specific gravity 1.4)",
+        "E1",
+        "E2",
+        "G12",
+        "nu12",
+        "longitudinal tensile/compressive strength",
+        "transverse tensile/compressive strength",
+        "in-plane shear strength and modulus",
+        "interlaminar shear strength",
+        "resin system and cure",
+        "fibre volume fractions"
+      ]
+    },
+    "plos_one_via_pubmed_central_pmc7313735_experimental_evaluation_of_stif": {
+      "title": "Experimental evaluation of stiffness predictions of multiaxial flax fibre composites by classical laminate theory (Ueki, Lilholt, Madsen, PLoS ONE, 2020)",
+      "publisher": "PLoS ONE via PubMed Central (PMC7313735)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7313735/",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "laminate density",
+        "tensile stiffness",
+        "tensile strength",
+        "failure strain",
+        "fibre volume fraction",
+        "resin system",
+        "manufacturing/cure conditions"
+      ]
+    },
+    "fiberline_composites_a_s_european_standard_en_13706_characteristic_pro": {
+      "title": "European Standard EN 13706 - characteristic properties of Fiberline structural profiles",
+      "publisher": "Fiberline Composites A/S",
+      "url": "https://fiberline.com/european-standard-en-13706",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "tensile modulus longitudinal/transverse",
+        "tensile strength longitudinal/transverse",
+        "bending strength",
+        "interlaminar shear strength",
+        "pin-bearing strength",
+        "modulus of elasticity (Annex D)"
+      ]
+    },
+    "engineered_composites_ltd_pultruded_grp_profiles_technical_guide_for_e": {
+      "title": "Pultruded GRP Profiles: Technical Guide for Engineers and Specifiers",
+      "publisher": "Engineered Composites Ltd",
+      "url": "https://engineered-composites.co.uk/pultruded-grp-profiles-technical-guide/",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "typical density 1850 kg/m3",
+        "E23 minimum glass content 60 wt%"
+      ]
+    },
+    "3a_composites_core_materials_airex_ag_airex_t92_structural_and_sustain": {
+      "title": "AIREX T92 Structural and Sustainable - Data Sheet 02.2024 (GM--TDS-121)",
+      "publisher": "3A Composites Core Materials / Airex AG",
+      "url": "https://trident-foams.files.svdcdn.com/production/files/3A-Composites/T92/TDS-AIREX-T92-E-02.2024-1.pdf?dm=1738766002",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "compressive strength/modulus",
+        "tensile strength/modulus",
+        "shear strength/modulus",
+        "shear elongation",
+        "test standards"
+      ]
+    },
+    "3a_composites_core_materials_airex_ag_airex_c70_universal_structural_f": {
+      "title": "AIREX C70 Universal Structural Foam - Data Sheet 08.2022 (GM--TDS-094)",
+      "publisher": "3A Composites Core Materials / Airex AG",
+      "url": "https://www.3accorematerials.com/uploads/pdf/TDS-AIREX-C70-E-08.2022-ex-Europe.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "compressive strength/modulus",
+        "tensile strength/modulus",
+        "shear strength/modulus",
+        "shear elongation",
+        "test standards"
+      ]
+    },
+    "evonik_operations_gmbh_rohacell_ig_f_product_information_april_2022": {
+      "title": "ROHACELL IG-F Product Information (April 2022)",
+      "publisher": "Evonik Operations GmbH",
+      "url": "https://products.evonik.com/assets/35/34/ROHACELL_IG_F_2022_April_EN_243534.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "compressive strength/modulus",
+        "tensile strength/modulus",
+        "shear strength/modulus",
+        "test standards",
+        "processing limits"
+      ]
+    },
+    "icc_evaluation_service_llc_icc_es_evaluation_report_esr_1652_aercon_au": {
+      "title": "ICC-ES Evaluation Report ESR-1652: AERCON Autoclaved Aerated Concrete (AAC) Panels and AERCON Thin-Bed Mortar (Reissued May 2026)",
+      "publisher": "ICC Evaluation Service, LLC",
+      "url": "https://icc-es.org/wp-content/uploads/report-directory/ESR-1652.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs_modulus",
+        "compressive_strength",
+        "allowable stresses",
+        "standards compliance"
+      ]
+    },
+    "structville_use_of_lightweight_concrete_in_rc_design_en_1992_1_1_secti": {
+      "title": "Use of Lightweight Concrete in RC Design (EN 1992-1-1 Section 11 density classes and eta_1 / eta_E formulas)",
+      "publisher": "Structville",
+      "url": "https://structville.com/2021/05/use-of-lightweight-concrete-in-rc-design.html",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density class table",
+        "eta_1 formula",
+        "eta_E formula",
+        "design densities"
+      ]
+    },
+    "eurocodeapplied_com_table_of_concrete_design_properties_fcd_fctm_ecm_f": {
+      "title": "Table of concrete design properties (fcd, fctm, Ecm, fctd) - Eurocode 2",
+      "publisher": "EurocodeApplied.com",
+      "url": "https://eurocodeapplied.com/design/en1992/concrete-design-properties",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "fctm and Ecm of base class C30/37",
+        "Ecm formula",
+        "poissons_ratio"
+      ]
+    },
+    "master_builders_solutions_mb_solutions_australia_pty_ltd_masterflow_64": {
+      "title": "MasterFlow 648 Technical Data Sheet (MasterFlow-648-ANZ-V10-0623)",
+      "publisher": "Master Builders Solutions (MB Solutions Australia Pty Ltd)",
+      "url": "https://assets.ctfassets.net/ctspkgm1yw3s/DMSY-1685695220-128848/14a07467ed717122765ebc49102ab1fb/masterflow-648-tds.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs_modulus (flexural)",
+        "compressive_strength",
+        "tensile_strength",
+        "flexural_strength",
+        "thermal expansion"
+      ]
+    },
+    "henkel_technical_data_sheet_loctite_ea_9461_known_as_hysol_9461_septem": {
+      "title": "Technical Data Sheet LOCTITE EA 9461 (known as Hysol 9461), September 2016",
+      "publisher": "Henkel",
+      "url": "https://datasheets.tdx.henkel.com/LOCTITE-EA-9461-en_GL.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "youngs_modulus (tensile)",
+        "tensile_strength",
+        "elongation",
+        "lap_shear_strength",
+        "component specific gravity",
+        "hardness"
+      ]
+    },
+    "huntsman_advanced_materials_distributor_hosted_copy_araldite_2015_1_te": {
+      "title": "Araldite 2015-1 Technical Datasheet, June 2017 (Huntsman Advanced Materials)",
+      "publisher": "Huntsman Advanced Materials (distributor-hosted copy)",
+      "url": "https://www.filzring.de/intern/datasheets/ARA-2000/TDB_ARA_2015-1_EN.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs_modulus (tensile)",
+        "tensile_strength",
+        "elongation",
+        "lap_shear_strength",
+        "flexural_strength",
+        "Tg",
+        "shear modulus"
+      ]
+    },
+    "itw_performance_polymers_plexus_ma300_technical_data_sheet_last_update": {
+      "title": "Plexus MA300 Technical Data Sheet (last update 17/01/2025)",
+      "publisher": "ITW Performance Polymers",
+      "url": "https://itwperformancepolymers.com/wp-content/uploads/Plexus-MA300-TDS.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density (component)",
+        "youngs_modulus (tensile)",
+        "tensile_strength",
+        "elongation",
+        "lap_shear_strength",
+        "hardness",
+        "cure profile"
+      ]
+    },
+    "azom_azo_materials_magnesium_az31b_h24_uns_m11311_alloy_article_id_862": {
+      "title": "Magnesium AZ31B-H24 (UNS M11311) Alloy (Article ID 8621)",
+      "publisher": "AZoM (AZo Materials)",
+      "url": "https://www.azom.com/article.aspx?ArticleID=8621",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs modulus",
+        "poissons ratio",
+        "shear modulus",
+        "yield strength",
+        "ultimate tensile strength",
+        "elongation",
+        "hardness"
+      ]
+    },
+    "azom_azo_materials_aisi_4140_alloy_steel_uns_g41400_article_id_6769": {
+      "title": "AISI 4140 Alloy Steel (UNS G41400) (Article ID 6769)",
+      "publisher": "AZoM (AZo Materials)",
+      "url": "https://www.azom.com/article.aspx?ArticleID=6769",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs modulus (range)",
+        "poissons ratio (range)",
+        "shear modulus",
+        "yield strength",
+        "ultimate tensile strength",
+        "elongation",
+        "hardness"
+      ]
+    },
+    "special_metals_corporation_inconel_alloy_625_technical_bulletin_aug_20": {
+      "title": "INCONEL alloy 625 technical bulletin (Aug 2013)",
+      "publisher": "Special Metals Corporation",
+      "url": "https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-625.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs modulus",
+        "poissons ratio",
+        "shear modulus",
+        "strength ranges (Table 5)"
+      ]
+    },
+    "high_temp_metals_inc_inconel_625_technical_data": {
+      "title": "Inconel 625 Technical Data",
+      "publisher": "High Temp Metals, Inc.",
+      "url": "https://www.hightempmetals.com/techdata/hitempInconel625data.php",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "yield strength (plate)",
+        "ultimate tensile strength (plate)",
+        "elongation (plate)"
+      ]
+    },
+    "saint_gobain_ceramics_norbide_hot_pressed_boron_carbide_technical_data": {
+      "title": "Norbide Hot Pressed Boron Carbide Technical Data (Form No. B-1050)",
+      "publisher": "Saint-Gobain Ceramics",
+      "url": "https://www.ceramicsrefractories.saint-gobain.com/sites/hps-mac3-cma-pcr/files/2021-08/HPR-Norbide-Boron-Carbide-TDS.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs modulus",
+        "poissons ratio",
+        "flexural strength",
+        "compressive strength",
+        "hardness",
+        "fracture toughness"
+      ]
+    },
+    "international_syalons_newcastle_limited_syalon_101_datasheet_advanced": {
+      "title": "Syalon 101 datasheet - Advanced Silicon Nitride & Sialon Ceramics",
+      "publisher": "International Syalons (Newcastle) Limited",
+      "url": "https://www.syalons.com/wp-content/uploads/2018/03/syalon-101-datasheet.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs modulus",
+        "poissons ratio",
+        "flexural strength",
+        "compressive strength",
+        "fracture toughness",
+        "hardness"
+      ]
+    },
+    "accuratus_corporation_mullite_3al2o3_2sio2_ceramic_properties": {
+      "title": "Mullite, 3Al2O3.2SiO2 Ceramic Properties",
+      "publisher": "Accuratus Corporation",
+      "url": "https://accuratus.com/mullite.html",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs modulus",
+        "flexural strength",
+        "compressive strength",
+        "hardness"
+      ]
+    },
+    "ceramics_silikaty_institute_of_chemical_technology_prague_elastic_prop": {
+      "title": "Elastic properties of mullite and mullite-containing ceramics, Part 1 (Ceramics-Silikaty 57(4) 265-274, 2013), W. Pabst, E. Gregorova, T. Uhlirova, A. Musilova",
+      "publisher": "Ceramics-Silikaty / Institute of Chemical Technology Prague",
+      "url": "https://www2.irsm.cas.cz/materialy/cs_content/2013/Pabst_CS_2013_0002.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "poissons ratio (0.281, dense polycrystalline mullite)"
+      ]
+    },
+    "drake_plastics_torlon_4203_data_sheet_typical_properties_data_courtesy": {
+      "title": "Torlon 4203 Data Sheet (typical properties, data courtesy of Solvay Advanced Polymers)",
+      "publisher": "Drake Plastics",
+      "url": "https://drakeplastics.com/wp-content/uploads/2015/09/Torlon-4203-Data-Sheet.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "tensile modulus",
+        "tensile strength",
+        "elongation",
+        "poissons_ratio",
+        "flexural strength/modulus",
+        "compressive strength",
+        "shear strength",
+        "HDT"
+      ]
+    },
+    "material_data_center_covestro_deutschland_ag_data_material_data_center": {
+      "title": "Material Data Center Datasheet Makrolon 2807",
+      "publisher": "Material Data Center (Covestro Deutschland AG data)",
+      "url": "https://www.materialdatacenter.com/ms/en/tradenames/Makrolon/Covestro+Deutschland+AG/Makrolon%C2%AE+2807/b1700647/410",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "tensile modulus",
+        "yield stress",
+        "yield strain",
+        "nominal strain at break"
+      ]
+    },
+    "mitsubishi_chemical_advanced_materials_tivar_1000_virgin_uhmw_pe_produ": {
+      "title": "TIVAR 1000 Virgin UHMW-PE Product Datasheet (rev. 07/03/2023)",
+      "publisher": "Mitsubishi Chemical Advanced Materials",
+      "url": "https://www.mcam.com/mam/datasheets/PE-TIVAR%C2%AE%201000%20UHMW-PE%20natural_en_US.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "tensile modulus",
+        "tensile/yield strength",
+        "yield strain",
+        "elongation at break",
+        "flexural strength",
+        "Shore D hardness"
+      ]
+    },
+    "material_data_center_basf_polyurethanes_gmbh_data_material_data_center": {
+      "title": "Material Data Center Datasheet Elastollan 1185 A",
+      "publisher": "Material Data Center (BASF Polyurethanes GmbH data)",
+      "url": "https://www.materialdatacenter.com/ms/en/tradenames/Elastollan/BASF+Polyurethanes+GmbH/Elastollan%C2%AE+1185+A/65a16011/906",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "Shore hardness",
+        "tensile strength",
+        "elongation",
+        "100%/300% modulus",
+        "tear strength",
+        "abrasion",
+        "predrying condition"
+      ]
+    },
+    "celanese_datasheet_pdf_hosted_by_picoplast_santoprene_101_73_tpv_produ": {
+      "title": "SANTOPRENE 101-73 - TPV Product Description (Celanese Materials Database, rev. 11-Feb-2022)",
+      "publisher": "Celanese (datasheet PDF hosted by Picoplast)",
+      "url": "https://www.picoplast.nl/uploads/Santoprene%20101%2073%20-%20MDS%20-%20EN.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "Shore A hardness",
+        "tensile strength",
+        "elongation",
+        "100% modulus",
+        "tear strength",
+        "compression set",
+        "brittleness temperature"
+      ]
+    },
+    "polymax_ltd_technical_data_sheet_compound_v75_viton_fkm_fluorocarbon": {
+      "title": "Technical Data Sheet Compound V75 - Viton (FKM - Fluorocarbon)",
+      "publisher": "Polymax Ltd",
+      "url": "https://www.polymax.co.uk/media/documents/Datasheet/ORing_Viton-75.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "specific gravity/density",
+        "Shore A hardness",
+        "tensile strength",
+        "elongation",
+        "compression set",
+        "temperature range"
+      ]
+    },
+    "mdpi_open_access_copy_via_pubmed_central_pmc11279227_mechanical_proper": {
+      "title": "Mechanical Properties of Rock Salt from the Kłodawa Salt Dome — A Statistical Analysis of Geomechanical Data (Materials, 17(14), 3564, 2024)",
+      "publisher": "MDPI, open-access copy via PubMed Central (PMC11279227)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11279227/",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "unconfined compressive strength",
+        "Young's modulus",
+        "Poisson's ratio",
+        "cohesion",
+        "friction angle",
+        "specimen/test conditions"
+      ]
+    },
+    "international_society_for_soil_mechanics_and_geotechnical_engineering": {
+      "title": "Some Physical and Engineering Properties of Chalk (Meigh, A.C. and Early, K.R., Proc. 4th Int. Conf. ISSMFE, London, 1957, paper 1a/16)",
+      "publisher": "International Society for Soil Mechanics and Geotechnical Engineering (ISSMGE) Online Library",
+      "url": "https://www.issmge.org/uploads/publications/1/41/1957_01_0016.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "dry density",
+        "moisture content",
+        "specific gravity",
+        "unconfined compressive strength",
+        "Young's modulus range",
+        "drained and undrained cohesion and friction angle",
+        "test conditions"
+      ]
+    },
+    "open_access_article_via_pubmed_central_pmc12917201_predicting_the_mech": {
+      "title": "Predicting the mechanical behavior of municipal solid waste layers in the Barmshour Landfill stability analysis",
+      "publisher": "open-access article via PubMed Central (PMC12917201)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12917201/",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "unit weight",
+        "Young's modulus",
+        "Poisson's ratio",
+        "friction angle",
+        "cohesion",
+        "age-dependent parameter ranges"
+      ]
+    },
+    "structural_basics_glulam_strength_classes_and_their_strength_and_stiff": {
+      "title": "Glulam strength classes and their strength and stiffness properties (EN 14080:2013)",
+      "publisher": "Structural Basics",
+      "url": "https://www.structuralbasics.com/glulam-strength-stiffness/",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs_modulus",
+        "shear_modulus",
+        "bending_strength",
+        "tension_parallel",
+        "tension_perpendicular",
+        "compression_parallel",
+        "compression_perpendicular",
+        "shear_strength"
+      ]
+    },
+    "pollmeier_furnierwerkstoffe_gmbh_declaration_of_performance_no_pm_021": {
+      "title": "Declaration of Performance No. PM-021-2025, BauBuche GL75 Beam",
+      "publisher": "Pollmeier Furnierwerkstoffe GmbH",
+      "url": "https://www.pollmeier.com/wp-content/uploads/2025/07/EN_Beam-BauBuche-GL75_Declaration-of-Performance.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs_modulus",
+        "orthotropic_moduli",
+        "shear_modulus",
+        "bending_strength",
+        "tension_parallel",
+        "tension_perpendicular",
+        "compression_parallel",
+        "compression_perpendicular",
+        "shear_strength",
+        "moisture_content",
+        "service_classes"
+      ]
+    },
+    "national_glass_association_nga_glass_technical_paper_fm05_12_2023_phys": {
+      "title": "Glass Technical Paper FM05-12 (2023): Physical and Mechanical Properties of Typical Soda Lime Float Glass",
+      "publisher": "National Glass Association (NGA)",
+      "url": "https://www.glass.org/sites/default/files/2023-07/FM05-12_2023_Physical_Mechanical_Properties_Typical_Soda_Lime_Float_Glass.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs_modulus",
+        "poissons_ratio",
+        "shear_modulus",
+        "bending_strength_mean",
+        "bending_strength_design",
+        "hardness",
+        "thermal_expansion"
+      ]
+    },
+    "spectraglass_limited_datasheet_m010_soda_lime_silica_float": {
+      "title": "Datasheet M010: Soda Lime Silica Float",
+      "publisher": "Spectraglass Limited",
+      "url": "https://spectraglass.com/wp-content/uploads/2013/09/M010-Soda-Lime-Silica-Float.pdf",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "density",
+        "youngs_modulus",
+        "poissons_ratio",
+        "bending_strength_mean",
+        "bending_strength_design"
+      ]
+    },
+    "glassonweb_com_glass_structures_engineering_relation_between_edge_stre": {
+      "title": "Relation between edge stress, bending strength, surface stress and fracture pattern of thermally toughened glass",
+      "publisher": "glassonweb.com (Glass Structures & Engineering)",
+      "url": "https://www.glassonweb.com/article/relation-between-edge-stress-bending-strength-surface-stress-and-fracture-pattern-thermally",
+      "accessed_at": "2026-07-16",
+      "info_used": [
+        "bending_strength_characteristic_EN12150"
+      ]
     }
   },
   "materials": [
@@ -74461,6 +74975,1466 @@
       "sources": {
         "source_ids": [
           "ceramtec_rocar_s1"
+        ]
+      }
+    },
+    {
+      "id": "composite_kevlar_49_my750_epoxy_ud_lamina_rarde_report_11_83",
+      "name": "Kevlar 49 / MY750 Epoxy UD Lamina (RARDE Report 11/83)",
+      "classification": {
+        "category_ja": "複合材料",
+        "category_en": "Composite",
+        "subcategory_ja": "アラミド繊維強化プラスチック（一方向ラミナ）",
+        "subcategory_en": "Aramid fiber reinforced polymer (AFRP) unidirectional lamina"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1400
+        },
+        "orthotropic_elastic_partial": {
+          "E1_pa": 65000000000,
+          "E2_pa": 4500000000,
+          "G12_pa": 2600000000,
+          "nu12": 0.45
+        },
+        "strength_data": {
+          "longitudinal_tensile_strength_pa": 1800000000,
+          "longitudinal_compressive_strength_pa": 230000000,
+          "transverse_tensile_strength_pa": 15000000,
+          "transverse_compressive_strength_pa": 140000000,
+          "in_plane_shear_strength_pa": 73000000,
+          "interlaminar_shear_strength_pa": 58800000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "unidirectional filament-wound Kevlar 49 / Ciba-Geigy MY750-HY917-DY063 epoxy lamina; fibre volume fraction 0.41-0.62 depending on test specimen (see notes); tested at 23 C / 50 % RH",
+        "notes": [
+          "Experimental characterization of a unidirectional Kevlar 49 (DuPont, type 969, 5070 dtex) / epoxy (Ciba-Geigy MY750/HY917/DY063, 100:85:2 pbw, cured 2 h at 90 C + 1 h at 130 C + 1.5 h at 150 C) system by RARDE (UK MoD), Report 11/83.",
+          "Summary-table values with specimen fibre volume fraction in brackets: E1 = 65 GPa and longitudinal tensile strength 1800 MPa (Vf 53 %); nu12 = 0.45 (Vf 46 %); E2 = 4.5 GPa and transverse tensile strength 15 MPa (Vf 41 %, hoop-wound tubes gave 5.0 GPa / 21 MPa at Vf 62 %); G12 = 2.6 GPa and in-plane shear strength 73 MPa (Vf 48 %); longitudinal compressive strength 230 MPa (Vf 60 %); transverse compressive strength 140 MPa (Vf 48 %).",
+          "Interlaminar shear strength 58.8 MPa is the mean for pre-dried fibres, leaky-mould specimens, Vf 0.45 (Table 14).",
+          "Density 1400 kg/m3 from the report's stated typical specific gravity of 1.4 for Kevlar/epoxy composites.",
+          "Report highlights poor longitudinal compressive and transverse tensile strengths, typical of aramid composites; unsuitable where significant compressive or bending stresses exist."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "royal_armament_research_and_development_establishment_uk_mod_via_dtic"
+        ]
+      }
+    },
+    {
+      "id": "composite_flax_epoxy_uniaxial_laminate_bcomp_amplitex_flax_yarn_vf_41",
+      "name": "Flax/Epoxy Uniaxial Laminate (Bcomp ampliTex flax yarn, Vf 41 %)",
+      "classification": {
+        "category_ja": "複合材料",
+        "category_en": "Composite",
+        "subcategory_ja": "天然繊維（亜麻）強化プラスチック積層板",
+        "subcategory_en": "Natural fiber (flax) reinforced polymer laminate"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1301,
+          "youngs_modulus_pa": 25000000000
+        },
+        "strength_data": {
+          "tensile_strength_pa": 331000000,
+          "tensile_failure_strain": 0.02
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "uniaxial lay-up (14 winding layers) of flax yarns from Bcomp ampliTex 5008 non-crimp fabric with Araldite LY1564SP/3486 epoxy, vacuum infusion, cured 5 h at 50 C + post-cured 4.5 h at 80 C; fibre volume fraction 41 %",
+        "notes": [
+          "Peer-reviewed experimental data (Ueki, Lilholt & Madsen, PLoS ONE 2020): uniaxial flax/epoxy composite stiffness 25.0 +/- 0.3 GPa, tensile strength 331 +/- 9 MPa, failure strain 2.0 +/- 0.1 %, measured density 1.301 +/- 0.002 g/cm3.",
+          "Values are in the fibre (yarn) direction of the uniaxial laminate; transverse properties and Poisson's ratio were not reported for this lay-up.",
+          "Matrix epoxy measured separately: density 1.151 g/cm3, modulus 3.0 GPa, Poisson's ratio 0.35.",
+          "Flax fibres are moisture sensitive; properties apply to laboratory ambient conditions."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "plos_one_via_pubmed_central_pmc7313735_experimental_evaluation_of_stif"
+        ]
+      }
+    },
+    {
+      "id": "composite_fiberline_pultruded_gfrp_structural_profile_en_13706_grade_e",
+      "name": "Fiberline Pultruded GFRP Structural Profile - EN 13706 Grade E23",
+      "classification": {
+        "category_ja": "複合材料",
+        "category_en": "Composite",
+        "subcategory_ja": "引抜成形ガラス繊維強化プラスチック構造形材",
+        "subcategory_en": "Pultruded glass fiber reinforced polymer (GFRP) structural profile"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1850,
+          "youngs_modulus_pa": 23000000000
+        },
+        "orthotropic_elastic_partial": {
+          "E1_pa": 23000000000,
+          "E2_pa": 7000000000
+        },
+        "strength_data": {
+          "longitudinal_tensile_strength_pa": 240000000,
+          "transverse_tensile_strength_pa": 50000000,
+          "longitudinal_flexural_strength_pa": 240000000,
+          "transverse_flexural_strength_pa": 100000000,
+          "interlaminar_shear_strength_pa": 25000000,
+          "longitudinal_pin_bearing_strength_pa": 150000000,
+          "transverse_pin_bearing_strength_pa": 70000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "pultruded E-glass reinforced polymer structural profile; EN 13706-2:2002 grade E23 characteristic (minimum) values as declared by Fiberline; glass content minimum 60 % by weight; room temperature",
+        "notes": [
+          "Values are EN 13706 grade E23 characteristic minimum requirements met by Fiberline structural profiles: tensile modulus 23 GPa (longitudinal) / 7 GPa (transverse) per EN ISO 527-4; tensile strength 240/50 MPa; bending strength 240/100 MPa per EN ISO 14125; interlaminar shear 25 MPa per EN ISO 14130; pin-bearing 150/70 MPa per EN 13706-2 Annex E.",
+          "Because these are grade minima, actual profile properties are equal to or better than the listed values; longitudinal modulus of elasticity per EN 13706-2 Annex D full-scale test is also 23 GPa.",
+          "Density 1850 kg/m3 is a typical value for pultruded GRP structural profiles (approximately 1/4 of steel), from Engineered Composites' technical guide for EN 13706 pultruded profiles.",
+          "Fiberline notes its grey (flame-retardant) profiles meet E23 except transverse tensile strength, which is 35 MPa.",
+          "Treated as transversely isotropic in-plane: E1 = longitudinal (pultrusion) direction, E2 = transverse; G12 and nu12 not declared under EN 13706."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "fiberline_composites_a_s_european_standard_en_13706_characteristic_pro",
+          "engineered_composites_ltd_pultruded_grp_profiles_technical_guide_for_e"
+        ]
+      }
+    },
+    {
+      "id": "foam_airex_t92_100_pet_structural_foam",
+      "name": "AIREX T92.100 PET Structural Foam",
+      "classification": {
+        "category_ja": "フォーム",
+        "category_en": "Foam",
+        "subcategory_ja": "PET（ポリエチレンテレフタレート）構造フォームコア",
+        "subcategory_en": "Thermoplastic PET structural foam core"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 100,
+          "youngs_modulus_pa": 90000000
+        },
+        "strength_data": {
+          "compressive_strength_perpendicular_pa": 1550000,
+          "compressive_modulus_perpendicular_pa": 90000000,
+          "tensile_strength_perpendicular_pa": 2300000,
+          "tensile_modulus_perpendicular_pa": 110000000,
+          "shear_strength_pa": 900000,
+          "shear_modulus_pa": 26000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "closed-cell recycled-PET structural foam core; nominal density 100 kg/m3 (typical range 95-105 kg/m3); average values per manufacturer TDS 02.2024, test sample thickness 20 mm",
+        "notes": [
+          "3A Composites AIREX T92 datasheet 02.2024 (GM--TDS-121), average values for T92.100: compressive strength 1.55 N/mm2 (min 1.4) per ISO 844/ASTM C365; compressive modulus 90 N/mm2 (min 65) per ASTM C365 (110 N/mm2 per ISO 844 B); tensile strength/modulus perpendicular to plane 2.3/110 N/mm2 per ASTM C297; shear strength 0.9 N/mm2 (min 0.75) and shear elongation at break 20 % per ISO 1922.",
+          "Shear modulus 26 N/mm2 parallel to welding lines, 23 N/mm2 across welding lines (min 19), ISO 1922.",
+          "youngs_modulus_pa is the perpendicular-to-plane compressive modulus (ASTM C365 average), the stiffness value normally used for sandwich core modelling.",
+          "Datasheet minima are DNV-GL type-approval statistical minimum values.",
+          "Recyclable thermoplastic core, process temperature up to 150 C, negligible water absorption."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "3a_composites_core_materials_airex_ag_airex_t92_structural_and_sustain"
+        ]
+      }
+    },
+    {
+      "id": "foam_airex_c70_75_pvc_structural_foam",
+      "name": "AIREX C70.75 PVC Structural Foam",
+      "classification": {
+        "category_ja": "フォーム",
+        "category_en": "Foam",
+        "subcategory_ja": "架橋PVC構造フォームコア",
+        "subcategory_en": "Cross-linked PVC structural foam core"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 80,
+          "youngs_modulus_pa": 104000000
+        },
+        "strength_data": {
+          "compressive_strength_perpendicular_pa": 1450000,
+          "compressive_modulus_perpendicular_pa": 104000000,
+          "tensile_strength_in_plane_pa": 2000000,
+          "tensile_modulus_in_plane_pa": 66000000,
+          "shear_strength_pa": 1200000,
+          "shear_modulus_pa": 26000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "closed-cell cross-linked polymer (PVC) structural foam core; nominal density 80 kg/m3 (typical range 72-92 kg/m3); average values per manufacturer TDS 08.2022, specimens at least 40 mm thick",
+        "notes": [
+          "3A Composites AIREX C70 datasheet 08.2022 (GM--TDS-094), average values for C70.75: compressive strength perpendicular 1.45 N/mm2 (min 1.10) per ISO 844/ASTM C365; compressive modulus 104 N/mm2 (min 80) per ISO 844/DIN 53421 (84 N/mm2 per ASTM C365); tensile strength/modulus in plane 2.0/66 N/mm2 per ISO 527 1-2; shear strength 1.2 N/mm2 (min 1.0), shear modulus 26 N/mm2 (min 21) and shear elongation 18 % per ISO 1922 (shear modulus 30 N/mm2 per ASTM C393).",
+          "youngs_modulus_pa is the perpendicular-to-plane compressive modulus (ISO 844/DIN 53421 average).",
+          "Minimum values follow the DNV-GL type-approval definition.",
+          "Self-extinguishing, negligible water absorption, good styrene resistance; widely used marine/rail/wind sandwich core."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "3a_composites_core_materials_airex_ag_airex_c70_universal_structural_f"
+        ]
+      }
+    },
+    {
+      "id": "foam_rohacell_71_ig_f_pmi_structural_foam",
+      "name": "ROHACELL 71 IG-F PMI Structural Foam",
+      "classification": {
+        "category_ja": "フォーム",
+        "category_en": "Foam",
+        "subcategory_ja": "ポリメタクリルイミド（PMI）硬質構造フォームコア",
+        "subcategory_en": "Polymethacrylimide (PMI) rigid structural foam core"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 75,
+          "youngs_modulus_pa": 73000000
+        },
+        "strength_data": {
+          "compressive_strength_pa": 1500000,
+          "compressive_modulus_pa": 73000000,
+          "tensile_strength_pa": 2800000,
+          "tensile_modulus_pa": 92000000,
+          "shear_strength_pa": 1300000,
+          "shear_modulus_pa": 29000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "closed-cell rigid PMI foam, industrial grade, fine cell structure; nominal density 75 +/- 15 kg/m3; typical values for nominal density per Evonik product information April 2022",
+        "notes": [
+          "Evonik ROHACELL IG-F product information (April 2022), ROHACELL 71 IG-F: compressive strength 1.5 MPa and compressive modulus 73 MPa per ISO 844/ASTM D1621; tensile strength 2.8 MPa and tensile modulus 92 MPa per ISO 527-2/ASTM D638; shear strength 1.3 MPa and shear modulus 29 MPa per DIN 53294/ASTM C273.",
+          "youngs_modulus_pa is the compressive modulus (ISO 844); the in-plane tensile modulus is higher (92 MPa).",
+          "Density tolerance +/- 15 kg/m3, valid for full-size sheets of minimum 10 mm thickness.",
+          "Suitable for prepreg processing, resin infusion and RTM up to 130 C and 0.3 MPa; thermoformable; contains no CFCs.",
+          "Distinct product line from the ROHACELL HERO grades already in the database (different property set and application profile)."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "evonik_operations_gmbh_rohacell_ig_f_product_information_april_2022"
+        ]
+      }
+    },
+    {
+      "id": "concrete_aercon_aac_class_ac4_reinforced_panel_astm_c1693",
+      "name": "AERCON AAC Class AC4 reinforced panel (ASTM C1693)",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "オートクレーブ気泡コンクリート（ALC）",
+        "subcategory_en": "Autoclaved Aerated Concrete (AAC)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 600,
+          "youngs_modulus_pa": 2480000000
+        },
+        "strength_data": {
+          "compressive_strength_pa": 4310000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "Autoclave-cured precast AAC, strength class AC4, dry (moisture content stabilizes at 4-8%); values per ICC-ES ESR-1652 Table 2",
+        "notes": [
+          "Minimum compressive strength f'AAC = 626 psi (4.31 MPa) for class AC4 per ICC-ES ESR-1652 Table 2; modulus of elasticity E = 360,000 psi (2.48 GPa).",
+          "Nominal dry density 40 lb/ft3 (600 kg/m3); dry density tolerance 40 +/- 1.6 pcf; design dead weight 49 pcf (approx. 785 kg/m3).",
+          "Allowable stresses per ESR-1652 Table 2: compressive 157 psi (1.08 MPa), flexural tensile 24 psi (0.165 MPa), shear 17 psi (0.117 MPa) - allowable design values, not characteristic strengths.",
+          "Material complies with ASTM C1693 (AAC) and ASTM C1694 (reinforced AAC elements); SI conversions per the report (1 psi = 6.89 kPa, 1 pcf = 16.018 kg/m3).",
+          "Coefficient of thermal expansion 4.4e-6 /degF; thermal conductivity 1.11 Btu-in/(ft2-h-degF)."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "icc_evaluation_service_llc_icc_es_evaluation_report_esr_1652_aercon_au"
+        ]
+      }
+    },
+    {
+      "id": "concrete_eurocode_2_lightweight_aggregate_concrete_lc30_33_density_cl",
+      "name": "Eurocode 2 lightweight aggregate concrete LC30/33 (density class D1.8)",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "軽量骨材コンクリート",
+        "subcategory_en": "Lightweight Aggregate Concrete"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1800,
+          "youngs_modulus_pa": 21980000000,
+          "poissons_ratio": 0.2
+        },
+        "strength_data": {
+          "compressive_strength_pa": 30000000,
+          "tensile_strength_pa": 2580000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "28-day characteristic values per EN 1992-1-1 Section 11, density class 1.8 (oven-dry density 1601-1800 kg/m3), upper class density rho = 1800 kg/m3 used for eta factors",
+        "notes": [
+          "LC30/33: characteristic cylinder strength flck = 30 MPa, cube strength flck,cube = 33 MPa.",
+          "Secant modulus Elcm = eta_E x Ecm with eta_E = (rho/2200)^2 = 0.6694 and Ecm(C30/37) = 32,837 MPa (Ecm = 22000(fcm/10)^0.3, fcm = 38 MPa), giving Elcm = 21,980 MPa (21.98 GPa).",
+          "Mean tensile strength flctm = eta_1 x fctm with eta_1 = 0.4 + 0.6(rho/2200) = 0.8909 and fctm(C30/37) = 2.90 MPa, giving flctm = 2.58 MPa.",
+          "Density class 1.8 range 1601-1800 kg/m3 (oven-dry); EC2 design densities: 1850 kg/m3 (plain), 1950 kg/m3 (reinforced concrete).",
+          "Poisson's ratio 0.2 for uncracked concrete per EN 1992-1-1 3.1.3(4).",
+          "Derived values computed from EN 1992-1-1 formulas and tables reproduced by the cited sources; not a proprietary product."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 21980000000,
+            "PRXY": 0.2,
+            "DENS_kg_m3": 1800
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 21980000000,
+            "nu": 0.2
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "structville_use_of_lightweight_concrete_in_rc_design_en_1992_1_1_secti",
+          "eurocodeapplied_com_table_of_concrete_design_properties_fcd_fctm_ecm_f"
+        ]
+      }
+    },
+    {
+      "id": "concrete_masterflow_648_epoxy_grout_standard_flow_mix",
+      "name": "MasterFlow 648 epoxy grout (standard flow mix)",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "エポキシグラウト",
+        "subcategory_en": "Epoxy Grout"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2170,
+          "youngs_modulus_pa": 15000000000
+        },
+        "strength_data": {
+          "compressive_strength_pa": 100000000,
+          "tensile_strength_pa": 15000000,
+          "flexural_strength_pa": 31000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "Standard flow mix (5 bags filler per resin/hardener set), tested at 23C; strengths at 7 days unless noted; per Master Builders Solutions ANZ TDS V10-0623",
+        "notes": [
+          "Three-component, solvent-free, high-flow epoxy resin grout for machinery baseplates and precision alignment.",
+          "Compressive strength (ASTM C579 B, modified 50 mm cubes, 23C): 85 MPa at 1 day, 100 MPa at 7 days; 59 MPa at 7 days tested at 60C.",
+          "Tensile strength 15 MPa at 7 days (ASTM C307); flexural strength 31 MPa at 7 days (ASTM C880-74).",
+          "Modulus 15.0 GPa is the 7-day flexural modulus at 23C per ASTM C1181 (11.6 GPa at 60C); used here as the elastic modulus.",
+          "Mixed density 2.17 kg/L (2170 kg/m3) at 23C; coefficient of thermal expansion 34e-6 /C (23-99C).",
+          "Hi-flow mix (4 bags filler) values are lower: 85 MPa compressive (7 d), 13 MPa tensile, 28 MPa flexural, 11.0 GPa flexural modulus, density 2090 kg/m3."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "master_builders_solutions_mb_solutions_australia_pty_ltd_masterflow_64"
+        ]
+      }
+    },
+    {
+      "id": "adhesive_loctite_ea_9461_two_part_epoxy",
+      "name": "LOCTITE EA 9461 (two-part epoxy)",
+      "classification": {
+        "category_ja": "接着剤",
+        "category_en": "Adhesive",
+        "subcategory_ja": "二液性エポキシ構造用接着剤",
+        "subcategory_en": "Two-Part Epoxy Structural Adhesive"
+      },
+      "properties": {
+        "linear_elastic": {
+          "youngs_modulus_pa": 2757000000
+        },
+        "strength_data": {
+          "tensile_strength_pa": 30000000,
+          "lap_shear_strength_pa": 21000000,
+          "elongation_percent": 3.5
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "Cured 7 days at 22C; bulk tensile on 1.2 mm thick samples (ISO 527-2); lap shear per ISO 4587",
+        "notes": [
+          "Two-part amine-cured epoxy paste (1:1 by volume), room-temperature cure, max gap 3.0 mm; high peel and shear strength.",
+          "Lap shear (ISO 4587, cured 7 d at 22C): abraded aluminum 21 N/mm2; grit-blasted mild steel 25 N/mm2; stainless steel 19 N/mm2; reported value is for aluminum.",
+          "Bulk tensile (ISO 527-2): strength 30 N/mm2, modulus 2757 N/mm2, elongation 3.5%; Shore D hardness 80.",
+          "Mixed density not stated; component specific gravities at 25C: resin 1.35, hardener 1.31 (mixed 1:1 by volume).",
+          "180-degree peel strength 10 N/mm on grit-blasted mild steel (ISO 8510-2)."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "henkel_technical_data_sheet_loctite_ea_9461_known_as_hysol_9461_septem"
+        ]
+      }
+    },
+    {
+      "id": "adhesive_araldite_2015_1_two_part_epoxy",
+      "name": "Araldite 2015-1 (two-part epoxy)",
+      "classification": {
+        "category_ja": "接着剤",
+        "category_en": "Adhesive",
+        "subcategory_ja": "二液性エポキシ構造用接着剤",
+        "subcategory_en": "Two-Part Epoxy Structural Adhesive"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1400,
+          "youngs_modulus_pa": 1600000000
+        },
+        "strength_data": {
+          "tensile_strength_pa": 31000000,
+          "lap_shear_strength_pa": 20000000,
+          "flexural_strength_pa": 43000000,
+          "elongation_percent": 4.2
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "Tensile: cured 16 h at 40C, tested at 23C (ISO 527); lap shear: sand-blasted aluminium alloy, cured 16 h at 40C, tested at 23C (ISO 4587)",
+        "notes": [
+          "Two-component toughened epoxy paste (mix ratio 100:100 by weight and volume), room-temperature curing, non-sagging up to 10 mm; suited to GRP/SMC and dissimilar-substrate bonding.",
+          "Tensile (ISO 527, typical average): strength 31 MPa, modulus 1.6 GPa, elongation at break 4.2%; flexural (ISO 178): 43 MPa, modulus 1800 MPa.",
+          "Lap shear on sand-blasted aluminium approx. 20 MPa (typical average, read from datasheet bar chart); product specification lap shear at 25C is > 15 MPa (test method A501).",
+          "Specific gravity of mixed adhesive 1.4 (1400 kg/m3).",
+          "Glass transition temperature 78C by DMA (cured 1 h at 80C); DMA shear modulus G' = 900 MPa at 20C (ISO 6721)."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "huntsman_advanced_materials_distributor_hosted_copy_araldite_2015_1_te"
+        ]
+      }
+    },
+    {
+      "id": "adhesive_plexus_ma300_methacrylate",
+      "name": "Plexus MA300 (methacrylate)",
+      "classification": {
+        "category_ja": "接着剤",
+        "category_en": "Adhesive",
+        "subcategory_ja": "メタクリレート系構造用接着剤",
+        "subcategory_en": "Methacrylate (MMA) Structural Adhesive"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 980,
+          "youngs_modulus_pa": 1793000000
+        },
+        "strength_data": {
+          "tensile_strength_pa": 26900000,
+          "lap_shear_strength_pa": 21800000,
+          "elongation_percent": 30
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "Room-temperature cured, 1:1 mix; tensile per ASTM D638 / ISO 527; lap shear per ASTM D1002 on aluminum",
+        "notes": [
+          "Two-part methacrylate (MMA) structural adhesive, 1:1 mix ratio, working time 3-6 min at 23C; bonds thermoplastics, metals and composites; gap tolerance 0.25-3.2 mm.",
+          "Tensile (ASTM D638/ISO 527) datasheet ranges: strength 24.2-29.6 MPa (midpoint 26.9 MPa reported), modulus 1524-2062 MPa (midpoint 1793 MPa reported), elongation at break 20-40% (midpoint 30% reported).",
+          "Typical lap shear (ASTM D1002): aluminum 21.8 MPa (adhesive failure), stainless steel 23.1 MPa (cohesive failure), PC/ABS 8.1 MPa (substrate failure).",
+          "Density: component densities 1.00 g/ml (Part A) and 0.96 g/ml (Part B) +/- 0.02; 980 kg/m3 is the 1:1 volumetric average.",
+          "Shore D hardness 78; reaches 6.9 MPa lap shear handling strength in 13-16 min at 23.9C.",
+          "TDS last update date 17 Jan 2025 (ITW Performance Polymers)."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "itw_performance_polymers_plexus_ma300_technical_data_sheet_last_update"
+        ]
+      }
+    },
+    {
+      "id": "metal_magnesium_az31b_h24_sheet",
+      "name": "Magnesium AZ31B-H24 sheet",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "マグネシウム合金",
+        "subcategory_en": "Magnesium alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1770,
+          "youngs_modulus_pa": 45000000000,
+          "poissons_ratio": 0.35
+        },
+        "strength_data": {
+          "yield_strength_pa": 220000000,
+          "ultimate_tensile_strength_pa": 290000000,
+          "elongation_percent": 15,
+          "hardness_brinell_hb": 73,
+          "shear_modulus_pa": 17000000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "hard rolled sheet, H24 temper, room temperature",
+        "notes": [
+          "UNS M11311; nominal composition Mg-3Al-1Zn.",
+          "H24 = partially strain hardened and partially annealed.",
+          "Tensile yield strength quoted at 0.2% strain; elongation over 50 mm gauge; Brinell hardness at 500 kg load.",
+          "Not present in existing database (no magnesium alloys listed)."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 45000000000,
+            "PRXY": 0.35,
+            "DENS_kg_m3": 1770
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 45000000000,
+            "nu": 0.35
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "azom_azo_materials_magnesium_az31b_h24_uns_m11311_alloy_article_id_862"
+        ]
+      }
+    },
+    {
+      "id": "metal_aisi_4140_alloy_steel_annealed",
+      "name": "AISI 4140 alloy steel (annealed)",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "クロムモリブデン鋼（低合金鋼）",
+        "subcategory_en": "Low-alloy Cr-Mo steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.285
+        },
+        "strength_data": {
+          "yield_strength_pa": 415000000,
+          "ultimate_tensile_strength_pa": 655000000,
+          "elongation_percent": 25.7,
+          "hardness_brinell_hb": 197,
+          "shear_modulus_pa": 80000000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "annealed bar, room temperature",
+        "notes": [
+          "UNS G41400; chromium-molybdenum medium-carbon alloy steel.",
+          "Source lists elastic modulus as a range 190-210 GPa; midpoint 200 GPa recorded here.",
+          "Source lists Poisson's ratio as a range 0.27-0.30; midpoint 0.285 recorded here.",
+          "Strength values apply to the annealed condition; heat treatment/tempering (205-649 C) raises tensile strength to roughly 900-1550 MPa.",
+          "Elongation over 50 mm gauge."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.285,
+            "DENS_kg_m3": 7850
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.285
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "azom_azo_materials_aisi_4140_alloy_steel_uns_g41400_article_id_6769"
+        ]
+      }
+    },
+    {
+      "id": "metal_inconel_alloy_625_annealed_plate",
+      "name": "INCONEL alloy 625 (annealed plate)",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "ニッケル基超合金",
+        "subcategory_en": "Nickel-based superalloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8440,
+          "youngs_modulus_pa": 207500000000,
+          "poissons_ratio": 0.278
+        },
+        "strength_data": {
+          "yield_strength_pa": 452000000,
+          "ultimate_tensile_strength_pa": 910000000,
+          "elongation_percent": 46,
+          "shear_modulus_pa": 81400000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "plate, annealed at 1052 C (1925 F) rapid cooled, room temperature",
+        "notes": [
+          "UNS N06625 / W.Nr. 2.4856; Ni-Cr-Mo-Nb alloy, service from cryogenic to 982 C.",
+          "Young's modulus 207.5 GPa and Poisson's ratio 0.278 are dynamic values at 21 C for annealed hot-rolled rod (Special Metals bulletin, Table 4); shear modulus 81.4 GPa from the same table.",
+          "Strength values are typical for 1/4 in plate annealed at 1925 F (High Temp Metals); Special Metals Table 5 gives annealed rod/bar/plate ranges: TS 827-1034 MPa, YS 414-655 MPa, elongation 60-30%, hardness 145-220 HB.",
+          "Distinct alloy from INCONEL 600 and 718 already in the database."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 207500000000,
+            "PRXY": 0.278,
+            "DENS_kg_m3": 8440
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 207500000000,
+            "nu": 0.278
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "special_metals_corporation_inconel_alloy_625_technical_bulletin_aug_20",
+          "high_temp_metals_inc_inconel_625_technical_data"
+        ]
+      }
+    },
+    {
+      "id": "ceramic_saint_gobain_norbide_hot_pressed_boron_carbide",
+      "name": "Saint-Gobain Norbide hot pressed boron carbide",
+      "classification": {
+        "category_ja": "セラミックス",
+        "category_en": "Ceramics",
+        "subcategory_ja": "炭化ホウ素",
+        "subcategory_en": "Boron carbide"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2500,
+          "youngs_modulus_pa": 440000000000,
+          "poissons_ratio": 0.18
+        },
+        "strength_data": {
+          "flexural_strength_pa": 425000000,
+          "compressive_strength_pa": 2900000000,
+          "hardness_knoop_kg_mm2": 2800,
+          "fracture_toughness_mpa_sqrt_m": 3.1
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "hot pressed, near theoretical density, room temperature",
+        "notes": [
+          "B4C, one of the hardest engineering ceramics; used for blast nozzles, wear parts and ballistic armor.",
+          "Flexural strength is 4-point at room temperature, test bar 3 x 4 x 45 mm; Knoop hardness at 0.1 kg load.",
+          "Fracture toughness by indentation at room temperature.",
+          "No boron carbide grade currently in the database."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 440000000000,
+            "PRXY": 0.18,
+            "DENS_kg_m3": 2500
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 440000000000,
+            "nu": 0.18
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "saint_gobain_ceramics_norbide_hot_pressed_boron_carbide_technical_data"
+        ]
+      }
+    },
+    {
+      "id": "ceramic_international_syalons_syalon_101",
+      "name": "International Syalons Syalon 101",
+      "classification": {
+        "category_ja": "セラミックス",
+        "category_en": "Ceramics",
+        "subcategory_ja": "サイアロン（窒化ケイ素系）",
+        "subcategory_en": "Sialon (silicon nitride family)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 3240,
+          "youngs_modulus_pa": 288000000000,
+          "poissons_ratio": 0.23
+        },
+        "strength_data": {
+          "flexural_strength_pa": 945000000,
+          "compressive_strength_pa": 3500000000,
+          "hardness_vickers_hv50_kg_mm2": 1500,
+          "fracture_toughness_mpa_sqrt_m": 7.7
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "sintered beta-sialon, fully dense (0% porosity), 20 C",
+        "notes": [
+          "General-purpose beta-sialon engineering grade; maximum use temperature 1200 C.",
+          "Flexural strength is 3-point modulus of rupture at 20 C (specimen 3 x 3 x 50 mm, span 19.05 mm); 700 MPa at 1000 C; Weibull modulus 15.",
+          "Compressive strength quoted by manufacturer as >3500 MPa; 3500 MPa recorded as lower bound.",
+          "Datasheet states properties were measured by independent testing authorities.",
+          "Existing database has Si3N4 grades (CoorsTek SSN, Kyocera SN240O) but no sialon."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 288000000000,
+            "PRXY": 0.23,
+            "DENS_kg_m3": 3240
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 288000000000,
+            "nu": 0.23
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "international_syalons_newcastle_limited_syalon_101_datasheet_advanced"
+        ]
+      }
+    },
+    {
+      "id": "ceramic_mullite_cast_extruded_accuratus_grade",
+      "name": "Mullite (cast/extruded, Accuratus grade)",
+      "classification": {
+        "category_ja": "セラミックス",
+        "category_en": "Ceramics",
+        "subcategory_ja": "ムライト（アルミノケイ酸塩）",
+        "subcategory_en": "Mullite (aluminosilicate)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2800,
+          "youngs_modulus_pa": 151000000000,
+          "poissons_ratio": 0.281
+        },
+        "strength_data": {
+          "flexural_strength_pa": 180000000,
+          "compressive_strength_pa": 1310000000,
+          "hardness_kg_mm2": 1070
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "cast and extruded, room temperature",
+        "notes": [
+          "Nominal composition 3Al2O3.2SiO2; low thermal expansion and good thermal-shock resistance; kiln furniture and refractory structural use.",
+          "Density, Young's modulus and strengths from the Accuratus datasheet (cast/extruded commercial grade, contains some porosity: dense mullite is ~3.14 g/cm3).",
+          "Poisson's ratio not given by Accuratus; 0.281 is the recommended literature value for dense polycrystalline mullite (Pabst et al. 2013, who also recommend E = 224.9 GPa for fully dense pore-free mullite - the lower 151 GPa modulus here reflects the porosity of the commercial grade).",
+          "No mullite grade currently in the database."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 151000000000,
+            "PRXY": 0.281,
+            "DENS_kg_m3": 2800
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 151000000000,
+            "nu": 0.281
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "accuratus_corporation_mullite_3al2o3_2sio2_ceramic_properties",
+          "ceramics_silikaty_institute_of_chemical_technology_prague_elastic_prop"
+        ]
+      }
+    },
+    {
+      "id": "polymer_torlon_4203_pai",
+      "name": "Torlon 4203 PAI",
+      "classification": {
+        "category_ja": "高分子",
+        "category_en": "Polymer",
+        "subcategory_ja": "ポリアミドイミド（PAI）、無充填",
+        "subcategory_en": "Polyamide-imide (PAI), unfilled"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1420,
+          "youngs_modulus_pa": 4900000000,
+          "poissons_ratio": 0.45
+        },
+        "strength_data": {
+          "tensile_strength_pa": 192000000,
+          "elongation_at_break_percent": 15,
+          "flexural_strength_pa": 244000000,
+          "flexural_modulus_pa": 5000000000,
+          "compressive_strength_pa": 220000000,
+          "shear_strength_pa": 128000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "stock shapes / molded specimens, dry, 23°C (ASTM test methods)",
+        "notes": [
+          "Unfilled polyamide-imide, toughest and most impact-resistant Torlon grade; continuous use up to ~260°C.",
+          "Tensile data per ASTM D1708 at 23°C; strength retained at elevated temperature (117 MPa at 135°C, 66 MPa at 232°C).",
+          "HDT 278°C at 1.82 MPa (ASTM D648); density per ASTM D1505 (1.42 g/cm³); Poisson's ratio 0.45 as listed on datasheet.",
+          "Data courtesy of Solvay Advanced Polymers (now Syensqo), republished by Drake Plastics."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 4900000000,
+            "PRXY": 0.45,
+            "DENS_kg_m3": 1420
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 4900000000,
+            "nu": 0.45
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "drake_plastics_torlon_4203_data_sheet_typical_properties_data_courtesy"
+        ]
+      }
+    },
+    {
+      "id": "polymer_makrolon_2807_pc",
+      "name": "Makrolon 2807 PC",
+      "classification": {
+        "category_ja": "高分子",
+        "category_en": "Polymer",
+        "subcategory_ja": "ポリカーボネート（PC）、中粘度・UV安定化",
+        "subcategory_en": "Polycarbonate (PC), medium viscosity, UV stabilized"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1200,
+          "youngs_modulus_pa": 2400000000
+        },
+        "strength_data": {
+          "tensile_strength_pa": 66000000,
+          "yield_strength_pa": 66000000,
+          "yield_strain_percent": 6.1,
+          "nominal_strain_at_break_percent": 50
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "injection molded ISO specimens (ISO 294), dry, 23°C",
+        "notes": [
+          "General purpose medium-viscosity injection molding polycarbonate, UV stabilized, easy release (Covestro).",
+          "Tensile modulus 2400 MPa and yield stress 66 MPa at 6.1% yield strain per ISO 527; nominal strain at break >50% (ductile, no break below 50%).",
+          "Density 1200 kg/m³ per ISO 1183.",
+          "Tensile strength value reported is the yield stress; PC typically breaks above yield after extensive drawing."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "material_data_center_covestro_deutschland_ag_data_material_data_center"
+        ]
+      }
+    },
+    {
+      "id": "polymer_tivar_1000_uhmw_pe_natural",
+      "name": "TIVAR 1000 UHMW-PE (natural)",
+      "classification": {
+        "category_ja": "高分子",
+        "category_en": "Polymer",
+        "subcategory_ja": "超高分子量ポリエチレン（UHMW-PE）",
+        "subcategory_en": "Ultra-high molecular weight polyethylene (UHMW-PE)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 930,
+          "youngs_modulus_pa": 750000000
+        },
+        "strength_data": {
+          "tensile_strength_pa": 19000000,
+          "yield_strength_pa": 19000000,
+          "yield_strain_percent": 15,
+          "elongation_at_break_percent": 50,
+          "flexural_strength_pa": 17000000,
+          "shore_hardness_d": 60
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "specimens machined from extruded stock shapes, dry, 23°C (ISO methods)",
+        "notes": [
+          "Virgin UHMW-PE stock shape grade (Mitsubishi Chemical Advanced Materials); FDA 21 CFR 177.1520 compliant; excellent wear and impact resistance.",
+          "ISO values: tensile strength 19 MPa and 15% yield strain (ISO 527-1/-2), tensile modulus 750 MPa at 1 mm/min, elongation at break 50% (ISO); ASTM D638 basis reports 300% elongation and 5800 psi (40 MPa) ultimate.",
+          "Density 0.93 g/cm³ (ISO 1183-1); Shore D 60 (ISO 868); Charpy unnotched: no break.",
+          "Values are indicative averages for dry specimens machined from rods/plates at 23°C; not for specification limits."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "mitsubishi_chemical_advanced_materials_tivar_1000_virgin_uhmw_pe_produ"
+        ]
+      }
+    },
+    {
+      "id": "elastomer_elastollan_1185_a_tpu",
+      "name": "Elastollan 1185 A TPU",
+      "classification": {
+        "category_ja": "エラストマー",
+        "category_en": "Elastomer",
+        "subcategory_ja": "熱可塑性ポリウレタンエラストマー（TPU、ポリエーテル系）",
+        "subcategory_en": "Thermoplastic polyurethane elastomer (TPU, polyether-based)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1120
+        },
+        "strength_data": {
+          "tensile_strength_pa": 45000000,
+          "elongation_at_break_percent": 300,
+          "shore_hardness_a": 87,
+          "shore_hardness_d": 36,
+          "modulus_100_percent_pa": 6000000,
+          "modulus_300_percent_pa": 10000000,
+          "tear_strength_n_per_m": 70000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "injection molded specimens, predried 2-3 h at 100-110°C before processing, tested at 23°C (ISO methods)",
+        "notes": [
+          "BASF polyether-based TPU, nominal 85 Shore A; good hydrolysis resistance and low-temperature flexibility.",
+          "Stress at break 45 MPa and strain at break >300% per ISO 527 (elongation recorded as the datasheet lower bound of 300%).",
+          "Stress at 100% elongation 6 MPa, at 300% elongation 10 MPa (ISO 527); tear strength 70 kN/m (ISO 34-1); abrasion loss 25 mm³ (ISO 4649).",
+          "Density 1120 kg/m³ (ISO 1183); Shore A 87 / Shore D 36 (ISO 7619-1)."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "material_data_center_basf_polyurethanes_gmbh_data_material_data_center"
+        ]
+      }
+    },
+    {
+      "id": "elastomer_santoprene_101_73_tpv",
+      "name": "Santoprene 101-73 TPV",
+      "classification": {
+        "category_ja": "エラストマー",
+        "category_en": "Elastomer",
+        "subcategory_ja": "熱可塑性加硫エラストマー（TPV、EPDM/PP系）",
+        "subcategory_en": "Thermoplastic vulcanizate (TPV, EPDM/PP)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 970
+        },
+        "strength_data": {
+          "tensile_strength_pa": 7980000,
+          "elongation_at_break_percent": 478,
+          "shore_hardness_a": 78,
+          "modulus_100_percent_pa": 3440000,
+          "tear_strength_n_per_m": 25000,
+          "compression_set_70c_22h_percent": 27
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "injection molded laboratory specimens, tested perpendicular to flow, 23°C (ISO/ASTM methods)",
+        "notes": [
+          "Soft, black, general-purpose polyolefin-based TPV (Celanese, formerly ExxonMobil Advanced Elastomer Systems); recyclable in the thermoplastic stream.",
+          "Shore A 78 (ISO 868, 15 s); tensile stress at break 7.98 MPa and strain at break 478% (ISO 37 / ASTM D412, perpendicular).",
+          "Tensile stress at 100% elongation 3.44 MPa (ISO 37); tear strength 25 kN/m (ISO 34-1, Method Ba); compression set 27% (70°C/22h) and 41% (125°C/70h).",
+          "Density 970 kg/m³ (ISO 1183); brittleness temperature -60°C (ASTM D746)."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "celanese_datasheet_pdf_hosted_by_picoplast_santoprene_101_73_tpv_produ"
+        ]
+      }
+    },
+    {
+      "id": "elastomer_polymax_v75_viton_fkm",
+      "name": "Polymax V75 Viton FKM",
+      "classification": {
+        "category_ja": "エラストマー",
+        "category_en": "Elastomer",
+        "subcategory_ja": "フッ素ゴム（FKM、バイトン）、ショアA75 Oリングコンパウンド",
+        "subcategory_en": "Fluoroelastomer (FKM, Viton), 75 Shore A O-ring compound"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1813
+        },
+        "strength_data": {
+          "tensile_strength_pa": 11800000,
+          "elongation_at_break_percent": 209,
+          "shore_hardness_a": 75,
+          "compression_set_175c_22h_percent": 9
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "molded and cured O-ring compound, black, tested per ASTM D2000 M2HK810 A1-10 B37 EF31, 23°C",
+        "notes": [
+          "Black Viton (FKM fluorocarbon) O-ring compound complying with ASTM D2000 M2HK810 A1-10 B37 EF31; tested values reported alongside spec requirements.",
+          "Tested: Shore A 75 (spec 75±5), tensile strength 11.8 MPa (spec min 10), elongation at break 209% (spec min 150); specific gravity 1.813.",
+          "Compression set 9% after 22 h at 175°C; operating temperature range -20 to +210°C.",
+          "Heat aging 250°C/70h: +4 hardness points, -13% tensile, -19% elongation; Fuel C immersion 23°C/70h: +6% volume change."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "polymax_ltd_technical_data_sheet_compound_v75_viton_fkm_fluorocarbon"
+        ]
+      }
+    },
+    {
+      "id": "soil_rock_salt_halite_k_odawa_salt_dome_intact_reference",
+      "name": "Rock salt (halite) — Kłodawa Salt Dome intact reference",
+      "classification": {
+        "category_ja": "地盤・土質",
+        "category_en": "Soil",
+        "subcategory_ja": "蒸発岩（岩塩）",
+        "subcategory_en": "Evaporite rock (rock salt)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2090,
+          "youngs_modulus_pa": 2326000000,
+          "poissons_ratio": 0.29
+        },
+        "strength_data": {
+          "unconfined_compressive_strength_pa": 20500000,
+          "friction_angle_deg": 37.64,
+          "cohesion_pa": 2880000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "intact cylindrical laboratory specimens (h ≈ 10 cm, d ≈ 5 cm), uniaxial and triaxial compression tests, Kłodawa Salt Dome, Poland",
+        "notes": [
+          "Density is the mean of 1844-2251 kg/m3 (source Table 3).",
+          "UCS is the mean of 7.81-34.22 MPa (source Table 5); median 20.55 MPa.",
+          "Young's modulus is the mean of 414-4923 MPa (source Table 6); median 2123 MPa. Rock salt is strongly creep-prone, so elastic modulus applies to short-term loading only.",
+          "Poisson's ratio is the mean of 0.04-0.49 (source Table 7).",
+          "Cohesion 2.88 MPa and friction angle 37.64 deg from Mohr-Coulomb fit to triaxial stress-path data for combined Fields 1-6 (source Table 13, Pearson r = 0.918); triaxial radial pressures approx. 2-25 MPa."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 2326000000,
+            "PRXY": 0.29,
+            "DENS_kg_m3": 2090
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 2326000000,
+            "nu": 0.29
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "mdpi_open_access_copy_via_pubmed_central_pmc11279227_mechanical_proper"
+        ]
+      }
+    },
+    {
+      "id": "soil_upper_middle_chalk_se_england_intact_saturated_reference",
+      "name": "Upper/Middle Chalk (SE England) — intact saturated reference",
+      "classification": {
+        "category_ja": "地盤・土質",
+        "category_en": "Soil",
+        "subcategory_ja": "炭酸塩岩（チョーク・白亜）",
+        "subcategory_en": "Carbonate rock (chalk)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1950,
+          "youngs_modulus_pa": 697000000
+        },
+        "strength_data": {
+          "unconfined_compressive_strength_pa": 3970000,
+          "friction_angle_deg": 21,
+          "cohesion_pa": 896000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "intact block/core specimens, approx. 95% saturated, Upper and Middle Chalk of south-east England (Coulsdon quarry blocks and Tilbury diamond-drill cores); high-pressure triaxial and unconfined compression tests",
+        "notes": [
+          "Density is bulk density computed from sourced dry density (92-101 lb/cu ft, i.e. 1.47-1.62 g/cm3) and sourced moisture content 23-26% at ~95% saturation: approx. 1.9-2.0 g/cm3; 1950 kg/m3 adopted.",
+          "Young's modulus sourced as E = 6500-13000 ton/sq ft (UK long ton); conservative low value 6500 ton/sq ft = ~0.70 GPa adopted, range up to ~1.39 GPa. E measured from straight-line portions of stress-strain curves.",
+          "UCS sourced as average unconfined strength 37 ton/sq ft (Tilbury cores) = ~3.97 MPa; oven-dried specimens were 2-3 times stronger than undried.",
+          "Drained triaxial parameters adopted: c_d = 130 lb/sq in = ~0.90 MPa, phi_d = 21 deg (Fig. 3c). Undrained high-pressure triaxial gave c of the order of 17 ton/sq ft (~1.8 MPa) with phi_u about 14 deg.",
+          "Chalk disaggregates ('putty chalk') at cell pressures of 800 lb/sq in and above; strength drops substantially on saturation. Specific gravity 2.71-2.72."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "international_society_for_soil_mechanics_and_geotechnical_engineering"
+        ]
+      }
+    },
+    {
+      "id": "soil_municipal_solid_waste_young_landfill_fill_5_years",
+      "name": "Municipal solid waste — young landfill fill (< 5 years)",
+      "classification": {
+        "category_ja": "地盤・土質",
+        "category_en": "Soil",
+        "subcategory_ja": "都市固形廃棄物（埋立ごみ）",
+        "subcategory_en": "Municipal solid waste fill"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1223,
+          "youngs_modulus_pa": 1000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "friction_angle_deg": 21,
+          "cohesion_pa": 5000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "young (< 5 years old) landfilled municipal solid waste, compacted in lifts; literature-based parameter set used for landfill stability FEM analysis (Barmshour Landfill study, Table 1)",
+        "notes": [
+          "Density from sourced unit weight of young waste 12-16 kN/m3; conservative low 12 kN/m3 = ~1223 kg/m3 adopted (g = 9.81 m/s2).",
+          "Young's modulus sourced range 1000-5000 kPa for young MSW; conservative low 1.0 MPa adopted.",
+          "Friction angle sourced range 21-25 deg (conservative low adopted); cohesion sourced range 5-10 kPa (conservative low adopted); Poisson's ratio sourced range 0.3-0.35.",
+          "Source Table 1 also gives aged MSW values: intermediate (5-10 yr) E = 5-15 MPa, phi = 25-30 deg, c = 10-15 kPa; old (> 10 yr) E = 15-30 MPa, phi = 30-35 deg, c = 15-25 kPa, nu = 0.2-0.3. Unit weight increases with age/degradation.",
+          "MSW properties are highly heterogeneous and depend on composition, compaction and degradation state; site-specific testing recommended for design."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 1000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 1223
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 1000000,
+            "nu": 0.3
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "open_access_article_via_pubmed_central_pmc12917201_predicting_the_mech"
+        ]
+      }
+    },
+    {
+      "id": "wood_glulam_gl24h_en_14080_2013_homogeneous_glued_laminated_timbe",
+      "name": "Glulam GL24h (EN 14080:2013) homogeneous glued laminated timber",
+      "classification": {
+        "category_ja": "木質",
+        "category_en": "Wood",
+        "subcategory_ja": "集成材",
+        "subcategory_en": "Glued laminated timber (glulam)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 420,
+          "youngs_modulus_pa": 11500000000
+        },
+        "orthotropic_elastic_partial": {
+          "E1_pa": 11500000000,
+          "G12_pa": 650000000
+        },
+        "strength_data": {
+          "bending_strength_pa": 24000000,
+          "tension_parallel_pa": 19200000,
+          "tension_perpendicular_pa": 500000,
+          "compression_parallel_pa": 24000000,
+          "compression_perpendicular_pa": 2500000,
+          "shear_strength_pa": 3500000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "12% moisture content (EN 14080 reference condition); characteristic values, service class 1/2 design basis",
+        "notes": [
+          "Characteristic (5th-percentile) strength values per EN 14080:2013 Table 5 for homogeneous glulam class GL24h.",
+          "youngs_modulus_pa is E0,g,mean (mean modulus parallel to grain); E0,g,05 = 9,600 MPa.",
+          "density_kg_m3 is mean density rho_g,mean = 420 kg/m3; characteristic density rho_g,k = 385 kg/m3.",
+          "Note: older DIN 1052:2008-era tables give different values (e.g. ft,0 = 16.5 MPa, fv = 2.5 MPa); the values here are the current EN 14080:2013 set."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "structural_basics_glulam_strength_classes_and_their_strength_and_stiff"
+        ]
+      }
+    },
+    {
+      "id": "wood_glulam_gl28c_en_14080_2013_combined_glued_laminated_timber",
+      "name": "Glulam GL28c (EN 14080:2013) combined glued laminated timber",
+      "classification": {
+        "category_ja": "木質",
+        "category_en": "Wood",
+        "subcategory_ja": "集成材",
+        "subcategory_en": "Glued laminated timber (glulam)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 420,
+          "youngs_modulus_pa": 12500000000
+        },
+        "orthotropic_elastic_partial": {
+          "E1_pa": 12500000000,
+          "G12_pa": 650000000
+        },
+        "strength_data": {
+          "bending_strength_pa": 28000000,
+          "tension_parallel_pa": 19500000,
+          "tension_perpendicular_pa": 500000,
+          "compression_parallel_pa": 24000000,
+          "compression_perpendicular_pa": 2500000,
+          "shear_strength_pa": 3500000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "12% moisture content (EN 14080 reference condition); characteristic values, service class 1/2 design basis",
+        "notes": [
+          "Characteristic (5th-percentile) strength values per EN 14080:2013 Table 4 for combined (layup-graded) glulam class GL28c.",
+          "youngs_modulus_pa is E0,g,mean (mean modulus parallel to grain); E0,g,05 = 10,400 MPa.",
+          "density_kg_m3 is mean density rho_g,mean = 420 kg/m3; characteristic density rho_g,k = 390 kg/m3.",
+          "Outer laminations are of higher grade than inner laminations (combined layup); bending strength applies to the section, not individual laminations."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "structural_basics_glulam_strength_classes_and_their_strength_and_stiff"
+        ]
+      }
+    },
+    {
+      "id": "wood_baubuche_gl75_beam_pollmeier_european_beech_lvl_glulam_eta_1",
+      "name": "BauBuche GL75 Beam (Pollmeier European beech LVL glulam, ETA-14/0354)",
+      "classification": {
+        "category_ja": "木質",
+        "category_en": "Wood",
+        "subcategory_ja": "ブナ単板積層材（LVL）集成材",
+        "subcategory_en": "Beech laminated veneer lumber (LVL) glulam"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 800,
+          "youngs_modulus_pa": 16800000000
+        },
+        "orthotropic_elastic_partial": {
+          "E1_pa": 16800000000,
+          "E2_pa": 470000000,
+          "G12_pa": 850000000
+        },
+        "strength_data": {
+          "bending_strength_pa": 75000000,
+          "tension_parallel_pa": 60000000,
+          "tension_perpendicular_pa": 600000,
+          "compression_parallel_pa": 59400000,
+          "compression_parallel_service_class_2_pa": 49500000,
+          "compression_perpendicular_pa": 14800000,
+          "compression_perpendicular_service_class_2_pa": 12300000,
+          "shear_strength_pa": 4500000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source_partial_mechanical_set",
+        "condition": "5-10% moisture content (EAD 130010-01-0304); characteristic values, service classes 1 and 2; compression values quoted for service class 1",
+        "notes": [
+          "Glued laminated timber made of European beech (Fagus sylvatica) laminated veneer lumber; Declaration of Performance PM-021-2025 per ETA-14/0354.",
+          "Bending strength fm,k = kh,m x 75 MPa with kh,m = (600/h)^0.10; tension parallel ft,0,k = kh,t x 60 MPa with kh,t = (600/h)^0.10; shear fv,k = kh,v x 4.5 MPa with kh,v = (600/h)^0.13 (h = beam height in mm; values quoted at reference height 600 mm).",
+          "E0,mean = 16,800 MPa, E0,05 = 15,300 MPa (EN 408); E90,mean = 470 MPa, E90,05 = 400 MPa; Gmean = 850 MPa, G05 = 760 MPa (EN 14374).",
+          "density_kg_m3 is mean density (declared >= 800 kg/m3); characteristic density rho_k >= 730 kg/m3 (used for fastener design).",
+          "Static or quasi-static loading only; Euroclass D-s2,d0 fire behaviour; charring rate beta_0 = 0.65 mm/min."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "pollmeier_furnierwerkstoffe_gmbh_declaration_of_performance_no_pm_021"
+        ]
+      }
+    },
+    {
+      "id": "glass_soda_lime_float_glass_annealed_typical_north_american_float",
+      "name": "Soda-lime float glass, annealed (typical North American float, NGA FM05-12)",
+      "classification": {
+        "category_ja": "ガラス",
+        "category_en": "Glass",
+        "subcategory_ja": "ソーダ石灰フロート板ガラス（徐冷）",
+        "subcategory_en": "Soda-lime float glass (annealed)"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2500,
+          "youngs_modulus_pa": 71700000000,
+          "poissons_ratio": 0.22
+        },
+        "strength_data": {
+          "bending_strength_mean_pa": 41000000,
+          "bending_strength_design_8_per_1000_pa": 19000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "annealed float glass, room temperature; strengths for short load duration (<= 60 s), surface origin, four-sided support",
+        "notes": [
+          "Typical average properties of soda-lime float glass produced in North America (NGA Glass Technical Paper FM05-12, 2023).",
+          "Shear modulus G = 29.6 GPa (NGA); Spectraglass datasheet gives E = 72 GPa, G = 30 GPa, Poisson's ratio 0.23, density 2500 kg/m3.",
+          "Modulus of rupture: mean 41 MPa (6,000 psi); design value 19 MPa (2,800 psi) at 8-per-1000 breakage probability, surface (not edge) strength.",
+          "Glass strength is statistical (flaw-governed); mean and design MOR are not characteristic values in the EN 572-1 sense.",
+          "Knoop hardness ~470-605 kg/mm2; CTE 8.3e-6 /degC."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 71700000000,
+            "PRXY": 0.22,
+            "DENS_kg_m3": 2500
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 71700000000,
+            "nu": 0.22
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "national_glass_association_nga_glass_technical_paper_fm05_12_2023_phys",
+          "spectraglass_limited_datasheet_m010_soda_lime_silica_float"
+        ]
+      }
+    },
+    {
+      "id": "glass_heat_strengthened_soda_lime_float_glass_typical_nga_fm05_12",
+      "name": "Heat-strengthened soda-lime float glass (typical, NGA FM05-12)",
+      "classification": {
+        "category_ja": "ガラス",
+        "category_en": "Glass",
+        "subcategory_ja": "倍強度ガラス",
+        "subcategory_en": "Heat-strengthened glass"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2500,
+          "youngs_modulus_pa": 71700000000,
+          "poissons_ratio": 0.22
+        },
+        "strength_data": {
+          "bending_strength_mean_pa": 83000000,
+          "bending_strength_design_8_per_1000_pa": 39000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "heat-strengthened soda-lime float glass, room temperature; strengths for short load duration (<= 60 s), surface origin, four-sided support",
+        "notes": [
+          "Heat-strengthened (partially tempered) soda-lime float glass; residual surface compression roughly doubles usable bending strength vs annealed glass.",
+          "Modulus of rupture: mean 83 MPa (12,000 psi); design value 39 MPa (5,600 psi) at 8-per-1000 breakage probability (NGA FM05-12; identical values in Spectraglass M010).",
+          "Elastic properties are those of the base soda-lime float glass (E = 71.7 GPa, G = 29.6 GPa, Poisson 0.22, density 2500 kg/m3); heat treatment does not change elastic constants.",
+          "Fracture pattern is similar to annealed glass (large shards); not a safety glass by itself."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 71700000000,
+            "PRXY": 0.22,
+            "DENS_kg_m3": 2500
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 71700000000,
+            "nu": 0.22
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "national_glass_association_nga_glass_technical_paper_fm05_12_2023_phys",
+          "spectraglass_limited_datasheet_m010_soda_lime_silica_float"
+        ]
+      }
+    },
+    {
+      "id": "glass_thermally_toughened_fully_tempered_soda_lime_safety_glass",
+      "name": "Thermally toughened (fully tempered) soda-lime safety glass",
+      "classification": {
+        "category_ja": "ガラス",
+        "category_en": "Glass",
+        "subcategory_ja": "強化ガラス",
+        "subcategory_en": "Thermally toughened safety glass"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2500,
+          "youngs_modulus_pa": 71700000000,
+          "poissons_ratio": 0.22
+        },
+        "strength_data": {
+          "bending_strength_characteristic_pa": 120000000,
+          "bending_strength_mean_pa": 166000000,
+          "bending_strength_design_8_per_1000_pa": 77000000
+        }
+      },
+      "other": {
+        "validation_tier": "official_source",
+        "condition": "fully tempered soda-lime float safety glass, room temperature; strengths for short load duration (<= 60 s), surface origin, four-sided support",
+        "notes": [
+          "Fully tempered (thermally toughened) soda-lime float glass; high residual surface compression from quenching.",
+          "Characteristic bending strength >= 120 MPa required by EN 12150-1 for thermally toughened safety glass made from float glass.",
+          "Modulus of rupture (NGA FM05-12): mean 166 MPa (24,000 psi); design value 77 MPa (11,200 psi) at 8-per-1000 breakage probability; Spectraglass M010 quotes mean 165 MPa.",
+          "Elastic properties are those of the base soda-lime float glass (E = 71.7 GPa, G = 29.6 GPa, Poisson 0.22, density 2500 kg/m3); tempering does not change elastic constants.",
+          "Fragments into small dice on failure (safety glass); cannot be cut or drilled after tempering."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 71700000000,
+            "PRXY": 0.22,
+            "DENS_kg_m3": 2500
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 71700000000,
+            "nu": 0.22
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "national_glass_association_nga_glass_technical_paper_fm05_12_2023_phys",
+          "spectraglass_limited_datasheet_m010_soda_lime_silica_float",
+          "glassonweb_com_glass_structures_engineering_relation_between_edge_stre"
         ]
       }
     }
