@@ -93,6 +93,7 @@ js/features.js      物性定義・ソルバーカード生成・フィルタ補
 js/charts.js        SVG チャート描画 (散布図・レーダー・ヒストグラム・折れ線・棒)
 materials_db.json   材料特性データ (JSON)
 scripts/validate-materials.mjs  JSON・単位範囲・出典参照の整合性検査
+scripts/test-url-range-security.mjs  URL 範囲フィルタのセキュリティ回帰テスト
 ```
 
 - 外部ライブラリ・CDN への依存なし (HTML / CSS / JavaScript のみ)
@@ -109,6 +110,9 @@ cd materials-db
 
 # 材料データを検証
 node scripts/validate-materials.mjs
+
+# URL 範囲フィルタのセキュリティ回帰テスト
+node scripts/test-url-range-security.mjs
 
 # ローカルサーバーを起動 (Python 3)
 python3 -m http.server 8080

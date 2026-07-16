@@ -481,6 +481,53 @@ const Features = (() => {
     return true;
   }
 
+  const STRICT_DECIMAL_PATTERN = /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/;
+
+  function parseStrictFiniteNumber(value) {
+    if (typeof value !== "string") return null;
+    const text = value.trim();
+    if (!STRICT_DECIMAL_PATTERN.test(text)) return null;
+    const number = Number(text);
+    return Number.isFinite(number) ? number : null;
+  }
+
+  function parseRangeFilters(params, allowedKeys) {
+    const allowed = new Set(allowedKeys);
+    const filters = Object.create(null);
+
+    for (const [paramKey, rawValue] of params.entries()) {
+      const match = /^r_([a-z0-9_]+)_(min|max)$/.exec(paramKey);
+      if (!match) continue;
+
+      const [, propertyKey, bound] = match;
+      if (!allowed.has(propertyKey)) continue;
+
+      const value = parseStrictFiniteNumber(rawValue);
+      if (value == null) continue;
+
+      if (!Object.hasOwn(filters, propertyKey)) {
+        filters[propertyKey] = Object.create(null);
+      }
+      filters[propertyKey][bound] = value;
+    }
+
+    return filters;
+  }
+
+  function appendRangeFilters(params, rangeFilters, allowedKeys) {
+    for (const propertyKey of allowedKeys) {
+      const range = rangeFilters?.[propertyKey];
+      if (!range || typeof range !== "object") continue;
+
+      for (const bound of ["min", "max"]) {
+        const value = range[bound];
+        if (typeof value === "number" && Number.isFinite(value)) {
+          params.set(`r_${propertyKey}_${bound}`, String(value));
+        }
+      }
+    }
+  }
+
   function materialHasSolver(material, solverKey) {
     return !!material.other?.[`${solverKey}_mapping`];
   }
@@ -492,7 +539,8 @@ const Features = (() => {
     formatStressWithUnit, formatDensityWithUnit,
     findSimilarMaterials, computeCategoryStats,
     buildCSV, downloadFile, generateSolverCard,
-    getPropertyRange, materialsMatchRangeFilters, materialHasSolver,
+    getPropertyRange, materialsMatchRangeFilters,
+    parseStrictFiniteNumber, parseRangeFilters, appendRangeFilters, materialHasSolver,
     getSolverMappingStatus,
   };
 })();

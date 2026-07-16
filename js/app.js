@@ -15,7 +15,7 @@ let comparePanelOpen = false;
 let analysisPanelType = null;
 let viewMode = "grid";
 let unitSystem = "si";
-let rangeFilters = {};
+let rangeFilters = Object.create(null);
 let solverFilterSet = new Set();
 let rangeFilterDebounce = null;
 let toastTimer = null;
@@ -23,6 +23,9 @@ let searchDebounce = null;
 
 const MAX_COMPARE_ITEMS = 4;
 const MAX_RECENT_ITEMS = 12;
+const RANGE_FILTER_KEYS = Features.PROPERTY_DEFS.map(({ key }) => key);
+const RANGE_FILTER_UI_KEYS = ["youngs_modulus", "density", "yield_strength"];
+const SOLVER_KEY_SET = new Set(Features.SOLVER_KEYS);
 
 const STORAGE_KEYS = {
   theme: "materials-db-theme",
@@ -494,11 +497,9 @@ function buildUrlFromState() {
   if (compareIds.length) params.set("compare", compareIds.join(","));
   if (viewMode !== "grid") params.set("view", viewMode);
   if (unitSystem !== "si") params.set("unit", unitSystem);
-  if (solverFilterSet.size > 0) params.set("solvers", [...solverFilterSet].join(","));
-  for (const [k, v] of Object.entries(rangeFilters)) {
-    if (v && v.min != null) params.set(`r_${k}_min`, String(v.min));
-    if (v && v.max != null) params.set(`r_${k}_max`, String(v.max));
-  }
+  const selectedSolvers = Features.SOLVER_KEYS.filter(key => solverFilterSet.has(key));
+  if (selectedSolvers.length > 0) params.set("solvers", selectedSolvers.join(","));
+  Features.appendRangeFilters(params, rangeFilters, RANGE_FILTER_KEYS);
   const query = params.toString();
   return `${window.location.pathname}${query ? `?${query}` : ""}`;
 }
@@ -526,14 +527,10 @@ function readUrlState() {
   viewMode = params.get("view") === "table" ? "table" : "grid";
   unitSystem = params.get("unit") === "imperial" ? "imperial" : "si";
   const solversParam = params.get("solvers");
-  solverFilterSet = solversParam ? new Set(solversParam.split(",").filter(Boolean)) : new Set();
-  rangeFilters = {};
-  for (const [k, v] of params.entries()) {
-    const mMin = k.match(/^r_(.+)_min$/);
-    const mMax = k.match(/^r_(.+)_max$/);
-    if (mMin) { const key = mMin[1]; if (!rangeFilters[key]) rangeFilters[key] = {}; rangeFilters[key].min = parseFloat(v); }
-    if (mMax) { const key = mMax[1]; if (!rangeFilters[key]) rangeFilters[key] = {}; rangeFilters[key].max = parseFloat(v); }
-  }
+  solverFilterSet = new Set(
+    (solversParam || "").split(",").filter(key => SOLVER_KEY_SET.has(key))
+  );
+  rangeFilters = Features.parseRangeFilters(params, RANGE_FILTER_KEYS);
 }
 
 function readStoredArray(key) {
@@ -893,8 +890,7 @@ function renderSolverFilters() {
 
 function renderRangeFilters() {
   const container = document.getElementById("rangeFilters");
-  const rangeProps = ["youngs_modulus", "density", "yield_strength"];
-  container.innerHTML = rangeProps.map(propKey => {
+  container.innerHTML = RANGE_FILTER_UI_KEYS.map(propKey => {
     const def = Features.PROPERTY_DEFS.find(d => d.key === propKey);
     if (!def) return "";
     const range = Features.getPropertyRange(allMaterials, propKey);
@@ -939,9 +935,11 @@ function renderRangeFilters() {
     const handler = () => {
       clearTimeout(rangeFilterDebounce);
       rangeFilterDebounce = setTimeout(() => {
-        let minVal = minInput.value.trim() ? parseFloat(minInput.value) : null;
-        let maxVal = maxInput.value.trim() ? parseFloat(maxInput.value) : null;
-        if ((minVal != null && !isFinite(minVal)) || (maxVal != null && !isFinite(maxVal))) return;
+        const minText = minInput.value.trim();
+        const maxText = maxInput.value.trim();
+        let minVal = minText ? Features.parseStrictFiniteNumber(minText) : null;
+        let maxVal = maxText ? Features.parseStrictFiniteNumber(maxText) : null;
+        if ((minText && minVal == null) || (maxText && maxVal == null)) return;
         const defH = Features.PROPERTY_DEFS.find(d => d.key === propKey);
         if (unitSystem === "imperial" && defH) {
           if (defH.unit === "stress") {
@@ -952,8 +950,14 @@ function renderRangeFilters() {
             if (maxVal != null) maxVal /= 0.062428;
           }
         }
-        if (minVal == null && maxVal == null) { delete rangeFilters[propKey]; }
-        else { rangeFilters[propKey] = { min: minVal, max: maxVal }; }
+        if (minVal == null && maxVal == null) {
+          delete rangeFilters[propKey];
+        } else {
+          const range = Object.create(null);
+          range.min = minVal;
+          range.max = maxVal;
+          rangeFilters[propKey] = range;
+        }
         refreshApp();
       }, 350);
     };
