@@ -15,7 +15,7 @@ let comparePanelOpen = false;
 let analysisPanelType = null;
 let viewMode = "grid";
 let unitSystem = "si";
-let rangeFilters = {};
+let rangeFilters = Object.create(null);
 let solverFilterSet = new Set();
 let rangeFilterDebounce = null;
 let toastTimer = null;
@@ -23,6 +23,9 @@ let searchDebounce = null;
 
 const MAX_COMPARE_ITEMS = 4;
 const MAX_RECENT_ITEMS = 12;
+const RANGE_FILTER_KEYS = Features.PROPERTY_DEFS.map(({ key }) => key);
+const RANGE_FILTER_UI_KEYS = ["youngs_modulus", "density", "yield_strength"];
+const SOLVER_KEY_SET = new Set(Features.SOLVER_KEYS);
 
 const STORAGE_KEYS = {
   theme: "materials-db-theme",
@@ -224,6 +227,12 @@ function esc(value) {
 function formatScalarValue(key, value) {
   if (value == null) return "-";
   if (typeof value === "number") {
+    if (key.includes("_n_per_mm")) {
+      return `${value.toLocaleString()} N/mm`;
+    }
+    if (key.includes("_n_per_m") || key.endsWith("_n_m")) {
+      return `${value.toLocaleString()} N/m`;
+    }
     if (key.includes("_pa") || key.includes("modulus") || key.includes("strength")) {
       return formatStress(value);
     }
@@ -409,35 +418,23 @@ function filterMaterialsBySearch(materials) {
 }
 
 function getPrimaryYoungsModulus(material) {
-  const properties = material.properties || {};
-  return (
-    properties.linear_elastic?.youngs_modulus_pa ??
-    properties.orthotropic_elastic?.EX_pa ??
-    properties.orthotropic_elastic_partial?.E1_pa ??
-    null
-  );
+  return Features.getPrimaryYoungsModulus(material);
 }
 
 function getPrimaryDensity(material) {
-  const properties = material.properties || {};
-  return (
-    properties.linear_elastic?.density_kg_m3 ??
-    properties.orthotropic_elastic?.reference_density_kg_m3_approx ??
-    properties.orthotropic_elastic_partial?.laminate_density_kg_m3 ??
-    null
-  );
+  return Features.getPrimaryDensity(material);
 }
 
 function getPrimaryYieldStrength(material) {
-  const strength = material.properties?.strength_data || {};
-  if (strength.yield_strength_pa != null) return strength.yield_strength_pa;
-  if (Array.isArray(strength.yield_strength_by_thickness_pa)) {
-    return strength.yield_strength_by_thickness_pa.reduce((maxValue, entry) => {
-      if (entry.value == null) return maxValue;
-      return maxValue == null ? entry.value : Math.max(maxValue, entry.value);
-    }, null);
-  }
-  return null;
+  return Features.getPrimaryYieldStrength(material);
+}
+
+function getPrimaryUltimateTensileStrength(material) {
+  return Features.getPrimaryUltimateTensileStrength(material);
+}
+
+function getPrimaryCompressiveStrength(material) {
+  return Features.getPrimaryCompressiveStrength(material);
 }
 
 function compareNullableNumbers(aValue, bValue, descending) {
@@ -500,11 +497,9 @@ function buildUrlFromState() {
   if (compareIds.length) params.set("compare", compareIds.join(","));
   if (viewMode !== "grid") params.set("view", viewMode);
   if (unitSystem !== "si") params.set("unit", unitSystem);
-  if (solverFilterSet.size > 0) params.set("solvers", [...solverFilterSet].join(","));
-  for (const [k, v] of Object.entries(rangeFilters)) {
-    if (v && v.min != null) params.set(`r_${k}_min`, String(v.min));
-    if (v && v.max != null) params.set(`r_${k}_max`, String(v.max));
-  }
+  const selectedSolvers = Features.SOLVER_KEYS.filter(key => solverFilterSet.has(key));
+  if (selectedSolvers.length > 0) params.set("solvers", selectedSolvers.join(","));
+  Features.appendRangeFilters(params, rangeFilters, RANGE_FILTER_KEYS);
   const query = params.toString();
   return `${window.location.pathname}${query ? `?${query}` : ""}`;
 }
@@ -532,14 +527,10 @@ function readUrlState() {
   viewMode = params.get("view") === "table" ? "table" : "grid";
   unitSystem = params.get("unit") === "imperial" ? "imperial" : "si";
   const solversParam = params.get("solvers");
-  solverFilterSet = solversParam ? new Set(solversParam.split(",").filter(Boolean)) : new Set();
-  rangeFilters = {};
-  for (const [k, v] of params.entries()) {
-    const mMin = k.match(/^r_(.+)_min$/);
-    const mMax = k.match(/^r_(.+)_max$/);
-    if (mMin) { const key = mMin[1]; if (!rangeFilters[key]) rangeFilters[key] = {}; rangeFilters[key].min = parseFloat(v); }
-    if (mMax) { const key = mMax[1]; if (!rangeFilters[key]) rangeFilters[key] = {}; rangeFilters[key].max = parseFloat(v); }
-  }
+  solverFilterSet = new Set(
+    (solversParam || "").split(",").filter(key => SOLVER_KEY_SET.has(key))
+  );
+  rangeFilters = Features.parseRangeFilters(params, RANGE_FILTER_KEYS);
 }
 
 function readStoredArray(key) {
@@ -899,8 +890,7 @@ function renderSolverFilters() {
 
 function renderRangeFilters() {
   const container = document.getElementById("rangeFilters");
-  const rangeProps = ["youngs_modulus", "density", "yield_strength"];
-  container.innerHTML = rangeProps.map(propKey => {
+  container.innerHTML = RANGE_FILTER_UI_KEYS.map(propKey => {
     const def = Features.PROPERTY_DEFS.find(d => d.key === propKey);
     if (!def) return "";
     const range = Features.getPropertyRange(allMaterials, propKey);
@@ -945,9 +935,11 @@ function renderRangeFilters() {
     const handler = () => {
       clearTimeout(rangeFilterDebounce);
       rangeFilterDebounce = setTimeout(() => {
-        let minVal = minInput.value.trim() ? parseFloat(minInput.value) : null;
-        let maxVal = maxInput.value.trim() ? parseFloat(maxInput.value) : null;
-        if ((minVal != null && !isFinite(minVal)) || (maxVal != null && !isFinite(maxVal))) return;
+        const minText = minInput.value.trim();
+        const maxText = maxInput.value.trim();
+        let minVal = minText ? Features.parseStrictFiniteNumber(minText) : null;
+        let maxVal = maxText ? Features.parseStrictFiniteNumber(maxText) : null;
+        if ((minText && minVal == null) || (maxText && maxVal == null)) return;
         const defH = Features.PROPERTY_DEFS.find(d => d.key === propKey);
         if (unitSystem === "imperial" && defH) {
           if (defH.unit === "stress") {
@@ -958,8 +950,14 @@ function renderRangeFilters() {
             if (maxVal != null) maxVal /= 0.062428;
           }
         }
-        if (minVal == null && maxVal == null) { delete rangeFilters[propKey]; }
-        else { rangeFilters[propKey] = { min: minVal, max: maxVal }; }
+        if (minVal == null && maxVal == null) {
+          delete rangeFilters[propKey];
+        } else {
+          const range = Object.create(null);
+          range.min = minVal;
+          range.max = maxVal;
+          rangeFilters[propKey] = range;
+        }
         refreshApp();
       }, 350);
     };
@@ -986,7 +984,7 @@ function renderTableView(materials) {
   let html = `<thead><tr>${cols.map(c => `<th>${esc(c.label)}</th>`).join("")}</tr></thead><tbody>`;
   for (const m of materials) {
     const E = getPrimaryYoungsModulus(m), rho = getPrimaryDensity(m), yld = getPrimaryYieldStrength(m);
-    const uts = m.properties?.strength_data?.ultimate_tensile_strength_pa;
+    const uts = getPrimaryUltimateTensileStrength(m);
     const nu = m.properties?.linear_elastic?.poissons_ratio;
     const isFav = favoriteIds.has(m.id);
     html += `<tr data-id="${esc(m.id)}">
@@ -1191,16 +1189,15 @@ function renderMaterials() {
       const classification = material.classification || {};
       const properties = material.properties || {};
       const linearElastic = properties.linear_elastic || {};
-      const orthotropic = properties.orthotropic_elastic || properties.orthotropic_elastic_partial || {};
       const isFavorite = favoriteIds.has(material.id);
       const isCompared = compareIds.includes(material.id);
       const categoryClass = catClass(classification.category_en);
 
       let propertyHtml = "";
-      if (linearElastic.youngs_modulus_pa != null) {
-        propertyHtml += `<div class="card-prop"><span class="card-prop-label">E</span><span class="card-prop-value">${formatStress(linearElastic.youngs_modulus_pa)}</span></div>`;
-      } else if (orthotropic.E_x_pa != null) {
-        propertyHtml += `<div class="card-prop"><span class="card-prop-label">E<sub>x</sub></span><span class="card-prop-value">${formatStress(orthotropic.E_x_pa)}</span></div>`;
+      const primaryE = getPrimaryYoungsModulus(material);
+      if (primaryE != null) {
+        const eLabel = linearElastic.youngs_modulus_pa != null ? "E" : "E<sub>1</sub>";
+        propertyHtml += `<div class="card-prop"><span class="card-prop-label">${eLabel}</span><span class="card-prop-value">${formatStress(primaryE)}</span></div>`;
       }
       if (linearElastic.poissons_ratio != null) {
         propertyHtml += `<div class="card-prop"><span class="card-prop-label">&nu;</span><span class="card-prop-value">${linearElastic.poissons_ratio}</span></div>`;
@@ -1372,12 +1369,18 @@ function buildDetailMarkup(material) {
   }
 
   /* Solver Card Copy (Feature 10) */
-  const availableSolvers = Features.SOLVER_KEYS.filter(k => other[`${k}_mapping`]);
+  const availableSolvers = Features.SOLVER_KEYS
+    .filter((solver) => other[`${solver}_mapping`])
+    .map((solver) => ({
+      solver,
+      status: Features.getSolverMappingStatus(material, solver),
+    }));
   if (availableSolvers.length) {
     html += `<div class="detail-section">
       <div class="detail-section-title">${esc(t("copySolverCard"))}</div>
-      <div class="solver-card-btns">${availableSolvers.map(s =>
-        `<button class="solver-card-btn" data-solver="${s}" type="button">${Features.SOLVER_LABELS[s]}</button>`
+      <p class="detail-note">${lang === "ja" ? "partial / reference は未確定項目を含むコメント付き参照出力です。" : "Partial/reference exports are annotated references and may not be runnable."}</p>
+      <div class="solver-card-btns">${availableSolvers.map(({ solver, status }) =>
+        `<button class="solver-card-btn" data-solver="${solver}" type="button">${Features.SOLVER_LABELS[solver]}${status === "runnable" ? "" : ` (${status})`}</button>`
       ).join("")}</div>
     </div>`;
   }
@@ -1656,14 +1659,14 @@ function buildCompareSections(materials) {
         {
           label: t("compareUltimate"),
           values: materials.map((material) => {
-            const value = material.properties?.strength_data?.ultimate_tensile_strength_pa;
+            const value = getPrimaryUltimateTensileStrength(material);
             return value != null ? formatStress(value) : "-";
           }),
         },
         {
           label: t("compareCompressive"),
           values: materials.map((material) => {
-            const value = material.properties?.strength_data?.compressive_strength_pa;
+            const value = getPrimaryCompressiveStrength(material);
             return value != null ? formatStress(value) : "-";
           }),
         },
@@ -1958,8 +1961,8 @@ function renderLinearElastic(linearElastic) {
 function renderOrthotropicElastic(orthotropicElastic, title) {
   let rows = "";
   Object.entries(orthotropicElastic).forEach(([key, value]) => {
-    if (value != null && typeof value !== "object") {
-      rows += `<tr><td>${esc(key)}</td><td>${formatScalarValue(key, value)}</td></tr>`;
+    if (value != null) {
+      rows += `<tr><td>${esc(key)}</td><td>${formatComplexValue(value, key)}</td></tr>`;
     }
   });
   if (!rows) return "";
@@ -1977,7 +1980,7 @@ function renderStrengthData(strengthData) {
   let html = `<div class="detail-section"><div class="detail-section-title">${lang === "ja" ? "強度データ" : "Strength Data"}</div>`;
 
   if (strengthData.yield_strength_pa != null) {
-    html += `<table class="detail-table"><tbody><tr><td>${lang === "ja" ? "降伏強度" : "Yield Strength"}</td><td>${formatStress(strengthData.yield_strength_pa)}</td></tr></tbody></table>`;
+    html += `<table class="detail-table"><tbody><tr><td>${lang === "ja" ? "降伏強度" : "Yield Strength"}</td><td>${formatComplexValue(strengthData.yield_strength_pa, "yield_strength_pa")}</td></tr></tbody></table>`;
   }
   if (strengthData.yield_strength_by_thickness_pa) {
     html += `<div class="detail-subsection">${lang === "ja" ? "降伏強度 (板厚別)" : "Yield Strength (by thickness)"}</div>`;
@@ -1989,7 +1992,7 @@ function renderStrengthData(strengthData) {
   }
 
   if (strengthData.ultimate_tensile_strength_pa != null) {
-    html += `<table class="detail-table"><tbody><tr><td>${lang === "ja" ? "引張強度" : "Ultimate Tensile Strength"}</td><td>${formatStress(strengthData.ultimate_tensile_strength_pa)}</td></tr></tbody></table>`;
+    html += `<table class="detail-table"><tbody><tr><td>${lang === "ja" ? "引張強度" : "Ultimate Tensile Strength"}</td><td>${formatComplexValue(strengthData.ultimate_tensile_strength_pa, "ultimate_tensile_strength_pa")}</td></tr></tbody></table>`;
   }
   if (strengthData.ultimate_tensile_strength_by_thickness_pa) {
     html += `<div class="detail-subsection">${lang === "ja" ? "引張強度 (板厚別)" : "UTS (by thickness)"}</div>`;
@@ -2004,10 +2007,10 @@ function renderStrengthData(strengthData) {
     html += `<table class="detail-table"><tbody><tr><td>${lang === "ja" ? "伸び (最小)" : "Elongation (min)"}</td><td>${strengthData.elongation_min_percent}%</td></tr></tbody></table>`;
   }
   if (strengthData.compressive_strength_pa != null) {
-    html += `<table class="detail-table"><tbody><tr><td>${lang === "ja" ? "圧縮強度" : "Compressive Strength"}</td><td>${formatStress(strengthData.compressive_strength_pa)}</td></tr></tbody></table>`;
+    html += `<table class="detail-table"><tbody><tr><td>${lang === "ja" ? "圧縮強度" : "Compressive Strength"}</td><td>${formatComplexValue(strengthData.compressive_strength_pa, "compressive_strength_pa")}</td></tr></tbody></table>`;
   }
   if (strengthData.flexural_strength_pa != null) {
-    html += `<table class="detail-table"><tbody><tr><td>${lang === "ja" ? "曲げ強度" : "Flexural Strength"}</td><td>${formatStress(strengthData.flexural_strength_pa)}</td></tr></tbody></table>`;
+    html += `<table class="detail-table"><tbody><tr><td>${lang === "ja" ? "曲げ強度" : "Flexural Strength"}</td><td>${formatComplexValue(strengthData.flexural_strength_pa, "flexural_strength_pa")}</td></tr></tbody></table>`;
   }
 
   const known = new Set([
@@ -2021,8 +2024,8 @@ function renderStrengthData(strengthData) {
   ]);
   let extraRows = "";
   Object.entries(strengthData).forEach(([key, value]) => {
-    if (!known.has(key) && value != null && typeof value !== "object") {
-      extraRows += `<tr><td>${esc(key)}</td><td>${formatScalarValue(key, value)}</td></tr>`;
+    if (!known.has(key) && value != null) {
+      extraRows += `<tr><td>${esc(key)}</td><td>${formatComplexValue(value, key)}</td></tr>`;
     }
   });
   if (extraRows) {
@@ -2037,7 +2040,7 @@ function renderNonlinearModels(nonlinearModels) {
   let html = `<div class="detail-section"><div class="detail-section-title">${lang === "ja" ? "非線形モデル" : "Nonlinear Models"}</div>`;
 
   Object.entries(nonlinearModels).forEach(([modelName, model]) => {
-    html += `<div class="detail-subsection">${esc(modelName)}${model.recommended ? " ★" : ""}</div>`;
+    html += `<div class="detail-subsection">${esc(modelName)}${model.recommended || model.model_family_recommended ? " ★" : ""}</div>`;
 
     if (model.variants_by_thickness_mm) {
       html += `<table class="detail-table"><thead><tr><th>${lang === "ja" ? "板厚 (mm)" : "Thickness (mm)"}</th><th>${lang === "ja" ? "降伏応力" : "Yield Stress"}</th><th>H<sub>iso</sub></th><th>E<sub>t</sub></th></tr></thead><tbody>`;
@@ -2050,8 +2053,8 @@ function renderNonlinearModels(nonlinearModels) {
     const skipKeys = new Set(["recommended", "material_model", "variants_by_thickness_mm", "notes", "source_ids"]);
     let rows = "";
     Object.entries(model).forEach(([key, value]) => {
-      if (!skipKeys.has(key) && value != null && typeof value !== "object") {
-        rows += `<tr><td>${esc(key)}</td><td>${formatScalarValue(key, value)}</td></tr>`;
+      if (!skipKeys.has(key) && value != null) {
+        rows += `<tr><td>${esc(key)}</td><td>${formatComplexValue(value, key)}</td></tr>`;
       }
     });
     if (rows) {
