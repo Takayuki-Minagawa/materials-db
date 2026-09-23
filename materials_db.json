@@ -5614,6 +5614,96 @@
       "info_used": [
         "bending_strength_characteristic_EN12150"
       ]
+    },
+    "hydro_en_aw_6060_rev4_2023": {
+      "title": "Technical datasheet – Extruded products, Alloy EN AW-6060 [AlMgSi], Rev.4 (03/2023)",
+      "publisher": "Hydro",
+      "url": "https://www.hydro.com/globalassets/08-about-hydro/hydro-worldwide/austria/nenzing/alloy-data-sheets/hydro-en-aw-6060.pdf",
+      "accessed_at": "2026-09-23",
+      "info_used": [
+        "EN 755-2:2016 minimum 0.2% proof strength, tensile strength and elongation for T6 extruded profiles with wall thickness up to 5 mm",
+        "Typical room-temperature Young and shear moduli and density"
+      ]
+    },
+    "hydro_en_aw_6063_rev4_2023": {
+      "title": "Technical datasheet – Extruded products, Alloy EN AW-6063 [AlMg0.7Si], Rev.4 (03/2023)",
+      "publisher": "Hydro",
+      "url": "https://www.hydro.com/globalassets/08-about-hydro/hydro-worldwide/austria/nenzing/alloy-data-sheets/hydro-en-aw-6063.pdf",
+      "accessed_at": "2026-09-23",
+      "info_used": [
+        "EN 755-2:2016 minimum 0.2% proof strength, tensile strength and elongation for T6 extruded profiles with wall thickness up to 10 mm",
+        "Typical room-temperature Young and shear moduli and density"
+      ]
+    },
+    "hydro_en_aw_6005a_rev4_2023": {
+      "title": "Technical datasheet – Extruded products, Alloy EN AW-6005A [AlSiMg(A)], Rev.4 (03/2023)",
+      "publisher": "Hydro",
+      "url": "https://www.hydro.com/globalassets/08-about-hydro/hydro-worldwide/austria/nenzing/alloy-data-sheets/hydro-en-aw-6005a.pdf",
+      "accessed_at": "2026-09-23",
+      "info_used": [
+        "EN 755-2:2016 minimum 0.2% proof strength, tensile strength and elongation for open and hollow T6 profiles with wall thickness up to 5 mm",
+        "Typical room-temperature Young and shear moduli and density"
+      ]
+    },
+    "ssab_strenx_650mc_de_2026": {
+      "title": "Strenx 650MC D/E - high-strength structural steel",
+      "publisher": "SSAB",
+      "url": "https://www.ssab.com/en-gb/brands-and-products/strenx/product-offer/650mc-de",
+      "accessed_at": "2026-09-23",
+      "info_used": [
+        "Minimum yield strength 650 MPa and tensile strength 700-850 MPa for the stated sheet thickness",
+        "Minimum A5 elongation 14% for the stated sheet thickness and test direction"
+      ]
+    },
+    "ssab_strenx_700mc_plus_2026": {
+      "title": "Strenx 700MC Plus - high-strength structural steel",
+      "publisher": "SSAB",
+      "url": "https://www.ssab.com/en-gb/brands-and-products/strenx/product-offer/700/mc-plus",
+      "accessed_at": "2026-09-23",
+      "info_used": [
+        "Minimum yield strength 700 MPa and tensile strength 750-950 MPa for the stated sheet thickness",
+        "Minimum A5 elongation 13% for the stated sheet thickness and test direction"
+      ]
+    },
+    "ssab_strenx_900_plus_2026": {
+      "title": "Strenx 900 Plus - high-strength structural steel",
+      "publisher": "SSAB",
+      "url": "https://www.ssab.com/en-gb/brands-and-products/strenx/product-offer/900/plus",
+      "accessed_at": "2026-09-23",
+      "info_used": [
+        "Minimum yield strength 900 MPa and tensile strength 940-1100 MPa for the stated sheet thickness",
+        "Minimum A5 elongation 11% for the stated sheet thickness and test direction"
+      ]
+    },
+    "ssab_strenx_960mc_2026": {
+      "title": "Strenx 960MC - high-strength structural steel",
+      "publisher": "SSAB",
+      "url": "https://www.ssab.com/en-gb/brands-and-products/strenx/product-offer/960/mc",
+      "accessed_at": "2026-09-23",
+      "info_used": [
+        "Minimum yield strength 960 MPa and tensile strength 980-1250 MPa for the stated sheet thickness",
+        "Minimum A5 elongation 7% for the stated sheet thickness and test direction"
+      ]
+    },
+    "ssab_strenx_960_plus_2026": {
+      "title": "Strenx 960 Plus - high-strength structural steel",
+      "publisher": "SSAB",
+      "url": "https://www.ssab.com/en-gb/brands-and-products/strenx/product-offer/960/plus",
+      "accessed_at": "2026-09-23",
+      "info_used": [
+        "Minimum yield strength 960 MPa and tensile strength 980-1150 MPa for the stated sheet thickness",
+        "Minimum A5 elongation 10% for the stated sheet thickness and test direction"
+      ]
+    },
+    "outokumpu_ultra_range_datasheet_dec2024": {
+      "title": "Outokumpu Ultra range datasheet – Stainless steels for extremely corrosive environments (1563EN:8, December 2024)",
+      "publisher": "Outokumpu",
+      "url": "https://www.outokumpu.com/-/media/files/products/ultra/outokumpu_ultra_range_datasheet.pdf",
+      "accessed_at": "2026-09-23",
+      "info_used": [
+        "Table 10: 20°C minimum 0.2% proof strength, tensile-strength range or lower bound, and minimum elongation by product form",
+        "Table 13: 20°C Young modulus and density by grade"
+      ]
     }
   },
   "materials": [
@@ -76435,6 +76525,788 @@
           "national_glass_association_nga_glass_technical_paper_fm05_12_2023_phys",
           "spectraglass_limited_datasheet_m010_soda_lime_silica_float",
           "glassonweb_com_glass_structures_engineering_relation_between_edge_stre"
+        ]
+      }
+    },
+    {
+      "id": "aluminum_hydro_6060_t6_extruded_upto_5mm_reference",
+      "name": "Hydro EN AW-6060-T6 extruded profile, t <= 5 mm reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "アルミニウム合金",
+        "subcategory_en": "aluminum alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2700,
+          "youngs_modulus_pa": 69000000000,
+          "shear_modulus_pa": 26000000000,
+          "poissons_ratio": 0.327
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 150000000,
+          "ultimate_tensile_strength_min_pa": 190000000,
+          "elongation_A_min_percent": 8,
+          "elongation_A50_min_percent": 6
+        }
+      },
+      "other": {
+        "condition": "EN AW extruded profile, T6, 0 < wall thickness <= 5 mm; EN 755-2:2016 minimum strengths and elongation, typical elastic constants at 20°C",
+        "validation_tier": "official_source_with_derived_poisson",
+        "notes": [
+          "Poisson ratio 0.327 is derived from rounded published E=69 GPa and G=26 GPa via E/(2G)-1; it is not a measured or guaranteed value.",
+          "The manufacturer does not provide a plastic stress-strain curve here; solver mappings contain linear elasticity only."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 69000000000,
+            "PRXY": 0.327,
+            "DENS_kg_m3": 2700
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 69000000000,
+            "nu": 0.327
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 69000000000,
+            "nu": 0.327
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "hydro_en_aw_6060_rev4_2023"
+        ]
+      }
+    },
+    {
+      "id": "aluminum_hydro_6063_t6_extruded_upto_10mm_reference",
+      "name": "Hydro EN AW-6063-T6 extruded profile, t <= 10 mm reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "アルミニウム合金",
+        "subcategory_en": "aluminum alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2700,
+          "youngs_modulus_pa": 69000000000,
+          "shear_modulus_pa": 26000000000,
+          "poissons_ratio": 0.327
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 170000000,
+          "ultimate_tensile_strength_min_pa": 215000000,
+          "elongation_A_min_percent": 8,
+          "elongation_A50_min_percent": 6
+        }
+      },
+      "other": {
+        "condition": "EN AW extruded profile, T6, 0 < wall thickness <= 10 mm; EN 755-2:2016 minimum strengths and elongation, typical elastic constants at 20°C",
+        "validation_tier": "official_source_with_derived_poisson",
+        "notes": [
+          "Poisson ratio 0.327 is derived from rounded published E=69 GPa and G=26 GPa via E/(2G)-1; it is not a measured or guaranteed value.",
+          "The manufacturer does not provide a plastic stress-strain curve here; solver mappings contain linear elasticity only."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 69000000000,
+            "PRXY": 0.327,
+            "DENS_kg_m3": 2700
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 69000000000,
+            "nu": 0.327
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 69000000000,
+            "nu": 0.327
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "hydro_en_aw_6063_rev4_2023"
+        ]
+      }
+    },
+    {
+      "id": "aluminum_hydro_6005a_t6_open_profile_upto_5mm_reference",
+      "name": "Hydro EN AW-6005A-T6 open profile, t <= 5 mm reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "アルミニウム合金",
+        "subcategory_en": "aluminum alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2710,
+          "youngs_modulus_pa": 70000000000,
+          "shear_modulus_pa": 26000000000,
+          "poissons_ratio": 0.346
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 225000000,
+          "ultimate_tensile_strength_min_pa": 270000000,
+          "elongation_A_min_percent": 8,
+          "elongation_A50_min_percent": 6
+        }
+      },
+      "other": {
+        "condition": "EN AW extruded open profile, T6, 0 < wall thickness <= 5 mm; EN 755-2:2016 minimum strengths and elongation, typical elastic constants at 20°C",
+        "validation_tier": "official_source_with_derived_poisson",
+        "notes": [
+          "Poisson ratio 0.346 is derived from rounded published E=70 GPa and G=26 GPa via E/(2G)-1; it is not a measured or guaranteed value.",
+          "The manufacturer does not provide a plastic stress-strain curve here; solver mappings contain linear elasticity only."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 70000000000,
+            "PRXY": 0.346,
+            "DENS_kg_m3": 2710
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 70000000000,
+            "nu": 0.346
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 70000000000,
+            "nu": 0.346
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "hydro_en_aw_6005a_rev4_2023"
+        ]
+      }
+    },
+    {
+      "id": "aluminum_hydro_6005a_t6_hollow_profile_upto_5mm_reference",
+      "name": "Hydro EN AW-6005A-T6 hollow profile, t <= 5 mm reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "アルミニウム合金",
+        "subcategory_en": "aluminum alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2710,
+          "youngs_modulus_pa": 70000000000,
+          "shear_modulus_pa": 26000000000,
+          "poissons_ratio": 0.346
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 215000000,
+          "ultimate_tensile_strength_min_pa": 255000000,
+          "elongation_A_min_percent": 8,
+          "elongation_A50_min_percent": 6
+        }
+      },
+      "other": {
+        "condition": "EN AW extruded hollow profile, T6, 0 < wall thickness <= 5 mm; EN 755-2:2016 minimum strengths and elongation, typical elastic constants at 20°C",
+        "validation_tier": "official_source_with_derived_poisson",
+        "notes": [
+          "Poisson ratio 0.346 is derived from rounded published E=70 GPa and G=26 GPa via E/(2G)-1; it is not a measured or guaranteed value.",
+          "The manufacturer does not provide a plastic stress-strain curve here; solver mappings contain linear elasticity only."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 70000000000,
+            "PRXY": 0.346,
+            "DENS_kg_m3": 2710
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 70000000000,
+            "nu": 0.346
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 70000000000,
+            "nu": 0.346
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "hydro_en_aw_6005a_rev4_2023"
+        ]
+      }
+    },
+    {
+      "id": "steel_ssab_strenx_650mc_de_sheet_3_8mm_reference",
+      "name": "SSAB Strenx 650MC D/E sheet, 3-8 mm reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "高張力構造用鋼",
+        "subcategory_en": "high-strength structural steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 650000000,
+          "ultimate_tensile_strength_range_pa": [
+            700000000,
+            850000000
+          ],
+          "elongation_A5_min_percent": 14
+        }
+      },
+      "other": {
+        "condition": "hot-rolled sheet, 3 <= thickness <= 8 mm, longitudinal mechanical properties; approximate SSAB-wide elastic constants at room temperature",
+        "validation_tier": "official_grade_strength_with_general_ssab_elastic_constants",
+        "notes": [
+          "E, Poisson ratio and density are SSAB-wide approximate values, not grade-specific measurements.",
+          "The thickness is capped at 8 mm where the SSAB page allows a 20 MPa lower yield minimum above 8 mm.",
+          "No calibrated plastic stress-strain curve is supplied; solver mappings contain linear elasticity only."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "ssab_strenx_650mc_de_2026",
+          "ssab_steel_general"
+        ]
+      }
+    },
+    {
+      "id": "steel_ssab_strenx_700mc_plus_sheet_3_8mm_reference",
+      "name": "SSAB Strenx 700MC Plus sheet, 3-8 mm reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "高張力構造用鋼",
+        "subcategory_en": "high-strength structural steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 700000000,
+          "ultimate_tensile_strength_range_pa": [
+            750000000,
+            950000000
+          ],
+          "elongation_A5_min_percent": 13
+        }
+      },
+      "other": {
+        "condition": "thermomechanically rolled sheet, 3 <= thickness <= 8 mm, longitudinal mechanical properties; approximate SSAB-wide elastic constants at room temperature",
+        "validation_tier": "official_grade_strength_with_general_ssab_elastic_constants",
+        "notes": [
+          "E, Poisson ratio and density are SSAB-wide approximate values, not grade-specific measurements.",
+          "The thickness is capped at 8 mm where the SSAB page allows a 20 MPa lower yield minimum above 8 mm.",
+          "No calibrated plastic stress-strain curve is supplied; solver mappings contain linear elasticity only."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "ssab_strenx_700mc_plus_2026",
+          "ssab_steel_general"
+        ]
+      }
+    },
+    {
+      "id": "steel_ssab_strenx_900_plus_sheet_3_8mm_reference",
+      "name": "SSAB Strenx 900 Plus sheet, 3-8 mm reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "高張力構造用鋼",
+        "subcategory_en": "high-strength structural steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 900000000,
+          "ultimate_tensile_strength_range_pa": [
+            940000000,
+            1100000000
+          ],
+          "elongation_A5_min_percent": 11
+        }
+      },
+      "other": {
+        "condition": "sheet, 3 <= thickness <= 8 mm, mechanical properties guaranteed in longitudinal and transverse directions; approximate SSAB-wide elastic constants at room temperature",
+        "validation_tier": "official_grade_strength_with_general_ssab_elastic_constants",
+        "notes": [
+          "E, Poisson ratio and density are SSAB-wide approximate values, not grade-specific measurements.",
+          "Strength values apply only to the sheet thickness and test direction stated in condition.",
+          "No calibrated plastic stress-strain curve is supplied; solver mappings contain linear elasticity only."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "ssab_strenx_900_plus_2026",
+          "ssab_steel_general"
+        ]
+      }
+    },
+    {
+      "id": "steel_ssab_strenx_960mc_sheet_3_10mm_reference",
+      "name": "SSAB Strenx 960MC sheet, 3-10 mm reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "高張力構造用鋼",
+        "subcategory_en": "high-strength structural steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 960000000,
+          "ultimate_tensile_strength_range_pa": [
+            980000000,
+            1250000000
+          ],
+          "elongation_A5_min_percent": 7
+        }
+      },
+      "other": {
+        "condition": "thermomechanically rolled sheet, 3 <= thickness <= 10 mm, longitudinal mechanical properties; approximate SSAB-wide elastic constants at room temperature",
+        "validation_tier": "official_grade_strength_with_general_ssab_elastic_constants",
+        "notes": [
+          "E, Poisson ratio and density are SSAB-wide approximate values, not grade-specific measurements.",
+          "Strength values apply only to the sheet thickness and test direction stated in condition.",
+          "No calibrated plastic stress-strain curve is supplied; solver mappings contain linear elasticity only."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "ssab_strenx_960mc_2026",
+          "ssab_steel_general"
+        ]
+      }
+    },
+    {
+      "id": "steel_ssab_strenx_960_plus_sheet_3_8mm_reference",
+      "name": "SSAB Strenx 960 Plus sheet, 3-8 mm reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "高張力構造用鋼",
+        "subcategory_en": "high-strength structural steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 960000000,
+          "ultimate_tensile_strength_range_pa": [
+            980000000,
+            1150000000
+          ],
+          "elongation_A5_min_percent": 10
+        }
+      },
+      "other": {
+        "condition": "sheet, 3 <= thickness <= 8 mm, mechanical properties guaranteed in longitudinal and transverse directions; approximate SSAB-wide elastic constants at room temperature",
+        "validation_tier": "official_grade_strength_with_general_ssab_elastic_constants",
+        "notes": [
+          "E, Poisson ratio and density are SSAB-wide approximate values, not grade-specific measurements.",
+          "Strength values apply only to the sheet thickness and test direction stated in condition.",
+          "No calibrated plastic stress-strain curve is supplied; solver mappings contain linear elasticity only."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "ssab_strenx_960_plus_2026",
+          "ssab_steel_general"
+        ]
+      }
+    },
+    {
+      "id": "stainless_outokumpu_ultra_904l_cold_rolled_reference",
+      "name": "Outokumpu Ultra 904L cold-rolled reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "耐食ステンレス・ニッケル合金",
+        "subcategory_en": "corrosion-resistant stainless or nickel alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8000,
+          "youngs_modulus_pa": 195000000000
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 240000000,
+          "ultimate_tensile_strength_range_pa": [
+            530000000,
+            730000000
+          ],
+          "elongation_min_percent": 35
+        }
+      },
+      "other": {
+        "condition": "cold-rolled coil or sheet; EN 1.4539 / UNS N08904; 20°C, Table 10 mechanical properties and Table 13 physical properties",
+        "validation_tier": "official_source_partial_linear_elastic",
+        "notes": [
+          "Density and Young modulus are 20°C values; strength values are for the stated product form only.",
+          "Poisson ratio and a calibrated plastic curve are not published in this datasheet, so no solver mapping is supplied.",
+          "Minimum elongation uses A80 for thickness <3 mm and A (5.65 sqrt(S0)) for thickness >=3 mm."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "outokumpu_ultra_range_datasheet_dec2024"
+        ]
+      }
+    },
+    {
+      "id": "stainless_outokumpu_ultra_254_smo_cold_rolled_reference",
+      "name": "Outokumpu Ultra 254 SMO cold-rolled reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "耐食ステンレス・ニッケル合金",
+        "subcategory_en": "corrosion-resistant stainless or nickel alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8000,
+          "youngs_modulus_pa": 195000000000
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 320000000,
+          "ultimate_tensile_strength_range_pa": [
+            650000000,
+            850000000
+          ],
+          "elongation_min_percent": 35
+        }
+      },
+      "other": {
+        "condition": "cold-rolled coil or sheet; EN 1.4547 / UNS S31254; 20°C, Table 10 mechanical properties and Table 13 physical properties",
+        "validation_tier": "official_source_partial_linear_elastic",
+        "notes": [
+          "Density and Young modulus are 20°C values; strength values are for the stated product form only.",
+          "Poisson ratio and a calibrated plastic curve are not published in this datasheet, so no solver mapping is supplied.",
+          "Minimum elongation uses A80 for thickness <3 mm and A (5.65 sqrt(S0)) for thickness >=3 mm."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "outokumpu_ultra_range_datasheet_dec2024"
+        ]
+      }
+    },
+    {
+      "id": "nickel_outokumpu_ultra_alloy_825_cold_rolled_reference",
+      "name": "Outokumpu Ultra Alloy 825 cold-rolled reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "耐食ステンレス・ニッケル合金",
+        "subcategory_en": "corrosion-resistant stainless or nickel alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8100,
+          "youngs_modulus_pa": 195000000000
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 240000000,
+          "ultimate_tensile_strength_min_pa": 590000000,
+          "elongation_min_percent": 30
+        }
+      },
+      "other": {
+        "condition": "cold-rolled coil or sheet; EN 2.4858 / UNS N08825; 20°C, Table 10 mechanical properties and Table 13 physical properties",
+        "validation_tier": "official_source_partial_linear_elastic",
+        "notes": [
+          "Density and Young modulus are 20°C values; strength values are for the stated product form only.",
+          "Poisson ratio and a calibrated plastic curve are not published in this datasheet, so no solver mapping is supplied.",
+          "Minimum elongation uses A80 for thickness <3 mm and A (5.65 sqrt(S0)) for thickness >=3 mm.",
+          "Single tensile-strength value is treated as a lower bound; the datasheet attributes this grade to ISO 6208."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "outokumpu_ultra_range_datasheet_dec2024"
+        ]
+      }
+    },
+    {
+      "id": "stainless_outokumpu_ultra_317l_plate_reference",
+      "name": "Outokumpu Ultra 317L plate reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "耐食ステンレス・ニッケル合金",
+        "subcategory_en": "corrosion-resistant stainless or nickel alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8000,
+          "youngs_modulus_pa": 200000000000
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 220000000,
+          "ultimate_tensile_strength_range_pa": [
+            520000000,
+            720000000
+          ],
+          "elongation_min_percent": 40
+        }
+      },
+      "other": {
+        "condition": "quarto plate; UNS S31703; 20°C, Table 10 mechanical properties and Table 13 physical properties",
+        "validation_tier": "official_source_partial_linear_elastic",
+        "notes": [
+          "Density and Young modulus are 20°C values; strength values are for the stated product form only.",
+          "Poisson ratio and a calibrated plastic curve are not published in this datasheet, so no solver mapping is supplied.",
+          "The 520-720 MPa tensile range is the plate row; no tensile range is given for the cold-rolled row."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "outokumpu_ultra_range_datasheet_dec2024"
+        ]
+      }
+    },
+    {
+      "id": "stainless_outokumpu_ultra_725ln_plate_reference",
+      "name": "Outokumpu Ultra 725LN plate reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "耐食ステンレス・ニッケル合金",
+        "subcategory_en": "corrosion-resistant stainless or nickel alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8000,
+          "youngs_modulus_pa": 195000000000
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 250000000,
+          "ultimate_tensile_strength_range_pa": [
+            540000000,
+            740000000
+          ],
+          "elongation_min_percent": 40
+        }
+      },
+      "other": {
+        "condition": "quarto plate; EN 1.4466 / UNS S31050; 20°C, Table 10 mechanical properties and Table 13 physical properties",
+        "validation_tier": "official_source_partial_linear_elastic",
+        "notes": [
+          "Density and Young modulus are 20°C values; strength values are for the stated product form only.",
+          "Poisson ratio and a calibrated plastic curve are not published in this datasheet, so no solver mapping is supplied."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "outokumpu_ultra_range_datasheet_dec2024"
+        ]
+      }
+    },
+    {
+      "id": "stainless_outokumpu_ultra_6xn_cold_rolled_reference",
+      "name": "Outokumpu Ultra 6XN cold-rolled reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "耐食ステンレス・ニッケル合金",
+        "subcategory_en": "corrosion-resistant stainless or nickel alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8100,
+          "youngs_modulus_pa": 195000000000
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 300000000,
+          "ultimate_tensile_strength_range_pa": [
+            650000000,
+            850000000
+          ],
+          "elongation_min_percent": 35
+        }
+      },
+      "other": {
+        "condition": "cold-rolled coil or sheet; EN 1.4529; 20°C, Table 10 mechanical properties and Table 13 physical properties",
+        "validation_tier": "official_source_partial_linear_elastic",
+        "notes": [
+          "Density and Young modulus are 20°C values; strength values are for the stated product form only.",
+          "Poisson ratio and a calibrated plastic curve are not published in this datasheet, so no solver mapping is supplied.",
+          "Minimum elongation uses A80 for thickness <3 mm and A (5.65 sqrt(S0)) for thickness >=3 mm."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "outokumpu_ultra_range_datasheet_dec2024"
+        ]
+      }
+    },
+    {
+      "id": "stainless_outokumpu_ultra_654_smo_cold_rolled_reference",
+      "name": "Outokumpu Ultra 654 SMO cold-rolled reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "耐食ステンレス・ニッケル合金",
+        "subcategory_en": "corrosion-resistant stainless or nickel alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8000,
+          "youngs_modulus_pa": 190000000000
+        },
+        "strength_data": {
+          "yield_strength_min_pa": 430000000,
+          "ultimate_tensile_strength_range_pa": [
+            750000000,
+            1000000000
+          ],
+          "elongation_min_percent": 40
+        }
+      },
+      "other": {
+        "condition": "cold-rolled coil or sheet; EN 1.4652 / UNS S32654; 20°C, Table 10 mechanical properties and Table 13 physical properties",
+        "validation_tier": "official_source_partial_linear_elastic",
+        "notes": [
+          "Density and Young modulus are 20°C values; strength values are for the stated product form only.",
+          "Poisson ratio and a calibrated plastic curve are not published in this datasheet, so no solver mapping is supplied.",
+          "Minimum elongation uses A80 for thickness <3 mm and A (5.65 sqrt(S0)) for thickness >=3 mm."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "outokumpu_ultra_range_datasheet_dec2024"
         ]
       }
     }

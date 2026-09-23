@@ -5,12 +5,12 @@ GitHub Pages でホストされており、ブラウザからすぐに利用で�
 
 ## 収録データ
 
-788 件の材料を 11 カテゴリに分類して収録しています。
+804 件の材料を 11 カテゴリに分類して収録しています。
 
 | カテゴリ | 件数 |
 |---|---|
 | 木質 (Wood) | 250 |
-| 金属 (Metal) | 87 |
+| 金属 (Metal) | 103 |
 | エラストマー (Elastomer) | 84 |
 | 高分子 (Polymer) | 81 |
 | 地盤・土質 (Soil) | 81 |
@@ -31,7 +31,7 @@ GitHub Pages でホストされており、ブラウザからすぐに利用で�
 
 主な構造解析向け系列は次のとおりです。
 
-- 金属: SSAB Domex / Strenx、Outokumpu Forta、Hydro 6082
+- 金属: SSAB Domex / Strenx、Outokumpu Forta / Ultra、Hydro 6005A / 6060 / 6063 / 6082
 - コンクリート・組積造: Eurocode 2 強度クラス、Rapid Set / QUIKRETE 補修材・グラウト、CMU・れんが組積体
 - 木質: EN 338 強度クラス、WWPA 構造用製材等級
 - 地盤・岩石: FHWA / USACE インタクトロック、FHWA 深層混合処理土
