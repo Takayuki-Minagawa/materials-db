@@ -1231,20 +1231,6 @@
         "A493 99.6% alumina thermal conductivity"
       ]
     },
-    "dow_sylgard_182": {
-      "title": "SYLGARD 182 Silicone Elastomer Technical Data Sheet",
-      "publisher": "Dow",
-      "url": "https://www.dow.com/content/dam/dcc/documents/en-us/productdatasheet/11/11-12/11-1251-01-sylgard-182-silicone-elastomer.pdf",
-      "accessed_at": "2026-03-28",
-      "info_used": [
-        "cured specific gravity",
-        "tensile strength",
-        "elongation",
-        "tensile modulus",
-        "Shore A hardness",
-        "thermal conductivity"
-      ]
-    },
     "rogers_bisco_ht800": {
       "title": "BISCO HT-800 Medium Silicone Foam Product Data Sheet",
       "publisher": "Rogers Corporation",
@@ -2419,21 +2405,6 @@
         "thermal conductivity"
       ]
     },
-    "victrex_peek_450ca40": {
-      "title": "VICTREX PEEK 450CA40 Datasheet",
-      "publisher": "Victrex",
-      "url": "https://www.victrex.com/-/media/downloads/datasheets/victrex_tds_450ca40.pdf",
-      "accessed_at": "2026-03-29",
-      "info_used": [
-        "density and water absorption",
-        "tensile modulus and tensile break stress over temperature",
-        "tensile break strain",
-        "flexural modulus and flexural stress over temperature",
-        "compressive stress over temperature",
-        "glass transition temperature and melting temperature",
-        "notched izod impact strength"
-      ]
-    },
     "victrex_peek_650ca30": {
       "title": "VICTREX PEEK 650CA30 Datasheet",
       "publisher": "Victrex",
@@ -2946,20 +2917,6 @@
         "thermal expansion from 0 to 200 C"
       ]
     },
-    "sika_sikagrout_500_aqua": {
-      "title": "SikaGrout-500 Aqua Product Data Sheet",
-      "publisher": "Sika",
-      "url": "https://usa.sika.com/content/dam/dms/us01/2/sikagrout-500-aqua.pdf",
-      "accessed_at": "2026-03-29",
-      "info_used": [
-        "28-day compressive strength",
-        "28-day compressive modulus",
-        "28-day flexural strength",
-        "28-day splitting tensile strength",
-        "mix water range per 22.7 kg bag",
-        "coverage at fluid consistency"
-      ]
-    },
     "sika_sikagrout_295_admx": {
       "title": "SikaGrout-295 AD MX Product Data Sheet",
       "publisher": "Sika",
@@ -2986,48 +2943,6 @@
         "flexural strength lower bound values",
         "autogenous shrinkage at 14 days",
         "coverage and mix water for one 2200 lb bulk bag"
-      ]
-    },
-    "sika_sikagrout_212": {
-      "title": "SikaGrout-212 Product Data Sheet",
-      "publisher": "Sika",
-      "url": "https://usa.sika.com/content/dam/dms/us01/o/sikagrout_-212.pdf",
-      "accessed_at": "2026-03-29",
-      "info_used": [
-        "28-day fluid-consistency compressive strength",
-        "28-day fluid-consistency flexural strength",
-        "28-day fluid-consistency splitting tensile strength",
-        "28-day fluid-consistency tensile adhesion strength",
-        "fluid-consistency mix water per 22.7 kg bag",
-        "coverage at fluid consistency"
-      ]
-    },
-    "sika_sikagrout_350": {
-      "title": "SikaGrout-350 Product Page",
-      "publisher": "Sika",
-      "url": "https://usa.sika.com/en/construction/repair-protection/grouts/cementitious-grouts/sikagrout-350.html",
-      "accessed_at": "2026-03-29",
-      "info_used": [
-        "28-day compressive strength",
-        "28-day flexural strength",
-        "28-day splitting tensile strength",
-        "28-day shear strength",
-        "fluid-consistency mix water range per 22.7 kg bag",
-        "coverage at fluid consistency"
-      ]
-    },
-    "sika_sikagrout_328": {
-      "title": "SikaGrout-328 Product Page",
-      "publisher": "Sika",
-      "url": "https://usa.sika.com/en/construction/repair-protection/grouts/cementitious-grouts/sikagrout-328.html",
-      "accessed_at": "2026-03-29",
-      "info_used": [
-        "28-day fluid-consistency compressive strength",
-        "28-day fluid-consistency flexural strength",
-        "28-day fluid-consistency splitting tensile strength",
-        "28-day fluid-consistency shear strength",
-        "fluid-consistency mix water range per 22.7 kg bag",
-        "coverage at fluid consistency"
       ]
     },
     "sika_sikagrout_4316": {
@@ -3701,15 +3616,6 @@
         "dry specific gravity, MOE, MOR, compression parallel, compression perpendicular, and shear for limber pine"
       ]
     },
-    "usda_fpl_jeffrey_pine_techsheet": {
-      "title": "USDA FPL Species Technical Sheet: Jeffrey Pine",
-      "publisher": "USDA Forest Service, Forest Products Laboratory",
-      "url": "https://www.fpl.fs.usda.gov/documnts/TechSheets/SoftwoodNA/htmlDocs/pinusjeffmet.html",
-      "accessed_at": "2026-04-01",
-      "info_used": [
-        "dry specific gravity, MOE, MOR, compression parallel, compression perpendicular, and shear for Jeffrey pine"
-      ]
-    },
     "usda_fpl_eastern_hemlock_techsheet": {
       "title": "USDA FPL Species Technical Sheet: Eastern Hemlock",
       "publisher": "USDA Forest Service, Forest Products Laboratory",
@@ -3735,15 +3641,6 @@
       "accessed_at": "2026-04-01",
       "info_used": [
         "dry specific gravity, MOE, MOR, compression parallel, compression perpendicular, and shear for Port-Orford-cedar"
-      ]
-    },
-    "usda_fpl_alaska_cedar_techsheet": {
-      "title": "USDA FPL Species Technical Sheet: Alaska Cedar",
-      "publisher": "USDA Forest Service, Forest Products Laboratory",
-      "url": "https://www.fpl.fs.usda.gov/documnts/TechSheets/SoftwoodNA/htmlDocs/chamaenootkmet.html",
-      "accessed_at": "2026-04-01",
-      "info_used": [
-        "dry specific gravity, MOE, MOR, compression parallel, compression perpendicular, and shear for Alaska cedar"
       ]
     },
     "usda_fpl_slash_pine_techsheet": {
@@ -18020,124 +17917,6 @@
       }
     },
     {
-      "id": "engineered_wood_arizona_20f_e_sp1_glulam_reference",
-      "name": "Arizona 20F-E/SP1 SP/PP unbalanced glulam reference",
-      "classification": {
-        "category_ja": "木質",
-        "category_en": "Wood",
-        "subcategory_ja": "エンジニアードウッド",
-        "subcategory_en": "engineered_wood"
-      },
-      "properties": {
-        "nonlinear_models": {
-          "engineered_wood_beam_damage_starter": {
-            "recommended": true,
-            "major_axis_bending_pa": 13789514.586336,
-            "minor_axis_bending_pa": 6550019.4285095995,
-            "tension_parallel_pa": 6205281.5638512,
-            "compression_parallel_pa": 6894757.293168,
-            "major_axis_shear_pa": 2585533.984938,
-            "minor_axis_shear_pa": 1310003.88570192,
-            "notes": [
-              "PR-L271 publishes design values for beam use, not a full 3D orthotropic continuum card.",
-              "This unbalanced SP1 layup is intended primarily for simple-span members and has different positive and negative major-axis bending values."
-            ],
-            "source_ids": [
-              "apa_pr_l271_glulam_beams"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "dry-use, unbalanced southern pine and ponderosa pine glulam beam, APA PR-L271",
-        "validation_tier": "official_source_partial_glulam_design_values",
-        "product_form": "glulam",
-        "notes": [
-          "This is a partial glulam beam card because PR-L271 does not publish bulk density or a full continuum orthotropic set.",
-          "PR-L271 notes that the bottom face is a southern pine lamination and may be designed with a specific gravity of 0.55 for dowel-type fastener design.",
-          "The report limits this layup to members with three or more laminations."
-        ],
-        "beam_reference_design_values": {
-          "layup_symbol": "20F-E/SP1",
-          "species_basis": "southern pine / ponderosa pine",
-          "major_axis_bending_positive_pa": 13789514.586336,
-          "major_axis_bending_negative_pa": 9997398.075093599,
-          "major_axis_compression_perpendicular_pa": 5550279.62100024,
-          "major_axis_shear_parallel_pa": 2585533.984938,
-          "major_axis_modulus_true_pa": 11721087398.3856,
-          "major_axis_modulus_apparent_pa": 11031611669.0688,
-          "major_axis_modulus_min_pa": 5791596126.26112,
-          "minor_axis_bending_pa": 6550019.4285095995,
-          "minor_axis_compression_perpendicular_pa": 2585533.984938,
-          "minor_axis_shear_parallel_pa": 1310003.88570192,
-          "minor_axis_modulus_true_pa": 9652660210.4352,
-          "minor_axis_modulus_apparent_pa": 8963184481.118399,
-          "minor_axis_modulus_min_pa": 4757382532.28592,
-          "tension_parallel_pa": 6205281.5638512,
-          "compression_parallel_pa": 6894757.293168,
-          "specific_gravity_for_dowel_type_fastener_design": {
-            "top_or_bottom_face": 0.43,
-            "side_face": 0.43
-          },
-          "wet_use_factors": {
-            "major_axis_bending": 0.8,
-            "major_axis_compression_perpendicular": 0.53,
-            "major_axis_shear": 0.875,
-            "major_axis_modulus": 0.833,
-            "minor_axis_bending": 0.8,
-            "minor_axis_compression_perpendicular": 0.53,
-            "minor_axis_shear": 0.875,
-            "minor_axis_modulus": 0.833,
-            "tension_parallel": 0.8,
-            "compression_parallel": 0.73
-          }
-        },
-        "equivalent_linear_beam_material": {
-          "E_longitudinal_pa": 11031611669.0688,
-          "E_axial_pa": 9652660210.4352,
-          "missing_parameters": [
-            "bulk density not published in PR-L271"
-          ]
-        },
-        "ansys_mapping": {
-          "beam_material_reference": {
-            "EX_pa": 11031611669.0688
-          },
-          "nonlinear_reference_data": {
-            "major_axis_bending_pa": 13789514.586336,
-            "minor_axis_bending_pa": 6550019.4285095995,
-            "tension_parallel_pa": 6205281.5638512,
-            "compression_parallel_pa": 6894757.293168,
-            "major_axis_shear_pa": 2585533.984938,
-            "minor_axis_shear_pa": 1310003.88570192
-          }
-        },
-        "abaqus_mapping": {
-          "beam_section_reference": {
-            "E1_pa": 11031611669.0688
-          }
-        },
-        "dolfinx_mapping": {
-          "beam_1d_reference": {
-            "E_pa": 11031611669.0688,
-            "sigma_b_major_pa": 13789514.586336,
-            "sigma_b_minor_pa": 6550019.4285095995,
-            "sigma_t_pa": 6205281.5638512,
-            "sigma_c_pa": 6894757.293168
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "apa_pr_l271_glulam_beams"
-        ],
-        "inferences": [
-          "The apparent major-axis modulus is the most practical starter modulus for beam deflection calculations.",
-          "The axial modulus is taken from the cited minor-axis true modulus per the report note for axial loading."
-        ]
-      }
-    },
-    {
       "id": "engineered_wood_arizona_20f_e_sp2_glulam_reference",
       "name": "Arizona 20F-E/SP2 SP/PP balanced glulam reference",
       "classification": {
@@ -26188,79 +25967,6 @@
         ],
         "inferences": [
           "Poisson ratio is not listed in the cited Hexcel datasheet. A typical toughened epoxy value of 0.35 is inserted as a practical starter value."
-        ]
-      }
-    },
-    {
-      "id": "elastomer_dow_sylgard_182",
-      "name": "SYLGARD 182 Silicone Elastomer",
-      "classification": {
-        "category_ja": "エラストマー",
-        "category_en": "Elastomer",
-        "subcategory_ja": "エラストマー",
-        "subcategory_en": "elastomer"
-      },
-      "properties": {
-        "linear_elastic": {
-          "density_kg_m3": 1030,
-          "youngs_modulus_pa": 7300000,
-          "poissons_ratio": 0.499
-        },
-        "strength_data": {
-          "tensile_strength_pa": 7600000,
-          "elongation_at_break": 1.05,
-          "shore_a_hardness": 51,
-          "thermal_conductivity_w_mk": 0.16
-        },
-        "nonlinear_models": {
-          "neo_hookean_starter": {
-            "recommended": true,
-            "shear_modulus_pa": 2434956.6377585055,
-            "bulk_modulus_pa": 1216666666.6666656,
-            "C10_pa": 1217478.3188792528,
-            "D1_1_per_pa": 1.6438356164383577e-9,
-            "notes": [
-              "The Neo-Hookean constants are inferred from the TDS tensile modulus and an assumed nearly incompressible Poisson ratio.",
-              "Replace this starter card with fitted multi-mode test data for large-strain sealing or contact simulations."
-            ],
-            "source_ids": [
-              "dow_sylgard_182",
-              "abaqus_hyperelastic_keyword",
-              "abaqus_hyperelastic_behavior"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "cured two-part silicone elastomer",
-        "validation_tier": "official_source_with_inferred_hyperelastic_starter",
-        "notes": [
-          "This is a practical silicone starter card for large-deformation FEM, not a test-fitted production hyperelastic model.",
-          "Because the constants are inferred, treat this entry as an initial estimate only."
-        ],
-        "abaqus_mapping": {
-          "elastic": {
-            "E_pa": 7300000,
-            "nu": 0.499
-          },
-          "hyperelastic_neo_hooke": {
-            "C10_pa": 1217478.3188792528,
-            "D1_1_per_pa": 1.6438356164383577e-9
-          }
-        },
-        "dolfinx_mapping": {
-          "compressible_neo_hookean_reference": {
-            "E_pa": 7300000,
-            "nu": 0.499
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "dow_sylgard_182"
-        ],
-        "inferences": [
-          "Poisson ratio is not listed in the Dow TDS. A nearly incompressible value of 0.499 is inserted to derive a Neo-Hookean starter card."
         ]
       }
     },
@@ -38081,78 +37787,6 @@
       }
     },
     {
-      "id": "concrete_sikagrout_500_aqua",
-      "name": "SikaGrout-500 Aqua",
-      "classification": {
-        "category_ja": "コンクリート・グラウト",
-        "category_en": "Concrete and Grout",
-        "subcategory_ja": "コンクリート・グラウト",
-        "subcategory_en": "concrete"
-      },
-      "properties": {
-        "linear_elastic": {
-          "density_kg_m3": 2685,
-          "youngs_modulus_pa": 35853000000,
-          "poissons_ratio": 0.2
-        },
-        "strength_data": {
-          "compressive_strength_pa": 62000000,
-          "flexural_strength_pa": 8300000,
-          "splitting_tensile_strength_pa": 3800000
-        },
-        "nonlinear_models": {
-          "concrete_damage_partial_reference": {
-            "recommended": true,
-            "compressive_strength_pa": 62000000,
-            "tensile_strength_pa": 3800000,
-            "notes": [
-              "The public Sika datasheet provides splitting tensile strength rather than direct uniaxial tensile strength, so the splitting value is used only as a practical cracking reference.",
-              "Use project-specific fracture-energy or softening data if underwater crack control or impact loading is important."
-            ],
-            "source_ids": [
-              "sika_sikagrout_500_aqua"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "nonshrink cementitious underwater grout, fluid consistency, 28-day reference values",
-        "validation_tier": "official_source_with_partly_inferred_density_and_nu",
-        "notes": [
-          "This adds a grout specifically formulated for underwater placement and tidal-zone repair work.",
-          "The listed values correspond to 28-day tests at fluid consistency and should not be reused unchanged for different water ratios."
-        ],
-        "abaqus_mapping": {
-          "elastic": {
-            "E_pa": 35853000000,
-            "nu": 0.2
-          },
-          "concrete_damaged_plasticity_partial_reference": {
-            "known_response_points": {
-              "compressive_strength_pa": 62000000,
-              "splitting_tensile_strength_pa": 3800000,
-              "flexural_strength_pa": 8300000
-            },
-            "missing_parameters": [
-              "compression_hardening_table",
-              "compression_damage_table",
-              "tension_stiffening_table",
-              "tension_damage_table"
-            ]
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "sika_sikagrout_500_aqua"
-        ],
-        "inferences": [
-          "Density is inferred from one 22.7 kg bag plus midpoint mix water of 4.15 kg yielding approximately 0.01 m3 of grout at fluid consistency.",
-          "Poisson ratio is not published in the cited Sika datasheet. A practical cementitious-grout starter value of 0.20 is inserted."
-        ]
-      }
-    },
-    {
       "id": "concrete_sikagrout_295_admx",
       "name": "SikaGrout-295 AD MX",
       "classification": {
@@ -40387,75 +40021,6 @@
       }
     },
     {
-      "id": "polymer_victrex_peek_450ca40",
-      "name": "VICTREX PEEK 450CA40",
-      "classification": {
-        "category_ja": "高分子",
-        "category_en": "Polymer",
-        "subcategory_ja": "高分子",
-        "subcategory_en": "polymer"
-      },
-      "properties": {
-        "linear_elastic": {
-          "density_kg_m3": 1450,
-          "youngs_modulus_pa": 32000000000,
-          "poissons_ratio": 0.33
-        },
-        "strength_data": {
-          "tensile_strength_pa": 240000000,
-          "reference_failure_strain": 0.015,
-          "flexural_modulus_pa": 27500000000,
-          "flexural_strength_pa": 335000000,
-          "compressive_strength_pa": 275000000,
-          "izod_notched_impact_strength_23c_j_m2": 10000,
-          "glass_transition_temperature_c": 150,
-          "melting_temperature_c": 343,
-          "water_absorption_saturation_23c_percent": 0.27,
-          "water_absorption_saturation_100c_percent": 0.3
-        },
-        "nonlinear_models": {
-          "continuum_damage_starter": {
-            "recommended": true,
-            "tensile_strength_pa": 240000000,
-            "engineering_failure_strain": 0.015,
-            "notes": [
-              "This is a very stiff carbon-rich PEEK starter card for small-strain screening analysis.",
-              "Molding orientation and electrically conductive filler effects are not represented."
-            ],
-            "source_ids": [
-              "victrex_peek_450ca40"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "40% carbon-fiber reinforced low-flow PEEK, 23 C",
-        "validation_tier": "official_source_with_inferred_nu",
-        "notes": [
-          "This entry adds a higher-carbon-content PEEK option above the earlier 30 percent carbon-fiber grades.",
-          "Because the public sheet omits some thermal design values, this card should still be treated as a room-temperature structural starter."
-        ],
-        "abaqus_mapping": {
-          "elastic": {
-            "E_pa": 32000000000,
-            "nu": 0.33
-          },
-          "nonlinear_reference_data": {
-            "sigma_t_pa": 240000000,
-            "epsilon_f": 0.015
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "victrex_peek_450ca40"
-        ],
-        "inferences": [
-          "Poisson ratio is not listed in the Victrex datasheet. A practical high-carbon-filled PEEK starter value of 0.33 is inserted."
-        ]
-      }
-    },
-    {
       "id": "polymer_victrex_peek_650ca30",
       "name": "VICTREX PEEK 650CA30",
       "classification": {
@@ -41848,155 +41413,6 @@
       }
     },
     {
-      "id": "concrete_sikagrout_212",
-      "name": "SikaGrout-212",
-      "classification": {
-        "category_ja": "コンクリート・グラウト",
-        "category_en": "Concrete and Grout",
-        "subcategory_ja": "コンクリート・グラウト",
-        "subcategory_en": "concrete"
-      },
-      "properties": {
-        "linear_elastic": {
-          "density_kg_m3": 2672.2,
-          "youngs_modulus_pa": 29700000000,
-          "poissons_ratio": 0.2
-        },
-        "strength_data": {
-          "compressive_strength_pa": 40000000,
-          "flexural_strength_pa": 6800000,
-          "splitting_tensile_strength_pa": 3400000,
-          "tensile_adhesion_strength_pa": 13100000,
-          "expansion_28d_percent": 0.027
-        },
-        "nonlinear_models": {
-          "concrete_damage_partial_reference": {
-            "recommended": true,
-            "compressive_strength_pa": 40000000,
-            "tensile_strength_pa": 3400000,
-            "notes": [
-              "The public Sika datasheet provides fluid-consistency compressive, flexural, and splitting-tensile data, but not the compression hardening or tension softening tables required for a calibrated cracking model.",
-              "The splitting tensile strength is used only as a practical cracking reference, not as a direct uniaxial tensile test result."
-            ],
-            "source_ids": [
-              "sika_sikagrout_212"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "general purpose cementitious grout, fluid consistency, 28-day reference values",
-        "validation_tier": "official_source_with_inferred_density_E_and_nu",
-        "notes": [
-          "This adds a broadly used general-purpose cementitious grout rather than another specialized offshore or heavy-equipment formulation.",
-          "The listed values correspond to fluid consistency and 28-day curing, so they should not be reused unchanged for plastic or flowable placements."
-        ],
-        "abaqus_mapping": {
-          "elastic": {
-            "E_pa": 29700000000,
-            "nu": 0.2
-          },
-          "concrete_damaged_plasticity_partial_reference": {
-            "known_response_points": {
-              "compressive_strength_pa": 40000000,
-              "splitting_tensile_strength_pa": 3400000,
-              "flexural_strength_pa": 6800000
-            },
-            "missing_parameters": [
-              "compression_hardening_table",
-              "compression_damage_table",
-              "tension_stiffening_table",
-              "tension_damage_table"
-            ]
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "sika_sikagrout_212"
-        ],
-        "inferences": [
-          "Density is inferred from one 22.7 kg bag plus approximately 4.02 kg water at fluid consistency yielding approximately 0.01 m3 of grout.",
-          "Young's modulus is inserted using an ACI-style concrete modulus estimate based on the published 28-day fluid-consistency compressive strength of 40 MPa.",
-          "Poisson ratio is not published in the cited Sika datasheet. A practical cementitious-grout starter value of 0.20 is inserted."
-        ]
-      }
-    },
-    {
-      "id": "concrete_sikagrout_350",
-      "name": "SikaGrout-350",
-      "classification": {
-        "category_ja": "コンクリート・グラウト",
-        "category_en": "Concrete and Grout",
-        "subcategory_ja": "コンクリート・グラウト",
-        "subcategory_en": "concrete"
-      },
-      "properties": {
-        "linear_elastic": {
-          "density_kg_m3": 2589.5,
-          "youngs_modulus_pa": 39000000000,
-          "poissons_ratio": 0.2
-        },
-        "strength_data": {
-          "compressive_strength_pa": 69000000,
-          "flexural_strength_pa": 9000000,
-          "splitting_tensile_strength_pa": 5200000,
-          "shear_strength_pa": 17200000
-        },
-        "nonlinear_models": {
-          "concrete_damage_partial_reference": {
-            "recommended": true,
-            "compressive_strength_pa": 69000000,
-            "tensile_strength_pa": 5200000,
-            "notes": [
-              "The public Sika page provides compressive, flexural, splitting-tensile, and shear values, but not the full compression hardening or tension softening data required for a calibrated nonlinear grout model.",
-              "The splitting tensile strength is used only as a practical cracking reference, not as a direct uniaxial tensile test result."
-            ],
-            "source_ids": [
-              "sika_sikagrout_350"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "high-performance deep-pour cementitious grout, fluid consistency, 28-day reference values",
-        "validation_tier": "official_source_with_inferred_density_E_and_nu",
-        "notes": [
-          "This adds a deep-pour cementitious grout for larger mass grouting and heavy-equipment bases, rather than another thin-section precision grout.",
-          "Its published values are useful for screening, but real deep-pour work still needs temperature-rise and placement-condition checks."
-        ],
-        "abaqus_mapping": {
-          "elastic": {
-            "E_pa": 39000000000,
-            "nu": 0.2
-          },
-          "concrete_damaged_plasticity_partial_reference": {
-            "known_response_points": {
-              "compressive_strength_pa": 69000000,
-              "splitting_tensile_strength_pa": 5200000,
-              "flexural_strength_pa": 9000000
-            },
-            "missing_parameters": [
-              "compression_hardening_table",
-              "compression_damage_table",
-              "tension_stiffening_table",
-              "tension_damage_table"
-            ]
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "sika_sikagrout_350"
-        ],
-        "inferences": [
-          "Density is inferred from one 22.7 kg bag plus approximately 3.20 kg midpoint mix water at fluid consistency yielding approximately 0.01 m3 of grout.",
-          "Young's modulus is inserted using an ACI-style concrete modulus estimate based on the published 28-day compressive strength of 69 MPa.",
-          "Poisson ratio is not published on the cited Sika page. A practical cementitious-grout starter value of 0.20 is inserted."
-        ]
-      }
-    },
-    {
       "id": "concrete_sikagrout_4316",
       "name": "SikaGrout-4316",
       "classification": {
@@ -42961,80 +42377,6 @@
         "inferences": [
           "The inserted Young's modulus corresponds to the published compressive modulus because compression-dominated sandwich-core behavior is commonly the governing design case.",
           "Poisson ratio is not listed in the Evonik datasheet. 0.30 is inserted as a practical rigid-foam starter value."
-        ]
-      }
-    },
-    {
-      "id": "concrete_sikagrout_328",
-      "name": "SikaGrout-328",
-      "classification": {
-        "category_ja": "コンクリート・グラウト",
-        "category_en": "Concrete and Grout",
-        "subcategory_ja": "コンクリート・グラウト",
-        "subcategory_en": "concrete"
-      },
-      "properties": {
-        "linear_elastic": {
-          "density_kg_m3": 2660,
-          "youngs_modulus_pa": 33800000000,
-          "poissons_ratio": 0.2
-        },
-        "strength_data": {
-          "compressive_strength_pa": 51700000,
-          "flexural_strength_pa": 9000000,
-          "splitting_tensile_strength_pa": 4500000,
-          "shear_strength_pa": 13800000
-        },
-        "nonlinear_models": {
-          "concrete_damage_partial_reference": {
-            "recommended": true,
-            "compressive_strength_pa": 51700000,
-            "tensile_strength_pa": 4500000,
-            "notes": [
-              "The public Sika page provides fluid-consistency compressive, flexural, splitting-tensile, and shear values, but not the hardening and softening tables required for a calibrated cracking model.",
-              "The splitting tensile strength is used only as a practical cracking reference, not as a direct uniaxial tensile test result."
-            ],
-            "source_ids": [
-              "sika_sikagrout_328"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "precision cementitious grout with extended working time, fluid consistency, 28-day reference values",
-        "validation_tier": "official_source_with_inferred_density_E_and_nu",
-        "notes": [
-          "This adds a precision grout with extended working time that sits between the general-purpose and higher-strength Sika grout cards already in the database.",
-          "The listed values correspond to fluid consistency and 28-day curing, so they should not be reused unchanged for different water ratios."
-        ],
-        "abaqus_mapping": {
-          "elastic": {
-            "E_pa": 33800000000,
-            "nu": 0.2
-          },
-          "concrete_damaged_plasticity_partial_reference": {
-            "known_response_points": {
-              "compressive_strength_pa": 51700000,
-              "splitting_tensile_strength_pa": 4500000,
-              "flexural_strength_pa": 9000000
-            },
-            "missing_parameters": [
-              "compression_hardening_table",
-              "compression_damage_table",
-              "tension_stiffening_table",
-              "tension_damage_table"
-            ]
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "sika_sikagrout_328"
-        ],
-        "inferences": [
-          "Density is inferred from one 22.7 kg bag plus approximately 3.9 kg midpoint mix water at fluid consistency yielding approximately 0.01 m3 of grout.",
-          "Young's modulus is inserted using an ACI-style concrete modulus estimate based on the published 28-day fluid-consistency compressive strength of 51.7 MPa.",
-          "Poisson ratio is not published on the cited Sika page. A practical cementitious-grout starter value of 0.20 is inserted."
         ]
       }
     },
@@ -49248,125 +48590,6 @@
       }
     },
     {
-      "id": "wood_jeffrey_pine_clear_12pct_reference",
-      "name": "Jeffrey pine clear wood reference",
-      "classification": {
-        "category_ja": "木質",
-        "category_en": "Wood",
-        "subcategory_ja": "天然木材",
-        "subcategory_en": "wood"
-      },
-      "properties": {
-        "orthotropic_elastic": {
-          "axes": {
-            "x": "longitudinal",
-            "y": "radial",
-            "z": "tangential"
-          },
-          "reference_density_kg_m3_approx": 400,
-          "specific_gravity_reference": 0.4,
-          "EX_pa": 9790000000,
-          "EY_pa": 1194380000,
-          "EZ_pa": 812570000,
-          "GXY_pa": 1351020000,
-          "GYZ_pa": 166430000,
-          "GXZ_pa": 1125850000,
-          "PRXY": 0.337,
-          "PRYZ": 0.426,
-          "PRXZ": 0.4
-        },
-        "strength_data": {
-          "modulus_of_rupture_pa": 65000000,
-          "compression_parallel_to_grain_pa": 36700000,
-          "compression_perpendicular_to_grain_pa": 4000000,
-          "shear_parallel_to_grain_pa": 7800000,
-          "tension_perpendicular_to_grain_pa": 2900000
-        },
-        "nonlinear_models": {
-          "orthotropic_strength_envelope_starter": {
-            "recommended": true,
-            "longitudinal_tension_pa": 65000000,
-            "longitudinal_compression_pa": 36700000,
-            "radial_tension_pa": 2900000,
-            "tangential_tension_pa": 2900000,
-            "radial_compression_pa": 4000000,
-            "tangential_compression_pa": 4000000,
-            "longitudinal_radial_shear_pa": 7800000,
-            "longitudinal_tangential_shear_pa": 7800000,
-            "notes": [
-              "The longitudinal tensile strength is conservatively approximated by the modulus of rupture because direct tension data were not available for the same reference condition.",
-              "No radial-tangential rolling-shear strength was inserted because the cited handbook data do not provide a matching value for this condition."
-            ],
-            "source_ids": [
-              "usda_fpl_jeffrey_pine_techsheet",
-              "usda_wood_handbook_ch5"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "clear, straight-grained, approximately 12% moisture content",
-        "validation_tier": "official_source_with_derived_orthotropic_constants",
-        "notes": [
-          "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Jeffrey pine is treated with the same mechanical property values as ponderosa pine because the USDA FPL species sheet states that Jeffrey pine has identical wood properties to ponderosa pine."
-        ],
-        "ansys_mapping": {
-          "orthotropic_mp": {
-            "EX_pa": 9790000000,
-            "EY_pa": 1194380000,
-            "EZ_pa": 812570000,
-            "GXY_pa": 1351020000,
-            "GYZ_pa": 166430000,
-            "GXZ_pa": 1125850000,
-            "PRXY": 0.337,
-            "PRYZ": 0.426,
-            "PRXZ": 0.4,
-            "DENS_kg_m3": 400
-          },
-          "nonlinear_reference_data": {
-            "longitudinal_tension_pa": 65000000,
-            "longitudinal_compression_pa": 36700000,
-            "transverse_tension_pa": 2900000,
-            "transverse_compression_pa": 4000000,
-            "shear_parallel_to_grain_pa": 7800000
-          }
-        },
-        "dolfinx_mapping": {
-          "orthotropic_linear_elastic": {
-            "E_x_pa": 9790000000,
-            "E_y_pa": 1194380000,
-            "E_z_pa": 812570000,
-            "nu_xy": 0.337,
-            "nu_yz": 0.426,
-            "nu_xz": 0.4,
-            "G_xy_pa": 1351020000,
-            "G_yz_pa": 166430000,
-            "G_xz_pa": 1125850000
-          },
-          "custom_orthotropic_damage_reference": {
-            "sigma_t_x_pa": 65000000,
-            "sigma_c_x_pa": 36700000,
-            "sigma_t_yz_pa": 2900000,
-            "sigma_c_yz_pa": 4000000,
-            "tau_xy_xz_pa": 7800000
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "usda_fpl_jeffrey_pine_techsheet",
-          "usda_wood_handbook_ch5"
-        ],
-        "inferences": [
-          "The USDA FPL Jeffrey pine species sheet states that Jeffrey pine has identical wood properties to ponderosa pine, so the published ponderosa pine mechanical values are reused directly.",
-          "EY, EZ, and the shear moduli follow the same transverse elastic ratios already used for Ponderosa pine clear wood reference.",
-          "Transverse tensile strength follows the same ratio already used for Ponderosa pine clear wood reference.",
-          "Density is approximated from specific gravity."
-        ]
-      }
-    },
-    {
       "id": "wood_eastern_hemlock_clear_12pct_reference",
       "name": "Eastern hemlock clear wood reference",
       "classification": {
@@ -49713,125 +48936,6 @@
       "sources": {
         "source_ids": [
           "usda_fpl_port_orford_cedar_techsheet",
-          "usda_wood_handbook_ch5"
-        ],
-        "inferences": [
-          "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
-          "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Atlantic white cedar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Atlantic white cedar clear wood reference.",
-          "Density is approximated from specific gravity."
-        ]
-      }
-    },
-    {
-      "id": "wood_alaska_cedar_clear_12pct_reference",
-      "name": "Alaska cedar clear wood reference",
-      "classification": {
-        "category_ja": "木質",
-        "category_en": "Wood",
-        "subcategory_ja": "天然木材",
-        "subcategory_en": "wood"
-      },
-      "properties": {
-        "orthotropic_elastic": {
-          "axes": {
-            "x": "longitudinal",
-            "y": "radial",
-            "z": "tangential"
-          },
-          "reference_density_kg_m3_approx": 440,
-          "specific_gravity_reference": 0.44,
-          "EX_pa": 7051000000.000001,
-          "EY_pa": 1290333000.0000002,
-          "EZ_pa": 571131000.0000001,
-          "GXY_pa": 1480710000.0000002,
-          "GYZ_pa": 105765000,
-          "GXZ_pa": 1318537000.0000005,
-          "PRXY": 0.337,
-          "PRYZ": 0.458,
-          "PRXZ": 0.34
-        },
-        "strength_data": {
-          "modulus_of_rupture_pa": 46900000,
-          "compression_parallel_to_grain_pa": 32400000,
-          "compression_perpendicular_to_grain_pa": 2830000,
-          "shear_parallel_to_grain_pa": 5520000,
-          "tension_perpendicular_to_grain_pa": 2290952.3809523806
-        },
-        "nonlinear_models": {
-          "orthotropic_strength_envelope_starter": {
-            "recommended": true,
-            "longitudinal_tension_pa": 46900000,
-            "longitudinal_compression_pa": 32400000,
-            "radial_tension_pa": 2290952.3809523806,
-            "tangential_tension_pa": 2290952.3809523806,
-            "radial_compression_pa": 2830000,
-            "tangential_compression_pa": 2830000,
-            "longitudinal_radial_shear_pa": 5520000,
-            "longitudinal_tangential_shear_pa": 5520000,
-            "notes": [
-              "The longitudinal tensile strength is conservatively approximated by the modulus of rupture because direct tension data were not available for the same reference condition.",
-              "No radial-tangential rolling-shear strength was inserted because the cited species-sheet data do not provide a matching value for this condition."
-            ],
-            "source_ids": [
-              "usda_fpl_alaska_cedar_techsheet",
-              "usda_wood_handbook_ch5"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "clear, straight-grained, approximately 12% moisture content",
-        "validation_tier": "official_source_with_derived_orthotropic_constants",
-        "notes": [
-          "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Alaska cedar adds a durable yellow-cedar reference with comparatively low stiffness but good decay resistance."
-        ],
-        "ansys_mapping": {
-          "orthotropic_mp": {
-            "EX_pa": 7051000000.000001,
-            "EY_pa": 1290333000.0000002,
-            "EZ_pa": 571131000.0000001,
-            "GXY_pa": 1480710000.0000002,
-            "GYZ_pa": 105765000,
-            "GXZ_pa": 1318537000.0000005,
-            "PRXY": 0.337,
-            "PRYZ": 0.458,
-            "PRXZ": 0.34,
-            "DENS_kg_m3": 440
-          },
-          "nonlinear_reference_data": {
-            "longitudinal_tension_pa": 46900000,
-            "longitudinal_compression_pa": 32400000,
-            "transverse_tension_pa": 2290952.3809523806,
-            "transverse_compression_pa": 2830000,
-            "shear_parallel_to_grain_pa": 5520000
-          }
-        },
-        "dolfinx_mapping": {
-          "orthotropic_linear_elastic": {
-            "E_x_pa": 7051000000.000001,
-            "E_y_pa": 1290333000.0000002,
-            "E_z_pa": 571131000.0000001,
-            "nu_xy": 0.337,
-            "nu_yz": 0.458,
-            "nu_xz": 0.34,
-            "G_xy_pa": 1480710000.0000002,
-            "G_yz_pa": 105765000,
-            "G_xz_pa": 1318537000.0000005
-          },
-          "custom_orthotropic_damage_reference": {
-            "sigma_t_x_pa": 46900000,
-            "sigma_c_x_pa": 32400000,
-            "sigma_t_yz_pa": 2290952.3809523806,
-            "sigma_c_yz_pa": 2830000,
-            "tau_xy_xz_pa": 5520000
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "usda_fpl_alaska_cedar_techsheet",
           "usda_wood_handbook_ch5"
         ],
         "inferences": [
@@ -50195,125 +49299,6 @@
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Western larch clear wood reference.",
           "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Western larch clear wood reference.",
-          "Density is approximated from specific gravity."
-        ]
-      }
-    },
-    {
-      "id": "wood_douglas_fir_coast_clear_12pct_reference",
-      "name": "Douglas-fir coast clear wood reference",
-      "classification": {
-        "category_ja": "木質",
-        "category_en": "Wood",
-        "subcategory_ja": "天然木材",
-        "subcategory_en": "wood"
-      },
-      "properties": {
-        "orthotropic_elastic": {
-          "axes": {
-            "x": "longitudinal",
-            "y": "radial",
-            "z": "tangential"
-          },
-          "reference_density_kg_m3_approx": 480,
-          "specific_gravity_reference": 0.48,
-          "EX_pa": 14784000000.000002,
-          "EY_pa": 1005312000.0000002,
-          "EZ_pa": 739200000.0000001,
-          "GXY_pa": 946176000.0000001,
-          "GYZ_pa": 103488000.00000001,
-          "GXZ_pa": 1153152000.0000002,
-          "PRXY": 0.292,
-          "PRYZ": 0.39,
-          "PRXZ": 0.449
-        },
-        "strength_data": {
-          "modulus_of_rupture_pa": 85490000,
-          "compression_parallel_to_grain_pa": 49850000,
-          "compression_perpendicular_to_grain_pa": 5520000,
-          "shear_parallel_to_grain_pa": 7790000,
-          "tension_perpendicular_to_grain_pa": 2308363.6363636362
-        },
-        "nonlinear_models": {
-          "orthotropic_strength_envelope_starter": {
-            "recommended": true,
-            "longitudinal_tension_pa": 85490000,
-            "longitudinal_compression_pa": 49850000,
-            "radial_tension_pa": 2308363.6363636362,
-            "tangential_tension_pa": 2308363.6363636362,
-            "radial_compression_pa": 5520000,
-            "tangential_compression_pa": 5520000,
-            "longitudinal_radial_shear_pa": 7790000,
-            "longitudinal_tangential_shear_pa": 7790000,
-            "notes": [
-              "The longitudinal tensile strength is conservatively approximated by the modulus of rupture because direct tension data were not available for the same reference condition.",
-              "No radial-tangential rolling-shear strength was inserted because the cited species-sheet data do not provide a matching value for this condition."
-            ],
-            "source_ids": [
-              "usda_fpl_douglas_fir_regional_techsheet",
-              "usda_wood_handbook_ch5"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "clear, straight-grained, approximately 12% moisture content",
-        "validation_tier": "official_source_with_derived_orthotropic_constants",
-        "notes": [
-          "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Coast Douglas-fir adds the high-density coastal regional benchmark from the FPL regional table."
-        ],
-        "ansys_mapping": {
-          "orthotropic_mp": {
-            "EX_pa": 14784000000.000002,
-            "EY_pa": 1005312000.0000002,
-            "EZ_pa": 739200000.0000001,
-            "GXY_pa": 946176000.0000001,
-            "GYZ_pa": 103488000.00000001,
-            "GXZ_pa": 1153152000.0000002,
-            "PRXY": 0.292,
-            "PRYZ": 0.39,
-            "PRXZ": 0.449,
-            "DENS_kg_m3": 480
-          },
-          "nonlinear_reference_data": {
-            "longitudinal_tension_pa": 85490000,
-            "longitudinal_compression_pa": 49850000,
-            "transverse_tension_pa": 2308363.6363636362,
-            "transverse_compression_pa": 5520000,
-            "shear_parallel_to_grain_pa": 7790000
-          }
-        },
-        "dolfinx_mapping": {
-          "orthotropic_linear_elastic": {
-            "E_x_pa": 14784000000.000002,
-            "E_y_pa": 1005312000.0000002,
-            "E_z_pa": 739200000.0000001,
-            "nu_xy": 0.292,
-            "nu_yz": 0.39,
-            "nu_xz": 0.449,
-            "G_xy_pa": 946176000.0000001,
-            "G_yz_pa": 103488000.00000001,
-            "G_xz_pa": 1153152000.0000002
-          },
-          "custom_orthotropic_damage_reference": {
-            "sigma_t_x_pa": 85490000,
-            "sigma_c_x_pa": 49850000,
-            "sigma_t_yz_pa": 2308363.6363636362,
-            "sigma_c_yz_pa": 5520000,
-            "tau_xy_xz_pa": 7790000
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "usda_fpl_douglas_fir_regional_techsheet",
-          "usda_wood_handbook_ch5"
-        ],
-        "inferences": [
-          "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
-          "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Douglas-fir clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Douglas-fir clear wood reference.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -60230,7 +59215,7 @@
       "properties": {
         "linear_elastic": {
           "density_kg_m3": 2400,
-          "youngs_modulus_pa": 32000000000,
+          "youngs_modulus_pa": 33000000000,
           "poissons_ratio": 0.2
         },
         "strength_data": {
@@ -60265,11 +59250,12 @@
         "validation_tier": "official_design_reference_with_inferred_density_nu_and_partial_cdp_card",
         "notes": [
           "The published Ecm is a secant modulus and the strength values are class properties, not batch-specific test results.",
-          "Density 2400 kg/m3 and Poisson ratio 0.20 are practical normal-weight-concrete starter values and are identified as inferred."
+          "Density 2400 kg/m3 and Poisson ratio 0.20 are practical normal-weight-concrete starter values and are identified as inferred.",
+          "Ecm corrected from 32 GPa to 33 GPa per EN 1992-1-1 Table 3.1 for C30/37 (22*(fcm/10)^0.3 with fcm = 38 MPa gives 32.8 GPa)."
         ],
         "abaqus_mapping": {
           "elastic": {
-            "E_pa": 32000000000,
+            "E_pa": 33000000000,
             "nu": 0.2
           },
           "concrete_damaged_plasticity_partial_reference": {
@@ -65581,66 +64567,6 @@
         "validation_tier": "official_source_partial_crushable_foam_reference",
         "notes": [
           "Calibrate a full compression curve and volumetric response before crush analysis."
-        ]
-      },
-      "sources": {
-        "source_ids": [
-          "dupont_vespel_sf_polyimide_foam"
-        ]
-      }
-    },
-    {
-      "id": "foam_dupont_sf0930_polyimide",
-      "name": "Vespel SF-0930",
-      "classification": {
-        "category_ja": "フォーム",
-        "category_en": "Foam",
-        "subcategory_ja": "耐熱ポリイミドフォーム",
-        "subcategory_en": "high-temperature polyimide foam"
-      },
-      "properties": {
-        "linear_elastic": {
-          "density_kg_m3": 300
-        },
-        "strength_data": {
-          "ultimate_tensile_strength_pa": 4400000,
-          "tensile_modulus_pa": 106700000,
-          "compressive_strength_at_10pct_pa": 2000000,
-          "compression_force_at_20pct_pa": 1760000,
-          "compression_force_at_40pct_pa": 3800000,
-          "compressive_modulus_pa": 1640000
-        },
-        "nonlinear_models": {
-          "crushable_foam_partial_reference": {
-            "known_compression_points": [
-              {
-                "engineering_strain": 0.2,
-                "stress_pa": 1760000
-              },
-              {
-                "engineering_strain": 0.4,
-                "stress_pa": 3800000
-              }
-            ],
-            "notes": [
-              "The two compression-force points help initialize a foam response but do not define hydrostatic yielding, unloading, or damage."
-            ],
-            "source_ids": [
-              "dupont_vespel_sf_polyimide_foam",
-              "abaqus_crushable_foam_behavior"
-            ],
-            "model_family_recommended": true,
-            "solver_ready": false,
-            "usage_level": "screening_or_partial_reference"
-          }
-        }
-      },
-      "other": {
-        "condition": "high-temperature polyimide foam, manufacturer typical properties",
-        "validation_tier": "official_source_partial_crushable_foam_reference",
-        "notes": [
-          "Calibrate a full compression curve and volumetric response before crush analysis.",
-          "The manufacturer compression modulus is retained as compressive_modulus_pa and is not relabeled as an isotropic Young's modulus."
         ]
       },
       "sources": {
@@ -71243,116 +70169,6 @@
       }
     },
     {
-      "id": "rock_intact_basalt_nevada_usace",
-      "name": "Intact basalt — Nevada sample (USACE Table 8-1)",
-      "classification": {
-        "category_ja": "地盤・土質",
-        "category_en": "Soil",
-        "subcategory_ja": "岩石",
-        "subcategory_en": "rock"
-      },
-      "properties": {
-        "linear_elastic": {
-          "reference_density_kg_m3": 2830,
-          "youngs_modulus_pa": 33900000000,
-          "poissons_ratio": 0.23,
-          "density_kg_m3": 2830
-        },
-        "strength_data": {
-          "uniaxial_compressive_strength_pa": 148000000,
-          "tensile_strength_pa": 18100000,
-          "cohesion_pa": null,
-          "friction_angle_deg": null,
-          "dilatancy_angle_deg": null
-        },
-        "nonlinear_models": {
-          "intact_rock_brittle_screening": {
-            "recommended": false,
-            "compressive_cutoff_pa": 148000000,
-            "tensile_cutoff_pa": 18100000,
-            "cohesion_pa": null,
-            "friction_angle_deg": null,
-            "dilatancy_angle_deg": null,
-            "missing_parameters": [
-              "triaxial failure data or calibrated Hoek–Brown mi",
-              "GSI/RMR, disturbance factor and discontinuity properties for rock mass",
-              "post-peak fracture energy/softening and dilation"
-            ],
-            "source_ids": [
-              "usace_em_1110_2_2901_table8_1",
-              "fhwa_sa_02_054_gec6_rock"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "intact basalt specimen reported for Nevada; specimen orientation, saturation, weathering grade and confinement not specified; not a rock-mass card",
-        "validation_tier": "official_manual_intact_sample_plus_independent_type_mean_poisson",
-        "source_values": {
-          "density_Mg_m3": 2.83,
-          "youngs_modulus_GPa": 33.9,
-          "uniaxial_compressive_strength_MPa": 148,
-          "tensile_strength_MPa": 18.1,
-          "poisson_ratio_type_mean": 0.23,
-          "poisson_ratio_type_range": [
-            0.16,
-            0.32
-          ]
-        },
-        "source_usage": [
-          {
-            "source_id": "usace_em_1110_2_2901_table8_1",
-            "info_used": [
-              "location-specific intact-sample density, Young's modulus, UCS and tensile strength"
-            ]
-          },
-          {
-            "source_id": "fhwa_sa_02_054_gec6_rock",
-            "info_used": [
-              "basalt mean and range of Poisson's ratio from Table 5-13"
-            ]
-          }
-        ],
-        "notes": [
-          "The Poisson ratio is a rock-type mean from FHWA, not measured on the same USACE location-specific specimen.",
-          "Do not infer Mohr–Coulomb cohesion/friction or Hoek–Brown parameters from UCS and tensile strength alone.",
-          "USACE warns that rock-mass discontinuities may eliminate tensile capacity; set rock-mass tensile strength to zero unless site evidence supports otherwise."
-        ],
-        "ansys_mapping": {
-          "linear_mp": {
-            "EX_pa": 33900000000,
-            "PRXY": 0.23,
-            "DENS_kg_m3": 2830
-          },
-          "brittle_strength_reference": {
-            "compressive_strength_pa": 148000000,
-            "tensile_strength_pa": 18100000
-          }
-        },
-        "abaqus_mapping": {
-          "elastic": {
-            "E_pa": 33900000000,
-            "nu": 0.23
-          },
-          "brittle_failure_reference": {
-            "compressive_strength_pa": 148000000,
-            "tensile_strength_pa": 18100000,
-            "missing_parameters": [
-              "triaxial_failure_envelope",
-              "fracture_energy",
-              "rock_mass_reduction"
-            ]
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "usace_em_1110_2_2901_table8_1",
-          "fhwa_sa_02_054_gec6_rock"
-        ]
-      }
-    },
-    {
       "id": "rock_intact_granite_georgia_usace",
       "name": "Intact granite — Georgia sample (USACE Table 8-1)",
       "classification": {
@@ -71447,116 +70263,6 @@
           "brittle_failure_reference": {
             "compressive_strength_pa": 193000000,
             "tensile_strength_pa": 2800000,
-            "missing_parameters": [
-              "triaxial_failure_envelope",
-              "fracture_energy",
-              "rock_mass_reduction"
-            ]
-          }
-        }
-      },
-      "sources": {
-        "source_ids": [
-          "usace_em_1110_2_2901_table8_1",
-          "fhwa_sa_02_054_gec6_rock"
-        ]
-      }
-    },
-    {
-      "id": "rock_intact_granite_colorado_usace",
-      "name": "Intact granite — Colorado sample (USACE Table 8-1)",
-      "classification": {
-        "category_ja": "地盤・土質",
-        "category_en": "Soil",
-        "subcategory_ja": "岩石",
-        "subcategory_en": "rock"
-      },
-      "properties": {
-        "linear_elastic": {
-          "reference_density_kg_m3": 2640,
-          "youngs_modulus_pa": 70600000000,
-          "poissons_ratio": 0.2,
-          "density_kg_m3": 2640
-        },
-        "strength_data": {
-          "uniaxial_compressive_strength_pa": 226000000,
-          "tensile_strength_pa": 11900000,
-          "cohesion_pa": null,
-          "friction_angle_deg": null,
-          "dilatancy_angle_deg": null
-        },
-        "nonlinear_models": {
-          "intact_rock_brittle_screening": {
-            "recommended": false,
-            "compressive_cutoff_pa": 226000000,
-            "tensile_cutoff_pa": 11900000,
-            "cohesion_pa": null,
-            "friction_angle_deg": null,
-            "dilatancy_angle_deg": null,
-            "missing_parameters": [
-              "triaxial failure data or calibrated Hoek–Brown mi",
-              "GSI/RMR, disturbance factor and discontinuity properties for rock mass",
-              "post-peak fracture energy/softening and dilation"
-            ],
-            "source_ids": [
-              "usace_em_1110_2_2901_table8_1",
-              "fhwa_sa_02_054_gec6_rock"
-            ]
-          }
-        }
-      },
-      "other": {
-        "condition": "intact granite specimen reported for Colorado; specimen orientation, saturation, weathering grade and confinement not specified; not a rock-mass card",
-        "validation_tier": "official_manual_intact_sample_plus_independent_type_mean_poisson",
-        "source_values": {
-          "density_Mg_m3": 2.64,
-          "youngs_modulus_GPa": 70.6,
-          "uniaxial_compressive_strength_MPa": 226,
-          "tensile_strength_MPa": 11.9,
-          "poisson_ratio_type_mean": 0.2,
-          "poisson_ratio_type_range": [
-            0.09,
-            0.39
-          ]
-        },
-        "source_usage": [
-          {
-            "source_id": "usace_em_1110_2_2901_table8_1",
-            "info_used": [
-              "location-specific intact-sample density, Young's modulus, UCS and tensile strength"
-            ]
-          },
-          {
-            "source_id": "fhwa_sa_02_054_gec6_rock",
-            "info_used": [
-              "granite mean and range of Poisson's ratio from Table 5-13"
-            ]
-          }
-        ],
-        "notes": [
-          "The Poisson ratio is a rock-type mean from FHWA, not measured on the same USACE location-specific specimen.",
-          "Do not infer Mohr–Coulomb cohesion/friction or Hoek–Brown parameters from UCS and tensile strength alone.",
-          "USACE warns that rock-mass discontinuities may eliminate tensile capacity; set rock-mass tensile strength to zero unless site evidence supports otherwise."
-        ],
-        "ansys_mapping": {
-          "linear_mp": {
-            "EX_pa": 70600000000,
-            "PRXY": 0.2,
-            "DENS_kg_m3": 2640
-          },
-          "brittle_strength_reference": {
-            "compressive_strength_pa": 226000000,
-            "tensile_strength_pa": 11900000
-          }
-        },
-        "abaqus_mapping": {
-          "elastic": {
-            "E_pa": 70600000000,
-            "nu": 0.2
-          },
-          "brittle_failure_reference": {
-            "compressive_strength_pa": 226000000,
-            "tensile_strength_pa": 11900000,
             "missing_parameters": [
               "triaxial_failure_envelope",
               "fracture_energy",
