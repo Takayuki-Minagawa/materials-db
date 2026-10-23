@@ -2815,19 +2815,6 @@
         "chemical toughening compressive stress and depth of layer"
       ]
     },
-    "gurit_corecell_i": {
-      "title": "Corecell M and I Structural Foam Core Technical Datasheet",
-      "publisher": "Gurit",
-      "url": "https://www.gurit.com/wp-content/uploads/2025/12/TDS-Corecell-M-Foam-11-0623.pdf",
-      "accessed_at": "2026-03-29",
-      "info_used": [
-        "I-60, I-80, and I-100 nominal densities and density ranges",
-        "I-60, I-80, and I-100 compressive strengths and moduli",
-        "I-60, I-80, and I-100 tensile strengths and moduli",
-        "I-60, I-80, and I-100 shear strengths, shear moduli, and shear elongations at break",
-        "thermal conductivity and heat distortion temperature by grade"
-      ]
-    },
     "schott_b270_technical_details": {
       "title": "Technical details of B 270",
       "publisher": "SCHOTT",
@@ -6374,6 +6361,225 @@
       "info_used": [
         "tensile modulus (cross-check)"
       ]
+    },
+    "corning_eagle_xg_pi_sheet_2021": {
+      "title": "Corning EAGLE XG Glass Product Information Sheet (December 2021)",
+      "publisher": "Corning Incorporated",
+      "url": "https://www.corning.com/media/cn/cdt/documents/EAGLE%20XG_PI%20Sheet_2021.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "density at 20 C (2.38 g/cc)",
+        "Young's modulus (73.6 GPa)",
+        "shear modulus (30.1 GPa)",
+        "Poisson ratio (0.23)"
+      ]
+    },
+    "gurit_corecell_i_pds_10_1023": {
+      "title": "Corecell I Structural Foam Core Product Datasheet, PDS-Corecell-I-Foam-10-1023",
+      "publisher": "Gurit",
+      "url": "https://www.gurit.com/wp-content/uploads/bsk-pdf-manager/2023/11/PDS-Corecell-I-Foam-10-1023.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "I-60, I-80 and I-100 nominal densities (65 / 85 / 105 kg/m3)",
+        "compressive strength and modulus (ASTM D1621 / ISO 844)",
+        "flatwise tensile strength and modulus (ASTM D1623)",
+        "shear strength, shear modulus and shear elongation at break (ASTM C273)"
+      ]
+    },
+    "gurit_corecell_i_dnv_type_approval_08149": {
+      "title": "DNV Type Approval Certificate TA-DNV-CP-0084-08149-0, Gurit Corecell I Series (I60, I80, I100)",
+      "publisher": "DNV / Gurit",
+      "url": "https://www.gurit.com/wp-content/uploads/bsk-pdf-manager/2023/12/DNV-Corecell-I-Series-TA-DNV-CP-0084-08149-0-exp_15-03-2027.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "I80 and I100 compressive modulus, flatwise tensile strength/modulus, shear strength/modulus (headline values; parenthesised values not used)"
+      ]
+    },
+    "victrex_peek_450ca40": {
+      "title": "VICTREX PEEK 450CA40 Datasheet",
+      "publisher": "Victrex",
+      "url": "https://www.victrex.com/-/media/downloads/datasheets/victrex_tds_450ca40.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "density 1.44 g/cm3 (ISO 1183)",
+        "tensile modulus 35,000 MPa at 23 C (ISO 527)",
+        "tensile stress at break 285 MPa at 23 C and 175 MPa at 125 C",
+        "tensile strain at break 1.5%",
+        "flexural modulus 30,000 MPa and flexural stress 425 MPa at 23 C (ISO 178)"
+      ]
+    },
+    "toray_t1100s_data_sheet": {
+      "title": "TORAYCA T1100S Data Sheet",
+      "publisher": "Toray Composite Materials America",
+      "url": "https://www.toraycma.com/wp-content/uploads/T1100S-Data-Sheet.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "fiber tensile strength 1,017 ksi (7,000 MPa)",
+        "tensile modulus 47.0 Msi (324 GPa)",
+        "strain at failure 2.2% (TY-030B-01); same value in revised sheet T1100S-Data-Sheet-1.pdf"
+      ]
+    },
+    "toray_t1100g_data_sheet": {
+      "title": "TORAYCA T1100G Data Sheet",
+      "publisher": "Toray Composite Materials America",
+      "url": "https://www.toraycma.com/wp-content/uploads/T1100G-Data-Sheet.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "fiber tensile strength 1,017 ksi (7,000 MPa)",
+        "tensile modulus 47.0 Msi (324 GPa)",
+        "strain at failure 2.2% (TY-030B-01); same value in T1100G-Technical-Data-Sheet.pdf"
+      ]
+    },
+    "sika_sikagrout_212": {
+      "title": "SikaGrout-212 Product Data Sheet (US)",
+      "publisher": "Sika Corporation",
+      "url": "https://usa.sika.com/dam/dms/us01/o/sikagrout_-212.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "50 lb (22.7 kg) bag",
+        "coverage 0.44 ft3 (0.01 m3) per bag at fluid consistency",
+        "mixing ratio plastic 6 / flowable 6.5 / fluid 8.5 pints per bag",
+        "28-day fluid compressive strength 5,800 psi (40 MPa), ASTM C942",
+        "28-day fluid flexural strength 1,000 psi (6.8 MPa), ASTM C293",
+        "28-day fluid splitting tensile strength 500 psi (3.4 MPa), ASTM C496"
+      ]
+    },
+    "sika_sikagrout_212_csi_spec": {
+      "title": "CSI Specs - SikaGrout-212",
+      "publisher": "Sika Corporation",
+      "url": "https://usa.sika.com/dms/getdocument.get/30e61832-076a-3b6b-8a81-4790b7f7397a/CSI%20Specs%20%20-%20SikaGrout%C2%AE-212.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "mixing ratio plastic 6 / flowable 6.5 / fluid 8.5 pints per 50 lb bag (corroborates PDS)"
+      ]
+    },
+    "sika_sikagrout_install_guide": {
+      "title": "SikaGrout High Performance Cementitious Grout - How To Install Application Guide",
+      "publisher": "Sika Corporation",
+      "url": "https://usa.sika.com/dam/dms/us01/k/SikaGrout-High-Performance-Cementitious-Grout-How-To-Install-Application-Guide.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "maximum water addition 8.5 pints per 50 lb bag (confirms the 'pts' unit = US pints)"
+      ]
+    },
+    "sika_sikagrout_328": {
+      "title": "SikaGrout-328 Product Page (US)",
+      "publisher": "Sika Corporation",
+      "url": "https://usa.sika.com/en/products/sikagrout-328.html",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "28-day compressive strength 10,000 / 8,200 / 8,000 / 7,500 psi (69 / 56.5 / 55.2 / 51.7 MPa) for dry pack / plastic / flowable / fluid"
+      ]
+    },
+    "sika_sikagrout_328_pds": {
+      "title": "SikaGrout-328 Product Data Sheet (US, July 2018)",
+      "publisher": "Sika Corporation",
+      "url": "https://usa.sika.com/content/dam/dms/us01/8/sikagrout_-328.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "50 lb (22.7 kg) bag",
+        "28-day fluid flexural strength 1,300 psi (9 MPa), ASTM C293",
+        "28-day fluid splitting tensile strength 650 psi (4.5 MPa), ASTM C496",
+        "28-day fluid shear strength 2,000 psi (13.8 MPa), modified ASTM C882"
+      ]
+    },
+    "sika_sikagrout_328_csi_spec": {
+      "title": "CSI Specs - SikaGrout-328 (Spec Component 03 60 00)",
+      "publisher": "Sika Corporation",
+      "url": "https://usa.sika.com/content/dam/dms/us01/1/CSI%20Specs%20%20-%20SikaGrout%C2%AE-328.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "fluid-consistency mix water 8.0-8.5 pts (3.8-4 L) per bag",
+        "yield 0.44 ft3 (0.01 m3) per bag at fluid consistency"
+      ]
+    },
+    "sika_sikagrout_328_fact_sheet": {
+      "title": "SikaGrout-328 Fact Sheet (US)",
+      "publisher": "Sika Corporation",
+      "url": "https://usa.sika.com/content/dam/dms/us01/3/fs-cpd-SikaGrout328-us.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "28-day fluid compressive strength 7,500 psi (corroborates product page)"
+      ]
+    },
+    "woodbin_fpl_wood_strength_table": {
+      "title": "Wood Strength Table (U.S. Forest Products Laboratory clear-wood strength data, 12% MC, inch-pound)",
+      "publisher": "woodbin.com (reproducing USDA Forest Products Laboratory / Wood Handbook data)",
+      "url": "https://woodbin.com/ref/wood-strength-table/",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "12% MC specific gravity rows: Hickory, Pignut 0.75; Hickory, Shagbark 0.72; Hickory, Mockernut 0.72; Hickory, Pecan 0.66; Tupelo, Black 0.50; Fir, Grand 0.37; Fir, Balsam 0.35; Pine, Slash 0.59; Hemlock, Mountain 0.45",
+        "Hickory, Shagbark row: shear parallel to grain 2,430 psi",
+        "Hemlock, Eastern row: compression perpendicular to grain 650 psi",
+        "Cedar, Alaska row: SG 0.44, MOE 1.42e6 psi, compression parallel 6,310 psi, compression perpendicular 620 psi, shear 1,130 psi"
+      ]
+    },
+    "wagnermeters_species_setting_chart": {
+      "title": "Species Setting Chart (specific gravity by species)",
+      "publisher": "Wagner Meters (values sourced from USDA Forest Products Laboratory)",
+      "url": "https://www.wagnermeters.com/wp-content/uploads/2012/10/Species-Setting-Chart.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "specific gravity: Fir, Balsam 0.35; Hemlock, Mountain 0.45; Pine, Slash 0.59; Oak (Red), Southern Red 0.59; Tupelo, Black 0.50"
+      ]
+    },
+    "engineeringtoolbox_timber_mechanical_properties": {
+      "title": "Wood, Panel and Structural Timber Products - Mechanical Properties",
+      "publisher": "The Engineering ToolBox",
+      "url": "https://www.engineeringtoolbox.com/timber-mechanical-properties-d_1789.html",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "black tupelo clear wood at 12% MC: density about 500 kg/m3 (SG 0.50 basis), MOR 66 MPa"
+      ]
+    },
+    "ufifas_st546_quercus_falcata": {
+      "title": "Quercus falcata: Southern Red Oak (Fact Sheet ST-546)",
+      "publisher": "University of Florida IFAS Extension (EDIS)",
+      "url": "https://edis.ifas.ufl.edu/publication/ST546/pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "wood specific gravity 0.59"
+      ]
+    },
+    "engineersedge_wood_properties_hardwoods_inch_pound": {
+      "title": "Wood Engineering Properties for Hardwoods (strength and engineering properties of some commercially important woods grown in the United States, inch-pound)",
+      "publisher": "Engineers Edge (reproducing USDA Wood Handbook Table 5-3a)",
+      "url": "https://ns1.engineersedge.com/civil_engineering/wood_engineering_properties_13743.htm",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "Ash, Green 12% row: SG 0.56, MOR 14,100 psi, MOE 1.66e6 psi, compression parallel 7,080, compression perpendicular 1,310, shear 1,910, tension perpendicular 700 psi, side hardness 1,200 lbf",
+        "Ash, White 12% row: SG 0.60, MOR 15,000, MOE 1.74e6, compression parallel 7,410, compression perpendicular 1,160, shear 1,910, tension perpendicular 940 psi, side hardness 1,320 lbf",
+        "Ash, Black 12% row: SG 0.49, compression perpendicular 760, shear 1,570, tension perpendicular 700 psi, side hardness 850 lbf"
+      ]
+    },
+    "engineersedge_wood_properties_softwoods_inch_pound": {
+      "title": "Wood Engineering Properties #2 (softwoods; strength and engineering properties of some commercially important woods grown in the United States, inch-pound)",
+      "publisher": "Engineers Edge (reproducing USDA Wood Handbook Table 5-3a)",
+      "url": "https://engineersedge.com/civil_engineering/wood_engineering_properties_2_13744.htm",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "Fir, Grand: tension perpendicular to grain 240 psi (green and 12% rows), 12% SG 0.37",
+        "Fir, Noble: tension perpendicular to grain 230 psi green / 220 psi at 12% MC"
+      ]
+    },
+    "dixdesign_timber_properties_imperial": {
+      "title": "Timber properties for boatbuilding (imperial units)",
+      "publisher": "Dudley Dix Yacht Design (tabulating USDA Forest Products Laboratory data)",
+      "url": "https://dixdesign.com/woodimp.htm",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "Alaskan cedar: SG 0.44, MOR 11,100 psi, MOE 1.42e6 psi, tensile strength perpendicular to grain 360 psi, compression parallel 6,310 psi, side hardness 580 lbf",
+        "Ash (White): SG 0.60, tensile strength perpendicular to grain 940 psi"
+      ]
+    },
+    "archipro_yellow_cedar_iti_nz": {
+      "title": "Yellow Cedar (ITI NZ) product listing",
+      "publisher": "ArchiPro",
+      "url": "https://archipro.com.au/product/yellow-cedar-iti-nz-2",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "yellow cedar modulus of rupture 76.6 MPa, modulus of elasticity 9.79 GPa, maximum crushing strength 43.5 MPa (corroboration of the 11,100 psi / 1.42e6 psi / 6,310 psi handbook values)"
+      ]
     }
   },
   "materials": [
@@ -8999,7 +9205,8 @@
         "validation_tier": "official_source_with_limited_ductility_and_representative_steel_elastic_constants",
         "notes": [
           "This card represents the high-strength coated sheet widely used in light-gauge structural frames where the product is not visible.",
-          "The coating mass is listed explicitly as AZ150 minimum 150 g/m2, but the coating contribution is not folded into the stored density."
+          "The coating mass is listed explicitly as AZ150 minimum 150 g/m2, but the coating contribution is not folded into the stored density.",
+          "Review 2026-10-23: the stored 570 MPa tensile strength is kept as the record's stated basis, i.e. NS BlueScope's own guaranteed TRUECORE G550 minimum (570 MPa appears as the minimum in NS BlueScope TRUECORE G550 sheets such as the Malaysian Rev4/Rev6 versions). The AS 1397 G550 grade minimum is 550 MPa, and some regional TRUECORE sheets (e.g. the 2013 sheet and a 2025 sheet citing AS 1397:2011) list 550 MPa; use 550 MPa where only AS 1397 compliance is assured."
         ],
         "ansys_mapping": {
           "linear_mp": {
@@ -9036,7 +9243,7 @@
     },
     {
       "id": "wood_douglas_fir_clear_12pct_reference",
-      "name": "Douglas-fir clear wood reference",
+      "name": "Coast Douglas-fir clear wood reference",
       "classification": {
         "category_ja": "木質",
         "category_en": "Wood",
@@ -9095,7 +9302,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "The orthotropic constants are suitable as starter values for solid wood FEM when a full test-derived constitutive law is unavailable."
+          "The orthotropic constants are suitable as starter values for solid wood FEM when a full test-derived constitutive law is unavailable.",
+          "2026-10-23: display name changed from 'Douglas-fir clear wood reference' to 'Coast Douglas-fir clear wood reference' (id kept). Values (SG 0.48, MOR 85 MPa, MOE 13.4 GPa x1.1, Fc-perp 5.5, shear 7.8, ft-perp 2.3 MPa) are the Wood Handbook Coast Douglas-fir row; the interior west/north/south regional cards are separate records."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -11138,8 +11346,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 410,
-          "specific_gravity_reference": 0.41,
+          "reference_density_kg_m3_approx": 350,
+          "specific_gravity_reference": 0.35,
           "EX_pa": 10997137882.603535,
           "EY_pa": 857776754.8430758,
           "EZ_pa": 472876928.951952,
@@ -11184,7 +11392,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "The transverse elastic constants are anchored to the Sitka spruce starter-card ratios because the USDA species sheet publishes scalar clear-wood strengths and longitudinal stiffness, but not a full orthotropic tensor."
+          "The transverse elastic constants are anchored to the Sitka spruce starter-card ratios because the USDA species sheet publishes scalar clear-wood strengths and longitudinal stiffness, but not a full orthotropic tensor.",
+          "2026-10-23 correction: specific gravity 0.41 -> 0.35 and density 410 -> 350 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -11197,7 +11406,7 @@
             "PRXY": 0.372,
             "PRYZ": 0.435,
             "PRXZ": 0.467,
-            "DENS_kg_m3": 410
+            "DENS_kg_m3": 350
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 63431767.09714892,
@@ -11231,7 +11440,9 @@
       "sources": {
         "source_ids": [
           "usda_fpl_balsam_fir_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart"
         ],
         "inferences": [
           "EX is the handbook species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
@@ -13298,15 +13509,15 @@
           "compression_parallel_to_grain_pa": 51100000,
           "compression_perpendicular_to_grain_pa": 8000000,
           "shear_parallel_to_grain_pa": 13170000,
-          "tension_perpendicular_to_grain_pa": 7522388.059701493
+          "tension_perpendicular_to_grain_pa": 6481071.9
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 103400000,
             "longitudinal_compression_pa": 51100000,
-            "radial_tension_pa": 7522388.059701493,
-            "tangential_tension_pa": 7522388.059701493,
+            "radial_tension_pa": 6481071.9,
+            "tangential_tension_pa": 6481071.9,
             "radial_compression_pa": 8000000,
             "tangential_compression_pa": 8000000,
             "longitudinal_radial_shear_pa": 13170000,
@@ -13327,7 +13538,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "White ash adds a common ring-porous North American hardwood reference for tool handles, flooring, and shock-resistant components."
+          "White ash adds a common ring-porous North American hardwood reference for tool handles, flooring, and shock-resistant components.",
+          "2026-10-23 correction: tension perpendicular to grain 7.52 -> 6.48 MPa (940 psi, Wood Handbook Table 5-3a 12% MC measured value; sources: engineersedge_wood_properties_hardwoods_inch_pound, dixdesign_timber_properties_imperial) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -13345,7 +13557,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 103400000,
             "longitudinal_compression_pa": 51100000,
-            "transverse_tension_pa": 7522388.059701493,
+            "transverse_tension_pa": 6481071.9,
             "transverse_compression_pa": 8000000,
             "shear_parallel_to_grain_pa": 13170000
           }
@@ -13365,7 +13577,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 103400000,
             "sigma_c_x_pa": 51100000,
-            "sigma_t_yz_pa": 7522388.059701493,
+            "sigma_t_yz_pa": 6481071.9,
             "sigma_c_yz_pa": 8000000,
             "tau_xy_xz_pa": 13170000
           }
@@ -13374,12 +13586,14 @@
       "sources": {
         "source_ids": [
           "usda_fpl_ash_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "engineersedge_wood_properties_hardwoods_inch_pound",
+          "dixdesign_timber_properties_imperial"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook Table 5-3a measured 12% MC tension perpendicular to grain (940 psi = 6.48 MPa), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -13536,15 +13750,15 @@
           "compression_parallel_to_grain_pa": 41200000,
           "compression_perpendicular_to_grain_pa": 5240000,
           "shear_parallel_to_grain_pa": 10820000,
-          "tension_perpendicular_to_grain_pa": 4927164.179104478
+          "tension_perpendicular_to_grain_pa": 4826330.1
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 86900000,
             "longitudinal_compression_pa": 41200000,
-            "radial_tension_pa": 4927164.179104478,
-            "tangential_tension_pa": 4927164.179104478,
+            "radial_tension_pa": 4826330.1,
+            "tangential_tension_pa": 4826330.1,
             "radial_compression_pa": 5240000,
             "tangential_compression_pa": 5240000,
             "longitudinal_radial_shear_pa": 10820000,
@@ -13565,7 +13779,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Black ash provides a lighter, lower-strength ash-family clear-wood card than white ash."
+          "Black ash provides a lighter, lower-strength ash-family clear-wood card than white ash.",
+          "2026-10-23 correction: tension perpendicular to grain 4.93 -> 4.83 MPa (700 psi, Wood Handbook Table 5-3a 12% MC measured value; sources: engineersedge_wood_properties_hardwoods_inch_pound) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -13583,7 +13798,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 86900000,
             "longitudinal_compression_pa": 41200000,
-            "transverse_tension_pa": 4927164.179104478,
+            "transverse_tension_pa": 4826330.1,
             "transverse_compression_pa": 5240000,
             "shear_parallel_to_grain_pa": 10820000
           }
@@ -13603,7 +13818,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 86900000,
             "sigma_c_x_pa": 41200000,
-            "sigma_t_yz_pa": 4927164.179104478,
+            "sigma_t_yz_pa": 4826330.1,
             "sigma_c_yz_pa": 5240000,
             "tau_xy_xz_pa": 10820000
           }
@@ -13612,12 +13827,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_ash_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "engineersedge_wood_properties_hardwoods_inch_pound"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook Table 5-3a measured 12% MC tension perpendicular to grain (700 psi = 4.83 MPa), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -13655,15 +13871,15 @@
           "compression_parallel_to_grain_pa": 48800000,
           "compression_perpendicular_to_grain_pa": 9030000,
           "shear_parallel_to_grain_pa": 13170000,
-          "tension_perpendicular_to_grain_pa": 8490895.52238806
+          "tension_perpendicular_to_grain_pa": 4826330.1
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 97200000,
             "longitudinal_compression_pa": 48800000,
-            "radial_tension_pa": 8490895.52238806,
-            "tangential_tension_pa": 8490895.52238806,
+            "radial_tension_pa": 4826330.1,
+            "tangential_tension_pa": 4826330.1,
             "radial_compression_pa": 9030000,
             "tangential_compression_pa": 9030000,
             "longitudinal_radial_shear_pa": 13170000,
@@ -13684,7 +13900,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Green ash complements white ash with slightly lower density and strength but a similar practical hardwood use range."
+          "Green ash complements white ash with slightly lower density and strength but a similar practical hardwood use range.",
+          "2026-10-23 correction: tension perpendicular to grain 8.49 -> 4.83 MPa (700 psi, Wood Handbook Table 5-3a 12% MC measured value; sources: engineersedge_wood_properties_hardwoods_inch_pound) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -13702,7 +13919,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 97200000,
             "longitudinal_compression_pa": 48800000,
-            "transverse_tension_pa": 8490895.52238806,
+            "transverse_tension_pa": 4826330.1,
             "transverse_compression_pa": 9030000,
             "shear_parallel_to_grain_pa": 13170000
           }
@@ -13722,7 +13939,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 97200000,
             "sigma_c_x_pa": 48800000,
-            "sigma_t_yz_pa": 8490895.52238806,
+            "sigma_t_yz_pa": 4826330.1,
             "sigma_c_yz_pa": 9030000,
             "tau_xy_xz_pa": 13170000
           }
@@ -13731,12 +13948,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_ash_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "engineersedge_wood_properties_hardwoods_inch_pound"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook Table 5-3a measured 12% MC tension perpendicular to grain (700 psi = 4.83 MPa), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -16326,7 +16544,7 @@
           "freres_pr_l337_mpp_matting"
         ],
         "inferences": [
-          "Equivalent major and minor bending moduli are derived from the published effective EI values over a one-foot-wide strip using E = EI / t^3."
+          "Equivalent major and minor bending moduli are derived from the published effective EI values over a one-foot-wide strip using E = 12 EI / t^3 (EI per unit strip width)."
         ]
       }
     },
@@ -16471,7 +16689,7 @@
           "freres_pr_l337_mpp_matting"
         ],
         "inferences": [
-          "Equivalent major and minor bending moduli are derived from the published effective EI values over a one-foot-wide strip using E = EI / t^3."
+          "Equivalent major and minor bending moduli are derived from the published effective EI values over a one-foot-wide strip using E = 12 EI / t^3 (EI per unit strip width)."
         ]
       }
     },
@@ -16554,7 +16772,7 @@
           "apa_pr_n610_osb_sip_facing"
         ],
         "inferences": [
-          "Equivalent major and minor bending moduli are derived from the published flatwise stiffness values over a one-foot-wide strip using E = EI / t^3."
+          "Equivalent major and minor bending moduli are derived from the published flatwise stiffness values over a one-foot-wide strip using E = 12 EI / t^3 (EI per unit strip width)."
         ]
       }
     },
@@ -22688,10 +22906,10 @@
         "linear_elastic": {
           "reference_density_kg_m3": 2002.30792125,
           "equivalent_youngs_modulus_pa": {
-            "recommended_initial": 144789903.1565356,
+            "recommended_initial": 113400000,
             "range": [
-              110316116.69069378,
-              213737476.0882192
+              86800000,
+              140000000
             ]
           },
           "poissons_ratio": 0.35
@@ -22725,14 +22943,15 @@
       },
       "other": {
         "condition": "dense granular soil, drained loading",
-        "validation_tier": "official_source_with_representative_equivalent_modulus",
+        "validation_tier": "official_strength_ranges_with_inferred_modulus_from_n_value",
         "notes": [
           "This is a representative reference card for dense drained sand, not a site-specific geotechnical characterization.",
-          "The stiffness of sand is strongly stress-path dependent and should be recalibrated for real projects."
+          "The stiffness of sand is strongly stress-path dependent and should be recalibrated for real projects.",
+          "Correction 2026-10-23 (method consistency): equivalent Young's modulus changed from the Caltrans resilient modulus (recommended 144.79 MPa, range 110.32-213.74 MPa) to E = 2800N (kN/m2), the relation used by the very-loose, loose, medium and very-dense sand cards. N band 31-50 (midpoint 40.5) gives recommended 113.4 MPa, range 86.8-140.0 MPa, so the series is monotonic and non-overlapping (medium 30.8-84.0 < dense 86.8-140.0 < very dense 168 MPa). Updated in properties, ansys linear_mp EX and dolfinx E; source caltrans_subgrade_modulus replaced by mlit_nvalue_modulus_reference. Friction angle, density and Poisson values unchanged."
         ],
         "ansys_mapping": {
           "linear_mp": {
-            "EX_pa": 144789903.1565356,
+            "EX_pa": 113400000,
             "PRXY": 0.35,
             "DENS_kg_m3": 2002.30792125
           },
@@ -22744,7 +22963,7 @@
         },
         "dolfinx_mapping": {
           "linear_elastic": {
-            "E_pa": 144789903.1565356,
+            "E_pa": 113400000,
             "nu": 0.35
           },
           "small_strain_mohr_coulomb": {
@@ -22757,11 +22976,11 @@
       "sources": {
         "source_ids": [
           "usace_sheet_pile_soils",
-          "caltrans_subgrade_modulus"
+          "mlit_nvalue_modulus_reference"
         ],
         "inferences": [
-          "The elastic modulus is a representative initial value taken from resilient-modulus design tables and inserted here as an equivalent Young's modulus for small-strain starter analyses.",
-          "Poisson's ratio is used as a representative transport-geotechnical default because the indexed table column is not preserved in PDF text extraction."
+          "The equivalent Young's modulus is inserted from the official practice relation E = 2800N (kN/m2) using the midpoint N = 40.5 of the dense-band SPT range 31-50, i.e. the band between the medium-sand card's upper N of 30 and the very-dense threshold of 50 (E = 2800 x 40.5 = 113,400 kN/m2; range 2800 x 31 = 86,800 to 2800 x 50 = 140,000 kN/m2).",
+          "The reference density is 125 pcf for the USACE Table 3-1 dense class (unchanged from the previous version of this card)."
         ]
       }
     },
@@ -22778,10 +22997,10 @@
         "linear_elastic": {
           "reference_density_kg_m3": 1962.261762825,
           "equivalent_youngs_modulus_pa": {
-            "recommended_initial": 62052815.63851525,
+            "recommended_initial": 8400000,
             "range": [
-              41368543.759010166,
-              89631844.8111887
+              5600000,
+              11200000
             ]
           },
           "poissons_ratio": 0.35,
@@ -22821,14 +23040,15 @@
       },
       "other": {
         "condition": "stiff cohesive soil, undrained total-stress interpretation",
-        "validation_tier": "official_source_with_representative_equivalent_modulus",
+        "validation_tier": "official_strength_ranges_with_inferred_modulus_from_current_bridge_spec_n_value_relation",
         "notes": [
           "This is a representative reference card for stiff clay under short-term undrained loading, not a site-specific design model.",
-          "If you need pore-pressure generation, softening, or consolidation, replace with a dedicated clay constitutive model."
+          "If you need pore-pressure generation, softening, or consolidation, replace with a dedicated clay constitutive model.",
+          "Correction 2026-10-23 (method consistency): equivalent Young's modulus changed from the Caltrans CL resilient modulus (recommended 62.05 MPa, range 41.37-89.63 MPa) to E = 700N (kN/m2), the relation used by the very-soft, soft, medium, very-stiff and hard clay cards. N band 8-16 (midpoint 12) gives recommended 8.4 MPa, range 5.6-11.2 MPa, so the series is now monotonic (medium 4.55 < stiff 8.4 < very stiff 16.8 < hard 22.4 MPa) with contiguous ranges. Updated in properties, ansys linear_mp EX and dolfinx E; source caltrans_subgrade_modulus replaced by mlit_current_bridge_spec_modulus_summary. Strength, density and Poisson values unchanged."
         ],
         "ansys_mapping": {
           "linear_mp": {
-            "EX_pa": 62052815.63851525,
+            "EX_pa": 8400000,
             "PRXY": 0.35,
             "DENS_kg_m3": 1962.261762825
           },
@@ -22840,7 +23060,7 @@
         },
         "dolfinx_mapping": {
           "linear_elastic": {
-            "E_pa": 62052815.63851525,
+            "E_pa": 8400000,
             "nu": 0.35
           },
           "small_strain_mohr_coulomb": {
@@ -22853,10 +23073,11 @@
       "sources": {
         "source_ids": [
           "usace_sheet_pile_soils",
-          "caltrans_subgrade_modulus"
+          "mlit_current_bridge_spec_modulus_summary"
         ],
         "inferences": [
-          "The elastic modulus is a representative initial value taken from resilient-modulus design tables and inserted here as an equivalent Young's modulus for small-strain starter analyses.",
+          "The equivalent Young's modulus is inserted from the current Road Bridge Specifications relation E = 700N (kN/m2) using the midpoint N = 12 of the stiff-clay N-value band 8-16, i.e. the band between the medium-clay card's upper N of 8 and the very-stiff-clay card's lower N of 16 (E = 700 x 12 = 8,400 kN/m2; range 700 x 8 = 5,600 to 700 x 16 = 11,200 kN/m2).",
+          "The reference density is inserted from 122.5 pcf, between the medium-clay (117.5 pcf) and very-stiff-clay (130 pcf) reference densities of the sibling cards (unchanged from the previous version of this card).",
           "For nearly undrained continuum analysis, use a larger Poisson ratio such as 0.45 after checking element locking and formulation details."
         ]
       }
@@ -32132,8 +32353,7 @@
           "shore_a_hardness": 36,
           "density_kg_m3": 1140,
           "tear_strength_crescent_n_per_mm": 28,
-          "tear_strength_angle_n_per_mm": 26,
-          "compression_set_180c_22h_percent": 102
+          "tear_strength_angle_n_per_mm": 26
         },
         "nonlinear_models": {
           "neo_hookean_starter": {
@@ -32159,7 +32379,7 @@
         "validation_tier": "official_source_with_inferred_hyperelastic_starter",
         "notes": [
           "This adds a transparent HCR extrusion silicone that broadens the database into tubing and translucent-profile applications.",
-          "The very high compression-set value reported in the guide means this card should be used cautiously for long-term seal design."
+          "The compression-set value transcribed from the guide (102 percent at 180 C / 22 h) is physically impossible and could not be re-verified on 2026-10-23, so compression set is not stored; check the current Dow data before long-term seal design."
         ],
         "abaqus_mapping": {
           "elastic": {
@@ -37160,7 +37380,7 @@
               "Use additional compression data if large crush strain or post-yield densification is important."
             ],
             "source_ids": [
-              "gurit_corecell_i",
+              "gurit_corecell_i_pds_10_1023",
               "abaqus_crushable_foam_behavior"
             ]
           }
@@ -37171,7 +37391,8 @@
         "validation_tier": "official_source_with_partial_crushable_foam_reference",
         "notes": [
           "Corecell I-60 adds the lower-density branch of the Gurit SAN foam family from the same official datasheet.",
-          "The single isotropic modulus is only a starter simplification for sandwich-core work and should not be mistaken for a full multi-axial crush model."
+          "The single isotropic modulus is only a starter simplification for sandwich-core work and should not be mistaken for a full multi-axial crush model.",
+          "2026-10-23 re-sourcing: citation moved from gurit_corecell_i (whose URL points to the Corecell M TDS) to the Gurit Corecell I product datasheet PDS-Corecell-I-Foam-10-1023 (gurit_corecell_i_pds_10_1023). Mechanical values re-checked and unchanged (I-60: 65 kg/m3, compressive 0.95 MPa / 63 MPa, tensile 1.16 MPa / 74 MPa, shear 0.78 MPa / 28 MPa, shear elongation 34%). Thermal conductivity and heat distortion temperature were not re-confirmed in this check. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "abaqus_mapping": {
           "elastic": {
@@ -37190,7 +37411,7 @@
       },
       "sources": {
         "source_ids": [
-          "gurit_corecell_i"
+          "gurit_corecell_i_pds_10_1023"
         ],
         "inferences": [
           "The inserted Young's modulus corresponds to the published compressive modulus because compression-dominated sandwich-core behavior is commonly the governing design case.",
@@ -37233,7 +37454,7 @@
               "Use additional compression data if large crush strain or post-yield densification is important."
             ],
             "source_ids": [
-              "gurit_corecell_i",
+              "gurit_corecell_i_pds_10_1023",
               "abaqus_crushable_foam_behavior"
             ]
           }
@@ -37244,7 +37465,8 @@
         "validation_tier": "official_source_with_partial_crushable_foam_reference",
         "notes": [
           "Corecell I-80 fills the middle of the lighter I-series SAN foam range from the Gurit datasheet.",
-          "The single isotropic modulus is only a starter simplification for sandwich-core work and should not be mistaken for a full multi-axial crush model."
+          "The single isotropic modulus is only a starter simplification for sandwich-core work and should not be mistaken for a full multi-axial crush model.",
+          "2026-10-23 re-sourcing: citation moved from gurit_corecell_i (whose URL points to the Corecell M TDS) to the Gurit Corecell I product datasheet PDS-Corecell-I-Foam-10-1023 (gurit_corecell_i_pds_10_1023). Mechanical values re-checked and unchanged (I-80: 85 kg/m3, compressive 1.45 MPa / 92 MPa, tensile 1.60 MPa / 105 MPa, shear 1.10 MPa / 37 MPa, shear elongation 30%). Thermal conductivity and heat distortion temperature were not re-confirmed in this check. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "abaqus_mapping": {
           "elastic": {
@@ -37263,7 +37485,8 @@
       },
       "sources": {
         "source_ids": [
-          "gurit_corecell_i"
+          "gurit_corecell_i_pds_10_1023",
+          "gurit_corecell_i_dnv_type_approval_08149"
         ],
         "inferences": [
           "The inserted Young's modulus corresponds to the published compressive modulus because compression-dominated sandwich-core behavior is commonly the governing design case.",
@@ -37306,7 +37529,7 @@
               "Use additional compression data if large crush strain or post-yield densification is important."
             ],
             "source_ids": [
-              "gurit_corecell_i",
+              "gurit_corecell_i_pds_10_1023",
               "abaqus_crushable_foam_behavior"
             ]
           }
@@ -37317,7 +37540,8 @@
         "validation_tier": "official_source_with_partial_crushable_foam_reference",
         "notes": [
           "Corecell I-100 adds the top end of the lighter I-series SAN foam grades from the Gurit datasheet.",
-          "The single isotropic modulus is only a starter simplification for sandwich-core work and should not be mistaken for a full multi-axial crush model."
+          "The single isotropic modulus is only a starter simplification for sandwich-core work and should not be mistaken for a full multi-axial crush model.",
+          "2026-10-23 re-sourcing: citation moved from gurit_corecell_i (whose URL points to the Corecell M TDS) to the Gurit Corecell I product datasheet PDS-Corecell-I-Foam-10-1023 (gurit_corecell_i_pds_10_1023). Mechanical values re-checked and unchanged (I-100: 105 kg/m3, compressive 1.90 MPa / 116 MPa, tensile strength 2.00 MPa (tensile modulus 130 MPa not re-confirmed in search snippets, retained), shear 1.43 MPa / 46 MPa). Thermal conductivity and heat distortion temperature were not re-confirmed in this check. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "abaqus_mapping": {
           "elastic": {
@@ -37336,7 +37560,8 @@
       },
       "sources": {
         "source_ids": [
-          "gurit_corecell_i"
+          "gurit_corecell_i_pds_10_1023",
+          "gurit_corecell_i_dnv_type_approval_08149"
         ],
         "inferences": [
           "The inserted Young's modulus corresponds to the published compressive modulus because compression-dominated sandwich-core behavior is commonly the governing design case.",
@@ -37488,7 +37713,7 @@
       "properties": {
         "linear_elastic": {
           "density_kg_m3": 2380,
-          "youngs_modulus_pa": 74000000000,
+          "youngs_modulus_pa": 73600000000,
           "poissons_ratio": 0.23
         },
         "nonlinear_models": {
@@ -37509,16 +37734,17 @@
         "validation_tier": "official_source_partial_mechanical_set",
         "notes": [
           "EAGLE XG adds a mainstream fusion-drawn display-substrate glass that is distinct from the earlier cover-glass and borosilicate entries.",
-          "The public sheet is useful for elastic and thermal analyses of display stacks, but it is not a finished brittle-failure card."
+          "The public sheet is useful for elastic and thermal analyses of display stacks, but it is not a finished brittle-failure card.",
+          "2026-10-23 correction: Young's modulus 74.0 -> 73.6 GPa and shear modulus 30 -> 30.1 GPa per the Corning EAGLE XG PI Sheet 2021 (source corning_eagle_xg_pi_sheet_2021; density 2.38 g/cc and Poisson ratio 0.23 unchanged and confirmed). The undated worldwide EAGLE_XG_Glass_PI_Sheet.pdf (corning_eagle_xg_glass) prints rounded 74 / 30 GPa and remains the citation for the CTE and thermal conductivity values. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "physical_properties": {
-          "shear_modulus_pa": 30000000000,
+          "shear_modulus_pa": 30100000000,
           "coefficient_of_thermal_expansion_per_c": 0.0000032,
           "thermal_conductivity_w_mk_25c": 1.058
         },
         "abaqus_mapping": {
           "elastic": {
-            "E_pa": 74000000000,
+            "E_pa": 73600000000,
             "nu": 0.23
           },
           "brittle_failure_reference": {
@@ -37532,6 +37758,7 @@
       },
       "sources": {
         "source_ids": [
+          "corning_eagle_xg_pi_sheet_2021",
           "corning_eagle_xg_glass"
         ]
       }
@@ -44196,8 +44423,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 660,
-          "specific_gravity_reference": 0.66,
+          "reference_density_kg_m3_approx": 750,
+          "specific_gravity_reference": 0.75,
           "EX_pa": 17141300000.000002,
           "EY_pa": 1337021400.0000002,
           "EZ_pa": 857065000.0000001,
@@ -44242,7 +44469,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Pignut hickory adds a dense shock-resistant hickory reference from the true-hickory group."
+          "Pignut hickory adds a dense shock-resistant hickory reference from the true-hickory group.",
+          "2026-10-23 correction: specific gravity 0.66 -> 0.75 and density 660 -> 750 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -44255,7 +44483,7 @@
             "PRXY": 0.426,
             "PRYZ": 0.697,
             "PRXZ": 0.451,
-            "DENS_kg_m3": 660
+            "DENS_kg_m3": 750
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 138590000,
@@ -44289,13 +44517,14 @@
       "sources": {
         "source_ids": [
           "usda_fpl_hickory_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
           "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
-          "Density is approximated from the single published specific gravity value because the species-group sheet does not list a separate dry specific gravity."
+          "Density is approximated from the Wood Handbook 12% MC specific gravity (ovendry weight, volume at 12% MC) x 1000, as for the other clear-wood cards; the single specific gravity printed on the hickory species-group sheet is not on that basis and was replaced on 2026-10-23."
         ]
       }
     },
@@ -44434,8 +44663,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 640,
-          "specific_gravity_reference": 0.64,
+          "reference_density_kg_m3_approx": 720,
+          "specific_gravity_reference": 0.72,
           "EX_pa": 16382300000.000002,
           "EY_pa": 1277819400.0000002,
           "EZ_pa": 819115000.0000001,
@@ -44450,7 +44679,7 @@
           "modulus_of_rupture_pa": 139279000,
           "compression_parallel_to_grain_pa": 63503000,
           "compression_perpendicular_to_grain_pa": 12135000,
-          "shear_parallel_to_grain_pa": 14893000,
+          "shear_parallel_to_grain_pa": 16754260.2,
           "tension_perpendicular_to_grain_pa": 11410522.388059702
         },
         "nonlinear_models": {
@@ -44462,8 +44691,8 @@
             "tangential_tension_pa": 11410522.388059702,
             "radial_compression_pa": 12135000,
             "tangential_compression_pa": 12135000,
-            "longitudinal_radial_shear_pa": 14893000,
-            "longitudinal_tangential_shear_pa": 14893000,
+            "longitudinal_radial_shear_pa": 16754260.2,
+            "longitudinal_tangential_shear_pa": 16754260.2,
             "notes": [
               "The longitudinal tensile strength is conservatively approximated by the modulus of rupture because direct tension data were not available for the same reference condition.",
               "No radial-tangential rolling-shear strength was inserted because the cited species-sheet data do not provide a matching value for this condition."
@@ -44480,7 +44709,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Shagbark hickory adds a classic tool-handle hickory benchmark with high bending and compression values."
+          "Shagbark hickory adds a classic tool-handle hickory benchmark with high bending and compression values.",
+          "2026-10-23 correction: specific gravity 0.64 -> 0.72 and density 640 -> 720 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher.; shear parallel to grain 14.89 -> 16.75 MPa (2,430 psi, Wood Handbook 12% MC row via woodbin_fpl_wood_strength_table) in strength_data, both longitudinal shear entries of the strength envelope, ansys shear_parallel_to_grain_pa and dolfinx tau_xy_xz_pa. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -44493,14 +44723,14 @@
             "PRXY": 0.426,
             "PRYZ": 0.697,
             "PRXZ": 0.451,
-            "DENS_kg_m3": 640
+            "DENS_kg_m3": 720
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 139279000,
             "longitudinal_compression_pa": 63503000,
             "transverse_tension_pa": 11410522.388059702,
             "transverse_compression_pa": 12135000,
-            "shear_parallel_to_grain_pa": 14893000
+            "shear_parallel_to_grain_pa": 16754260.2
           }
         },
         "dolfinx_mapping": {
@@ -44520,20 +44750,21 @@
             "sigma_c_x_pa": 63503000,
             "sigma_t_yz_pa": 11410522.388059702,
             "sigma_c_yz_pa": 12135000,
-            "tau_xy_xz_pa": 14893000
+            "tau_xy_xz_pa": 16754260.2
           }
         }
       },
       "sources": {
         "source_ids": [
           "usda_fpl_hickory_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
           "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
-          "Density is approximated from the single published specific gravity value because the species-group sheet does not list a separate dry specific gravity."
+          "Density is approximated from the Wood Handbook 12% MC specific gravity (ovendry weight, volume at 12% MC) x 1000, as for the other clear-wood cards; the single specific gravity printed on the hickory species-group sheet is not on that basis and was replaced on 2026-10-23."
         ]
       }
     },
@@ -44553,8 +44784,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 640,
-          "specific_gravity_reference": 0.64,
+          "reference_density_kg_m3_approx": 720,
+          "specific_gravity_reference": 0.72,
           "EX_pa": 16837700000.000002,
           "EY_pa": 1313340600.0000002,
           "EZ_pa": 841885000.0000001,
@@ -44599,7 +44830,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Mockernut hickory extends the true-hickory set with strong compression and moderate shear among the group."
+          "Mockernut hickory extends the true-hickory set with strong compression and moderate shear among the group.",
+          "2026-10-23 correction: specific gravity 0.64 -> 0.72 and density 640 -> 720 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -44612,7 +44844,7 @@
             "PRXY": 0.426,
             "PRYZ": 0.697,
             "PRXZ": 0.451,
-            "DENS_kg_m3": 640
+            "DENS_kg_m3": 720
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 132384000,
@@ -44646,13 +44878,14 @@
       "sources": {
         "source_ids": [
           "usda_fpl_hickory_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
           "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
-          "Density is approximated from the single published specific gravity value because the species-group sheet does not list a separate dry specific gravity."
+          "Density is approximated from the Wood Handbook 12% MC specific gravity (ovendry weight, volume at 12% MC) x 1000, as for the other clear-wood cards; the single specific gravity printed on the hickory species-group sheet is not on that basis and was replaced on 2026-10-23."
         ]
       }
     },
@@ -44914,8 +45147,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 600,
-          "specific_gravity_reference": 0.6,
+          "reference_density_kg_m3_approx": 660,
+          "specific_gravity_reference": 0.66,
           "EX_pa": 13120800000.000002,
           "EY_pa": 1023422400.0000001,
           "EZ_pa": 656040000.0000001,
@@ -44960,7 +45193,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Pecan adds the commercial pecan benchmark within the hickory group."
+          "Pecan adds the commercial pecan benchmark within the hickory group.",
+          "2026-10-23 correction: specific gravity 0.6 -> 0.66 and density 600 -> 660 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -44973,7 +45207,7 @@
             "PRXY": 0.426,
             "PRYZ": 0.697,
             "PRXZ": 0.451,
-            "DENS_kg_m3": 600
+            "DENS_kg_m3": 660
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 94462000,
@@ -45007,13 +45241,14 @@
       "sources": {
         "source_ids": [
           "usda_fpl_hickory_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
           "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
-          "Density is approximated from the single published specific gravity value because the species-group sheet does not list a separate dry specific gravity."
+          "Density is approximated from the Wood Handbook 12% MC specific gravity (ovendry weight, volume at 12% MC) x 1000, as for the other clear-wood cards; the single specific gravity printed on the hickory species-group sheet is not on that basis and was replaced on 2026-10-23."
         ]
       }
     },
@@ -45273,8 +45508,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 650,
-          "specific_gravity_reference": 0.65,
+          "reference_density_kg_m3_approx": 500,
+          "specific_gravity_reference": 0.5,
           "EX_pa": 9130000000.000002,
           "EY_pa": 1049950000.0000002,
           "EZ_pa": 456500000.0000001,
@@ -45319,7 +45554,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Black tupelo adds the black-gum reference, with higher density but similar bending strength to water tupelo."
+          "Black tupelo adds the black-gum reference, with the same 12% MC specific gravity (0.50) and similar bending strength to water tupelo.",
+          "2026-10-23 correction: specific gravity 0.65 -> 0.50 and density 650 -> 500 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart, engineeringtoolbox_timber_mechanical_properties). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -45332,7 +45568,7 @@
             "PRXY": 0.325,
             "PRYZ": 0.682,
             "PRXZ": 0.403,
-            "DENS_kg_m3": 650
+            "DENS_kg_m3": 500
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 66200000,
@@ -45366,7 +45602,10 @@
       "sources": {
         "source_ids": [
           "usda_fpl_tupelo_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart",
+          "engineeringtoolbox_timber_mechanical_properties"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
@@ -45987,8 +46226,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 520,
-          "specific_gravity_reference": 0.52,
+          "reference_density_kg_m3_approx": 590,
+          "specific_gravity_reference": 0.59,
           "EX_pa": 11300507203.502945,
           "EY_pa": 881439561.8732297,
           "EZ_pa": 565025360.1751473,
@@ -46033,7 +46272,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Southern red oak adds a lighter red-oak reference common in the southeastern United States."
+          "Southern red oak adds a lighter red-oak reference common in the southeastern United States.",
+          "2026-10-23 correction: specific gravity 0.52 -> 0.59 and density 520 -> 590 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: wagnermeters_species_setting_chart, ufifas_st546_quercus_falcata). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -46046,7 +46286,7 @@
             "PRXY": 0.426,
             "PRYZ": 0.697,
             "PRXZ": 0.451,
-            "DENS_kg_m3": 520
+            "DENS_kg_m3": 590
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 75152854.49553514,
@@ -46080,7 +46320,9 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "wagnermeters_species_setting_chart",
+          "ufifas_st546_quercus_falcata"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
@@ -48010,8 +48252,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 420,
-          "specific_gravity_reference": 0.42,
+          "reference_density_kg_m3_approx": 370,
+          "specific_gravity_reference": 0.37,
           "EX_pa": 11880000000.000002,
           "EY_pa": 926640000.0000001,
           "EZ_pa": 510840000.00000006,
@@ -48027,15 +48269,15 @@
           "compression_parallel_to_grain_pa": 36500000,
           "compression_perpendicular_to_grain_pa": 3450000,
           "shear_parallel_to_grain_pa": 6200000,
-          "tension_perpendicular_to_grain_pa": 2200862.0689655175
+          "tension_perpendicular_to_grain_pa": 1654741.8
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 61400000,
             "longitudinal_compression_pa": 36500000,
-            "radial_tension_pa": 2200862.0689655175,
-            "tangential_tension_pa": 2200862.0689655175,
+            "radial_tension_pa": 1654741.8,
+            "tangential_tension_pa": 1654741.8,
             "radial_compression_pa": 3450000,
             "tangential_compression_pa": 3450000,
             "longitudinal_radial_shear_pa": 6200000,
@@ -48056,7 +48298,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Grand fir adds a Pacific Northwest true-fir reference with moderate density and stiffness."
+          "Grand fir adds a Pacific Northwest true-fir reference with moderate density and stiffness.",
+          "2026-10-23 correction: specific gravity 0.42 -> 0.37 and density 420 -> 370 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, engineersedge_wood_properties_softwoods_inch_pound). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher.; tension perpendicular to grain 2.20 -> 1.65 MPa (240 psi, Wood Handbook Table 5-3a 12% MC measured value; sources: engineersedge_wood_properties_softwoods_inch_pound) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.64 x Fc-perp, Sitka spruce ratio) and overstated the measured value. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -48069,12 +48312,12 @@
             "PRXY": 0.372,
             "PRYZ": 0.435,
             "PRXZ": 0.467,
-            "DENS_kg_m3": 420
+            "DENS_kg_m3": 370
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 61400000,
             "longitudinal_compression_pa": 36500000,
-            "transverse_tension_pa": 2200862.0689655175,
+            "transverse_tension_pa": 1654741.8,
             "transverse_compression_pa": 3450000,
             "shear_parallel_to_grain_pa": 6200000
           }
@@ -48094,7 +48337,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 61400000,
             "sigma_c_x_pa": 36500000,
-            "sigma_t_yz_pa": 2200862.0689655175,
+            "sigma_t_yz_pa": 1654741.8,
             "sigma_c_yz_pa": 3450000,
             "tau_xy_xz_pa": 6200000
           }
@@ -48103,12 +48346,14 @@
       "sources": {
         "source_ids": [
           "usda_fpl_grand_fir_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table",
+          "engineersedge_wood_properties_softwoods_inch_pound"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sitka spruce clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sitka spruce clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook Table 5-3a measured 12% MC tension perpendicular to grain (240 psi = 1.65 MPa), replacing the earlier estimate from the Sitka spruce compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -48146,15 +48391,15 @@
           "compression_parallel_to_grain_pa": 42100000,
           "compression_perpendicular_to_grain_pa": 3580000,
           "shear_parallel_to_grain_pa": 7240000,
-          "tension_perpendicular_to_grain_pa": 2283793.103448276
+          "tension_perpendicular_to_grain_pa": 1516846.6
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 73800000,
             "longitudinal_compression_pa": 42100000,
-            "radial_tension_pa": 2283793.103448276,
-            "tangential_tension_pa": 2283793.103448276,
+            "radial_tension_pa": 1516846.6,
+            "tangential_tension_pa": 1516846.6,
             "radial_compression_pa": 3580000,
             "tangential_compression_pa": 3580000,
             "longitudinal_radial_shear_pa": 7240000,
@@ -48175,7 +48420,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Noble fir adds a stronger high-elevation true-fir reference distinct from white fir and grand fir."
+          "Noble fir adds a stronger high-elevation true-fir reference distinct from white fir and grand fir.",
+          "2026-10-23 correction: tension perpendicular to grain 2.28 -> 1.52 MPa (220 psi, Wood Handbook Table 5-3a 12% MC measured value; sources: engineersedge_wood_properties_softwoods_inch_pound) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.64 x Fc-perp, Sitka spruce ratio) and overstated the measured value. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -48193,7 +48439,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 73800000,
             "longitudinal_compression_pa": 42100000,
-            "transverse_tension_pa": 2283793.103448276,
+            "transverse_tension_pa": 1516846.6,
             "transverse_compression_pa": 3580000,
             "shear_parallel_to_grain_pa": 7240000
           }
@@ -48213,7 +48459,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 73800000,
             "sigma_c_x_pa": 42100000,
-            "sigma_t_yz_pa": 2283793.103448276,
+            "sigma_t_yz_pa": 1516846.6,
             "sigma_c_yz_pa": 3580000,
             "tau_xy_xz_pa": 7240000
           }
@@ -48222,12 +48468,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_noble_fir_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "engineersedge_wood_properties_softwoods_inch_pound"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sitka spruce clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sitka spruce clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook Table 5-3a measured 12% MC tension perpendicular to grain (220 psi = 1.52 MPa), replacing the earlier estimate from the Sitka spruce compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -48620,19 +48867,19 @@
         "strength_data": {
           "modulus_of_rupture_pa": 61363339.90919841,
           "compression_parallel_to_grain_pa": 37300636.95604083,
-          "compression_perpendicular_to_grain_pa": 5860543.699193106,
+          "compression_perpendicular_to_grain_pa": 4481592.2,
           "shear_parallel_to_grain_pa": 7308442.730758462,
-          "tension_perpendicular_to_grain_pa": 3547171.186353722
+          "tension_perpendicular_to_grain_pa": 2712542.6
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 61363339.90919841,
             "longitudinal_compression_pa": 37300636.95604083,
-            "radial_tension_pa": 3547171.186353722,
-            "tangential_tension_pa": 3547171.186353722,
-            "radial_compression_pa": 5860543.699193106,
-            "tangential_compression_pa": 5860543.699193106,
+            "radial_tension_pa": 2712542.6,
+            "tangential_tension_pa": 2712542.6,
+            "radial_compression_pa": 4481592.2,
+            "tangential_compression_pa": 4481592.2,
             "longitudinal_radial_shear_pa": 7308442.730758462,
             "longitudinal_tangential_shear_pa": 7308442.730758462,
             "notes": [
@@ -48651,7 +48898,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Eastern hemlock adds an eastern North American hemlock reference with lower stiffness than western hemlock."
+          "Eastern hemlock adds an eastern North American hemlock reference with lower stiffness than western hemlock.",
+          "2026-10-23 correction: compression perpendicular to grain 5.86 -> 4.48 MPa (650 psi, Wood Handbook Table 5-3a 12% MC via woodbin_fpl_wood_strength_table) in strength_data, envelope radial/tangential compression, ansys transverse_compression_pa and dolfinx sigma_c_yz_pa. The ratio-derived tension perpendicular was recomputed with the same western-hemlock ratio (0.6053): 3.55 -> 2.71 MPa (no measured 12% MC value was verified). Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -48669,8 +48917,8 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 61363339.90919841,
             "longitudinal_compression_pa": 37300636.95604083,
-            "transverse_tension_pa": 3547171.186353722,
-            "transverse_compression_pa": 5860543.699193106,
+            "transverse_tension_pa": 2712542.6,
+            "transverse_compression_pa": 4481592.2,
             "shear_parallel_to_grain_pa": 7308442.730758462
           }
         },
@@ -48689,8 +48937,8 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 61363339.90919841,
             "sigma_c_x_pa": 37300636.95604083,
-            "sigma_t_yz_pa": 3547171.186353722,
-            "sigma_c_yz_pa": 5860543.699193106,
+            "sigma_t_yz_pa": 2712542.6,
+            "sigma_c_yz_pa": 4481592.2,
             "tau_xy_xz_pa": 7308442.730758462
           }
         }
@@ -48698,7 +48946,8 @@
       "sources": {
         "source_ids": [
           "usda_fpl_eastern_hemlock_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
@@ -48724,8 +48973,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 510,
-          "specific_gravity_reference": 0.51,
+          "reference_density_kg_m3_approx": 450,
+          "specific_gravity_reference": 0.45,
           "EX_pa": 10087000000,
           "EY_pa": 585046000,
           "EZ_pa": 312697000,
@@ -48770,7 +49019,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Mountain hemlock adds a denser Pacific high-elevation hemlock reference."
+          "Mountain hemlock adds a Pacific high-elevation hemlock reference (12% MC specific gravity 0.45, the same as western hemlock).",
+          "2026-10-23 correction: specific gravity 0.51 -> 0.45 and density 510 -> 450 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -48783,7 +49033,7 @@
             "PRXY": 0.485,
             "PRYZ": 0.442,
             "PRXZ": 0.423,
-            "DENS_kg_m3": 510
+            "DENS_kg_m3": 450
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 79300000,
@@ -48817,7 +49067,9 @@
       "sources": {
         "source_ids": [
           "usda_fpl_mountain_hemlock_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
@@ -48962,8 +49214,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 660,
-          "specific_gravity_reference": 0.66,
+          "reference_density_kg_m3_approx": 590,
+          "specific_gravity_reference": 0.59,
           "EX_pa": 15016781384.52069,
           "EY_pa": 1696896296.450838,
           "EZ_pa": 1171308947.9926138,
@@ -49008,7 +49260,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Slash pine adds a very dense southern yellow pine reference distinct from loblolly and longleaf pine."
+          "Slash pine adds a dense southern yellow pine reference (12% MC specific gravity 0.59, the same as longleaf pine) distinct from loblolly and longleaf pine.",
+          "2026-10-23 correction: specific gravity 0.66 -> 0.59 and density 660 -> 590 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -49021,7 +49274,7 @@
             "PRXY": 0.328,
             "PRYZ": 0.382,
             "PRXZ": 0.292,
-            "DENS_kg_m3": 660
+            "DENS_kg_m3": 590
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 112384543.87864427,
@@ -49055,7 +49308,9 @@
       "sources": {
         "source_ids": [
           "usda_fpl_slash_pine_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
@@ -53836,7 +54091,7 @@
     },
     {
       "id": "wood_mesquite_clear_12pct_reference",
-      "name": "Mesquite clear wood reference",
+      "name": "Mesquite (Prosopis nigra, algarrobo) clear wood reference",
       "classification": {
         "category_ja": "木質",
         "category_en": "Wood",
@@ -53896,7 +54151,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Mesquite adds a very dense hardwood reference using the complete Prosopis nigra dry dataset reported in the USDA mesquite group chapter."
+          "Mesquite adds a very dense hardwood reference using the complete Prosopis nigra dry dataset reported in the USDA mesquite group chapter.",
+          "2026-10-23: display name changed from 'Mesquite clear wood reference' to 'Mesquite (Prosopis nigra, algarrobo) clear wood reference' (id kept). The card holds the Prosopis nigra (South American algarrobo) dataset from the FPL-GTR-83 mesquite group chapter, not North American honey mesquite, as documented in its notes and inferences."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -63793,18 +64049,19 @@
         },
         "strength_data": {
           "fiber_tensile_strength_pa": 7000000000,
-          "fiber_failure_strain": 0.02
+          "fiber_failure_strain": 0.022
         },
         "nonlinear_models": {
           "fiber_maximum_stress_partial_reference": {
             "Xt_fiber_pa": 7000000000,
-            "failure_strain": 0.02,
+            "failure_strain": 0.022,
             "notes": [
               "This is a fiber-constituent tensile limit for micromechanics or RVE work, not a cured-lamina failure allowable.",
               "Matrix behavior, fiber volume, interfaces, compression behavior, and transverse/shear constants remain required."
             ],
             "source_ids": [
-              "toray_carbon_fiber_selector_guide"
+              "toray_carbon_fiber_selector_guide",
+              "toray_t1100s_data_sheet"
             ],
             "model_family_recommended": true,
             "solver_ready": false,
@@ -63816,7 +64073,9 @@
         "condition": "continuous PAN-based carbon fiber, manufacturer typical values",
         "validation_tier": "official_source_fiber_constituent_partial_card",
         "notes": [
-          "Use for constituent-level homogenization and material screening only."
+          "Use for constituent-level homogenization and material screening only.",
+          "Correction 2026-10-23: fiber failure strain 0.020 -> 0.022 (strength_data, nonlinear_models failure_strain, dolfinx epsilon_f). The TORAYCA T1100S data sheet lists Strain at Failure 2.2% (TY-030B-01) alongside 7,000 MPa and 324 GPa (consistent with 7000/324000 = 2.16%). Source: https://www.toraycma.com/wp-content/uploads/T1100S-Data-Sheet.pdf.",
+          "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "abaqus_mapping": {
           "engineering_constants_partial": {
@@ -63846,13 +64105,14 @@
             "E_f_pa": 324000000000,
             "rho_f_kg_m3": 1790,
             "sigma_f_t_pa": 7000000000,
-            "epsilon_f": 0.02
+            "epsilon_f": 0.022
           }
         }
       },
       "sources": {
         "source_ids": [
-          "toray_carbon_fiber_selector_guide"
+          "toray_carbon_fiber_selector_guide",
+          "toray_t1100s_data_sheet"
         ]
       }
     },
@@ -63887,18 +64147,19 @@
         },
         "strength_data": {
           "fiber_tensile_strength_pa": 7000000000,
-          "fiber_failure_strain": 0.02
+          "fiber_failure_strain": 0.022
         },
         "nonlinear_models": {
           "fiber_maximum_stress_partial_reference": {
             "Xt_fiber_pa": 7000000000,
-            "failure_strain": 0.02,
+            "failure_strain": 0.022,
             "notes": [
               "This is a fiber-constituent tensile limit for micromechanics or RVE work, not a cured-lamina failure allowable.",
               "Matrix behavior, fiber volume, interfaces, compression behavior, and transverse/shear constants remain required."
             ],
             "source_ids": [
-              "toray_carbon_fiber_selector_guide"
+              "toray_carbon_fiber_selector_guide",
+              "toray_t1100g_data_sheet"
             ],
             "model_family_recommended": true,
             "solver_ready": false,
@@ -63910,7 +64171,9 @@
         "condition": "continuous PAN-based carbon fiber, manufacturer typical values",
         "validation_tier": "official_source_fiber_constituent_partial_card",
         "notes": [
-          "Use for constituent-level homogenization and material screening only."
+          "Use for constituent-level homogenization and material screening only.",
+          "Correction 2026-10-23: fiber failure strain 0.020 -> 0.022 (strength_data, nonlinear_models failure_strain, dolfinx epsilon_f). The TORAYCA T1100G data sheet lists Strain at Failure 2.2% (TY-030B-01) alongside 7,000 MPa and 324 GPa (consistent with 7000/324000 = 2.16%). Source: https://www.toraycma.com/wp-content/uploads/T1100G-Data-Sheet.pdf.",
+          "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "abaqus_mapping": {
           "engineering_constants_partial": {
@@ -63940,13 +64203,14 @@
             "E_f_pa": 324000000000,
             "rho_f_kg_m3": 1790,
             "sigma_f_t_pa": 7000000000,
-            "epsilon_f": 0.02
+            "epsilon_f": 0.022
           }
         }
       },
       "sources": {
         "source_ids": [
-          "toray_carbon_fiber_selector_guide"
+          "toray_carbon_fiber_selector_guide",
+          "toray_t1100g_data_sheet"
         ]
       }
     },
@@ -79163,6 +79427,485 @@
           "fibergrate_dynaform_structural_shapes_design_guide_si",
           "fibergrate_dynaform_structural_shapes_si_brochure",
           "fibergrate_dynaform_engineering_specification_shapes"
+        ]
+      }
+    },
+    {
+      "id": "polymer_victrex_peek_450ca40",
+      "name": "VICTREX PEEK 450CA40",
+      "classification": {
+        "category_ja": "高分子",
+        "category_en": "Polymer",
+        "subcategory_ja": "高分子",
+        "subcategory_en": "polymer"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1440,
+          "youngs_modulus_pa": 35000000000,
+          "poissons_ratio": 0.33
+        },
+        "strength_data": {
+          "tensile_strength_pa": 285000000,
+          "reference_failure_strain": 0.015,
+          "flexural_modulus_pa": 30000000000,
+          "flexural_strength_pa": 425000000,
+          "tensile_strength_pa_125c": 175000000
+        },
+        "nonlinear_models": {
+          "continuum_damage_starter": {
+            "recommended": true,
+            "tensile_strength_pa": 285000000,
+            "engineering_failure_strain": 0.015,
+            "notes": [
+              "This is a very stiff 40 percent carbon-fiber PEEK starter card for small-strain screening analysis; with a 1.5 percent strain at break it is better treated as quasi-brittle than as a ductile plastic.",
+              "Molding orientation and fiber-alignment effects are not represented."
+            ],
+            "source_ids": [
+              "victrex_peek_450ca40"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "40% carbon-fiber reinforced PEEK, injection-molded test specimens, 23 C",
+        "validation_tier": "official_source_with_inferred_nu",
+        "notes": [
+          "Re-added on 2026-10-23 after deletion of an earlier card whose values (E 32 GPa, tensile 240 MPa, flexural 27.5 GPa / 335 MPa, density 1450 kg/m3) did not match the current Victrex 450CA40 datasheet. Core values now follow the current TDS: density 1.44 g/cm3 (ISO 1183), tensile modulus 35,000 MPa (ISO 527), tensile stress at break 285 MPa and strain at break 1.5% (ISO 527), flexural modulus 30,000 MPa and flexural stress 425 MPa (ISO 178), all at 23 C; tensile stress at break 175 MPa at 125 C.",
+          "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable).",
+          "Compressive stress, notched impact, glass-transition/melting temperatures and water absorption from the earlier card were not re-verified against the current datasheet and are therefore omitted.",
+          "This higher-carbon-content grade sits above the 30 percent carbon-fiber 450CA30 card (28 GPa, 265 MPa); for directional or fatigue-critical work use an orientation-aware reinforced-polymer model."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 35000000000,
+            "PRXY": 0.33,
+            "DENS_kg_m3": 1440
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 35000000000,
+            "nu": 0.33,
+            "density_kg_m3": 1440
+          },
+          "nonlinear_reference_data": {
+            "sigma_t_pa": 285000000,
+            "epsilon_f": 0.015
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 35000000000,
+            "nu": 0.33
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "victrex_peek_450ca40"
+        ],
+        "inferences": [
+          "Poisson ratio is not listed in the Victrex datasheet. A practical high-carbon-filled PEEK starter value of 0.33 is inserted (sibling 450CA30 uses 0.34)."
+        ]
+      }
+    },
+    {
+      "id": "concrete_sikagrout_212",
+      "name": "SikaGrout-212",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "セメント系無収縮グラウト",
+        "subcategory_en": "cementitious non-shrink grout"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3_approx": 2143.1,
+          "youngs_modulus_pa_derived": 29700000000,
+          "poissons_ratio_assumed": 0.2,
+          "density_kg_m3": 2143.1,
+          "youngs_modulus_pa": 29700000000,
+          "poissons_ratio": 0.2
+        },
+        "strength_data": {
+          "compressive_strength_pa": 40000000,
+          "flexural_strength_pa": 6800000,
+          "splitting_tensile_strength_pa": 3400000
+        },
+        "nonlinear_models": {
+          "cementitious_damage_reference_partial": {
+            "compressive_strength_pa": 40000000,
+            "tensile_input_pa": 3400000,
+            "tensile_input_kind": "published ASTM C496 splitting tensile strength used as a practical cracking reference; not direct uniaxial tensile",
+            "notes": [
+              "The public Sika data provide 28-day fluid-consistency strength values but not the compression hardening or tension softening tables required for a calibrated cracking model."
+            ],
+            "source_ids": [
+              "sika_sikagrout_212",
+              "sika_sikagrout_212_csi_spec",
+              "sika_sikagrout_install_guide",
+              "fhwa_jpcp_frp_dowels",
+              "fhwa_lightweight_concrete_primer"
+            ],
+            "model_family_recommended": true,
+            "solver_ready": false,
+            "usage_level": "screening_or_partial_reference"
+          }
+        }
+      },
+      "other": {
+        "condition": "general-purpose cementitious non-shrink grout, fluid consistency (8.5 pints water per 50 lb bag), 28-day values at 73 F / 50% RH",
+        "validation_tier": "official_product_strength_data_with_derived_density_elasticity_and_assumed_nu",
+        "notes": [
+          "Re-added 2026-10-23 with corrected density; the earlier tensile-adhesion (13.1 MPa) and expansion values were not re-verified and are omitted.",
+          "Density is an approximate fresh-mixture value from bag mass, published fluid-consistency mix water and published fluid yield: rho = (22.680 kg bag [50 lb] + 4.022 kg water [8.5 US pints = 4.022 L fluid mix water per bag]) / (0.44 ft3 = 0.01246 m3) = 26.702 / 0.01246 = 2143.1 kg/m3. The 0.44 ft3 yield is published to two significant figures (about +/-1.1%). This replaces the earlier 2590-2685 kg/m3 values, which divided by the rounded 0.01 m3 metric equivalent.",
+          "E is derived, not published: ACI 318 / FHWA relation Ec = 57,000 sqrt(f'c [psi]) = 4,700 sqrt(f'c [MPa]) = 4,700 x sqrt(40) = 29.7 GPa. It is a normal-concrete relationship and only an approximate grout starter.",
+          "nu = 0.2 is an assumed FHWA/AASHTO fallback (not published by Sika).",
+          "The listed values correspond to fluid consistency and 28-day curing; do not reuse them unchanged for plastic or flowable water contents.",
+          "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 29700000000,
+            "PRXY": 0.2,
+            "DENS_kg_m3": 2143.1
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 29700000000,
+            "nu": 0.2,
+            "density_kg_m3": 2143.1,
+            "value_provenance": "official_product_strength_data_with_derived_density_elasticity_and_assumed_nu"
+          },
+          "concrete_damaged_plasticity_partial_reference": {
+            "known_response_points": {
+              "compressive_strength_pa": 40000000,
+              "flexural_strength_pa": 6800000,
+              "splitting_tensile_strength_pa": 3400000
+            },
+            "missing_parameters": [
+              "plasticity_flow_parameters",
+              "compression_hardening_and_damage_tables",
+              "tension_softening_and_damage_tables",
+              "fracture_energy_or_crack_band_regularization"
+            ]
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 29700000000,
+            "nu": 0.2
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "sika_sikagrout_212",
+          "sika_sikagrout_212_csi_spec",
+          "sika_sikagrout_install_guide",
+          "fhwa_jpcp_frp_dowels",
+          "fhwa_lightweight_concrete_primer"
+        ],
+        "inferences": [
+          "Density derived as (bag mass + published fluid mix water) / published fluid yield: (22.680 + 4.022) kg / 0.01246 m3 = 2143.1 kg/m3, assuming water density 1000 kg/m3.",
+          "Fluid mix water 8.5 pints per bag is published in the US PDS and CSI spec; the installation guide confirms the unit as pints (8.5 x 0.473176 L = 4.022 L).",
+          "Young's modulus derived from Ec = 4700 sqrt(f'c) (MPa) with the published 28-day fluid f'c = 40 MPa (5,800 psi): 29.7 GPa.",
+          "Poisson ratio 0.20 assumed (AASHTO fallback when not measured); not published by Sika."
+        ]
+      }
+    },
+    {
+      "id": "concrete_sikagrout_328",
+      "name": "SikaGrout-328",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "セメント系無収縮グラウト",
+        "subcategory_en": "cementitious non-shrink grout"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3_approx": 2133.6,
+          "youngs_modulus_pa_derived": 33800000000,
+          "poissons_ratio_assumed": 0.2,
+          "density_kg_m3": 2133.6,
+          "youngs_modulus_pa": 33800000000,
+          "poissons_ratio": 0.2
+        },
+        "strength_data": {
+          "compressive_strength_pa": 51700000,
+          "flexural_strength_pa": 9000000,
+          "splitting_tensile_strength_pa": 4500000,
+          "shear_strength_pa": 13800000
+        },
+        "nonlinear_models": {
+          "cementitious_damage_reference_partial": {
+            "compressive_strength_pa": 51700000,
+            "tensile_input_pa": 4500000,
+            "tensile_input_kind": "published ASTM C496 splitting tensile strength used as a practical cracking reference; not direct uniaxial tensile",
+            "notes": [
+              "The public Sika data provide 28-day fluid-consistency strength values but not the compression hardening or tension softening tables required for a calibrated cracking model."
+            ],
+            "source_ids": [
+              "sika_sikagrout_328",
+              "sika_sikagrout_328_pds",
+              "sika_sikagrout_328_csi_spec",
+              "sika_sikagrout_328_fact_sheet",
+              "fhwa_jpcp_frp_dowels",
+              "fhwa_lightweight_concrete_primer"
+            ],
+            "model_family_recommended": true,
+            "solver_ready": false,
+            "usage_level": "screening_or_partial_reference"
+          }
+        }
+      },
+      "other": {
+        "condition": "precision cementitious non-shrink grout with extended working time, fluid consistency (8.0-8.5 pints water per 50 lb bag), 28-day values",
+        "validation_tier": "official_product_strength_data_with_derived_density_elasticity_and_assumed_nu",
+        "notes": [
+          "Re-added 2026-10-23 with corrected density. Over the published 8.0-8.5 pint water range the derived density is about 2124-2143 kg/m3.",
+          "Density is an approximate fresh-mixture value from bag mass, published fluid-consistency mix water and published fluid yield: rho = (22.680 kg bag [50 lb] + 3.904 kg water [midpoint of published 8.0-8.5 US pints = 3.904 L fluid mix water per bag]) / (0.44 ft3 = 0.01246 m3) = 26.583 / 0.01246 = 2133.6 kg/m3. The 0.44 ft3 yield is published to two significant figures (about +/-1.1%). This replaces the earlier 2590-2685 kg/m3 values, which divided by the rounded 0.01 m3 metric equivalent.",
+          "E is derived, not published: ACI 318 / FHWA relation Ec = 57,000 sqrt(f'c [psi]) = 4,700 sqrt(f'c [MPa]) = 4,700 x sqrt(51.7) = 33.8 GPa. It is a normal-concrete relationship and only an approximate grout starter.",
+          "nu = 0.2 is an assumed FHWA/AASHTO fallback (not published by Sika).",
+          "The listed values correspond to fluid consistency and 28-day curing; do not reuse them unchanged for plastic or flowable water contents.",
+          "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 33800000000,
+            "PRXY": 0.2,
+            "DENS_kg_m3": 2133.6
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 33800000000,
+            "nu": 0.2,
+            "density_kg_m3": 2133.6,
+            "value_provenance": "official_product_strength_data_with_derived_density_elasticity_and_assumed_nu"
+          },
+          "concrete_damaged_plasticity_partial_reference": {
+            "known_response_points": {
+              "compressive_strength_pa": 51700000,
+              "flexural_strength_pa": 9000000,
+              "splitting_tensile_strength_pa": 4500000,
+              "shear_strength_pa": 13800000
+            },
+            "missing_parameters": [
+              "plasticity_flow_parameters",
+              "compression_hardening_and_damage_tables",
+              "tension_softening_and_damage_tables",
+              "fracture_energy_or_crack_band_regularization"
+            ]
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 33800000000,
+            "nu": 0.2
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "sika_sikagrout_328",
+          "sika_sikagrout_328_pds",
+          "sika_sikagrout_328_csi_spec",
+          "sika_sikagrout_328_fact_sheet",
+          "fhwa_jpcp_frp_dowels",
+          "fhwa_lightweight_concrete_primer"
+        ],
+        "inferences": [
+          "Density derived as (bag mass + published fluid mix water) / published fluid yield: (22.680 + 3.904) kg / 0.01246 m3 = 2133.6 kg/m3, assuming water density 1000 kg/m3.",
+          "Fluid mix water 8.0-8.5 pints (3.8-4 L) per bag is published in the CSI spec (and the distributor-hosted PDS); the midpoint 8.25 pints (3.904 L) is used. Yield 0.44 ft3 per bag at fluid consistency is published in the CSI spec and Sweets listing.",
+          "Young's modulus derived from Ec = 4700 sqrt(f'c) (MPa) with the published 28-day fluid f'c = 51.7 MPa (7,500 psi): 33.8 GPa.",
+          "Poisson ratio 0.20 assumed (AASHTO fallback when not measured); not published by Sika."
+        ]
+      }
+    },
+    {
+      "id": "wood_alaska_cedar_clear_12pct_reference",
+      "name": "Alaska cedar (yellow-cedar) clear wood reference",
+      "classification": {
+        "category_ja": "木質",
+        "category_en": "Wood",
+        "subcategory_ja": "天然木材",
+        "subcategory_en": "wood"
+      },
+      "properties": {
+        "orthotropic_elastic": {
+          "axes": {
+            "x": "longitudinal",
+            "y": "radial",
+            "z": "tangential"
+          },
+          "reference_density_kg_m3_approx": 440,
+          "specific_gravity_reference": 0.44,
+          "EX_pa": 10769610891.9,
+          "EY_pa": 1970838793.2,
+          "EZ_pa": 872338482.2,
+          "GXY_pa": 2261618287.3,
+          "GYZ_pa": 161544163.4,
+          "GXZ_pa": 2013917236.8,
+          "PRXY": 0.337,
+          "PRYZ": 0.458,
+          "PRXZ": 0.34
+        },
+        "strength_data": {
+          "modulus_of_rupture_pa": 76531806,
+          "compression_parallel_to_grain_pa": 43505918.5,
+          "compression_perpendicular_to_grain_pa": 4274749.5,
+          "shear_parallel_to_grain_pa": 7791075.7,
+          "tension_perpendicular_to_grain_pa": 2482112.6
+        },
+        "nonlinear_models": {
+          "orthotropic_strength_envelope_starter": {
+            "recommended": true,
+            "longitudinal_tension_pa": 76531806,
+            "longitudinal_compression_pa": 43505918.5,
+            "radial_tension_pa": 2482112.6,
+            "tangential_tension_pa": 2482112.6,
+            "radial_compression_pa": 4274749.5,
+            "tangential_compression_pa": 4274749.5,
+            "longitudinal_radial_shear_pa": 7791075.7,
+            "longitudinal_tangential_shear_pa": 7791075.7,
+            "notes": [
+              "The longitudinal tensile strength is conservatively approximated by the modulus of rupture because direct tension data were not available for the same reference condition.",
+              "No radial-tangential rolling-shear strength was inserted because the Wood Handbook species table does not provide a matching value for this condition."
+            ],
+            "source_ids": [
+              "woodbin_fpl_wood_strength_table",
+              "dixdesign_timber_properties_imperial",
+              "archipro_yellow_cedar_iti_nz",
+              "usda_wood_handbook_ch5"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "clear, straight-grained, approximately 12% moisture content (Wood Handbook Table 5-3a/5-3b dry row)",
+        "validation_tier": "official_source_with_derived_orthotropic_constants",
+        "notes": [
+          "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
+          "Alaska cedar (yellow-cedar, Callitropsis nootkatensis, formerly Chamaecyparis nootkatensis) adds a durable yellow-cedar reference with moderate stiffness and good decay resistance.",
+          "Re-added 2026-10-23 with every number redone from the Wood Handbook 12% MC row (inch-pound Table 5-3a, metric 5-3b): SG 0.44, MOR 11,100 psi (76.5 MPa), MOE 1.42e6 psi (9.79 GPa), compression parallel 6,310 psi (43.5 MPa), compression perpendicular 620 psi (4.27 MPa), shear 1,130 psi (7.79 MPa), tension perpendicular 360 psi (2.48 MPa). The previously deleted card carried Atlantic white cedar numbers.",
+          "Verification depth: SG, MOE and compression parallel appear in both woodbin_fpl_wood_strength_table and dixdesign_timber_properties_imperial; MOR in dixdesign_timber_properties_imperial and (as 76.6 MPa) archipro_yellow_cedar_iti_nz, which also corroborates 9.79 GPa and 43.5 MPa. Compression perpendicular (620 psi) and shear (1,130 psi) rest on the single woodbin row, and tension perpendicular (360 psi) on the single dixdesign row; in both rows the other columns match the cross-checked values.",
+          "Density follows the database convention SG(ovendry weight, volume at 12% MC) x 1000 = 440 kg/m3; actual air-dry density at 12% MC is about 10% higher.",
+          "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+        ],
+        "ansys_mapping": {
+          "orthotropic_mp": {
+            "EX_pa": 10769610891.9,
+            "EY_pa": 1970838793.2,
+            "EZ_pa": 872338482.2,
+            "GXY_pa": 2261618287.3,
+            "GYZ_pa": 161544163.4,
+            "GXZ_pa": 2013917236.8,
+            "PRXY": 0.337,
+            "PRYZ": 0.458,
+            "PRXZ": 0.34,
+            "DENS_kg_m3": 440
+          },
+          "nonlinear_reference_data": {
+            "longitudinal_tension_pa": 76531806,
+            "longitudinal_compression_pa": 43505918.5,
+            "transverse_tension_pa": 2482112.6,
+            "transverse_compression_pa": 4274749.5,
+            "shear_parallel_to_grain_pa": 7791075.7
+          }
+        },
+        "dolfinx_mapping": {
+          "orthotropic_linear_elastic": {
+            "E_x_pa": 10769610891.9,
+            "E_y_pa": 1970838793.2,
+            "E_z_pa": 872338482.2,
+            "nu_xy": 0.337,
+            "nu_yz": 0.458,
+            "nu_xz": 0.34,
+            "G_xy_pa": 2261618287.3,
+            "G_yz_pa": 161544163.4,
+            "G_xz_pa": 2013917236.8
+          },
+          "custom_orthotropic_damage_reference": {
+            "sigma_t_x_pa": 76531806,
+            "sigma_c_x_pa": 43505918.5,
+            "sigma_t_yz_pa": 2482112.6,
+            "sigma_c_yz_pa": 4274749.5,
+            "tau_xy_xz_pa": 7791075.7
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "woodbin_fpl_wood_strength_table",
+          "dixdesign_timber_properties_imperial",
+          "archipro_yellow_cedar_iti_nz",
+          "usda_wood_handbook_ch5"
+        ],
+        "inferences": [
+          "EX is the Wood Handbook 12% MC MOE (1.42e6 psi = 9.79 GPa) increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
+          "Wood Handbook Table 5-1 has no Alaska-cedar row, so EY, EZ, the shear moduli and the Poisson ratios use the Table 5-1 northern white-cedar ratios (E_R/E_L 0.183, E_T/E_L 0.081, G_LR/E_L 0.210, G_LT/E_L 0.187, G_RT/E_L 0.015; nu_LR 0.337, nu_LT 0.340, nu_RT 0.458), the same surrogate pattern used by the Atlantic white cedar and Port-Orford-cedar cards.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (360 psi), not a ratio estimate.",
+          "The longitudinal tensile strength is conservatively approximated by the modulus of rupture.",
+          "Density is approximated from specific gravity (SG x 1000)."
+        ]
+      }
+    },
+    {
+      "id": "foam_dupont_sf0930_polyimide",
+      "name": "Vespel SF-0930",
+      "classification": {
+        "category_ja": "フォーム",
+        "category_en": "Foam",
+        "subcategory_ja": "耐熱ポリイミドフォーム",
+        "subcategory_en": "high-temperature polyimide foam"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 300
+        },
+        "strength_data": {
+          "ultimate_tensile_strength_pa": 4400000,
+          "elongation_at_break_percent": 7.94,
+          "compression_force_at_40pct_pa": 3800000
+        },
+        "nonlinear_models": {
+          "crushable_foam_partial_reference": {
+            "known_compression_points": [
+              {
+                "engineering_strain": 0.4,
+                "stress_pa": 3800000
+              }
+            ],
+            "notes": [
+              "Only the 40 % compression point is retained; DuPont's other SF-0930 compression entries are mutually inconsistent (see record notes)."
+            ],
+            "source_ids": [
+              "dupont_vespel_sf_polyimide_foam",
+              "abaqus_crushable_foam_behavior"
+            ],
+            "model_family_recommended": true,
+            "solver_ready": false,
+            "usage_level": "screening_or_partial_reference"
+          }
+        }
+      },
+      "other": {
+        "condition": "high-temperature polyimide foam, manufacturer typical properties",
+        "validation_tier": "official_source_partial_crushable_foam_reference",
+        "notes": [
+          "Calibrate a full compression curve and volumetric response before crush analysis.",
+          "Re-added 2026-10-23 with only internally consistent DuPont values: density 0.3 g/cc, tensile strength 4,400 kPa, elongation 7.94 %, compression at 40 % strain 3,800 kPa.",
+          "DuPont's SF-0930 page also prints a compression modulus of 1,640 kPa (238 psi), which cannot be reconciled with the published compression stresses (it would imply > 20 MPa secant stiffness at 10 % strain), so no modulus, 10 % or 20 % compression values, or tensile modulus are stored. No stiffness is recorded; use as a partial strength/crush reference like SF-0920.",
+          "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+        ]
+      },
+      "sources": {
+        "source_ids": [
+          "dupont_vespel_sf_polyimide_foam"
         ]
       }
     }
