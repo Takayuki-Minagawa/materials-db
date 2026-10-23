@@ -6580,6 +6580,27 @@
       "info_used": [
         "yellow cedar modulus of rupture 76.6 MPa, modulus of elasticity 9.79 GPa, maximum crushing strength 43.5 MPa (corroboration of the 11,100 psi / 1.42e6 psi / 6,310 psi handbook values)"
       ]
+    },
+    "matmake_tensile_strength_of_wood": {
+      "title": "Tensile Strength of Wood - Table",
+      "publisher": "MatMake (tabulating USDA Wood Handbook clear-wood data)",
+      "url": "https://matmake.com/properties/tensile-strength-of-wood.html",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "Tensile Strength of Common Wood Types table (values stated at 12% moisture content, MPa; Wood Handbook SI values, perpendicular to grain): Oak (white) 5.5; Oak (northern red) 5.5; Oak (scarlet) 6; Oak (pin) 7.2; Oak (bur) 4.7; Oak (laurel) 5.4; Oak (post) 5.4; Oak (swamp chestnut) 4.8; Oak (swamp white) 5.7; Maple (black) 4.6; Maple (bigleaf) 3.7; Maple (silver, creek) 3.4; Birch (sweet) 6.6; Elm (American) 4.6; Elm (slippery) 3.7; Beech (American) 7; Cherry (black) 3.9; Aspen (quaking) 1.8; Basswood (American) 2.4; Butternut 3; Cottonwood (black) 2.3; Cottonwood (eastern) 4; Magnolia (cucumber tree) 4.6; Magnolia (southern) 5.1; Sycamore (American) 5; Tupelo (black) 3.4; Locust (black) 4.4; Locust (honey) 6.2; Chestnut (American) 3.2; Pine (eastern white) 2.1; Pine (jack) 2.9; Pine (shortleaf) 3.2; Spruce (white) 2.5; Spruce (red) 2.4; Fir (white) 2.1; Fir (balsam) 1.2; Cedar (southern white) 1.5; Tamarack 2.8; Redwood (young growth) 1.7",
+        "consistency check: rows already in the database from the inch-pound Handbook table agree (Ash (white) 6.5, Ash (black) 4.8, Poplar (yellow) 3.7, Douglas fir (coast) 2.3, Hemlock (western) 2.3, Larch (western) 3.0, Pine (loblolly) 3.2, Birch (yellow) 6.3, Walnut (black) 4.8, Cedar (western red) 1.5)",
+        "shear table cross-check: Oak (laurel) 12.6, Oak (post) 12.7, Oak (swamp chestnut) 13.7 MPa (match the cards' 1,830/1,840/1,990 psi)"
+      ]
+    },
+    "dixdesign_timber_properties_metric": {
+      "title": "Mechanical Properties of Boatbuilding Timbers (metric units)",
+      "publisher": "Dudley Dix Yacht Design (tabulating USDA Forest Products Laboratory data)",
+      "url": "https://dixdesign.com/woodmet.htm",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "Cedar (Port Orford): SG 0.43, MOR 8.96 kg/mm2, MOE 1200 kg/mm2, tensile strength perpendicular to grain 0.28 kg/mm2, side hardness 286 kg",
+        "Ash (White) tensile strength perpendicular to grain 0.66 kg/mm2 (consistent with the imperial table's 940 psi)"
+      ]
     }
   },
   "materials": [
@@ -11363,15 +11384,15 @@
           "compression_parallel_to_grain_pa": 36404318.507928945,
           "compression_perpendicular_to_grain_pa": 2757902.9172673444,
           "shear_parallel_to_grain_pa": 6481071.85557826,
-          "tension_perpendicular_to_grain_pa": 1759351.861015375
+          "tension_perpendicular_to_grain_pa": 1200000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 63431767.09714892,
             "longitudinal_compression_pa": 36404318.507928945,
-            "radial_tension_pa": 1759351.861015375,
-            "tangential_tension_pa": 1759351.861015375,
+            "radial_tension_pa": 1200000,
+            "tangential_tension_pa": 1200000,
             "radial_compression_pa": 2757902.9172673444,
             "tangential_compression_pa": 2757902.9172673444,
             "longitudinal_radial_shear_pa": 6481071.85557826,
@@ -11393,7 +11414,8 @@
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
           "The transverse elastic constants are anchored to the Sitka spruce starter-card ratios because the USDA species sheet publishes scalar clear-wood strengths and longitudinal stiffness, but not a full orthotropic tensor.",
-          "2026-10-23 correction: specific gravity 0.41 -> 0.35 and density 410 -> 350 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+          "2026-10-23 correction: specific gravity 0.41 -> 0.35 and density 410 -> 350 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable).",
+          "2026-10-23 correction: tension perpendicular to grain 1.76 -> 1.20 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.64 x Fc-perp, Sitka spruce ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -11411,7 +11433,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 63431767.09714892,
             "longitudinal_compression_pa": 36404318.507928945,
-            "transverse_tension_pa": 1759351.861015375,
+            "transverse_tension_pa": 1200000,
             "transverse_compression_pa": 2757902.9172673444,
             "shear_parallel_to_grain_pa": 6481071.85557826
           }
@@ -11431,7 +11453,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 63431767.09714892,
             "sigma_c_x_pa": 36404318.507928945,
-            "sigma_t_yz_pa": 1759351.861015375,
+            "sigma_t_yz_pa": 1200000,
             "sigma_c_yz_pa": 2757902.9172673444,
             "tau_xy_xz_pa": 6481071.85557826
           }
@@ -11442,12 +11464,13 @@
           "usda_fpl_balsam_fir_techsheet",
           "usda_wood_handbook_ch5",
           "woodbin_fpl_wood_strength_table",
-          "wagnermeters_species_setting_chart"
+          "wagnermeters_species_setting_chart",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the handbook species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sitka spruce clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sitka spruce clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (1.2 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Sitka spruce compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -11604,15 +11627,15 @@
           "compression_parallel_to_grain_pa": 40000000,
           "compression_perpendicular_to_grain_pa": 3650000,
           "shear_parallel_to_grain_pa": 7580000,
-          "tension_perpendicular_to_grain_pa": 2328448.2758620693
+          "tension_perpendicular_to_grain_pa": 2100000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 67600000,
             "longitudinal_compression_pa": 40000000,
-            "radial_tension_pa": 2328448.2758620693,
-            "tangential_tension_pa": 2328448.2758620693,
+            "radial_tension_pa": 2100000,
+            "tangential_tension_pa": 2100000,
             "radial_compression_pa": 3650000,
             "tangential_compression_pa": 3650000,
             "longitudinal_radial_shear_pa": 7580000,
@@ -11633,7 +11656,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "The cited metric FPL sheet resolves the formatting ambiguity present in some HTML renderings of the white-fir MOE value."
+          "The cited metric FPL sheet resolves the formatting ambiguity present in some HTML renderings of the white-fir MOE value.",
+          "2026-10-23 correction: tension perpendicular to grain 2.33 -> 2.10 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.64 x Fc-perp, Sitka spruce ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -11651,7 +11675,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 67600000,
             "longitudinal_compression_pa": 40000000,
-            "transverse_tension_pa": 2328448.2758620693,
+            "transverse_tension_pa": 2100000,
             "transverse_compression_pa": 3650000,
             "shear_parallel_to_grain_pa": 7580000
           }
@@ -11671,7 +11695,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 67600000,
             "sigma_c_x_pa": 40000000,
-            "sigma_t_yz_pa": 2328448.2758620693,
+            "sigma_t_yz_pa": 2100000,
             "sigma_c_yz_pa": 3650000,
             "tau_xy_xz_pa": 7580000
           }
@@ -11680,12 +11704,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_white_fir_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the handbook species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sitka spruce clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sitka spruce clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (2.1 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Sitka spruce compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -11842,15 +11867,15 @@
           "compression_parallel_to_grain_pa": 50124885.521333985,
           "compression_perpendicular_to_grain_pa": 5653700.980398056,
           "shear_parallel_to_grain_pa": 9583712.63750402,
-          "tension_perpendicular_to_grain_pa": 3350341.3217173666
+          "tension_perpendicular_to_grain_pa": 3200000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 90321320.54050553,
             "longitudinal_compression_pa": 50124885.521333985,
-            "radial_tension_pa": 3350341.3217173666,
-            "tangential_tension_pa": 3350341.3217173666,
+            "radial_tension_pa": 3200000,
+            "tangential_tension_pa": 3200000,
             "radial_compression_pa": 5653700.980398056,
             "tangential_compression_pa": 5653700.980398056,
             "longitudinal_radial_shear_pa": 9583712.63750402,
@@ -11871,7 +11896,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Shortleaf pine adds another southern yellow pine clear-wood option between the existing loblolly and longleaf cards."
+          "Shortleaf pine adds another southern yellow pine clear-wood option between the existing loblolly and longleaf cards.",
+          "2026-10-23 correction: tension perpendicular to grain 3.35 -> 3.20 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.59 x Fc-perp, Loblolly pine ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -11889,7 +11915,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 90321320.54050553,
             "longitudinal_compression_pa": 50124885.521333985,
-            "transverse_tension_pa": 3350341.3217173666,
+            "transverse_tension_pa": 3200000,
             "transverse_compression_pa": 5653700.980398056,
             "shear_parallel_to_grain_pa": 9583712.63750402
           }
@@ -11909,7 +11935,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 90321320.54050553,
             "sigma_c_x_pa": 50124885.521333985,
-            "sigma_t_yz_pa": 3350341.3217173666,
+            "sigma_t_yz_pa": 3200000,
             "sigma_c_yz_pa": 5653700.980398056,
             "tau_xy_xz_pa": 9583712.63750402
           }
@@ -11918,12 +11944,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_shortleaf_pine_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the handbook species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Loblolly pine clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Loblolly pine clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (3.2 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Loblolly pine compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -12200,15 +12227,15 @@
           "compression_parallel_to_grain_pa": 32405359.277891297,
           "compression_perpendicular_to_grain_pa": 2826850.490199028,
           "shear_parallel_to_grain_pa": 5515805.834534689,
-          "tension_perpendicular_to_grain_pa": 2288402.7777801654
+          "tension_perpendicular_to_grain_pa": 1500000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 46884349.593544856,
             "longitudinal_compression_pa": 32405359.277891297,
-            "radial_tension_pa": 2288402.7777801654,
-            "tangential_tension_pa": 2288402.7777801654,
+            "radial_tension_pa": 1500000,
+            "tangential_tension_pa": 1500000,
             "radial_compression_pa": 2826850.490199028,
             "tangential_compression_pa": 2826850.490199028,
             "longitudinal_radial_shear_pa": 5515805.834534689,
@@ -12229,7 +12256,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Atlantic white cedar uses the northern white cedar transverse-ratio pattern because both species occupy the same lightweight cedar family niche in the current database."
+          "Atlantic white cedar uses the northern white cedar transverse-ratio pattern because both species occupy the same lightweight cedar family niche in the current database.",
+          "2026-10-23 correction: tension perpendicular to grain 2.29 -> 1.50 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.81 x Fc-perp, Northern white cedar ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -12247,7 +12275,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 46884349.593544856,
             "longitudinal_compression_pa": 32405359.277891297,
-            "transverse_tension_pa": 2288402.7777801654,
+            "transverse_tension_pa": 1500000,
             "transverse_compression_pa": 2826850.490199028,
             "shear_parallel_to_grain_pa": 5515805.834534689
           }
@@ -12267,7 +12295,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 46884349.593544856,
             "sigma_c_x_pa": 32405359.277891297,
-            "sigma_t_yz_pa": 2288402.7777801654,
+            "sigma_t_yz_pa": 1500000,
             "sigma_c_yz_pa": 2826850.490199028,
             "tau_xy_xz_pa": 5515805.834534689
           }
@@ -12276,12 +12304,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_atlantic_white_cedar_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the handbook species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Northern white cedar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Northern white cedar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (1.5 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Northern white cedar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -12438,15 +12467,15 @@
           "compression_parallel_to_grain_pa": 51296994.26117261,
           "compression_perpendicular_to_grain_pa": 7377390.303690146,
           "shear_parallel_to_grain_pa": 13168986.429951569,
-          "tension_perpendicular_to_grain_pa": 6936949.091529541
+          "tension_perpendicular_to_grain_pa": 5500000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 104800310.85615909,
             "longitudinal_compression_pa": 51296994.26117261,
-            "radial_tension_pa": 6936949.091529541,
-            "tangential_tension_pa": 6936949.091529541,
+            "radial_tension_pa": 5500000,
+            "tangential_tension_pa": 5500000,
             "radial_compression_pa": 7377390.303690146,
             "tangential_compression_pa": 7377390.303690146,
             "longitudinal_radial_shear_pa": 13168986.429951569,
@@ -12467,7 +12496,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "White oak is added as a heavy ring-porous hardwood reference with transverse elastic ratios anchored to the existing yellow-birch starter card."
+          "White oak is added as a heavy ring-porous hardwood reference with transverse elastic ratios anchored to the existing yellow-birch starter card.",
+          "2026-10-23 correction: tension perpendicular to grain 6.94 -> 5.50 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -12485,7 +12515,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 104800310.85615909,
             "longitudinal_compression_pa": 51296994.26117261,
-            "transverse_tension_pa": 6936949.091529541,
+            "transverse_tension_pa": 5500000,
             "transverse_compression_pa": 7377390.303690146,
             "shear_parallel_to_grain_pa": 13168986.429951569
           }
@@ -12505,7 +12535,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 104800310.85615909,
             "sigma_c_x_pa": 51296994.26117261,
-            "sigma_t_yz_pa": 6936949.091529541,
+            "sigma_t_yz_pa": 5500000,
             "sigma_c_yz_pa": 7377390.303690146,
             "tau_xy_xz_pa": 13168986.429951569
           }
@@ -12514,12 +12544,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the handbook species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (5.5 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -12557,15 +12588,15 @@
           "compression_parallel_to_grain_pa": 46608559.30181812,
           "compression_perpendicular_to_grain_pa": 6963704.866100044,
           "shear_parallel_to_grain_pa": 12272667.981839683,
-          "tension_perpendicular_to_grain_pa": 6547961.292004519
+          "tension_perpendicular_to_grain_pa": 5500000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 98595029.29230756,
             "longitudinal_compression_pa": 46608559.30181812,
-            "radial_tension_pa": 6547961.292004519,
-            "tangential_tension_pa": 6547961.292004519,
+            "radial_tension_pa": 5500000,
+            "tangential_tension_pa": 5500000,
             "radial_compression_pa": 6963704.866100044,
             "tangential_compression_pa": 6963704.866100044,
             "longitudinal_radial_shear_pa": 12272667.981839683,
@@ -12586,7 +12617,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Northern red oak complements the white-oak card with the lighter but still high-strength red-oak group values from the same official FPL sheet."
+          "Northern red oak complements the white-oak card with the lighter but still high-strength red-oak group values from the same official FPL sheet.",
+          "2026-10-23 correction: tension perpendicular to grain 6.55 -> 5.50 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -12604,7 +12636,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 98595029.29230756,
             "longitudinal_compression_pa": 46608559.30181812,
-            "transverse_tension_pa": 6547961.292004519,
+            "transverse_tension_pa": 5500000,
             "transverse_compression_pa": 6963704.866100044,
             "shear_parallel_to_grain_pa": 12272667.981839683
           }
@@ -12624,7 +12656,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 98595029.29230756,
             "sigma_c_x_pa": 46608559.30181812,
-            "sigma_t_yz_pa": 6547961.292004519,
+            "sigma_t_yz_pa": 5500000,
             "sigma_c_yz_pa": 6963704.866100044,
             "tau_xy_xz_pa": 12272667.981839683
           }
@@ -12633,12 +12665,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the handbook species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (5.5 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -12914,15 +12947,15 @@
           "compression_parallel_to_grain_pa": 41000000,
           "compression_perpendicular_to_grain_pa": 5170000,
           "shear_parallel_to_grain_pa": 11930000,
-          "tension_perpendicular_to_grain_pa": 5583600
+          "tension_perpendicular_to_grain_pa": 3700000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 73800000,
             "longitudinal_compression_pa": 41000000,
-            "radial_tension_pa": 5583600,
-            "tangential_tension_pa": 5583600,
+            "radial_tension_pa": 3700000,
+            "tangential_tension_pa": 3700000,
             "radial_compression_pa": 5170000,
             "tangential_compression_pa": 5170000,
             "longitudinal_radial_shear_pa": 11930000,
@@ -12943,7 +12976,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Bigleaf maple is added as a west-coast maple clear-wood reference distinct from the eastern hard- and soft-maple groups."
+          "Bigleaf maple is added as a west-coast maple clear-wood reference distinct from the eastern hard- and soft-maple groups.",
+          "2026-10-23 correction: tension perpendicular to grain 5.58 -> 3.70 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.08 x Fc-perp, Yellow-poplar ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -12961,7 +12995,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 73800000,
             "longitudinal_compression_pa": 41000000,
-            "transverse_tension_pa": 5583600,
+            "transverse_tension_pa": 3700000,
             "transverse_compression_pa": 5170000,
             "shear_parallel_to_grain_pa": 11930000
           }
@@ -12981,7 +13015,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 73800000,
             "sigma_c_x_pa": 41000000,
-            "sigma_t_yz_pa": 5583600,
+            "sigma_t_yz_pa": 3700000,
             "sigma_c_yz_pa": 5170000,
             "tau_xy_xz_pa": 11930000
           }
@@ -12990,12 +13024,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_maple_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow-poplar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow-poplar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (3.7 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow-poplar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -13033,15 +13068,15 @@
           "compression_parallel_to_grain_pa": 46100000,
           "compression_perpendicular_to_grain_pa": 7030000,
           "shear_parallel_to_grain_pa": 12550000,
-          "tension_perpendicular_to_grain_pa": 6610298.507462687
+          "tension_perpendicular_to_grain_pa": 4600000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 91700000,
             "longitudinal_compression_pa": 46100000,
-            "radial_tension_pa": 6610298.507462687,
-            "tangential_tension_pa": 6610298.507462687,
+            "radial_tension_pa": 4600000,
+            "tangential_tension_pa": 4600000,
             "radial_compression_pa": 7030000,
             "tangential_compression_pa": 7030000,
             "longitudinal_radial_shear_pa": 12550000,
@@ -13062,7 +13097,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Black maple uses the heavier hardwood transverse-ratio pattern consistent with the hard-maple group."
+          "Black maple uses the heavier hardwood transverse-ratio pattern consistent with the hard-maple group.",
+          "2026-10-23 correction: tension perpendicular to grain 6.61 -> 4.60 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -13080,7 +13116,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 91700000,
             "longitudinal_compression_pa": 46100000,
-            "transverse_tension_pa": 6610298.507462687,
+            "transverse_tension_pa": 4600000,
             "transverse_compression_pa": 7030000,
             "shear_parallel_to_grain_pa": 12550000
           }
@@ -13100,7 +13136,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 91700000,
             "sigma_c_x_pa": 46100000,
-            "sigma_t_yz_pa": 6610298.507462687,
+            "sigma_t_yz_pa": 4600000,
             "sigma_c_yz_pa": 7030000,
             "tau_xy_xz_pa": 12550000
           }
@@ -13109,12 +13145,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_maple_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (4.6 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -13271,15 +13308,15 @@
           "compression_parallel_to_grain_pa": 36000000,
           "compression_perpendicular_to_grain_pa": 5100000,
           "shear_parallel_to_grain_pa": 10200000,
-          "tension_perpendicular_to_grain_pa": 5508000
+          "tension_perpendicular_to_grain_pa": 3400000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 61400000,
             "longitudinal_compression_pa": 36000000,
-            "radial_tension_pa": 5508000,
-            "tangential_tension_pa": 5508000,
+            "radial_tension_pa": 3400000,
+            "tangential_tension_pa": 3400000,
             "radial_compression_pa": 5100000,
             "tangential_compression_pa": 5100000,
             "longitudinal_radial_shear_pa": 10200000,
@@ -13300,7 +13337,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Silver maple adds a lower-stiffness soft-maple clear-wood card that differs materially from the existing birch and walnut entries."
+          "Silver maple adds a lower-stiffness soft-maple clear-wood card that differs materially from the existing birch and walnut entries.",
+          "2026-10-23 correction: tension perpendicular to grain 5.51 -> 3.40 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.08 x Fc-perp, Yellow-poplar ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -13318,7 +13356,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 61400000,
             "longitudinal_compression_pa": 36000000,
-            "transverse_tension_pa": 5508000,
+            "transverse_tension_pa": 3400000,
             "transverse_compression_pa": 5100000,
             "shear_parallel_to_grain_pa": 10200000
           }
@@ -13338,7 +13376,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 61400000,
             "sigma_c_x_pa": 36000000,
-            "sigma_t_yz_pa": 5508000,
+            "sigma_t_yz_pa": 3400000,
             "sigma_c_yz_pa": 5100000,
             "tau_xy_xz_pa": 10200000
           }
@@ -13347,12 +13385,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_maple_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow-poplar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow-poplar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (3.4 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow-poplar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -14349,15 +14388,15 @@
           "compression_parallel_to_grain_pa": 38100000,
           "compression_perpendicular_to_grain_pa": 4760000,
           "shear_parallel_to_grain_pa": 10400000,
-          "tension_perpendicular_to_grain_pa": 5756279.069767442
+          "tension_perpendicular_to_grain_pa": 4600000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 81400000,
             "longitudinal_compression_pa": 38100000,
-            "radial_tension_pa": 5756279.069767442,
-            "tangential_tension_pa": 5756279.069767442,
+            "radial_tension_pa": 4600000,
+            "tangential_tension_pa": 4600000,
             "radial_compression_pa": 4760000,
             "tangential_compression_pa": 4760000,
             "longitudinal_radial_shear_pa": 10400000,
@@ -14378,7 +14417,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "American elm adds a medium-density interlocked-grain hardwood reference that is materially different from the existing oak and walnut cards."
+          "American elm adds a medium-density interlocked-grain hardwood reference that is materially different from the existing oak and walnut cards.",
+          "2026-10-23 correction: tension perpendicular to grain 5.76 -> 4.60 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.21 x Fc-perp, Sweetgum ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -14396,7 +14436,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 81400000,
             "longitudinal_compression_pa": 38100000,
-            "transverse_tension_pa": 5756279.069767442,
+            "transverse_tension_pa": 4600000,
             "transverse_compression_pa": 4760000,
             "shear_parallel_to_grain_pa": 10400000
           }
@@ -14416,7 +14456,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 81400000,
             "sigma_c_x_pa": 38100000,
-            "sigma_t_yz_pa": 5756279.069767442,
+            "sigma_t_yz_pa": 4600000,
             "sigma_c_yz_pa": 4760000,
             "tau_xy_xz_pa": 10400000
           }
@@ -14425,12 +14465,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_elm_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sweetgum clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sweetgum clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (4.6 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Sweetgum compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -14587,15 +14628,15 @@
           "compression_parallel_to_grain_pa": 43900000,
           "compression_perpendicular_to_grain_pa": 5650000,
           "shear_parallel_to_grain_pa": 11200000,
-          "tension_perpendicular_to_grain_pa": 6832558.139534883
+          "tension_perpendicular_to_grain_pa": 3700000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 89600000,
             "longitudinal_compression_pa": 43900000,
-            "radial_tension_pa": 6832558.139534883,
-            "tangential_tension_pa": 6832558.139534883,
+            "radial_tension_pa": 3700000,
+            "tangential_tension_pa": 3700000,
             "radial_compression_pa": 5650000,
             "tangential_compression_pa": 5650000,
             "longitudinal_radial_shear_pa": 11200000,
@@ -14616,7 +14657,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Slippery elm rounds out the mid-density elm options between American elm and the denser rock / winged elm cards."
+          "Slippery elm rounds out the mid-density elm options between American elm and the denser rock / winged elm cards.",
+          "2026-10-23 correction: tension perpendicular to grain 6.83 -> 3.70 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.21 x Fc-perp, Sweetgum ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -14634,7 +14676,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 89600000,
             "longitudinal_compression_pa": 43900000,
-            "transverse_tension_pa": 6832558.139534883,
+            "transverse_tension_pa": 3700000,
             "transverse_compression_pa": 5650000,
             "shear_parallel_to_grain_pa": 11200000
           }
@@ -14654,7 +14696,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 89600000,
             "sigma_c_x_pa": 43900000,
-            "sigma_t_yz_pa": 6832558.139534883,
+            "sigma_t_yz_pa": 3700000,
             "sigma_c_yz_pa": 5650000,
             "tau_xy_xz_pa": 11200000
           }
@@ -14663,12 +14705,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_elm_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sweetgum clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sweetgum clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (3.7 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Sweetgum compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -14944,15 +14987,15 @@
           "compression_parallel_to_grain_pa": 33853258.309456654,
           "compression_perpendicular_to_grain_pa": 2620007.771403977,
           "shear_parallel_to_grain_pa": 6412124.282646576,
-          "tension_perpendicular_to_grain_pa": 2829608.3931162953
+          "tension_perpendicular_to_grain_pa": 4000000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 58605436.991931066,
             "longitudinal_compression_pa": 33853258.309456654,
-            "radial_tension_pa": 2829608.3931162953,
-            "tangential_tension_pa": 2829608.3931162953,
+            "radial_tension_pa": 4000000,
+            "tangential_tension_pa": 4000000,
             "radial_compression_pa": 2620007.771403977,
             "tangential_compression_pa": 2620007.771403977,
             "longitudinal_radial_shear_pa": 6412124.282646576,
@@ -14973,7 +15016,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Eastern cottonwood adds a common low-density North American hardwood reference for boxes, pallets, and secondary products."
+          "Eastern cottonwood adds a common low-density North American hardwood reference for boxes, pallets, and secondary products.",
+          "2026-10-23 correction: tension perpendicular to grain 2.83 -> 4.00 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.08 x Fc-perp, Yellow-poplar ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -14991,7 +15035,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 58605436.991931066,
             "longitudinal_compression_pa": 33853258.309456654,
-            "transverse_tension_pa": 2829608.3931162953,
+            "transverse_tension_pa": 4000000,
             "transverse_compression_pa": 2620007.771403977,
             "shear_parallel_to_grain_pa": 6412124.282646576
           }
@@ -15011,7 +15055,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 58605436.991931066,
             "sigma_c_x_pa": 33853258.309456654,
-            "sigma_t_yz_pa": 2829608.3931162953,
+            "sigma_t_yz_pa": 4000000,
             "sigma_c_yz_pa": 2620007.771403977,
             "tau_xy_xz_pa": 6412124.282646576
           }
@@ -15020,12 +15064,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_cottonwood_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow-poplar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow-poplar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (4 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow-poplar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -15063,15 +15108,15 @@
           "compression_parallel_to_grain_pa": 31026407.819257624,
           "compression_perpendicular_to_grain_pa": 2068427.1879505082,
           "shear_parallel_to_grain_pa": 7170547.584895095,
-          "tension_perpendicular_to_grain_pa": 2233901.362986549
+          "tension_perpendicular_to_grain_pa": 2300000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 58605436.991931066,
             "longitudinal_compression_pa": 31026407.819257624,
-            "radial_tension_pa": 2233901.362986549,
-            "tangential_tension_pa": 2233901.362986549,
+            "radial_tension_pa": 2300000,
+            "tangential_tension_pa": 2300000,
             "radial_compression_pa": 2068427.1879505082,
             "tangential_compression_pa": 2068427.1879505082,
             "longitudinal_radial_shear_pa": 7170547.584895095,
@@ -15092,7 +15137,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Black cottonwood extends the cottonwood family to a western species with slightly higher published shear than balsam poplar."
+          "Black cottonwood extends the cottonwood family to a western species with slightly higher published shear than balsam poplar.",
+          "2026-10-23 correction: tension perpendicular to grain 2.23 -> 2.30 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.08 x Fc-perp, Yellow-poplar ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -15110,7 +15156,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 58605436.991931066,
             "longitudinal_compression_pa": 31026407.819257624,
-            "transverse_tension_pa": 2233901.362986549,
+            "transverse_tension_pa": 2300000,
             "transverse_compression_pa": 2068427.1879505082,
             "shear_parallel_to_grain_pa": 7170547.584895095
           }
@@ -15130,7 +15176,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 58605436.991931066,
             "sigma_c_x_pa": 31026407.819257624,
-            "sigma_t_yz_pa": 2233901.362986549,
+            "sigma_t_yz_pa": 2300000,
             "sigma_c_yz_pa": 2068427.1879505082,
             "tau_xy_xz_pa": 7170547.584895095
           }
@@ -15139,12 +15185,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_cottonwood_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow-poplar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow-poplar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (2.3 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow-poplar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -15182,15 +15229,15 @@
           "compression_parallel_to_grain_pa": 49000000,
           "compression_perpendicular_to_grain_pa": 4760000,
           "shear_parallel_to_grain_pa": 11720000,
-          "tension_perpendicular_to_grain_pa": 3264000
+          "tension_perpendicular_to_grain_pa": 3900000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 84800000,
             "longitudinal_compression_pa": 49000000,
-            "radial_tension_pa": 3264000,
-            "tangential_tension_pa": 3264000,
+            "radial_tension_pa": 3900000,
+            "tangential_tension_pa": 3900000,
             "radial_compression_pa": 4760000,
             "tangential_compression_pa": 4760000,
             "longitudinal_radial_shear_pa": 11720000,
@@ -15211,7 +15258,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Black cherry adds a widely used furniture hardwood clear-wood reference not previously represented in the database."
+          "Black cherry adds a widely used furniture hardwood clear-wood reference not previously represented in the database.",
+          "2026-10-23 correction: tension perpendicular to grain 3.26 -> 3.90 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.69 x Fc-perp, Black walnut ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -15229,7 +15277,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 84800000,
             "longitudinal_compression_pa": 49000000,
-            "transverse_tension_pa": 3264000,
+            "transverse_tension_pa": 3900000,
             "transverse_compression_pa": 4760000,
             "shear_parallel_to_grain_pa": 11720000
           }
@@ -15249,7 +15297,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 84800000,
             "sigma_c_x_pa": 49000000,
-            "sigma_t_yz_pa": 3264000,
+            "sigma_t_yz_pa": 3900000,
             "sigma_c_yz_pa": 4760000,
             "tau_xy_xz_pa": 11720000
           }
@@ -15258,12 +15306,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_black_cherry_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Black walnut clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Black walnut clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (3.9 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Black walnut compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -15301,15 +15350,15 @@
           "compression_parallel_to_grain_pa": 37093794.23724578,
           "compression_perpendicular_to_grain_pa": 4826330.105217853,
           "shear_parallel_to_grain_pa": 10135293.22095749,
-          "tension_perpendicular_to_grain_pa": 5836492.2202634495
+          "tension_perpendicular_to_grain_pa": 5000000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 68947572.93168361,
             "longitudinal_compression_pa": 37093794.23724578,
-            "radial_tension_pa": 5836492.2202634495,
-            "tangential_tension_pa": 5836492.2202634495,
+            "radial_tension_pa": 5000000,
+            "tangential_tension_pa": 5000000,
             "radial_compression_pa": 4826330.105217853,
             "tangential_compression_pa": 4826330.105217853,
             "longitudinal_radial_shear_pa": 10135293.22095749,
@@ -15330,7 +15379,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "American sycamore adds an interlocked-grain hardwood reference commonly used in secondary furniture and millwork."
+          "American sycamore adds an interlocked-grain hardwood reference commonly used in secondary furniture and millwork.",
+          "2026-10-23 correction: tension perpendicular to grain 5.84 -> 5.00 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.21 x Fc-perp, Sweetgum ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -15348,7 +15398,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 68947572.93168361,
             "longitudinal_compression_pa": 37093794.23724578,
-            "transverse_tension_pa": 5836492.2202634495,
+            "transverse_tension_pa": 5000000,
             "transverse_compression_pa": 4826330.105217853,
             "shear_parallel_to_grain_pa": 10135293.22095749
           }
@@ -15368,7 +15418,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 68947572.93168361,
             "sigma_c_x_pa": 37093794.23724578,
-            "sigma_t_yz_pa": 5836492.2202634495,
+            "sigma_t_yz_pa": 5000000,
             "sigma_c_yz_pa": 4826330.105217853,
             "tau_xy_xz_pa": 10135293.22095749
           }
@@ -15377,12 +15427,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_sycamore_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sweetgum clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sweetgum clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (5 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Sweetgum compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -43726,15 +43777,15 @@
           "compression_parallel_to_grain_pa": 50300000,
           "compression_perpendicular_to_grain_pa": 6960000,
           "shear_parallel_to_grain_pa": 13860000,
-          "tension_perpendicular_to_grain_pa": 6544477.611940299
+          "tension_perpendicular_to_grain_pa": 7000000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 102700000,
             "longitudinal_compression_pa": 50300000,
-            "radial_tension_pa": 6544477.611940299,
-            "tangential_tension_pa": 6544477.611940299,
+            "radial_tension_pa": 7000000,
+            "tangential_tension_pa": 7000000,
             "radial_compression_pa": 6960000,
             "tangential_compression_pa": 6960000,
             "longitudinal_radial_shear_pa": 13860000,
@@ -43755,7 +43806,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "American beech adds a dense diffuse-porous hardwood reference commonly used in flooring, millwork, and bent components."
+          "American beech adds a dense diffuse-porous hardwood reference commonly used in flooring, millwork, and bent components.",
+          "2026-10-23 correction: tension perpendicular to grain 6.54 -> 7.00 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -43773,7 +43825,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 102700000,
             "longitudinal_compression_pa": 50300000,
-            "transverse_tension_pa": 6544477.611940299,
+            "transverse_tension_pa": 7000000,
             "transverse_compression_pa": 6960000,
             "shear_parallel_to_grain_pa": 13860000
           }
@@ -43793,7 +43845,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 102700000,
             "sigma_c_x_pa": 50300000,
-            "sigma_t_yz_pa": 6544477.611940299,
+            "sigma_t_yz_pa": 7000000,
             "sigma_c_yz_pa": 6960000,
             "tau_xy_xz_pa": 13860000
           }
@@ -43802,12 +43854,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_beech_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (7 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -43845,15 +43898,15 @@
           "compression_parallel_to_grain_pa": 32612201.996686347,
           "compression_perpendicular_to_grain_pa": 2551060.198472293,
           "shear_parallel_to_grain_pa": 6825809.720236677,
-          "tension_perpendicular_to_grain_pa": 2755145.0143500767
+          "tension_perpendicular_to_grain_pa": 2400000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 59984388.45056473,
             "longitudinal_compression_pa": 32612201.996686347,
-            "radial_tension_pa": 2755145.0143500767,
-            "tangential_tension_pa": 2755145.0143500767,
+            "radial_tension_pa": 2400000,
+            "tangential_tension_pa": 2400000,
             "radial_compression_pa": 2551060.198472293,
             "tangential_compression_pa": 2551060.198472293,
             "longitudinal_radial_shear_pa": 6825809.720236677,
@@ -43874,7 +43927,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "American basswood adds a very light, low-stiffness carving wood reference distinct from poplar and other utility hardwoods."
+          "American basswood adds a very light, low-stiffness carving wood reference distinct from poplar and other utility hardwoods.",
+          "2026-10-23 correction: tension perpendicular to grain 2.76 -> 2.40 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.08 x Fc-perp, Yellow-poplar ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -43892,7 +43946,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 59984388.45056473,
             "longitudinal_compression_pa": 32612201.996686347,
-            "transverse_tension_pa": 2755145.0143500767,
+            "transverse_tension_pa": 2400000,
             "transverse_compression_pa": 2551060.198472293,
             "shear_parallel_to_grain_pa": 6825809.720236677
           }
@@ -43912,7 +43966,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 59984388.45056473,
             "sigma_c_x_pa": 32612201.996686347,
-            "sigma_t_yz_pa": 2755145.0143500767,
+            "sigma_t_yz_pa": 2400000,
             "sigma_c_yz_pa": 2551060.198472293,
             "tau_xy_xz_pa": 6825809.720236677
           }
@@ -43921,12 +43975,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_basswood_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow-poplar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow-poplar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (2.4 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow-poplar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -43964,15 +44019,15 @@
           "compression_parallel_to_grain_pa": 58881227.28365779,
           "compression_perpendicular_to_grain_pa": 7446337.876621829,
           "shear_parallel_to_grain_pa": 15444256.33669713,
-          "tension_perpendicular_to_grain_pa": 7001780.391450377
+          "tension_perpendicular_to_grain_pa": 6600000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 116521398.25454529,
             "longitudinal_compression_pa": 58881227.28365779,
-            "radial_tension_pa": 7001780.391450377,
-            "tangential_tension_pa": 7001780.391450377,
+            "radial_tension_pa": 6600000,
+            "tangential_tension_pa": 6600000,
             "radial_compression_pa": 7446337.876621829,
             "tangential_compression_pa": 7446337.876621829,
             "longitudinal_radial_shear_pa": 15444256.33669713,
@@ -43993,7 +44048,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Sweet birch adds a heavy birch reference with higher density and stiffness than paper birch."
+          "Sweet birch adds a heavy birch reference with higher density and stiffness than paper birch.",
+          "2026-10-23 correction: tension perpendicular to grain 7.00 -> 6.60 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -44011,7 +44067,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 116521398.25454529,
             "longitudinal_compression_pa": 58881227.28365779,
-            "transverse_tension_pa": 7001780.391450377,
+            "transverse_tension_pa": 6600000,
             "transverse_compression_pa": 7446337.876621829,
             "shear_parallel_to_grain_pa": 15444256.33669713
           }
@@ -44031,7 +44087,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 116521398.25454529,
             "sigma_c_x_pa": 58881227.28365779,
-            "sigma_t_yz_pa": 7001780.391450377,
+            "sigma_t_yz_pa": 6600000,
             "sigma_c_yz_pa": 7446337.876621829,
             "tau_xy_xz_pa": 15444256.33669713
           }
@@ -44040,12 +44096,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_birch_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (6.6 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -44544,8 +44601,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 620,
-          "specific_gravity_reference": 0.62,
+          "reference_density_kg_m3_approx": 690,
+          "specific_gravity_reference": 0.69,
           "EX_pa": 14335200000.000002,
           "EY_pa": 1118145600.0000002,
           "EZ_pa": 716760000.0000001,
@@ -44590,7 +44647,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Shellbark hickory adds a large-nut hickory reference with high published bending and shear capacity."
+          "Shellbark hickory adds a large-nut hickory reference with high published bending and shear capacity.",
+          "2026-10-23 correction: specific gravity 0.62 -> 0.69 and density 620 -> 690 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -44603,7 +44661,7 @@
             "PRXY": 0.426,
             "PRYZ": 0.697,
             "PRXZ": 0.451,
-            "DENS_kg_m3": 620
+            "DENS_kg_m3": 690
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 124800000,
@@ -44637,13 +44695,15 @@
       "sources": {
         "source_ids": [
           "usda_fpl_hickory_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
           "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
-          "Density is approximated from the single published specific gravity value because the species-group sheet does not list a separate dry specific gravity."
+          "Density is approximated from the Wood Handbook 12% MC specific gravity (ovendry weight, volume at 12% MC) x 1000, as for the other clear-wood cards; the single specific gravity printed on the hickory species-group sheet is not on that basis and was replaced on 2026-10-23."
         ]
       }
     },
@@ -44905,8 +44965,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 610,
-          "specific_gravity_reference": 0.61,
+          "reference_density_kg_m3_approx": 620,
+          "specific_gravity_reference": 0.62,
           "EX_pa": 15320800000.000002,
           "EY_pa": 1195022400.0000002,
           "EZ_pa": 766040000.0000001,
@@ -44952,7 +45012,8 @@
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
           "Water hickory adds a pecan-group hickory reference representative of bottomland timber.",
-          "The USDA hickory sheet does not publish a dry shear value for water hickory, so the green shear value is retained conservatively as a starter shear limit."
+          "The USDA hickory sheet does not publish a dry shear value for water hickory, so the green shear value is retained conservatively as a starter shear limit.",
+          "2026-10-23 correction: specific gravity 0.61 -> 0.62 and density 610 -> 620 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -44965,7 +45026,7 @@
             "PRXY": 0.426,
             "PRYZ": 0.697,
             "PRXZ": 0.451,
-            "DENS_kg_m3": 610
+            "DENS_kg_m3": 620
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 122731000,
@@ -44999,13 +45060,15 @@
       "sources": {
         "source_ids": [
           "usda_fpl_hickory_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
           "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
-          "Density is approximated from the single published specific gravity value because the species-group sheet does not list a separate dry specific gravity.",
+          "Density is approximated from the Wood Handbook 12% MC specific gravity (ovendry weight, volume at 12% MC) x 1000, as for the other clear-wood cards; the single specific gravity printed on the hickory species-group sheet is not on that basis and was replaced on 2026-10-23.",
           "Shear_parallel_to_grain uses the published green shear value because the species-group sheet does not list a dry shear value for water hickory."
         ]
       }
@@ -45026,8 +45089,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 600,
-          "specific_gravity_reference": 0.6,
+          "reference_density_kg_m3_approx": 660,
+          "specific_gravity_reference": 0.66,
           "EX_pa": 13576200000.000002,
           "EY_pa": 1058943600.0000001,
           "EZ_pa": 678810000.0000001,
@@ -45073,7 +45136,8 @@
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
           "Bitternut hickory adds a lower-stiffness pecan-group hickory reference with strong compression data.",
-          "The USDA hickory sheet does not publish a dry shear value for bitternut hickory, so the green shear value is retained conservatively as a starter shear limit."
+          "The USDA hickory sheet does not publish a dry shear value for bitternut hickory, so the green shear value is retained conservatively as a starter shear limit.",
+          "2026-10-23 correction: specific gravity 0.6 -> 0.66 and density 600 -> 660 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -45086,7 +45150,7 @@
             "PRXY": 0.426,
             "PRYZ": 0.697,
             "PRXZ": 0.451,
-            "DENS_kg_m3": 600
+            "DENS_kg_m3": 660
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 117905000,
@@ -45120,13 +45184,15 @@
       "sources": {
         "source_ids": [
           "usda_fpl_hickory_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
           "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
-          "Density is approximated from the single published specific gravity value because the species-group sheet does not list a separate dry specific gravity.",
+          "Density is approximated from the Wood Handbook 12% MC specific gravity (ovendry weight, volume at 12% MC) x 1000, as for the other clear-wood cards; the single specific gravity printed on the hickory species-group sheet is not on that basis and was replaced on 2026-10-23.",
           "Shear_parallel_to_grain uses the published green shear value because the species-group sheet does not list a dry shear value for bitternut hickory."
         ]
       }
@@ -45268,8 +45334,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 560,
-          "specific_gravity_reference": 0.56,
+          "reference_density_kg_m3_approx": 600,
+          "specific_gravity_reference": 0.6,
           "EX_pa": 12894200000.000002,
           "EY_pa": 1005747600.0000001,
           "EZ_pa": 644710000.0000001,
@@ -45315,7 +45381,8 @@
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
           "Nutmeg hickory extends the pecan-group hickories with a lighter-density reference.",
-          "The USDA hickory sheet does not publish a dry shear value for nutmeg hickory, so the green shear value is retained conservatively as a starter shear limit."
+          "The USDA hickory sheet does not publish a dry shear value for nutmeg hickory, so the green shear value is retained conservatively as a starter shear limit.",
+          "2026-10-23 correction: specific gravity 0.56 -> 0.60 and density 560 -> 600 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -45328,7 +45395,7 @@
             "PRXY": 0.426,
             "PRYZ": 0.697,
             "PRXZ": 0.451,
-            "DENS_kg_m3": 560
+            "DENS_kg_m3": 600
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 114457000,
@@ -45362,13 +45429,15 @@
       "sources": {
         "source_ids": [
           "usda_fpl_hickory_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
           "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
-          "Density is approximated from the single published specific gravity value because the species-group sheet does not list a separate dry specific gravity.",
+          "Density is approximated from the Wood Handbook 12% MC specific gravity (ovendry weight, volume at 12% MC) x 1000, as for the other clear-wood cards; the single specific gravity printed on the hickory species-group sheet is not on that basis and was replaced on 2026-10-23.",
           "Shear_parallel_to_grain uses the published green shear value because the species-group sheet does not list a dry shear value for nutmeg hickory."
         ]
       }
@@ -45525,15 +45594,15 @@
           "compression_parallel_to_grain_pa": 38100000,
           "compression_perpendicular_to_grain_pa": 6410000,
           "shear_parallel_to_grain_pa": 9240000,
-          "tension_perpendicular_to_grain_pa": 7751627.906976744
+          "tension_perpendicular_to_grain_pa": 3400000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 66200000,
             "longitudinal_compression_pa": 38100000,
-            "radial_tension_pa": 7751627.906976744,
-            "tangential_tension_pa": 7751627.906976744,
+            "radial_tension_pa": 3400000,
+            "tangential_tension_pa": 3400000,
             "radial_compression_pa": 6410000,
             "tangential_compression_pa": 6410000,
             "longitudinal_radial_shear_pa": 9240000,
@@ -45555,7 +45624,8 @@
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
           "Black tupelo adds the black-gum reference, with the same 12% MC specific gravity (0.50) and similar bending strength to water tupelo.",
-          "2026-10-23 correction: specific gravity 0.65 -> 0.50 and density 650 -> 500 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart, engineeringtoolbox_timber_mechanical_properties). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+          "2026-10-23 correction: specific gravity 0.65 -> 0.50 and density 650 -> 500 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart, engineeringtoolbox_timber_mechanical_properties). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable).",
+          "2026-10-23 correction: tension perpendicular to grain 7.75 -> 3.40 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.21 x Fc-perp, Sweetgum ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -45573,7 +45643,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 66200000,
             "longitudinal_compression_pa": 38100000,
-            "transverse_tension_pa": 7751627.906976744,
+            "transverse_tension_pa": 3400000,
             "transverse_compression_pa": 6410000,
             "shear_parallel_to_grain_pa": 9240000
           }
@@ -45593,7 +45663,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 66200000,
             "sigma_c_x_pa": 38100000,
-            "sigma_t_yz_pa": 7751627.906976744,
+            "sigma_t_yz_pa": 3400000,
             "sigma_c_yz_pa": 6410000,
             "tau_xy_xz_pa": 9240000
           }
@@ -45605,12 +45675,13 @@
           "usda_wood_handbook_ch5",
           "woodbin_fpl_wood_strength_table",
           "wagnermeters_species_setting_chart",
-          "engineeringtoolbox_timber_mechanical_properties"
+          "engineeringtoolbox_timber_mechanical_properties",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sweetgum clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sweetgum clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (3.4 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Sweetgum compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -45767,15 +45838,15 @@
           "compression_parallel_to_grain_pa": 70326524.39031728,
           "compression_perpendicular_to_grain_pa": 12617405.8464981,
           "shear_parallel_to_grain_pa": 17098998.087057535,
-          "tension_perpendicular_to_grain_pa": 11864127.88551314
+          "tension_perpendicular_to_grain_pa": 4400000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 133758291.48746619,
             "longitudinal_compression_pa": 70326524.39031728,
-            "radial_tension_pa": 11864127.88551314,
-            "tangential_tension_pa": 11864127.88551314,
+            "radial_tension_pa": 4400000,
+            "tangential_tension_pa": 4400000,
             "radial_compression_pa": 12617405.8464981,
             "tangential_compression_pa": 12617405.8464981,
             "longitudinal_radial_shear_pa": 17098998.087057535,
@@ -45796,7 +45867,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Black locust adds a highly durable, very dense hardwood reference with exceptionally high published strength."
+          "Black locust adds a highly durable, very dense hardwood reference with exceptionally high published strength.",
+          "2026-10-23 correction: tension perpendicular to grain 11.86 -> 4.40 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -45814,7 +45886,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 133758291.48746619,
             "longitudinal_compression_pa": 70326524.39031728,
-            "transverse_tension_pa": 11864127.88551314,
+            "transverse_tension_pa": 4400000,
             "transverse_compression_pa": 12617405.8464981,
             "shear_parallel_to_grain_pa": 17098998.087057535
           }
@@ -45834,7 +45906,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 133758291.48746619,
             "sigma_c_x_pa": 70326524.39031728,
-            "sigma_t_yz_pa": 11864127.88551314,
+            "sigma_t_yz_pa": 4400000,
             "sigma_c_yz_pa": 12617405.8464981,
             "tau_xy_xz_pa": 17098998.087057535
           }
@@ -45843,12 +45915,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_black_locust_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (4.4 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -46005,15 +46078,15 @@
           "compression_parallel_to_grain_pa": 29300000,
           "compression_perpendicular_to_grain_pa": 2550000,
           "shear_parallel_to_grain_pa": 5860000,
-          "tension_perpendicular_to_grain_pa": 2754000
+          "tension_perpendicular_to_grain_pa": 1800000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 57900000,
             "longitudinal_compression_pa": 29300000,
-            "radial_tension_pa": 2754000,
-            "tangential_tension_pa": 2754000,
+            "radial_tension_pa": 1800000,
+            "tangential_tension_pa": 1800000,
             "radial_compression_pa": 2550000,
             "tangential_compression_pa": 2550000,
             "longitudinal_radial_shear_pa": 5860000,
@@ -46034,7 +46107,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Quaking aspen adds a very light utility hardwood reference for pulp, cores, and other low-density wood applications."
+          "Quaking aspen adds a very light utility hardwood reference for pulp, cores, and other low-density wood applications.",
+          "2026-10-23 correction: tension perpendicular to grain 2.75 -> 1.80 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.08 x Fc-perp, Yellow-poplar ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -46052,7 +46126,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 57900000,
             "longitudinal_compression_pa": 29300000,
-            "transverse_tension_pa": 2754000,
+            "transverse_tension_pa": 1800000,
             "transverse_compression_pa": 2550000,
             "shear_parallel_to_grain_pa": 5860000
           }
@@ -46072,7 +46146,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 57900000,
             "sigma_c_x_pa": 29300000,
-            "sigma_t_yz_pa": 2754000,
+            "sigma_t_yz_pa": 1800000,
             "sigma_c_yz_pa": 2550000,
             "tau_xy_xz_pa": 5860000
           }
@@ -46081,12 +46155,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_aspen_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow-poplar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow-poplar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (1.8 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow-poplar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -46124,15 +46199,15 @@
           "compression_parallel_to_grain_pa": 57433328.25209244,
           "compression_perpendicular_to_grain_pa": 7722128.168348565,
           "shear_parallel_to_grain_pa": 13031091.2840882,
-          "tension_perpendicular_to_grain_pa": 7261105.591133726
+          "tension_perpendicular_to_grain_pa": 6000000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 119968776.90112945,
             "longitudinal_compression_pa": 57433328.25209244,
-            "radial_tension_pa": 7261105.591133726,
-            "tangential_tension_pa": 7261105.591133726,
+            "radial_tension_pa": 6000000,
+            "tangential_tension_pa": 6000000,
             "radial_compression_pa": 7722128.168348565,
             "tangential_compression_pa": 7722128.168348565,
             "longitudinal_radial_shear_pa": 13031091.2840882,
@@ -46153,7 +46228,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Scarlet oak extends the red-oak set with a strong upland species reference."
+          "Scarlet oak extends the red-oak set with a strong upland species reference.",
+          "2026-10-23 correction: tension perpendicular to grain 7.26 -> 6.00 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -46171,7 +46247,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 119968776.90112945,
             "longitudinal_compression_pa": 57433328.25209244,
-            "transverse_tension_pa": 7261105.591133726,
+            "transverse_tension_pa": 6000000,
             "transverse_compression_pa": 7722128.168348565,
             "shear_parallel_to_grain_pa": 13031091.2840882
           }
@@ -46191,7 +46267,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 119968776.90112945,
             "sigma_c_x_pa": 57433328.25209244,
-            "sigma_t_yz_pa": 7261105.591133726,
+            "sigma_t_yz_pa": 6000000,
             "sigma_c_yz_pa": 7722128.168348565,
             "tau_xy_xz_pa": 13031091.2840882
           }
@@ -46200,12 +46276,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (6 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -46484,15 +46561,15 @@
           "compression_parallel_to_grain_pa": 48125405.906315155,
           "compression_perpendicular_to_grain_pa": 7308442.730758462,
           "shear_parallel_to_grain_pa": 12617405.8464981,
-          "tension_perpendicular_to_grain_pa": 6872117.791608703
+          "tension_perpendicular_to_grain_pa": 5400000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 86873941.89392135,
             "longitudinal_compression_pa": 48125405.906315155,
-            "radial_tension_pa": 6872117.791608703,
-            "tangential_tension_pa": 6872117.791608703,
+            "radial_tension_pa": 5400000,
+            "tangential_tension_pa": 5400000,
             "radial_compression_pa": 7308442.730758462,
             "tangential_compression_pa": 7308442.730758462,
             "longitudinal_radial_shear_pa": 12617405.8464981,
@@ -46513,7 +46590,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Laurel oak expands the red-oak coverage toward coastal plain species."
+          "Laurel oak expands the red-oak coverage toward coastal plain species.",
+          "2026-10-23 correction: tension perpendicular to grain 6.87 -> 5.40 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -46531,7 +46609,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 86873941.89392135,
             "longitudinal_compression_pa": 48125405.906315155,
-            "transverse_tension_pa": 6872117.791608703,
+            "transverse_tension_pa": 5400000,
             "transverse_compression_pa": 7308442.730758462,
             "shear_parallel_to_grain_pa": 12617405.8464981
           }
@@ -46551,7 +46629,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 86873941.89392135,
             "sigma_c_x_pa": 48125405.906315155,
-            "sigma_t_yz_pa": 6872117.791608703,
+            "sigma_t_yz_pa": 5400000,
             "sigma_c_yz_pa": 7308442.730758462,
             "tau_xy_xz_pa": 12617405.8464981
           }
@@ -46560,12 +46638,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (5.4 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -46722,15 +46801,15 @@
           "compression_parallel_to_grain_pa": 47022244.73940822,
           "compression_perpendicular_to_grain_pa": 7032652.439031728,
           "shear_parallel_to_grain_pa": 14341095.16979019,
-          "tension_perpendicular_to_grain_pa": 6612792.591925357
+          "tension_perpendicular_to_grain_pa": 7200000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 96526602.10435705,
             "longitudinal_compression_pa": 47022244.73940822,
-            "radial_tension_pa": 6612792.591925357,
-            "tangential_tension_pa": 6612792.591925357,
+            "radial_tension_pa": 7200000,
+            "tangential_tension_pa": 7200000,
             "radial_compression_pa": 7032652.439031728,
             "tangential_compression_pa": 7032652.439031728,
             "longitudinal_radial_shear_pa": 14341095.16979019,
@@ -46751,7 +46830,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Pin oak adds a widely planted urban and lowland red-oak reference."
+          "Pin oak adds a widely planted urban and lowland red-oak reference.",
+          "2026-10-23 correction: tension perpendicular to grain 6.61 -> 7.20 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -46769,7 +46849,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 96526602.10435705,
             "longitudinal_compression_pa": 47022244.73940822,
-            "transverse_tension_pa": 6612792.591925357,
+            "transverse_tension_pa": 7200000,
             "transverse_compression_pa": 7032652.439031728,
             "shear_parallel_to_grain_pa": 14341095.16979019
           }
@@ -46789,7 +46869,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 96526602.10435705,
             "sigma_c_x_pa": 47022244.73940822,
-            "sigma_t_yz_pa": 6612792.591925357,
+            "sigma_t_yz_pa": 7200000,
             "sigma_c_yz_pa": 7032652.439031728,
             "tau_xy_xz_pa": 14341095.16979019
           }
@@ -46798,12 +46878,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (7.2 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -47079,15 +47160,15 @@
           "compression_parallel_to_grain_pa": 59294912.7212479,
           "compression_perpendicular_to_grain_pa": 8204761.178870348,
           "shear_parallel_to_grain_pa": 13789514.58633672,
-          "tension_perpendicular_to_grain_pa": 7714924.690579582
+          "tension_perpendicular_to_grain_pa": 5700000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 122037204.08907998,
             "longitudinal_compression_pa": 59294912.7212479,
-            "radial_tension_pa": 7714924.690579582,
-            "tangential_tension_pa": 7714924.690579582,
+            "radial_tension_pa": 5700000,
+            "tangential_tension_pa": 5700000,
             "radial_compression_pa": 8204761.178870348,
             "tangential_compression_pa": 8204761.178870348,
             "longitudinal_radial_shear_pa": 13789514.58633672,
@@ -47108,7 +47189,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Swamp white oak adds a dense white-oak-group reference with strong published bending data."
+          "Swamp white oak adds a dense white-oak-group reference with strong published bending data.",
+          "2026-10-23 correction: tension perpendicular to grain 7.71 -> 5.70 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -47126,7 +47208,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 122037204.08907998,
             "longitudinal_compression_pa": 59294912.7212479,
-            "transverse_tension_pa": 7714924.690579582,
+            "transverse_tension_pa": 5700000,
             "transverse_compression_pa": 8204761.178870348,
             "shear_parallel_to_grain_pa": 13789514.58633672
           }
@@ -47146,7 +47228,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 122037204.08907998,
             "sigma_c_x_pa": 59294912.7212479,
-            "sigma_t_yz_pa": 7714924.690579582,
+            "sigma_t_yz_pa": 5700000,
             "sigma_c_yz_pa": 8204761.178870348,
             "tau_xy_xz_pa": 13789514.58633672
           }
@@ -47155,12 +47237,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (5.7 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -47317,15 +47400,15 @@
           "compression_parallel_to_grain_pa": 41782229.19660026,
           "compression_perpendicular_to_grain_pa": 8273708.751802032,
           "shear_parallel_to_grain_pa": 12548458.273566416,
-          "tension_perpendicular_to_grain_pa": 7779755.9905004185
+          "tension_perpendicular_to_grain_pa": 4700000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 71016000.11963412,
             "longitudinal_compression_pa": 41782229.19660026,
-            "radial_tension_pa": 7779755.9905004185,
-            "tangential_tension_pa": 7779755.9905004185,
+            "radial_tension_pa": 4700000,
+            "tangential_tension_pa": 4700000,
             "radial_compression_pa": 8273708.751802032,
             "tangential_compression_pa": 8273708.751802032,
             "longitudinal_radial_shear_pa": 12548458.273566416,
@@ -47346,7 +47429,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Bur oak extends the white-oak set with a comparatively low-stiffness but durable plains species."
+          "Bur oak extends the white-oak set with a comparatively low-stiffness but durable plains species.",
+          "2026-10-23 correction: tension perpendicular to grain 7.78 -> 4.70 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -47364,7 +47448,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 71016000.11963412,
             "longitudinal_compression_pa": 41782229.19660026,
-            "transverse_tension_pa": 7779755.9905004185,
+            "transverse_tension_pa": 4700000,
             "transverse_compression_pa": 8273708.751802032,
             "shear_parallel_to_grain_pa": 12548458.273566416
           }
@@ -47384,7 +47468,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 71016000.11963412,
             "sigma_c_x_pa": 41782229.19660026,
-            "sigma_t_yz_pa": 7779755.9905004185,
+            "sigma_t_yz_pa": 4700000,
             "sigma_c_yz_pa": 8273708.751802032,
             "tau_xy_xz_pa": 12548458.273566416
           }
@@ -47393,12 +47477,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (4.7 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -47436,15 +47521,15 @@
           "compression_parallel_to_grain_pa": 50124885.52133398,
           "compression_perpendicular_to_grain_pa": 7653180.595416881,
           "shear_parallel_to_grain_pa": 13720567.013405036,
-          "tension_perpendicular_to_grain_pa": 7196274.291212888
+          "tension_perpendicular_to_grain_pa": 4800000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 95837126.37504022,
             "longitudinal_compression_pa": 50124885.52133398,
-            "radial_tension_pa": 7196274.291212888,
-            "tangential_tension_pa": 7196274.291212888,
+            "radial_tension_pa": 4800000,
+            "tangential_tension_pa": 4800000,
             "radial_compression_pa": 7653180.595416881,
             "tangential_compression_pa": 7653180.595416881,
             "longitudinal_radial_shear_pa": 13720567.013405036,
@@ -47465,7 +47550,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Swamp chestnut oak adds a strong lowland white-oak-group reference."
+          "Swamp chestnut oak adds a strong lowland white-oak-group reference.",
+          "2026-10-23 correction: tension perpendicular to grain 7.20 -> 4.80 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -47483,7 +47569,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 95837126.37504022,
             "longitudinal_compression_pa": 50124885.52133398,
-            "transverse_tension_pa": 7196274.291212888,
+            "transverse_tension_pa": 4800000,
             "transverse_compression_pa": 7653180.595416881,
             "shear_parallel_to_grain_pa": 13720567.013405036
           }
@@ -47503,7 +47589,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 95837126.37504022,
             "sigma_c_x_pa": 50124885.52133398,
-            "sigma_t_yz_pa": 7196274.291212888,
+            "sigma_t_yz_pa": 4800000,
             "sigma_c_yz_pa": 7653180.595416881,
             "tau_xy_xz_pa": 13720567.013405036
           }
@@ -47512,12 +47598,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (4.8 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -47674,15 +47761,15 @@
           "compression_parallel_to_grain_pa": 45505398.13491118,
           "compression_perpendicular_to_grain_pa": 9859502.929230755,
           "shear_parallel_to_grain_pa": 12686353.419429783,
-          "tension_perpendicular_to_grain_pa": 9270875.888679666
+          "tension_perpendicular_to_grain_pa": 5400000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 91010796.26982236,
             "longitudinal_compression_pa": 45505398.13491118,
-            "radial_tension_pa": 9270875.888679666,
-            "tangential_tension_pa": 9270875.888679666,
+            "radial_tension_pa": 5400000,
+            "tangential_tension_pa": 5400000,
             "radial_compression_pa": 9859502.929230755,
             "tangential_compression_pa": 9859502.929230755,
             "longitudinal_radial_shear_pa": 12686353.419429783,
@@ -47703,7 +47790,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Post oak adds a heavy, durable white-oak-group reference often associated with posts and outdoor uses."
+          "Post oak adds a heavy, durable white-oak-group reference often associated with posts and outdoor uses.",
+          "2026-10-23 correction: tension perpendicular to grain 9.27 -> 5.40 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -47721,7 +47809,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 91010796.26982236,
             "longitudinal_compression_pa": 45505398.13491118,
-            "transverse_tension_pa": 9270875.888679666,
+            "transverse_tension_pa": 5400000,
             "transverse_compression_pa": 9859502.929230755,
             "shear_parallel_to_grain_pa": 12686353.419429783
           }
@@ -47741,7 +47829,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 91010796.26982236,
             "sigma_c_x_pa": 45505398.13491118,
-            "sigma_t_yz_pa": 9270875.888679666,
+            "sigma_t_yz_pa": 5400000,
             "sigma_c_yz_pa": 9859502.929230755,
             "tau_xy_xz_pa": 12686353.419429783
           }
@@ -47750,12 +47838,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_oak_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (5.4 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -47912,15 +48001,15 @@
           "compression_parallel_to_grain_pa": 35700000,
           "compression_perpendicular_to_grain_pa": 2960000,
           "shear_parallel_to_grain_pa": 6690000,
-          "tension_perpendicular_to_grain_pa": 1888275.8620689656
+          "tension_perpendicular_to_grain_pa": 2500000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 64800000,
             "longitudinal_compression_pa": 35700000,
-            "radial_tension_pa": 1888275.8620689656,
-            "tangential_tension_pa": 1888275.8620689656,
+            "radial_tension_pa": 2500000,
+            "tangential_tension_pa": 2500000,
             "radial_compression_pa": 2960000,
             "tangential_compression_pa": 2960000,
             "longitudinal_radial_shear_pa": 6690000,
@@ -47941,7 +48030,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "White spruce adds a common boreal spruce reference for framing, crates, and sounding-board stock."
+          "White spruce adds a common boreal spruce reference for framing, crates, and sounding-board stock.",
+          "2026-10-23 correction: tension perpendicular to grain 1.89 -> 2.50 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.64 x Fc-perp, Sitka spruce ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -47959,7 +48049,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 64800000,
             "longitudinal_compression_pa": 35700000,
-            "transverse_tension_pa": 1888275.8620689656,
+            "transverse_tension_pa": 2500000,
             "transverse_compression_pa": 2960000,
             "shear_parallel_to_grain_pa": 6690000
           }
@@ -47979,7 +48069,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 64800000,
             "sigma_c_x_pa": 35700000,
-            "sigma_t_yz_pa": 1888275.8620689656,
+            "sigma_t_yz_pa": 2500000,
             "sigma_c_yz_pa": 2960000,
             "tau_xy_xz_pa": 6690000
           }
@@ -47988,12 +48078,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_white_spruce_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sitka spruce clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sitka spruce clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (2.5 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Sitka spruce compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -48031,15 +48122,15 @@
           "compression_parallel_to_grain_pa": 38200000,
           "compression_perpendicular_to_grain_pa": 3790000,
           "shear_parallel_to_grain_pa": 8890000,
-          "tension_perpendicular_to_grain_pa": 2417758.620689655
+          "tension_perpendicular_to_grain_pa": 2400000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 74500000,
             "longitudinal_compression_pa": 38200000,
-            "radial_tension_pa": 2417758.620689655,
-            "tangential_tension_pa": 2417758.620689655,
+            "radial_tension_pa": 2400000,
+            "tangential_tension_pa": 2400000,
             "radial_compression_pa": 3790000,
             "tangential_compression_pa": 3790000,
             "longitudinal_radial_shear_pa": 8890000,
@@ -48060,7 +48151,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Red spruce adds a resonant eastern spruce reference with higher published bending strength than white spruce."
+          "Red spruce adds a resonant eastern spruce reference with higher published bending strength than white spruce.",
+          "2026-10-23 correction: tension perpendicular to grain 2.42 -> 2.40 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.64 x Fc-perp, Sitka spruce ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -48078,7 +48170,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 74500000,
             "longitudinal_compression_pa": 38200000,
-            "transverse_tension_pa": 2417758.620689655,
+            "transverse_tension_pa": 2400000,
             "transverse_compression_pa": 3790000,
             "shear_parallel_to_grain_pa": 8890000
           }
@@ -48098,7 +48190,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 74500000,
             "sigma_c_x_pa": 38200000,
-            "sigma_t_yz_pa": 2417758.620689655,
+            "sigma_t_yz_pa": 2400000,
             "sigma_c_yz_pa": 3790000,
             "tau_xy_xz_pa": 8890000
           }
@@ -48107,12 +48199,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_red_spruce_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sitka spruce clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sitka spruce clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (2.4 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Sitka spruce compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -48374,8 +48467,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 400,
-          "specific_gravity_reference": 0.4,
+          "reference_density_kg_m3_approx": 390,
+          "specific_gravity_reference": 0.39,
           "EX_pa": 13090000000.000002,
           "EY_pa": 1021020000.0000001,
           "EZ_pa": 562870000,
@@ -48421,7 +48514,8 @@
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
           "Noble fir adds a stronger high-elevation true-fir reference distinct from white fir and grand fir.",
-          "2026-10-23 correction: tension perpendicular to grain 2.28 -> 1.52 MPa (220 psi, Wood Handbook Table 5-3a 12% MC measured value; sources: engineersedge_wood_properties_softwoods_inch_pound) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.64 x Fc-perp, Sitka spruce ratio) and overstated the measured value. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+          "2026-10-23 correction: tension perpendicular to grain 2.28 -> 1.52 MPa (220 psi, Wood Handbook Table 5-3a 12% MC measured value; sources: engineersedge_wood_properties_softwoods_inch_pound) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.64 x Fc-perp, Sitka spruce ratio) and overstated the measured value. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable).",
+          "2026-10-23 correction: specific gravity 0.4 -> 0.39 and density 400 -> 390 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -48434,7 +48528,7 @@
             "PRXY": 0.372,
             "PRYZ": 0.435,
             "PRXZ": 0.467,
-            "DENS_kg_m3": 400
+            "DENS_kg_m3": 390
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 73800000,
@@ -48469,7 +48563,9 @@
         "source_ids": [
           "usda_fpl_noble_fir_techsheet",
           "usda_wood_handbook_ch5",
-          "engineersedge_wood_properties_softwoods_inch_pound"
+          "engineersedge_wood_properties_softwoods_inch_pound",
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
@@ -48512,15 +48608,15 @@
           "compression_parallel_to_grain_pa": 33100000,
           "compression_perpendicular_to_grain_pa": 3030000,
           "shear_parallel_to_grain_pa": 6200000,
-          "tension_perpendicular_to_grain_pa": 2138823.529411765
+          "tension_perpendicular_to_grain_pa": 2100000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 59300000,
             "longitudinal_compression_pa": 33100000,
-            "radial_tension_pa": 2138823.529411765,
-            "tangential_tension_pa": 2138823.529411765,
+            "radial_tension_pa": 2100000,
+            "tangential_tension_pa": 2100000,
             "radial_compression_pa": 3030000,
             "tangential_compression_pa": 3030000,
             "longitudinal_radial_shear_pa": 6200000,
@@ -48541,7 +48637,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Eastern white pine adds a classic low-density white-pine reference widely used in interior millwork and framing."
+          "Eastern white pine adds a classic low-density white-pine reference widely used in interior millwork and framing.",
+          "2026-10-23 correction: tension perpendicular to grain 2.14 -> 2.10 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.71 x Fc-perp, Sugar pine ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -48559,7 +48656,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 59300000,
             "longitudinal_compression_pa": 33100000,
-            "transverse_tension_pa": 2138823.529411765,
+            "transverse_tension_pa": 2100000,
             "transverse_compression_pa": 3030000,
             "shear_parallel_to_grain_pa": 6200000
           }
@@ -48579,7 +48676,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 59300000,
             "sigma_c_x_pa": 33100000,
-            "sigma_t_yz_pa": 2138823.529411765,
+            "sigma_t_yz_pa": 2100000,
             "sigma_c_yz_pa": 3030000,
             "tau_xy_xz_pa": 6200000
           }
@@ -48588,12 +48685,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_eastern_white_pine_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Sugar pine clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Sugar pine clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (2.1 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Sugar pine compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -48852,8 +48950,8 @@
             "y": "radial",
             "z": "tangential"
           },
-          "reference_density_kg_m3_approx": 430,
-          "specific_gravity_reference": 0.43,
+          "reference_density_kg_m3_approx": 400,
+          "specific_gravity_reference": 0.4,
           "EX_pa": 9101079626.982237,
           "EY_pa": 527862618.3649698,
           "EZ_pa": 282133468.43644935,
@@ -48899,7 +48997,8 @@
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
           "Eastern hemlock adds an eastern North American hemlock reference with lower stiffness than western hemlock.",
-          "2026-10-23 correction: compression perpendicular to grain 5.86 -> 4.48 MPa (650 psi, Wood Handbook Table 5-3a 12% MC via woodbin_fpl_wood_strength_table) in strength_data, envelope radial/tangential compression, ansys transverse_compression_pa and dolfinx sigma_c_yz_pa. The ratio-derived tension perpendicular was recomputed with the same western-hemlock ratio (0.6053): 3.55 -> 2.71 MPa (no measured 12% MC value was verified). Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+          "2026-10-23 correction: compression perpendicular to grain 5.86 -> 4.48 MPa (650 psi, Wood Handbook Table 5-3a 12% MC via woodbin_fpl_wood_strength_table) in strength_data, envelope radial/tangential compression, ansys transverse_compression_pa and dolfinx sigma_c_yz_pa. The ratio-derived tension perpendicular was recomputed with the same western-hemlock ratio (0.6053): 3.55 -> 2.71 MPa (no measured 12% MC value was verified). Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable).",
+          "2026-10-23 correction: specific gravity 0.43 -> 0.40 and density 430 -> 400 kg/m3 (properties.orthotropic_elastic and ansys_mapping DENS_kg_m3) to the Wood Handbook 12% MC specific gravity (sources: woodbin_fpl_wood_strength_table, wagnermeters_species_setting_chart). Density stays on the database convention SG(12% basis) x 1000; actual air-dry density at 12% MC is roughly 10-12% higher. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -48912,7 +49011,7 @@
             "PRXY": 0.485,
             "PRYZ": 0.442,
             "PRXZ": 0.423,
-            "DENS_kg_m3": 430
+            "DENS_kg_m3": 400
           },
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 61363339.90919841,
@@ -48947,7 +49046,8 @@
         "source_ids": [
           "usda_fpl_eastern_hemlock_techsheet",
           "usda_wood_handbook_ch5",
-          "woodbin_fpl_wood_strength_table"
+          "woodbin_fpl_wood_strength_table",
+          "wagnermeters_species_setting_chart"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
@@ -49112,15 +49212,15 @@
           "compression_parallel_to_grain_pa": 43100000,
           "compression_perpendicular_to_grain_pa": 4960000,
           "shear_parallel_to_grain_pa": 9440000,
-          "tension_perpendicular_to_grain_pa": 4015238.0952380947
+          "tension_perpendicular_to_grain_pa": 2745862
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 87600000,
             "longitudinal_compression_pa": 43100000,
-            "radial_tension_pa": 4015238.0952380947,
-            "tangential_tension_pa": 4015238.0952380947,
+            "radial_tension_pa": 2745862,
+            "tangential_tension_pa": 2745862,
             "radial_compression_pa": 4960000,
             "tangential_compression_pa": 4960000,
             "longitudinal_radial_shear_pa": 9440000,
@@ -49141,7 +49241,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Port-Orford-cedar adds a durable, high-strength cypress-family reference for coastal Pacific applications."
+          "Port-Orford-cedar adds a durable, high-strength cypress-family reference for coastal Pacific applications.",
+          "2026-10-23 correction: tension perpendicular to grain 4.02 -> 2.75 MPa (Wood Handbook 12% MC measured value; source: dixdesign_timber_properties_metric) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.81 x Fc-perp, Atlantic white cedar ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -49159,7 +49260,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 87600000,
             "longitudinal_compression_pa": 43100000,
-            "transverse_tension_pa": 4015238.0952380947,
+            "transverse_tension_pa": 2745862,
             "transverse_compression_pa": 4960000,
             "shear_parallel_to_grain_pa": 9440000
           }
@@ -49179,7 +49280,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 87600000,
             "sigma_c_x_pa": 43100000,
-            "sigma_t_yz_pa": 4015238.0952380947,
+            "sigma_t_yz_pa": 2745862,
             "sigma_c_yz_pa": 4960000,
             "tau_xy_xz_pa": 9440000
           }
@@ -49188,12 +49289,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_port_orford_cedar_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "dixdesign_timber_properties_metric"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Atlantic white cedar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Atlantic white cedar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (2.746 MPa (0.28 kg/mm2), via dixdesign_timber_properties_metric), replacing the earlier estimate from the Atlantic white cedar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -49472,15 +49574,15 @@
           "compression_parallel_to_grain_pa": 49366462.21908546,
           "compression_perpendicular_to_grain_pa": 5515805.834534689,
           "shear_parallel_to_grain_pa": 8825289.335255502,
-          "tension_perpendicular_to_grain_pa": 2550318.8267203397
+          "tension_perpendicular_to_grain_pa": 2800000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 79979184.60075298,
             "longitudinal_compression_pa": 49366462.21908546,
-            "radial_tension_pa": 2550318.8267203397,
-            "tangential_tension_pa": 2550318.8267203397,
+            "radial_tension_pa": 2800000,
+            "tangential_tension_pa": 2800000,
             "radial_compression_pa": 5515805.834534689,
             "tangential_compression_pa": 5515805.834534689,
             "longitudinal_radial_shear_pa": 8825289.335255502,
@@ -49501,7 +49603,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Tamarack adds an eastern larch reference complementing western larch."
+          "Tamarack adds an eastern larch reference complementing western larch.",
+          "2026-10-23 correction: tension perpendicular to grain 2.55 -> 2.80 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.46 x Fc-perp, Western larch ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -49519,7 +49622,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 79979184.60075298,
             "longitudinal_compression_pa": 49366462.21908546,
-            "transverse_tension_pa": 2550318.8267203397,
+            "transverse_tension_pa": 2800000,
             "transverse_compression_pa": 5515805.834534689,
             "shear_parallel_to_grain_pa": 8825289.335255502
           }
@@ -49539,7 +49642,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 79979184.60075298,
             "sigma_c_x_pa": 49366462.21908546,
-            "sigma_t_yz_pa": 2550318.8267203397,
+            "sigma_t_yz_pa": 2800000,
             "sigma_c_yz_pa": 5515805.834534689,
             "tau_xy_xz_pa": 8825289.335255502
           }
@@ -49548,12 +49651,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_tamarack_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Western larch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Western larch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (2.8 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Western larch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -49948,15 +50052,15 @@
           "compression_parallel_to_grain_pa": 36000000,
           "compression_perpendicular_to_grain_pa": 3580000,
           "shear_parallel_to_grain_pa": 7650000,
-          "tension_perpendicular_to_grain_pa": 1227428.5714285711
+          "tension_perpendicular_to_grain_pa": 1700000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 54500000,
             "longitudinal_compression_pa": 36000000,
-            "radial_tension_pa": 1227428.5714285711,
-            "tangential_tension_pa": 1227428.5714285711,
+            "radial_tension_pa": 1700000,
+            "tangential_tension_pa": 1700000,
             "radial_compression_pa": 3580000,
             "tangential_compression_pa": 3580000,
             "longitudinal_radial_shear_pa": 7650000,
@@ -49977,7 +50081,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Second-growth redwood adds a modern lighter redwood reference distinct from the existing old-growth card."
+          "Second-growth redwood adds a modern lighter redwood reference distinct from the existing old-growth card.",
+          "2026-10-23 correction: tension perpendicular to grain 1.23 -> 1.70 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.34 x Fc-perp, Redwood old-growth ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -49995,7 +50100,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 54500000,
             "longitudinal_compression_pa": 36000000,
-            "transverse_tension_pa": 1227428.5714285711,
+            "transverse_tension_pa": 1700000,
             "transverse_compression_pa": 3580000,
             "shear_parallel_to_grain_pa": 7650000
           }
@@ -50015,7 +50120,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 54500000,
             "sigma_c_x_pa": 36000000,
-            "sigma_t_yz_pa": 1227428.5714285711,
+            "sigma_t_yz_pa": 1700000,
             "sigma_c_yz_pa": 3580000,
             "tau_xy_xz_pa": 7650000
           }
@@ -50024,12 +50129,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_redwood_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the species-sheet MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Redwood old-growth clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Redwood old-growth clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (1.7 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Redwood old-growth compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -50543,15 +50649,15 @@
           "compression_parallel_to_grain_pa": 43507000,
           "compression_perpendicular_to_grain_pa": 3930000,
           "shear_parallel_to_grain_pa": 9239000,
-          "tension_perpendicular_to_grain_pa": 4244400
+          "tension_perpendicular_to_grain_pa": 4600000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 84809000,
             "longitudinal_compression_pa": 43507000,
-            "radial_tension_pa": 4244400,
-            "tangential_tension_pa": 4244400,
+            "radial_tension_pa": 4600000,
+            "tangential_tension_pa": 4600000,
             "radial_compression_pa": 3930000,
             "tangential_compression_pa": 3930000,
             "longitudinal_radial_shear_pa": 9239000,
@@ -50572,7 +50678,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Cucumbertree adds a magnolia-family hardwood reference whose source notes properties similar to yellow-poplar."
+          "Cucumbertree adds a magnolia-family hardwood reference whose source notes properties similar to yellow-poplar.",
+          "2026-10-23 correction: tension perpendicular to grain 4.24 -> 4.60 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.08 x Fc-perp, Yellow-poplar ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -50590,7 +50697,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 84809000,
             "longitudinal_compression_pa": 43507000,
-            "transverse_tension_pa": 4244400,
+            "transverse_tension_pa": 4600000,
             "transverse_compression_pa": 3930000,
             "shear_parallel_to_grain_pa": 9239000
           }
@@ -50610,7 +50717,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 84809000,
             "sigma_c_x_pa": 43507000,
-            "sigma_t_yz_pa": 4244400,
+            "sigma_t_yz_pa": 4600000,
             "sigma_c_yz_pa": 3930000,
             "tau_xy_xz_pa": 9239000
           }
@@ -50619,12 +50726,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_magnolia_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the source MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow-poplar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow-poplar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (4.6 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow-poplar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -50662,15 +50770,15 @@
           "compression_parallel_to_grain_pa": 37647000,
           "compression_perpendicular_to_grain_pa": 5930000,
           "shear_parallel_to_grain_pa": 10549000,
-          "tension_perpendicular_to_grain_pa": 6404400
+          "tension_perpendicular_to_grain_pa": 5100000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 77224000,
             "longitudinal_compression_pa": 37647000,
-            "radial_tension_pa": 6404400,
-            "tangential_tension_pa": 6404400,
+            "radial_tension_pa": 5100000,
+            "tangential_tension_pa": 5100000,
             "radial_compression_pa": 5930000,
             "tangential_compression_pa": 5930000,
             "longitudinal_radial_shear_pa": 10549000,
@@ -50691,7 +50799,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Southern magnolia adds a denser magnolia-family hardwood reference with higher transverse compression than cucumbertree."
+          "Southern magnolia adds a denser magnolia-family hardwood reference with higher transverse compression than cucumbertree.",
+          "2026-10-23 correction: tension perpendicular to grain 6.40 -> 5.10 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 1.08 x Fc-perp, Yellow-poplar ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -50709,7 +50818,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 77224000,
             "longitudinal_compression_pa": 37647000,
-            "transverse_tension_pa": 6404400,
+            "transverse_tension_pa": 5100000,
             "transverse_compression_pa": 5930000,
             "shear_parallel_to_grain_pa": 10549000
           }
@@ -50729,7 +50838,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 77224000,
             "sigma_c_x_pa": 37647000,
-            "sigma_t_yz_pa": 6404400,
+            "sigma_t_yz_pa": 5100000,
             "sigma_c_yz_pa": 5930000,
             "tau_xy_xz_pa": 10549000
           }
@@ -50738,12 +50847,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_magnolia_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the source MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow-poplar clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow-poplar clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (5.1 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow-poplar compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -51138,15 +51248,15 @@
           "compression_parallel_to_grain_pa": 35233000,
           "compression_perpendicular_to_grain_pa": 3172000,
           "shear_parallel_to_grain_pa": 8067000,
-          "tension_perpendicular_to_grain_pa": 2982626.865671642
+          "tension_perpendicular_to_grain_pa": 3000000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 55850000,
             "longitudinal_compression_pa": 35233000,
-            "radial_tension_pa": 2982626.865671642,
-            "tangential_tension_pa": 2982626.865671642,
+            "radial_tension_pa": 3000000,
+            "tangential_tension_pa": 3000000,
             "radial_compression_pa": 3172000,
             "tangential_compression_pa": 3172000,
             "longitudinal_radial_shear_pa": 8067000,
@@ -51167,7 +51277,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Butternut adds a lightweight walnut-family hardwood reference well below black walnut in density and stiffness."
+          "Butternut adds a lightweight walnut-family hardwood reference well below black walnut in density and stiffness.",
+          "2026-10-23 correction: tension perpendicular to grain 2.98 -> 3.00 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and understated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -51185,7 +51296,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 55850000,
             "longitudinal_compression_pa": 35233000,
-            "transverse_tension_pa": 2982626.865671642,
+            "transverse_tension_pa": 3000000,
             "transverse_compression_pa": 3172000,
             "shear_parallel_to_grain_pa": 8067000
           }
@@ -51205,7 +51316,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 55850000,
             "sigma_c_x_pa": 35233000,
-            "sigma_t_yz_pa": 2982626.865671642,
+            "sigma_t_yz_pa": 3000000,
             "sigma_c_yz_pa": 3172000,
             "tau_xy_xz_pa": 8067000
           }
@@ -51214,12 +51325,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_butternut_report",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the source MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (3 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
@@ -53284,15 +53396,15 @@
           "compression_parallel_to_grain_pa": 51710679.698759995,
           "compression_perpendicular_to_grain_pa": 12686353.41942912,
           "shear_parallel_to_grain_pa": 15513203.909628,
-          "tension_perpendicular_to_grain_pa": 11928959.185433352
+          "tension_perpendicular_to_grain_pa": 6200000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 101352932.20956959,
             "longitudinal_compression_pa": 51710679.698759995,
-            "radial_tension_pa": 11928959.185433352,
-            "tangential_tension_pa": 11928959.185433352,
+            "radial_tension_pa": 6200000,
+            "tangential_tension_pa": 6200000,
             "radial_compression_pa": 12686353.41942912,
             "tangential_compression_pa": 12686353.41942912,
             "longitudinal_radial_shear_pa": 15513203.909628,
@@ -53313,7 +53425,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Honeylocust adds a dense ring-porous hardwood reference with high bending strength and durable heartwood."
+          "Honeylocust adds a dense ring-porous hardwood reference with high bending strength and durable heartwood.",
+          "2026-10-23 correction: tension perpendicular to grain 11.93 -> 6.20 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, Yellow birch ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -53331,7 +53444,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 101352932.20956959,
             "longitudinal_compression_pa": 51710679.698759995,
-            "transverse_tension_pa": 11928959.185433352,
+            "transverse_tension_pa": 6200000,
             "transverse_compression_pa": 12686353.41942912,
             "shear_parallel_to_grain_pa": 15513203.909628
           }
@@ -53351,7 +53464,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 101352932.20956959,
             "sigma_c_x_pa": 51710679.698759995,
-            "sigma_t_yz_pa": 11928959.185433352,
+            "sigma_t_yz_pa": 6200000,
             "sigma_c_yz_pa": 12686353.41942912,
             "tau_xy_xz_pa": 15513203.909628
           }
@@ -53360,12 +53473,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_honeylocust_report",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the source MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Yellow birch clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Yellow birch clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (6.2 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Yellow birch compression-perpendicular ratio.",
           "Density is approximated from specific gravity.",
           "The source does not report a 12% specific gravity; the ovendry specific gravity is used as the reference density proxy for this card."
         ]
@@ -53644,15 +53758,15 @@
           "compression_parallel_to_grain_pa": 36680108.79965376,
           "compression_perpendicular_to_grain_pa": 4274749.52176416,
           "shear_parallel_to_grain_pa": 7446337.87662144,
-          "tension_perpendicular_to_grain_pa": 4019540.595091673
+          "tension_perpendicular_to_grain_pa": 3200000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 59294912.7212448,
             "longitudinal_compression_pa": 36680108.79965376,
-            "radial_tension_pa": 4019540.595091673,
-            "tangential_tension_pa": 4019540.595091673,
+            "radial_tension_pa": 3200000,
+            "tangential_tension_pa": 3200000,
             "radial_compression_pa": 4274749.52176416,
             "tangential_compression_pa": 4274749.52176416,
             "longitudinal_radial_shear_pa": 7446337.87662144,
@@ -53673,7 +53787,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "American chestnut adds a lighter Fagaceae hardwood reference with decay-resistant historic timber properties."
+          "American chestnut adds a lighter Fagaceae hardwood reference with decay-resistant historic timber properties.",
+          "2026-10-23 correction: tension perpendicular to grain 4.02 -> 3.20 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.94 x Fc-perp, White oak ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -53691,7 +53806,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 59294912.7212448,
             "longitudinal_compression_pa": 36680108.79965376,
-            "transverse_tension_pa": 4019540.595091673,
+            "transverse_tension_pa": 3200000,
             "transverse_compression_pa": 4274749.52176416,
             "shear_parallel_to_grain_pa": 7446337.87662144
           }
@@ -53711,7 +53826,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 59294912.7212448,
             "sigma_c_x_pa": 36680108.79965376,
-            "sigma_t_yz_pa": 4019540.595091673,
+            "sigma_t_yz_pa": 3200000,
             "sigma_c_yz_pa": 4274749.52176416,
             "tau_xy_xz_pa": 7446337.87662144
           }
@@ -53720,12 +53835,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_american_chestnut_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the source MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for White oak clear wood reference because American chestnut is a lighter Fagaceae hardwood.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for White oak clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (3.2 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the White oak compression-perpendicular ratio.",
           "Density is approximated from specific gravity.",
           "The source reports English-unit values; the database values are converted to SI units."
         ]
@@ -53764,15 +53880,15 @@
           "compression_parallel_to_grain_pa": 39000000,
           "compression_perpendicular_to_grain_pa": 4000000,
           "shear_parallel_to_grain_pa": 8070000,
-          "tension_perpendicular_to_grain_pa": 3121951.2195121953
+          "tension_perpendicular_to_grain_pa": 2900000
         },
         "nonlinear_models": {
           "orthotropic_strength_envelope_starter": {
             "recommended": true,
             "longitudinal_tension_pa": 68300000,
             "longitudinal_compression_pa": 39000000,
-            "radial_tension_pa": 3121951.2195121953,
-            "tangential_tension_pa": 3121951.2195121953,
+            "radial_tension_pa": 2900000,
+            "tangential_tension_pa": 2900000,
             "radial_compression_pa": 4000000,
             "tangential_compression_pa": 4000000,
             "longitudinal_radial_shear_pa": 8070000,
@@ -53793,7 +53909,8 @@
         "validation_tier": "official_source_with_derived_orthotropic_constants",
         "notes": [
           "These are clear-wood reference values and should not be used directly for graded structural timber without reduction factors and moisture adjustments.",
-          "Jack pine adds a northern pine reference aligned with the red-pine family of softwood starter ratios."
+          "Jack pine adds a northern pine reference aligned with the red-pine family of softwood starter ratios.",
+          "2026-10-23 correction: tension perpendicular to grain 3.12 -> 2.90 MPa (Wood Handbook 12% MC measured value; source: matmake_tensile_strength_of_wood) in strength_data, the orthotropic strength envelope (radial/tangential tension), ansys transverse_tension_pa and dolfinx sigma_t_yz_pa. The previous value was ratio-derived from compression perpendicular (about 0.78 x Fc-perp, Red pine ratio) and overstated the measured value. No other stored value was derived from it. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "orthotropic_mp": {
@@ -53811,7 +53928,7 @@
           "nonlinear_reference_data": {
             "longitudinal_tension_pa": 68300000,
             "longitudinal_compression_pa": 39000000,
-            "transverse_tension_pa": 3121951.2195121953,
+            "transverse_tension_pa": 2900000,
             "transverse_compression_pa": 4000000,
             "shear_parallel_to_grain_pa": 8070000
           }
@@ -53831,7 +53948,7 @@
           "custom_orthotropic_damage_reference": {
             "sigma_t_x_pa": 68300000,
             "sigma_c_x_pa": 39000000,
-            "sigma_t_yz_pa": 3121951.2195121953,
+            "sigma_t_yz_pa": 2900000,
             "sigma_c_yz_pa": 4000000,
             "tau_xy_xz_pa": 8070000
           }
@@ -53840,12 +53957,13 @@
       "sources": {
         "source_ids": [
           "usda_fpl_jack_pine_techsheet",
-          "usda_wood_handbook_ch5"
+          "usda_wood_handbook_ch5",
+          "matmake_tensile_strength_of_wood"
         ],
         "inferences": [
           "EX is the source MOE increased by 10% per the Wood Handbook recommendation for use as the longitudinal modulus.",
           "EY, EZ, and the shear moduli are approximated from the transverse elastic ratios used for Red pine clear wood reference.",
-          "Transverse tensile strength is approximated from the compression-perpendicular value using the same ratio used for Red pine clear wood reference.",
+          "Transverse tensile strength is the Wood Handbook tabulated 12% MC tension perpendicular to grain (2.9 MPa, via matmake_tensile_strength_of_wood), replacing the earlier estimate from the Red pine compression-perpendicular ratio.",
           "Density is approximated from specific gravity."
         ]
       }
