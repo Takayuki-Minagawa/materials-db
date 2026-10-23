@@ -1202,7 +1202,8 @@
         "0 degree and 90 degree tensile strengths and moduli",
         "0 degree compressive strength and modulus",
         "in-plane shear strength",
-        "neat resin density, tensile strength, and tensile modulus"
+        "neat resin density, tensile strength, and tensile modulus",
+        "AS4 UD laminate density, 0 and 90 degree tensile and 0 degree compressive properties, ILSS"
       ]
     },
     "victrex_peek_450pf_tds": {
@@ -1228,7 +1229,8 @@
         "A493 99.6% alumina density",
         "A493 99.6% alumina Young's modulus",
         "A493 99.6% alumina flexural strength",
-        "A493 99.6% alumina thermal conductivity"
+        "A493 99.6% alumina thermal conductivity",
+        "SA100 single-crystal sapphire properties"
       ]
     },
     "rogers_bisco_ht800": {
@@ -4259,7 +4261,8 @@
         "Table 3.1 normal-weight concrete strength classes C12/15 through C50/60",
         "characteristic and mean compressive strength",
         "mean and characteristic axial tensile strength",
-        "secant modulus of elasticity"
+        "secant modulus of elasticity",
+        "C55/67 to C90/105 strength-class reference (partial CDP card)"
       ]
     },
     "abaqus_concrete_damaged_plasticity_2024": {
@@ -4805,7 +4808,8 @@
       "info_used": [
         "H60, H80, H100, H130 and H200 nominal density",
         "nominal and minimum compression, tension and shear properties",
-        "23 °C test condition and through-thickness direction note"
+        "23 °C test condition and through-thickness direction note",
+        "Divinycell H45 / H250 nominal and minimum properties"
       ]
     },
     "sika_sikadur_30": {
@@ -37486,9 +37490,7 @@
           "tensile_modulus_pa": 74000000,
           "shear_strength_pa": 780000,
           "shear_modulus_pa": 28000000,
-          "shear_elongation_at_break": 0.34,
-          "thermal_conductivity_w_mk": 0.03,
-          "heat_distortion_temperature_c": 110
+          "shear_elongation_at_break": 0.34
         },
         "nonlinear_models": {
           "crushable_foam_partial_reference": {
@@ -37511,7 +37513,7 @@
         "notes": [
           "Corecell I-60 adds the lower-density branch of the Gurit SAN foam family from the same official datasheet.",
           "The single isotropic modulus is only a starter simplification for sandwich-core work and should not be mistaken for a full multi-axial crush model.",
-          "2026-10-23 re-sourcing: citation moved from gurit_corecell_i (whose URL points to the Corecell M TDS) to the Gurit Corecell I product datasheet PDS-Corecell-I-Foam-10-1023 (gurit_corecell_i_pds_10_1023). Mechanical values re-checked and unchanged (I-60: 65 kg/m3, compressive 0.95 MPa / 63 MPa, tensile 1.16 MPa / 74 MPa, shear 0.78 MPa / 28 MPa, shear elongation 34%). Thermal conductivity and heat distortion temperature were not re-confirmed in this check. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+          "2026-10-23 re-sourcing: citation moved from gurit_corecell_i (whose URL points to the Corecell M TDS) to the Gurit Corecell I product datasheet PDS-Corecell-I-Foam-10-1023 (gurit_corecell_i_pds_10_1023). Mechanical values re-checked and unchanged (I-60: 65 kg/m3, compressive 0.95 MPa / 63 MPa, tensile 1.16 MPa / 74 MPa, shear 0.78 MPa / 28 MPa, shear elongation 34%). Thermal conductivity and heat distortion temperature could not be re-confirmed against the Corecell I PDS and were removed. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "abaqus_mapping": {
           "elastic": {
@@ -37560,9 +37562,7 @@
           "tensile_modulus_pa": 105000000,
           "shear_strength_pa": 1100000,
           "shear_modulus_pa": 37000000,
-          "shear_elongation_at_break": 0.3,
-          "thermal_conductivity_w_mk": 0.04,
-          "heat_distortion_temperature_c": 110
+          "shear_elongation_at_break": 0.3
         },
         "nonlinear_models": {
           "crushable_foam_partial_reference": {
@@ -37585,7 +37585,7 @@
         "notes": [
           "Corecell I-80 fills the middle of the lighter I-series SAN foam range from the Gurit datasheet.",
           "The single isotropic modulus is only a starter simplification for sandwich-core work and should not be mistaken for a full multi-axial crush model.",
-          "2026-10-23 re-sourcing: citation moved from gurit_corecell_i (whose URL points to the Corecell M TDS) to the Gurit Corecell I product datasheet PDS-Corecell-I-Foam-10-1023 (gurit_corecell_i_pds_10_1023). Mechanical values re-checked and unchanged (I-80: 85 kg/m3, compressive 1.45 MPa / 92 MPa, tensile 1.60 MPa / 105 MPa, shear 1.10 MPa / 37 MPa, shear elongation 30%). Thermal conductivity and heat distortion temperature were not re-confirmed in this check. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+          "2026-10-23 re-sourcing: citation moved from gurit_corecell_i (whose URL points to the Corecell M TDS) to the Gurit Corecell I product datasheet PDS-Corecell-I-Foam-10-1023 (gurit_corecell_i_pds_10_1023). Mechanical values re-checked and unchanged (I-80: 85 kg/m3, compressive 1.45 MPa / 92 MPa, tensile 1.60 MPa / 105 MPa, shear 1.10 MPa / 37 MPa, shear elongation 30%). Thermal conductivity and heat distortion temperature could not be re-confirmed against the Corecell I PDS and were removed. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "abaqus_mapping": {
           "elastic": {
@@ -37635,9 +37635,7 @@
           "tensile_modulus_pa": 130000000,
           "shear_strength_pa": 1430000,
           "shear_modulus_pa": 46000000,
-          "shear_elongation_at_break": 0.25,
-          "thermal_conductivity_w_mk": 0.04,
-          "heat_distortion_temperature_c": 110
+          "shear_elongation_at_break": 0.25
         },
         "nonlinear_models": {
           "crushable_foam_partial_reference": {
@@ -37660,7 +37658,7 @@
         "notes": [
           "Corecell I-100 adds the top end of the lighter I-series SAN foam grades from the Gurit datasheet.",
           "The single isotropic modulus is only a starter simplification for sandwich-core work and should not be mistaken for a full multi-axial crush model.",
-          "2026-10-23 re-sourcing: citation moved from gurit_corecell_i (whose URL points to the Corecell M TDS) to the Gurit Corecell I product datasheet PDS-Corecell-I-Foam-10-1023 (gurit_corecell_i_pds_10_1023). Mechanical values re-checked and unchanged (I-100: 105 kg/m3, compressive 1.90 MPa / 116 MPa, tensile strength 2.00 MPa (tensile modulus 130 MPa not re-confirmed in search snippets, retained), shear 1.43 MPa / 46 MPa). Thermal conductivity and heat distortion temperature were not re-confirmed in this check. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+          "2026-10-23 re-sourcing: citation moved from gurit_corecell_i (whose URL points to the Corecell M TDS) to the Gurit Corecell I product datasheet PDS-Corecell-I-Foam-10-1023 (gurit_corecell_i_pds_10_1023). Mechanical values re-checked and unchanged (I-100: 105 kg/m3, compressive 1.90 MPa / 116 MPa, tensile strength 2.00 MPa (tensile modulus 130 MPa not re-confirmed in search snippets, retained), shear 1.43 MPa / 46 MPa). Thermal conductivity and heat distortion temperature could not be re-confirmed against the Corecell I PDS and were removed. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "abaqus_mapping": {
           "elastic": {
@@ -77279,9 +77277,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 95000000000,
-            "nu": 0.25
-          },
-          "density": {
+            "nu": 0.25,
             "density_kg_m3": 2600
           }
         },
@@ -77338,9 +77334,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 92000000000,
-            "nu": 0.26
-          },
-          "density": {
+            "nu": 0.26,
             "density_kg_m3": 2540
           }
         },
@@ -77396,9 +77390,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 93000000000,
-            "nu": 0.25
-          },
-          "density": {
+            "nu": 0.25,
             "density_kg_m3": 2600
           }
         },
@@ -77458,9 +77450,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 90000000000,
-            "nu": 0.25
-          },
-          "density": {
+            "nu": 0.25,
             "density_kg_m3": 2550
           }
         },
@@ -77520,9 +77510,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 90000000000,
-            "nu": 0.25
-          },
-          "density": {
+            "nu": 0.25,
             "density_kg_m3": 2550
           }
         },
@@ -77582,9 +77570,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 72500000000,
-            "nu": 0.17
-          },
-          "density": {
+            "nu": 0.17,
             "density_kg_m3": 2203
           }
         },
@@ -77692,15 +77678,16 @@
           "value_provenance": "minimum compression modulus (same convention as the existing Divinycell H60-H200 records)"
         },
         "strength_data": {
-          "compressive_strength_pa": 600000,
+          "density_nominal_kg_m3": 48,
+          "compressive_strength_nominal_pa": 600000,
           "compressive_strength_min_pa": 500000,
-          "compressive_modulus_pa": 50000000,
+          "compressive_modulus_nominal_pa": 50000000,
           "compressive_modulus_min_pa": 45000000,
-          "tensile_strength_pa": 1400000,
+          "tensile_strength_nominal_pa": 1400000,
           "tensile_strength_min_pa": 1100000,
-          "shear_strength_pa": 560000,
+          "shear_strength_nominal_pa": 560000,
           "shear_strength_min_pa": 460000,
-          "shear_modulus_pa": 15000000,
+          "shear_modulus_nominal_pa": 15000000,
           "shear_modulus_min_pa": 12000000
         }
       },
@@ -77710,7 +77697,7 @@
         "notes": [
           "Diab Divinycell H datasheet rev19 (SI), H45: density 48 kg/m3 (ISO 845); compressive strength 0.6 MPa nominal (min 0.5) and compressive modulus 50 MPa nominal (min 45) per ASTM D1621 (modulus ASTM D1621-B-73); tensile strength 1.4 MPa nominal (min 1.1) per ASTM D1623; shear strength 0.56 MPa (min 0.46) and shear modulus 15 MPa (min 12) per ASTM C273.",
           "Imperial rev19 sheet (Dec 2020) gives the same H45 compressive strength as 87 psi nominal (consistent with 0.6 MPa).",
-          "youngs_modulus_pa is the guaranteed minimum compressive modulus (nominal value kept as compressive_modulus_pa) perpendicular to the plane (ASTM D1621); Poisson's ratio not given by the datasheet.",
+          "youngs_modulus_pa is the guaranteed minimum compressive modulus (nominal value kept as compressive_modulus_nominal_pa) perpendicular to the plane (ASTM D1621); Poisson's ratio not given by the datasheet.",
           "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ]
       },
@@ -77737,15 +77724,16 @@
           "value_provenance": "minimum compression modulus (same convention as the existing Divinycell H60-H200 records)"
         },
         "strength_data": {
-          "compressive_strength_pa": 7200000,
+          "density_nominal_kg_m3": 250,
+          "compressive_strength_nominal_pa": 7200000,
           "compressive_strength_min_pa": 6100000,
-          "compressive_modulus_pa": 400000000,
+          "compressive_modulus_nominal_pa": 400000000,
           "compressive_modulus_min_pa": 350000000,
-          "tensile_strength_pa": 9200000,
+          "tensile_strength_nominal_pa": 9200000,
           "tensile_strength_min_pa": 8000000,
-          "shear_strength_pa": 4500000,
+          "shear_strength_nominal_pa": 4500000,
           "shear_strength_min_pa": 3900000,
-          "shear_modulus_pa": 97000000,
+          "shear_modulus_nominal_pa": 97000000,
           "shear_modulus_min_pa": 81000000
         }
       },
@@ -77755,7 +77743,7 @@
         "notes": [
           "Diab Divinycell H datasheet rev19 (SI), H250: density 250 kg/m3 (ISO 845); compressive strength 7.2 MPa nominal (min 6.1) and compressive modulus 400 MPa nominal (min 350) per ASTM D1621 (modulus ASTM D1621-B-73); tensile strength 9.2 MPa nominal (min 8.0) per ASTM D1623; shear strength 4.5 MPa (min 3.9) and shear modulus 97 MPa (min 81) per ASTM C273.",
           "Imperial rev19 sheet (Dec 2020) gives the same H250 compressive strength as 1044 psi nominal (consistent with 7.2 MPa).",
-          "youngs_modulus_pa is the guaranteed minimum compressive modulus (nominal value kept as compressive_modulus_pa) perpendicular to the plane (ASTM D1621); Poisson's ratio not given by the datasheet.",
+          "youngs_modulus_pa is the guaranteed minimum compressive modulus (nominal value kept as compressive_modulus_nominal_pa) perpendicular to the plane (ASTM D1621); Poisson's ratio not given by the datasheet.",
           "An older Diab sheet (DragonPlate-hosted) lists H250 compressive modulus as 300 MPa; the current rev19 value of 400 MPa is used.",
           "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ]
@@ -78076,7 +78064,6 @@
         "strength_data": {
           "compressive_resistance_1pct_strain_min_pa": 50000,
           "compressive_resistance_5pct_strain_min_pa": 115000,
-          "compressive_strength_pa": 50000,
           "flexural_strength_pa": 276000,
           "compressive_modulus_pa": 5000000
         }
@@ -78089,7 +78076,7 @@
           "All values are specification MINIMUMS. The tabulated elastic modulus equals the 1% compressive resistance divided by 0.01 strain (secant modulus over the initial linear range); youngs_modulus_pa is this compressive modulus.",
           "Design guidance in the sources: combined dead+live load stress should not exceed the 1% compressive resistance (linear-elastic range, limits long-term creep). 5% and 10% values are non-mandatory in ASTM D6817.",
           "Flexural strength: Styrotech lists 276 kPa (40 psi); some third-party tables show 240 kPa, the 276 kPa value is used.",
-          "compressive_strength_pa is set to the 1% deformation compressive resistance (the usual design limit), not an ultimate strength.",
+          "No compressive_strength_pa is stored: ASTM D6817 specifies compressive resistance at 1 % / 5 % deformation (design limit = 1 % value), not an ultimate strength.",
           "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ]
       },
@@ -78117,7 +78104,6 @@
         "strength_data": {
           "compressive_resistance_1pct_strain_min_pa": 75000,
           "compressive_resistance_5pct_strain_min_pa": 170000,
-          "compressive_strength_pa": 75000,
           "flexural_strength_pa": 345000,
           "compressive_modulus_pa": 7500000
         }
@@ -78130,7 +78116,7 @@
           "All values are specification MINIMUMS. The tabulated elastic modulus equals the 1% compressive resistance divided by 0.01 strain (secant modulus over the initial linear range); youngs_modulus_pa is this compressive modulus.",
           "Design guidance in the sources: combined dead+live load stress should not exceed the 1% compressive resistance (linear-elastic range, limits long-term creep). 5% and 10% values are non-mandatory in ASTM D6817.",
           "Iowa DOT special provision SP-230057 independently lists EPS29: density 1.80 lb/ft3, compressive resistance at 1% 10.9 psi, flexural strength 50.0 psi, elastic modulus 1090 psi.",
-          "compressive_strength_pa is set to the 1% deformation compressive resistance (the usual design limit), not an ultimate strength.",
+          "No compressive_strength_pa is stored: ASTM D6817 specifies compressive resistance at 1 % / 5 % deformation (design limit = 1 % value), not an ultimate strength.",
           "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ]
       },
@@ -78159,7 +78145,6 @@
         "strength_data": {
           "compressive_resistance_1pct_strain_min_pa": 103000,
           "compressive_resistance_5pct_strain_min_pa": 241000,
-          "compressive_strength_pa": 103000,
           "flexural_strength_pa": 414000,
           "compressive_modulus_pa": 10300000
         }
@@ -78171,7 +78156,7 @@
           "ASTM D6817 Type EPS39 minimum properties as reproduced in the Styro-Flex (Styrotech) and Foam-Control (AFM) EPS geofoam data sheets: density 38.4 kg/m3 (2.4 lb/ft3, ASTM D1622); compressive resistance at 1% deformation 103 kPa (15.0 psi) and at 5% deformation 241 kPa (ASTM D1621); flexural strength 414 kPa (60 psi, ASTM C203); elastic modulus 10300 kPa (1500 psi).",
           "All values are specification MINIMUMS. The tabulated elastic modulus equals the 1% compressive resistance divided by 0.01 strain (secant modulus over the initial linear range); youngs_modulus_pa is this compressive modulus.",
           "Design guidance in the sources: combined dead+live load stress should not exceed the 1% compressive resistance (linear-elastic range, limits long-term creep). 5% and 10% values are non-mandatory in ASTM D6817.",
-          "compressive_strength_pa is set to the 1% deformation compressive resistance (the usual design limit), not an ultimate strength.",
+          "No compressive_strength_pa is stored: ASTM D6817 specifies compressive resistance at 1 % / 5 % deformation (design limit = 1 % value), not an ultimate strength.",
           "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ]
       },
@@ -78298,9 +78283,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 380000000000,
-            "nu": 0.18
-          },
-          "density": {
+            "nu": 0.18,
             "density_kg_m3": 3050
           }
         },
@@ -78356,9 +78339,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 350000000000,
-            "nu": 0.19
-          },
-          "density": {
+            "nu": 0.19,
             "density_kg_m3": 3000
           }
         },
@@ -78453,9 +78434,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 323364103300,
-            "nu": 0.24
-          },
-          "density": {
+            "nu": 0.24,
             "density_kg_m3": 3690
           }
         },
@@ -78882,9 +78861,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 38000000000,
-            "nu": 0.2
-          },
-          "density": {
+            "nu": 0.2,
             "density_kg_m3": 2400
           }
         },
@@ -78972,9 +78949,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 39000000000,
-            "nu": 0.2
-          },
-          "density": {
+            "nu": 0.2,
             "density_kg_m3": 2400
           }
         },
@@ -79062,9 +79037,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 41000000000,
-            "nu": 0.2
-          },
-          "density": {
+            "nu": 0.2,
             "density_kg_m3": 2400
           }
         },
@@ -79152,9 +79125,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 42000000000,
-            "nu": 0.2
-          },
-          "density": {
+            "nu": 0.2,
             "density_kg_m3": 2400
           }
         },
@@ -79242,9 +79213,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 44000000000,
-            "nu": 0.2
-          },
-          "density": {
+            "nu": 0.2,
             "density_kg_m3": 2400
           }
         },
@@ -79316,9 +79285,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 15850000000,
-            "nu": 0.2
-          },
-          "density": {
+            "nu": 0.2,
             "density_kg_m3": 1600
           }
         },
@@ -79386,9 +79353,7 @@
         "abaqus_mapping": {
           "elastic": {
             "E_pa": 23580000000,
-            "nu": 0.2
-          },
-          "density": {
+            "nu": 0.2,
             "density_kg_m3": 1800
           }
         },
@@ -79500,10 +79465,6 @@
         "subcategory_en": "Toughened epoxy unidirectional CFRP (standard-modulus carbon fibre)"
       },
       "properties": {
-        "linear_elastic": {
-          "density_kg_m3": 1580,
-          "youngs_modulus_pa": 141000000000
-        },
         "orthotropic_elastic_partial": {
           "axes": {
             "1": "fiber direction (0 deg)",
@@ -79563,10 +79524,6 @@
         "subcategory_en": "Pultruded glass fiber reinforced polymer (GFRP) structural profile"
       },
       "properties": {
-        "linear_elastic": {
-          "density_kg_m3": 1830,
-          "youngs_modulus_pa": 17200000000
-        },
         "orthotropic_elastic_partial": {
           "axes": {
             "1": "pultrusion lengthwise direction (LW)",
@@ -79708,9 +79665,6 @@
       },
       "properties": {
         "linear_elastic": {
-          "density_kg_m3_approx": 2143.1,
-          "youngs_modulus_pa_derived": 29700000000,
-          "poissons_ratio_assumed": 0.2,
           "density_kg_m3": 2143.1,
           "youngs_modulus_pa": 29700000000,
           "poissons_ratio": 0.2
@@ -79746,7 +79700,7 @@
         "validation_tier": "official_product_strength_data_with_derived_density_elasticity_and_assumed_nu",
         "notes": [
           "Re-added 2026-10-23 with corrected density; the earlier tensile-adhesion (13.1 MPa) and expansion values were not re-verified and are omitted.",
-          "Density is an approximate fresh-mixture value from bag mass, published fluid-consistency mix water and published fluid yield: rho = (22.680 kg bag [50 lb] + 4.022 kg water [8.5 US pints = 4.022 L fluid mix water per bag]) / (0.44 ft3 = 0.01246 m3) = 26.702 / 0.01246 = 2143.1 kg/m3. The 0.44 ft3 yield is published to two significant figures (about +/-1.1%). This replaces the earlier 2590-2685 kg/m3 values, which divided by the rounded 0.01 m3 metric equivalent.",
+          "Density is an approximate fresh-mixture value from bag mass, published fluid-consistency mix water and published fluid yield: rho = (22.680 kg bag [50 lb] + 4.022 kg water [8.5 US pints = 4.022 L fluid mix water per bag]) / (0.44 ft3 = 0.01246 m3) = 26.702 / 0.01246 = 2143.1 kg/m3. The 0.44 ft3 yield is published to two significant figures (about +/-1.1%). This replaces the earlier 2672.2 kg/m3 value, which divided by the rounded 0.01 m3 metric equivalent.",
           "E is derived, not published: ACI 318 / FHWA relation Ec = 57,000 sqrt(f'c [psi]) = 4,700 sqrt(f'c [MPa]) = 4,700 x sqrt(40) = 29.7 GPa. It is a normal-concrete relationship and only an approximate grout starter.",
           "nu = 0.2 is an assumed FHWA/AASHTO fallback (not published by Sika).",
           "The listed values correspond to fluid consistency and 28-day curing; do not reuse them unchanged for plastic or flowable water contents.",
@@ -79814,9 +79768,6 @@
       },
       "properties": {
         "linear_elastic": {
-          "density_kg_m3_approx": 2133.6,
-          "youngs_modulus_pa_derived": 33800000000,
-          "poissons_ratio_assumed": 0.2,
           "density_kg_m3": 2133.6,
           "youngs_modulus_pa": 33800000000,
           "poissons_ratio": 0.2
@@ -79854,7 +79805,7 @@
         "validation_tier": "official_product_strength_data_with_derived_density_elasticity_and_assumed_nu",
         "notes": [
           "Re-added 2026-10-23 with corrected density. Over the published 8.0-8.5 pint water range the derived density is about 2124-2143 kg/m3.",
-          "Density is an approximate fresh-mixture value from bag mass, published fluid-consistency mix water and published fluid yield: rho = (22.680 kg bag [50 lb] + 3.904 kg water [midpoint of published 8.0-8.5 US pints = 3.904 L fluid mix water per bag]) / (0.44 ft3 = 0.01246 m3) = 26.583 / 0.01246 = 2133.6 kg/m3. The 0.44 ft3 yield is published to two significant figures (about +/-1.1%). This replaces the earlier 2590-2685 kg/m3 values, which divided by the rounded 0.01 m3 metric equivalent.",
+          "Density is an approximate fresh-mixture value from bag mass, published fluid-consistency mix water and published fluid yield: rho = (22.680 kg bag [50 lb] + 3.904 kg water [midpoint of published 8.0-8.5 US pints = 3.904 L fluid mix water per bag]) / (0.44 ft3 = 0.01246 m3) = 26.583 / 0.01246 = 2133.6 kg/m3. The 0.44 ft3 yield is published to two significant figures (about +/-1.1%). This replaces the earlier 2660 kg/m3 value, which divided by the rounded 0.01 m3 metric equivalent.",
           "E is derived, not published: ACI 318 / FHWA relation Ec = 57,000 sqrt(f'c [psi]) = 4,700 sqrt(f'c [MPa]) = 4,700 x sqrt(51.7) = 33.8 GPa. It is a normal-concrete relationship and only an approximate grout starter.",
           "nu = 0.2 is an assumed FHWA/AASHTO fallback (not published by Sika).",
           "The listed values correspond to fluid consistency and 28-day curing; do not reuse them unchanged for plastic or flowable water contents.",
@@ -80107,9 +80058,6 @@
       },
       "properties": {
         "linear_elastic": {
-          "density_kg_m3_approx": 2202.7,
-          "youngs_modulus_pa_derived": 37000000000,
-          "poissons_ratio_assumed": 0.2,
           "density_kg_m3": 2202.7,
           "youngs_modulus_pa": 37000000000,
           "poissons_ratio": 0.2
