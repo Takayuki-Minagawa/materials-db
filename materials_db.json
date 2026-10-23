@@ -6601,6 +6601,71 @@
         "Cedar (Port Orford): SG 0.43, MOR 8.96 kg/mm2, MOE 1200 kg/mm2, tensile strength perpendicular to grain 0.28 kg/mm2, side hardness 286 kg",
         "Ash (White) tensile strength perpendicular to grain 0.66 kg/mm2 (consistent with the imperial table's 940 psi)"
       ]
+    },
+    "protolabs_ryton_r4_200bl_tds": {
+      "title": "Ryton R-4-200BL Technical Data Sheet (Syensqo/Solvay, UL Prospector format, hosted by Protolabs)",
+      "publisher": "Syensqo (Solvay Specialty Polymers), hosted by Protolabs",
+      "url": "https://protolabs.com/media/asnjuvia/ryton-r-4-200bl.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "density 1.68 g/cm3 (ASTM D792)",
+        "tensile elongation at break 1.5 % (ASTM D638)",
+        "40 % glass fiber filler by weight"
+      ]
+    },
+    "sika_sikagrout_500_aqua": {
+      "title": "SikaGrout-500 Aqua Product Data Sheet (US), October 2022, Version 01.01",
+      "publisher": "Sika Corporation",
+      "url": "https://usa.sika.com/dam/dms/us01/2/sikagrout-500-aqua.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "mixing ratio 8-1/2 to 9 pints (4.0-4.3 L) per 50 lb (22.7 kg) bag",
+        "coverage 0.43 ft3 (0.01 m3) per bag at fluid consistency",
+        "compressive strength 4,000 / 8,000 / 9,000 psi at 1 / 7 / 28 days (28 days 62.0 MPa), ASTM C109, 73 F / 50% RH"
+      ]
+    },
+    "sika_sikagrout_500_aqua_product_page": {
+      "title": "SikaGrout-500 Aqua Product Page (US)",
+      "publisher": "Sika Corporation",
+      "url": "https://usa.sika.com/en/construction/repair-protection/grouts/cementitious-grouts/sikagrout-500-aqua.html",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "28-day compressive strength 9,000 psi (62.0 MPa)",
+        "mixing ratio 8-1/2 to 9 pints per bag",
+        "coverage 0.43 ft3 (0.01 m3) per bag at fluid consistency"
+      ]
+    },
+    "dow_sylgard_182_tds": {
+      "title": "Technical Data Sheet SYLGARD 182 Silicone Elastomer (Dow, 2018 revision, Ellsworth-hosted copy)",
+      "publisher": "Dow (hosted by Ellsworth Adhesives)",
+      "url": "https://webaps.ellsworth.com/edl/Actions/GetLibraryFile.aspx?document=23636&language=en",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "tensile modulus 1050 psi / 7.3 MPa / 73 kg/cm2",
+        "tensile strength 1105 psi / 7.6 MPa",
+        "elongation 105 %",
+        "durometer 51 Shore A"
+      ]
+    },
+    "dow_sylgard_182_tds_conro": {
+      "title": "DOWSIL SYLGARD 182 TDS (Conro-hosted copy)",
+      "publisher": "Dow (hosted by Conro Electronics)",
+      "url": "https://conro.com/downloads/Manuals/Dowsil-sylgard-182-TDS.pdf",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "cured specific gravity 1.03",
+        "heat cure time 20 min at 150 C",
+        "tensile strength 1105 psi"
+      ]
+    },
+    "gluespec_sylgard_182": {
+      "title": "Dow Sylgard 182 Silicone Elastomer datasheet",
+      "publisher": "Gluespec",
+      "url": "https://www.gluespec.com/Materials/adhesive/dow/sylgard-182-silicone-elastomer",
+      "accessed_at": "2026-10-23",
+      "info_used": [
+        "tensile modulus 1,050 psi (independent repeat of the Dow TDS value)"
+      ]
     }
   },
   "materials": [
@@ -8109,7 +8174,8 @@
         "validation_tier": "official_source",
         "notes": [
           "This adds a corrosion- and heat-resistant nickel alloy reference below the higher-strength stored INCONEL 718 entry.",
-          "The stored values are nominal annealed room-temperature properties, not a product-form-specific true stress-plastic strain curve."
+          "The stored values are nominal annealed room-temperature properties, not a product-form-specific true stress-plastic strain curve.",
+          "Checked 2026-10-23: the cited Special Metals INCONEL alloy 600 bulletin (Table 4, modulus of elasticity vs temperature) gives at 22 C E = 214 GPa, G = 80.8 GPa and Poisson ratio 0.324 (internally consistent: E/(2G) - 1 = 0.324), falling to 193 GPa / 74.2 GPa / 0.301 at 400 C. The stored E = 214 GPa and nu = 0.324 are therefore kept as one consistent Special Metals basis; the commonly quoted nu = 0.29 (distributor sheets) pairs with E ~ 207 GPa and is a different basis. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "ansys_mapping": {
           "linear_mp": {
@@ -32548,13 +32614,13 @@
       },
       "properties": {
         "linear_elastic": {
-          "density_kg_m3": 1700,
+          "density_kg_m3": 1680,
           "youngs_modulus_pa": 14000000000,
           "poissons_ratio": 0.34
         },
         "strength_data": {
           "tensile_strength_pa": 180000000,
-          "reference_failure_strain": 0.012857142857142857,
+          "reference_failure_strain": 0.015,
           "weldline_tensile_strength_pa": 60000000,
           "tensile_strength_pa_150c": 65000000,
           "tensile_modulus_pa_150c": 7000000000
@@ -32563,7 +32629,7 @@
           "continuum_damage_starter": {
             "recommended": true,
             "tensile_strength_pa": 180000000,
-            "engineering_failure_strain": 0.012857142857142857,
+            "engineering_failure_strain": 0.015,
             "notes": [
               "This is a practical starter card for a stronger 40 percent glass-filled PPS grade used where stiffness and processability are both important.",
               "Replace this isotropic approximation with directional coupon data if weld lines, orientation, or hydrothermal exposure dominate the design."
@@ -32576,10 +32642,11 @@
       },
       "other": {
         "condition": "40% glass-fiber reinforced PPS enhanced-strength grade",
-        "validation_tier": "official_source_with_inferred_density_nu_and_failure_strain",
+        "validation_tier": "official_source_with_inferred_nu",
         "notes": [
           "This entry adds a mainstream high-strength Ryton PPS grade that sits between the tougher and more specialized compounds already in the database.",
-          "The product page emphasizes enhanced mechanical strength and low-maintenance molding using conventional injection equipment."
+          "The product page emphasizes enhanced mechanical strength and low-maintenance molding using conventional injection equipment.",
+          "Corrected 2026-10-23: density 1700 -> 1680 kg/m3 (published 1.68 g/cm3, ASTM D792) and failure strain 0.012857 (sigma/E) -> 0.015 (published elongation at break 1.5 %, ASTM D638), from the Syensqo/Solvay R-4-200BL technical data sheet (Protolabs-hosted copy; same values in other Solvay TDS copies). Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ],
         "abaqus_mapping": {
           "elastic": {
@@ -32588,19 +32655,20 @@
           },
           "nonlinear_reference_data": {
             "sigma_t_pa": 180000000,
-            "epsilon_f": 0.012857142857142857
+            "epsilon_f": 0.015
           }
         }
       },
       "sources": {
         "source_ids": [
           "syensqo_ryton_r4_200bl_product_page",
-          "syensqo_ryton_pps_properties_r4_200bl"
+          "syensqo_ryton_pps_properties_r4_200bl",
+          "protolabs_ryton_r4_200bl_tds"
         ],
         "inferences": [
-          "The density is not listed in the cited Syensqo sources. A practical 40 percent glass-filled PPS starter value of 1700 kg/m3 is inserted.",
+          "Density 1680 kg/m3 is the published 1.68 g/cm3 (ASTM D792) from the Syensqo/Solvay R-4-200BL technical data sheet (Protolabs-hosted copy); it replaces the earlier inferred 1700 kg/m3.",
           "Poisson ratio is not listed in the cited Syensqo sources. A practical reinforced PPS starter value of 0.34 is inserted.",
-          "The reference failure strain is inserted as sigma over E at 23 C because the public Syensqo page does not publish strain-at-break for R-4-200BL."
+          "The reference failure strain 0.015 is the published tensile elongation at break 1.5 % (ASTM D638) from the Syensqo/Solvay R-4-200BL technical data sheet; it replaces the earlier sigma/E estimate 0.0129. The card's tensile strength remains the Syensqo product-page value (the TDS lists 179 MPa ASTM D638 / 185 MPa ISO 527-2)."
         ]
       }
     },
@@ -77115,7 +77183,7 @@
             650000000,
             850000000
           ],
-          "elongation_min_percent": 35
+          "elongation_min_percent": 40
         }
       },
       "other": {
@@ -77124,7 +77192,8 @@
         "notes": [
           "Density and Young modulus are 20°C values; strength values are for the stated product form only.",
           "Poisson ratio and a calibrated plastic curve are not published in this datasheet, so no solver mapping is supplied.",
-          "Minimum elongation uses A80 for thickness <3 mm and A (5.65 sqrt(S0)) for thickness >=3 mm."
+          "Minimum elongation uses A80 for thickness <3 mm and A (5.65 sqrt(S0)) for thickness >=3 mm.",
+          "Corrected 2026-10-23: minimum elongation 35 % -> 40 % (A80). The cited Outokumpu Ultra range datasheet lists Ultra 6XN (1.4529) with Rp0.2 300 MPa and A80 40 %, stated as EN 10088-2 minimum values for cold-rolled strip; the EN/VdTUV listing for 1.4529 (Rm 650-850 MPa, Rp0.2 >= 300 MPa, A >= 40 %) agrees. Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
         ]
       },
       "sources": {
@@ -80024,6 +80093,184 @@
       "sources": {
         "source_ids": [
           "dupont_vespel_sf_polyimide_foam"
+        ]
+      }
+    },
+    {
+      "id": "concrete_sikagrout_500_aqua",
+      "name": "SikaGrout-500 Aqua",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "セメント系無収縮グラウト",
+        "subcategory_en": "cementitious non-shrink grout"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3_approx": 2202.7,
+          "youngs_modulus_pa_derived": 37000000000,
+          "poissons_ratio_assumed": 0.2,
+          "density_kg_m3": 2202.7,
+          "youngs_modulus_pa": 37000000000,
+          "poissons_ratio": 0.2
+        },
+        "strength_data": {
+          "compressive_strength_pa": 62000000
+        },
+        "nonlinear_models": {
+          "cementitious_damage_reference_partial": {
+            "compressive_strength_pa": 62000000,
+            "notes": [
+              "The public Sika data provide the 28-day fluid-consistency compressive strength only (no verified tensile, hardening or softening data), so a calibrated cracking model cannot be built from this card; tensile/fracture inputs must come from project testing."
+            ],
+            "source_ids": [
+              "sika_sikagrout_500_aqua",
+              "sika_sikagrout_500_aqua_product_page",
+              "fhwa_jpcp_frp_dowels",
+              "fhwa_lightweight_concrete_primer"
+            ],
+            "model_family_recommended": true,
+            "solver_ready": false,
+            "usage_level": "screening_or_partial_reference"
+          }
+        }
+      },
+      "other": {
+        "condition": "nonshrink cementitious underwater grout, fluid consistency (8.5-9 pints water per 50 lb bag), 28-day values at 73 F / 50% RH",
+        "validation_tier": "official_product_strength_data_with_derived_density_elasticity_and_assumed_nu",
+        "notes": [
+          "Re-added 2026-10-23 with corrected density. Over the published 8.5-9.0 US pints water range the derived density is about 2193-2212 kg/m3.",
+          "Density is an approximate fresh-mixture value from bag mass, published fluid-consistency mix water and published fluid yield: rho = (22.680 kg bag [50 lb] + 4.140 kg water [midpoint of published 8.5-9.0 US pints = 4.140 L fluid mix water per bag]) / (0.43 ft3 = 0.012176 m3) = 26.820 / 0.012176 = 2202.7 kg/m3.",
+          "The 0.43 ft3 coverage is published to two significant figures (about +/-1.2%). This replaces the earlier 2685 kg/m3 value, which divided by the rounded 0.01 m3 metric equivalent.",
+          "The earlier flexural (8.3 MPa), splitting-tensile (3.8 MPa) and compressive-modulus values were not re-verified on 2026-10-23 and are omitted; E is therefore derived (same tier as SikaGrout-212). Published compressive strength development: 4,000 psi (1 day), 8,000 psi (7 days), 9,000 psi (62.0 MPa, 28 days), ASTM C109.",
+          "E is derived, not published: ACI 318 / FHWA relation Ec = 57,000 sqrt(f'c [psi]) = 4,700 sqrt(f'c [MPa]) = 4,700 x sqrt(62.0) = 37.0 GPa. It is a normal-concrete relationship and only an approximate grout starter.",
+          "nu = 0.2 is an assumed FHWA/AASHTO fallback (not published by Sika).",
+          "The listed values correspond to fluid consistency and 28-day curing; do not reuse them unchanged for plastic or flowable water contents.",
+          "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 37000000000,
+            "PRXY": 0.2,
+            "DENS_kg_m3": 2202.7
+          }
+        },
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 37000000000,
+            "nu": 0.2,
+            "density_kg_m3": 2202.7,
+            "value_provenance": "official_product_strength_data_with_derived_density_elasticity_and_assumed_nu"
+          },
+          "concrete_damaged_plasticity_partial_reference": {
+            "known_response_points": {
+              "compressive_strength_pa": 62000000
+            },
+            "missing_parameters": [
+              "plasticity_flow_parameters",
+              "compression_hardening_and_damage_tables",
+              "tension_softening_and_damage_tables",
+              "fracture_energy_or_crack_band_regularization"
+            ]
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 37000000000,
+            "nu": 0.2
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "sika_sikagrout_500_aqua",
+          "sika_sikagrout_500_aqua_product_page",
+          "fhwa_jpcp_frp_dowels",
+          "fhwa_lightweight_concrete_primer"
+        ],
+        "inferences": [
+          "Density derived as (bag mass + published fluid mix water) / published fluid yield: (22.680 + 4.140) kg / 0.012176 m3 = 2202.7 kg/m3, assuming water density 1000 kg/m3.",
+          "Fluid mix water 8-1/2 to 9 pints (4.0-4.3 L) per 50 lb (22.7 kg) bag and coverage 0.43 ft3 (0.01 m3) per bag at fluid consistency are published in the Sika US October 2022 PDS and product page; the midpoint 8.75 pints (4.140 L) is used.",
+          "Young's modulus derived from Ec = 4700 sqrt(f'c) (MPa) with the published 28-day f'c = 62.0 MPa (9,000 psi, ASTM C109): 37.0 GPa.",
+          "Poisson ratio 0.20 assumed (AASHTO fallback when not measured); not published by Sika."
+        ]
+      }
+    },
+    {
+      "id": "elastomer_dow_sylgard_182",
+      "name": "SYLGARD 182 Silicone Elastomer",
+      "classification": {
+        "category_ja": "エラストマー",
+        "category_en": "Elastomer",
+        "subcategory_ja": "エラストマー",
+        "subcategory_en": "elastomer"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1030,
+          "youngs_modulus_pa": 7300000,
+          "poissons_ratio": 0.499
+        },
+        "strength_data": {
+          "tensile_strength_pa": 7600000,
+          "elongation_at_break": 1.05,
+          "tensile_modulus_pa_tds": 7300000,
+          "shore_a_hardness": 51
+        },
+        "nonlinear_models": {
+          "neo_hookean_starter": {
+            "recommended": true,
+            "shear_modulus_pa": 2434956.6377585055,
+            "bulk_modulus_pa": 1216666666.6666656,
+            "C10_pa": 1217478.3188792528,
+            "D1_1_per_pa": 1.6438356164383577e-9,
+            "notes": [
+              "The Neo-Hookean constants are inferred from the Dow TDS tensile modulus (7.3 MPa) and an assumed nearly incompressible Poisson ratio of 0.499 (mu = E/(2(1+nu)), C10 = mu/2, K = E/(3(1-2nu)), D1 = 2/K).",
+              "The TDS does not state the strain level at which the tensile modulus is evaluated; published small-strain moduli for the related SYLGARD 184 PDMS are typically 1.3-3 MPa, so this card may be stiff at small strain. Replace it with fitted multi-mode test data for sealing or contact simulations."
+            ],
+            "source_ids": [
+              "dow_sylgard_182_tds",
+              "abaqus_hyperelastic_keyword",
+              "abaqus_hyperelastic_behavior"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "cured two-part (10:1) silicone elastomer, Dow TDS typical properties (heat cure listed as 20 min at 150 C; the specimen cure schedule for the tabulated properties is not stated in the extracted TDS text)",
+        "validation_tier": "official_source_with_inferred_nu_and_hyperelastic_starter",
+        "notes": [
+          "Re-added 2026-10-23 with a sourced modulus: the Dow SYLGARD 182 TDS lists Tensile Modulus 1050 psi / 7.3 MPa / 73 kg/cm2, tensile strength 1105 psi (7.6 MPa), elongation 105 %, durometer 51 Shore A and cured specific gravity 1.03; Gluespec repeats the 1,050 psi tensile modulus. Thermal conductivity from the earlier card was not re-verified and is omitted.",
+          "E is the TDS 'tensile modulus' typical value (not a specification value, strain basis not stated); it is about 3x a Gent-type estimate from 51 Shore A and higher than literature small-strain moduli for SYLGARD 184, so use it as an upper-bound starter.",
+          "This is a practical silicone starter card for large-deformation FEM, not a test-fitted production hyperelastic model.",
+          "Values verified via web-search extraction of the cited source text on 2026-10-23 (direct page fetch unavailable)."
+        ],
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 7300000,
+            "nu": 0.499
+          },
+          "hyperelastic_neo_hooke": {
+            "C10_pa": 1217478.3188792528,
+            "D1_1_per_pa": 1.6438356164383577e-9
+          }
+        },
+        "dolfinx_mapping": {
+          "compressible_neo_hookean_reference": {
+            "E_pa": 7300000,
+            "nu": 0.499
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "dow_sylgard_182_tds",
+          "dow_sylgard_182_tds_conro",
+          "gluespec_sylgard_182"
+        ],
+        "inferences": [
+          "Poisson ratio is not listed in the Dow TDS. A nearly incompressible value of 0.499 is inserted to derive a Neo-Hookean starter card.",
+          "Density 1030 kg/m3 is the TDS cured specific gravity 1.03 x 1000 kg/m3."
         ]
       }
     }
