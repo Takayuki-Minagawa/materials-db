@@ -6841,6 +6841,33 @@
       "info_used": [
         "A536 grade minimums cross-check"
       ]
+    },
+    "aa_adm_2010": {
+      "title": "2010 Aluminum Design Manual (excerpt)",
+      "publisher": "The Aluminum Association",
+      "url": "https://img1.wsimg.com/blobby/go/5e430324-4c3a-4fd6-9bee-a582890ed427/downloads/Aluminum%20Design%20Manual%202010.pdf?ver=1618596738794",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "3003-H14 sheet/plate Ftu 20 ksi, Fty 17 ksi, E 10,100 ksi (garbled text extraction)"
+      ]
+    },
+    "maadi_marine_aluminum": {
+      "title": "What Is Marine Grade Aluminum? Alloys and Tempers",
+      "publisher": "Maadi Group",
+      "url": "https://maadigroup.com/what-is-marine-grade-aluminum/",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "ADM 2020 nominal values: 5052-H32 159/214 MPa; 5083-H116 214/303 MPa"
+      ]
+    },
+    "kissell_aluminum_structural": {
+      "title": "Introduction to Aluminum as a Structural Material",
+      "publisher": "R. Kissell, P.E.",
+      "url": "https://cdn.fs.pathlms.com/6s1hNVyQG3gOdGJGJ1zQ",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "5052-H32 sheet/plate 23/31 ksi; 5083-H116 plate 31/44 ksi"
+      ]
     }
   },
   "materials": [
@@ -82507,6 +82534,241 @@
         ],
         "inferences": [
           "Density 7100 kg/m3, Poisson ratio 0.28 and Young's modulus 169 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "aluminum_5052_h32_sheet_plate_reference",
+      "name": "Aluminum 5052-H32 sheet/plate reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "アルミニウム合金",
+        "subcategory_en": "wrought aluminum alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2680,
+          "youngs_modulus_pa": 70000000000.0,
+          "poissons_ratio": 0.33
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 159000000.0,
+          "ultimate_tensile_strength_pa": 214000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 159000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "kissell_aluminum_structural",
+              "maadi_marine_aluminum",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "Aluminum Design Manual design values: 5052-H32 sheet and plate, Fty 23 ksi (159 MPa), Ftu 31 ksi (214 MPa)",
+        "product_form": "sheet and plate",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Design (minimum) values, lower than typical mill values (about 193/228 MPa).",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 70000000000.0,
+            "PRXY": 0.33,
+            "DENS_kg_m3": 2680
+          },
+          "tb_biso": {
+            "yield_stress_pa": 159000000.0,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 70000000000.0,
+            "nu": 0.33
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 159000000.0,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "kissell_aluminum_structural",
+          "maadi_marine_aluminum"
+        ],
+        "inferences": [
+          "Density 2680 kg/m3, Poisson ratio 0.33 and Young's modulus 70 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "aluminum_5083_h116_plate_reference",
+      "name": "Aluminum 5083-H116 plate reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "アルミニウム合金",
+        "subcategory_en": "wrought aluminum alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2660,
+          "youngs_modulus_pa": 70000000000.0,
+          "poissons_ratio": 0.33
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 214000000.0,
+          "ultimate_tensile_strength_pa": 303000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 214000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "kissell_aluminum_structural",
+              "maadi_marine_aluminum",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "Aluminum Design Manual design values: 5083-H116 plate, Fty 31 ksi (214 MPa), Ftu 44 ksi (303 MPa)",
+        "product_form": "plate",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Design (minimum) values; strength degrades in the heat-affected zone and above about 65 C service temperature.",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 70000000000.0,
+            "PRXY": 0.33,
+            "DENS_kg_m3": 2660
+          },
+          "tb_biso": {
+            "yield_stress_pa": 214000000.0,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 70000000000.0,
+            "nu": 0.33
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 214000000.0,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "kissell_aluminum_structural",
+          "maadi_marine_aluminum"
+        ],
+        "inferences": [
+          "Density 2660 kg/m3, Poisson ratio 0.33 and Young's modulus 70 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "aluminum_3003_h14_sheet_plate_reference",
+      "name": "Aluminum 3003-H14 sheet/plate reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "アルミニウム合金",
+        "subcategory_en": "wrought aluminum alloy"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2730,
+          "youngs_modulus_pa": 70000000000.0,
+          "poissons_ratio": 0.33
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 117210873.983856,
+          "ultimate_tensile_strength_pa": 137895145.86336
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 117210873.983856,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "aa_adm_2010",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "Aluminum Design Manual design values: 3003-H14 sheet and plate, Fty 17 ksi, Ftu 20 ksi",
+        "product_form": "sheet and plate",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Single-source values taken from a garbled text extraction of the ADM table; confirm against the manual before design use.",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 70000000000.0,
+            "PRXY": 0.33,
+            "DENS_kg_m3": 2730
+          },
+          "tb_biso": {
+            "yield_stress_pa": 117210873.983856,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 70000000000.0,
+            "nu": 0.33
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 117210873.983856,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "aa_adm_2010"
+        ],
+        "inferences": [
+          "Density 2730 kg/m3, Poisson ratio 0.33 and Young's modulus 70 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
         ]
       }
     }
