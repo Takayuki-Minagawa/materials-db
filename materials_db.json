@@ -6670,6 +6670,15 @@
       "info_used": [
         "tensile modulus 1,050 psi (independent repeat of the Dow TDS value)"
       ]
+    },
+    "aisc_steelwise_materials_2015": {
+      "title": "Steelwise: Properly Specifying Materials (AISC Modern Steel Construction)",
+      "publisher": "AISC",
+      "url": "https://www.aisc.org/globalassets/modern-steel/steelwise/2015/steelwise.pdf",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "Minimum Fy/Fu of ASTM A36 (36/58 ksi), A572 Grade 50 (50/65 ksi) and A992 (50/65 ksi; Fy/Fu <= 0.85)"
+      ]
     }
   },
   "materials": [
@@ -80219,6 +80228,241 @@
         "inferences": [
           "Poisson ratio is not listed in the Dow TDS. A nearly incompressible value of 0.499 is inserted to derive a Neo-Hookean starter card.",
           "Density 1030 kg/m3 is the TDS cured specific gravity 1.03 x 1000 kg/m3."
+        ]
+      }
+    },
+    {
+      "id": "steel_astm_a36_reference",
+      "name": "ASTM A36 structural steel plate/shape reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "炭素構造用鋼",
+        "subcategory_en": "carbon structural steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 248211262.554048,
+          "ultimate_tensile_strength_pa": 399895923.003744
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 248211262.554048,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "aisc_steelwise_materials_2015",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A36, Fy 36 ksi, Fu 58 ksi minimum",
+        "product_form": "plate and structural shapes",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified yield and tensile strengths from AISC-published ASTM requirements; actual mill-certified values are typically higher.",
+          "Elastic-perfectly-plastic card; strain hardening and thickness-dependent yield reductions are not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 248211262.554048,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 248211262.554048,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "aisc_steelwise_materials_2015",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative structural steel elastic constants because the cited ASTM/manufacturer sources focus on mechanical requirement tables."
+        ]
+      }
+    },
+    {
+      "id": "steel_astm_a572_grade50_reference",
+      "name": "ASTM A572 Grade 50 structural steel reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "高張力低合金構造用鋼",
+        "subcategory_en": "HSLA structural steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 344737864.6584,
+          "ultimate_tensile_strength_pa": 448159224.05592
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 344737864.6584,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "aisc_steelwise_materials_2015",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A572 Grade 50, Fy 50 ksi, Fu 65 ksi minimum (thickness up to 4 in)",
+        "product_form": "plate and structural shapes",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified yield and tensile strengths from AISC-published ASTM requirements; actual mill-certified values are typically higher.",
+          "Elastic-perfectly-plastic card; strain hardening and thickness-dependent yield reductions are not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 344737864.6584,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 344737864.6584,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "aisc_steelwise_materials_2015",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative structural steel elastic constants because the cited ASTM/manufacturer sources focus on mechanical requirement tables."
+        ]
+      }
+    },
+    {
+      "id": "steel_astm_a992_reference",
+      "name": "ASTM A992 wide-flange structural steel reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "H形鋼用構造用鋼",
+        "subcategory_en": "wide-flange structural steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7850,
+          "youngs_modulus_pa": 200000000000,
+          "poissons_ratio": 0.3
+        },
+        "strength_data": {
+          "yield_strength_pa": 344737864.6584,
+          "ultimate_tensile_strength_pa": 448159224.05592,
+          "max_yield_to_tensile_ratio": 0.85
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 344737864.6584,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "aisc_steelwise_materials_2015",
+              "ssab_steel_general",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A992 W-shapes, Fy 50 ksi minimum, Fu 65 ksi minimum, Fy/Fu <= 0.85",
+        "product_form": "wide-flange (W) shapes",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified yield and tensile strengths from AISC-published ASTM requirements; actual mill-certified values are typically higher.",
+          "Elastic-perfectly-plastic card; strain hardening and thickness-dependent yield reductions are not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 200000000000,
+            "PRXY": 0.3,
+            "DENS_kg_m3": 7850
+          },
+          "tb_biso": {
+            "yield_stress_pa": 344737864.6584,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 200000000000,
+            "nu": 0.3
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 344737864.6584,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "aisc_steelwise_materials_2015",
+          "ssab_steel_general"
+        ],
+        "inferences": [
+          "Density 7850 kg/m3, Young's modulus 200 GPa, and Poisson ratio 0.3 were inserted as representative structural steel elastic constants because the cited ASTM/manufacturer sources focus on mechanical requirement tables."
         ]
       }
     }
