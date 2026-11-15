@@ -6787,6 +6787,60 @@
       "info_used": [
         "Grade 60 [420] minimum yield 60,000 psi"
       ]
+    },
+    "rolledalloys_304_304l": {
+      "title": "304/304L stainless datasheet",
+      "publisher": "Rolled Alloys",
+      "url": "https://www.rolledalloys.ca/wp-content/uploads/304-304L_Datasheet_rolled-alloys_CA.pdf",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "ASTM A240 304: 30 ksi yield / 75 ksi tensile min; 304L: 25 ksi / 70 ksi"
+      ]
+    },
+    "rolledalloys_316_316l": {
+      "title": "316/316L stainless datasheet",
+      "publisher": "Rolled Alloys",
+      "url": "https://www.rolledalloys.com/wp-content/uploads/316_316L_Stainless_DataSheet_RolledAlloys.pdf",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "316: 30 ksi yield / 75 ksi tensile min, 40% elongation (per ASTM A240)"
+      ]
+    },
+    "totalmateria_a240_304l": {
+      "title": "ASTM A240 Type 304L",
+      "publisher": "Total Materia",
+      "url": "https://www.totalmateria.com/en-us/material/1261242",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "304L minimum yield and tensile"
+      ]
+    },
+    "totalmateria_sa358_347": {
+      "title": "ASME SA-358 Grade 347 / ASME II table",
+      "publisher": "Total Materia",
+      "url": "https://www.totalmateria.com/en-us/material/1457730",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "347: 30 ksi yield / 75 ksi tensile min"
+      ]
+    },
+    "portlandbolt_a536_table": {
+      "title": "A536 Mechanical Properties for General Purpose Castings",
+      "publisher": "Portland Bolt",
+      "url": "https://portlandbolt.com/print/?table=3465",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "A536 60-40-18, 65-45-12, 80-55-06 minimum tensile, yield, elongation"
+      ]
+    },
+    "lethiron_ductile_iron": {
+      "title": "Ductile Iron alloys",
+      "publisher": "Leth Iron",
+      "url": "https://www.lethiron.com/alloys/",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "A536 grade minimums cross-check"
+      ]
     }
   },
   "materials": [
@@ -81906,6 +81960,553 @@
         ],
         "inferences": [
           "Density 7850 kg/m3, Poisson ratio 0.3 and Young's modulus 200 GPa were inserted as the representative design values for this standard family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "stainless_astm_a240_304_annealed_reference",
+      "name": "ASTM A240 Type 304 plate/sheet reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "オーステナイト系ステンレス鋼",
+        "subcategory_en": "austenitic stainless steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8000,
+          "youngs_modulus_pa": 193000000000.0,
+          "poissons_ratio": 0.29
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 205000000.0,
+          "ultimate_tensile_strength_pa": 515000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 205000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "rolledalloys_304_304l",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A240 Type 304 annealed, 0.2% yield 205 MPa (30 ksi) min, tensile 515 MPa (75 ksi) min",
+        "product_form": "annealed plate, sheet and strip",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Minimum specification values; typical mill values are higher.",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 193000000000.0,
+            "PRXY": 0.29,
+            "DENS_kg_m3": 8000
+          },
+          "tb_biso": {
+            "yield_stress_pa": 205000000.0,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 193000000000.0,
+            "nu": 0.29
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 205000000.0,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "rolledalloys_304_304l"
+        ],
+        "inferences": [
+          "Density 8000 kg/m3, Poisson ratio 0.29 and Young's modulus 193 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "stainless_astm_a240_304l_annealed_reference",
+      "name": "ASTM A240 Type 304L plate/sheet reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "オーステナイト系ステンレス鋼",
+        "subcategory_en": "austenitic stainless steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8000,
+          "youngs_modulus_pa": 193000000000.0,
+          "poissons_ratio": 0.29
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 170000000.0,
+          "ultimate_tensile_strength_pa": 485000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 170000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "rolledalloys_304_304l",
+              "totalmateria_a240_304l",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A240 Type 304L annealed, 0.2% yield 170 MPa (25 ksi) min, tensile 485 MPa (70 ksi) min",
+        "product_form": "annealed plate, sheet and strip",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Minimum specification values; typical mill values are higher.",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 193000000000.0,
+            "PRXY": 0.29,
+            "DENS_kg_m3": 8000
+          },
+          "tb_biso": {
+            "yield_stress_pa": 170000000.0,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 193000000000.0,
+            "nu": 0.29
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 170000000.0,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "rolledalloys_304_304l",
+          "totalmateria_a240_304l"
+        ],
+        "inferences": [
+          "Density 8000 kg/m3, Poisson ratio 0.29 and Young's modulus 193 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "stainless_astm_a240_316_annealed_reference",
+      "name": "ASTM A240 Type 316 plate/sheet reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "オーステナイト系ステンレス鋼",
+        "subcategory_en": "austenitic stainless steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8000,
+          "youngs_modulus_pa": 193000000000.0,
+          "poissons_ratio": 0.29
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 205000000.0,
+          "ultimate_tensile_strength_pa": 515000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 205000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "rolledalloys_316_316l",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A240 Type 316 annealed, 0.2% yield 205 MPa (30 ksi) min, tensile 515 MPa (75 ksi) min",
+        "product_form": "annealed plate, sheet and strip",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Minimum specification values; the 316L yield minimum was not confirmed from a retrieved source, so no 316L card is added.",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 193000000000.0,
+            "PRXY": 0.29,
+            "DENS_kg_m3": 8000
+          },
+          "tb_biso": {
+            "yield_stress_pa": 205000000.0,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 193000000000.0,
+            "nu": 0.29
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 205000000.0,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "rolledalloys_316_316l"
+        ],
+        "inferences": [
+          "Density 8000 kg/m3, Poisson ratio 0.29 and Young's modulus 193 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "stainless_astm_a240_347_annealed_reference",
+      "name": "ASTM A240 Type 347 plate/sheet reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "オーステナイト系ステンレス鋼",
+        "subcategory_en": "austenitic stainless steel"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 8000,
+          "youngs_modulus_pa": 193000000000.0,
+          "poissons_ratio": 0.29
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 205000000.0,
+          "ultimate_tensile_strength_pa": 515000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 205000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "totalmateria_sa358_347",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "Type 347 annealed, yield 205 MPa (30 ksi) min, tensile 515 MPa (75 ksi) min (ASME Section II table)",
+        "product_form": "annealed plate, sheet and strip",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Single-source minimums; confirm against ASTM A240 before design use.",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 193000000000.0,
+            "PRXY": 0.29,
+            "DENS_kg_m3": 8000
+          },
+          "tb_biso": {
+            "yield_stress_pa": 205000000.0,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 193000000000.0,
+            "nu": 0.29
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 205000000.0,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "totalmateria_sa358_347"
+        ],
+        "inferences": [
+          "Density 8000 kg/m3, Poisson ratio 0.29 and Young's modulus 193 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "iron_astm_a536_grade_60_40_18_reference",
+      "name": "ASTM A536 Grade 60-40-18 ductile iron reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "ダクタイル鋳鉄",
+        "subcategory_en": "ductile cast iron"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7100,
+          "youngs_modulus_pa": 169000000000.0,
+          "poissons_ratio": 0.28
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 276000000.0,
+          "ultimate_tensile_strength_pa": 414000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 276000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "portlandbolt_a536_table",
+              "lethiron_ductile_iron",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A536 Grade 60-40-18, yield 40 ksi (276 MPa) min, tensile 60 ksi (414 MPa) min, elongation 18% min",
+        "product_form": "ferritic ductile iron castings (annealed)",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Tension/compression asymmetry and graphite-nodule damage are not modelled by the J2 card.",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 169000000000.0,
+            "PRXY": 0.28,
+            "DENS_kg_m3": 7100
+          },
+          "tb_biso": {
+            "yield_stress_pa": 276000000.0,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 169000000000.0,
+            "nu": 0.28
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 276000000.0,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "portlandbolt_a536_table",
+          "lethiron_ductile_iron"
+        ],
+        "inferences": [
+          "Density 7100 kg/m3, Poisson ratio 0.28 and Young's modulus 169 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "iron_astm_a536_grade_65_45_12_reference",
+      "name": "ASTM A536 Grade 65-45-12 ductile iron reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "ダクタイル鋳鉄",
+        "subcategory_en": "ductile cast iron"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7100,
+          "youngs_modulus_pa": 169000000000.0,
+          "poissons_ratio": 0.28
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 310000000.0,
+          "ultimate_tensile_strength_pa": 448000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 310000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "portlandbolt_a536_table",
+              "lethiron_ductile_iron",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A536 Grade 65-45-12, yield 45 ksi (310 MPa) min, tensile 65 ksi (448 MPa) min, elongation 12% min",
+        "product_form": "as-cast ductile iron castings",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Tension/compression asymmetry and graphite-nodule damage are not modelled by the J2 card.",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 169000000000.0,
+            "PRXY": 0.28,
+            "DENS_kg_m3": 7100
+          },
+          "tb_biso": {
+            "yield_stress_pa": 310000000.0,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 169000000000.0,
+            "nu": 0.28
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 310000000.0,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "portlandbolt_a536_table",
+          "lethiron_ductile_iron"
+        ],
+        "inferences": [
+          "Density 7100 kg/m3, Poisson ratio 0.28 and Young's modulus 169 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "iron_astm_a536_grade_80_55_06_reference",
+      "name": "ASTM A536 Grade 80-55-06 ductile iron reference",
+      "classification": {
+        "category_ja": "金属",
+        "category_en": "Metal",
+        "subcategory_ja": "ダクタイル鋳鉄",
+        "subcategory_en": "ductile cast iron"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 7100,
+          "youngs_modulus_pa": 169000000000.0,
+          "poissons_ratio": 0.28
+        },
+        "strength_data": {
+          "yield_strength_0p2_pa": 379000000.0,
+          "ultimate_tensile_strength_pa": 552000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 379000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Minimum specified yield strength used; elastic-perfectly-plastic idealization."
+            ],
+            "source_ids": [
+              "portlandbolt_a536_table",
+              "lethiron_ductile_iron",
+              "ansys_biso_definition",
+              "ansys_rate_independent_plasticity"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "ASTM A536 Grade 80-55-06, yield 55 ksi (379 MPa) min, tensile 80 ksi (552 MPa) min, elongation 6% min",
+        "product_form": "as-cast ductile iron castings",
+        "validation_tier": "official_source_with_representative_steel_elastic_constants",
+        "notes": [
+          "Minimum specified strengths from the cited public sources; actual mill-certified values are typically higher.",
+          "Tension/compression asymmetry and graphite-nodule damage are not modelled by the J2 card.",
+          "Elastic-perfectly-plastic card; strain hardening is not represented."
+        ],
+        "ansys_mapping": {
+          "linear_mp": {
+            "EX_pa": 169000000000.0,
+            "PRXY": 0.28,
+            "DENS_kg_m3": 7100
+          },
+          "tb_biso": {
+            "yield_stress_pa": 379000000.0,
+            "tangent_modulus_pa": 0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 169000000000.0,
+            "nu": 0.28
+          },
+          "small_strain_j2": {
+            "sigma_y_pa": 379000000.0,
+            "H_iso_pa": 0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "portlandbolt_a536_table",
+          "lethiron_ductile_iron"
+        ],
+        "inferences": [
+          "Density 7100 kg/m3, Poisson ratio 0.28 and Young's modulus 169 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
         ]
       }
     }
