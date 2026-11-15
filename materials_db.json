@@ -6868,6 +6868,24 @@
       "info_used": [
         "5052-H32 sheet/plate 23/31 ksi; 5083-H116 plate 31/44 ksi"
       ]
+    },
+    "protolabs_delrin_500p": {
+      "title": "Delrin 500P NC010 datasheet",
+      "publisher": "Protolabs / DuPont",
+      "url": "https://Protolabs.com/media/1022598/delrin-500p_nc010.pdf",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "ISO 527-2 tensile modulus 3100 MPa, yield stress 71 MPa; density 1420 kg/m3; Poisson ratio 0.37"
+      ]
+    },
+    "protolabs_zytel_101l": {
+      "title": "Zytel 101L datasheet",
+      "publisher": "Protolabs / DuPont",
+      "url": "https://Protolabs.com/media/tcebrq5j/zytel-101l.pdf",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "ISO 527-2 dry: modulus 3100 MPa, yield 82 MPa; conditioned: 1400 MPa, 55 MPa; Poisson ratio 0.37 dry / 0.43 conditioned"
+      ]
     }
   },
   "materials": [
@@ -82769,6 +82787,216 @@
         ],
         "inferences": [
           "Density 2730 kg/m3, Poisson ratio 0.33 and Young's modulus 70 GPa were inserted as representative values for this material family because the cited sources focus on strength requirements."
+        ]
+      }
+    },
+    {
+      "id": "polymer_dupont_delrin_500p_nc010",
+      "name": "Delrin 500P NC010",
+      "classification": {
+        "category_ja": "高分子",
+        "category_en": "Polymer",
+        "subcategory_ja": "高分子",
+        "subcategory_en": "polymer"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1420,
+          "youngs_modulus_pa": 3100000000.0,
+          "poissons_ratio": 0.37
+        },
+        "strength_data": {
+          "yield_strength_pa": 71000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 71000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Practical small-strain starter model from the datasheet yield stress; it does not capture rate dependence, creep or cyclic degradation."
+            ],
+            "source_ids": [
+              "protolabs_delrin_500p"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "unfilled POM homopolymer, natural, dry-as-molded",
+        "validation_tier": "manufacturer_datasheet_with_J2_starter",
+        "notes": [
+          "Modulus values for this grade vary between sheets (3100-3250 MPa); the ISO 527-2 value is stored.",
+          "Starter J2 model only: creep, rate dependence and fatigue are not represented."
+        ],
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 3100000000.0,
+            "nu": 0.37
+          },
+          "plastic": {
+            "plastic_strain": 0,
+            "yield_stress_pa": 71000000.0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 3100000000.0,
+            "nu": 0.37
+          },
+          "small_strain_j2": {
+            "H_iso_pa": 0,
+            "sigma_y_pa": 71000000.0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "protolabs_delrin_500p"
+        ]
+      }
+    },
+    {
+      "id": "polymer_dupont_zytel_101l_nc010_dry",
+      "name": "Zytel 101L NC010 (PA66) - Dry",
+      "classification": {
+        "category_ja": "高分子",
+        "category_en": "Polymer",
+        "subcategory_ja": "高分子",
+        "subcategory_en": "polymer"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1140,
+          "youngs_modulus_pa": 3100000000.0,
+          "poissons_ratio": 0.37
+        },
+        "strength_data": {
+          "yield_strength_pa": 82000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 82000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Practical small-strain starter model from the datasheet yield stress; it does not capture rate dependence, creep or cyclic degradation."
+            ],
+            "source_ids": [
+              "protolabs_zytel_101l"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "unfilled PA66, natural, dry-as-molded",
+        "validation_tier": "manufacturer_datasheet_with_J2_starter_and_inferred_density",
+        "notes": [
+          "Nylon properties depend strongly on moisture; use the conditioned card for service in humid environments.",
+          "Starter J2 model only: creep, rate dependence and fatigue are not represented."
+        ],
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 3100000000.0,
+            "nu": 0.37
+          },
+          "plastic": {
+            "plastic_strain": 0,
+            "yield_stress_pa": 82000000.0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 3100000000.0,
+            "nu": 0.37
+          },
+          "small_strain_j2": {
+            "H_iso_pa": 0,
+            "sigma_y_pa": 82000000.0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "protolabs_zytel_101l"
+        ],
+        "inferences": [
+          "Solid density 1140 kg/m3 is the commonly published PA66 value; the retrieved sheets listed only melt density."
+        ]
+      }
+    },
+    {
+      "id": "polymer_dupont_zytel_101l_nc010_conditioned",
+      "name": "Zytel 101L NC010 (PA66) - Conditioned",
+      "classification": {
+        "category_ja": "高分子",
+        "category_en": "Polymer",
+        "subcategory_ja": "高分子",
+        "subcategory_en": "polymer"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 1140,
+          "youngs_modulus_pa": 1400000000.0,
+          "poissons_ratio": 0.43
+        },
+        "strength_data": {
+          "yield_strength_pa": 55000000.0
+        },
+        "nonlinear_models": {
+          "j2_perfect_plasticity": {
+            "recommended": true,
+            "material_model": "von_mises_isotropic",
+            "yield_stress_pa": 55000000.0,
+            "isotropic_hardening_modulus_pa": 0,
+            "tangent_modulus_pa": 0,
+            "notes": [
+              "Practical small-strain starter model from the datasheet yield stress; it does not capture rate dependence, creep or cyclic degradation."
+            ],
+            "source_ids": [
+              "protolabs_zytel_101l"
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "unfilled PA66, natural, conditioned (moisture equilibrated)",
+        "validation_tier": "manufacturer_datasheet_with_J2_starter_and_inferred_density",
+        "notes": [
+          "Nylon properties depend strongly on moisture; this card holds the conditioned ISO 527-2 values.",
+          "Starter J2 model only: creep, rate dependence and fatigue are not represented."
+        ],
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 1400000000.0,
+            "nu": 0.43
+          },
+          "plastic": {
+            "plastic_strain": 0,
+            "yield_stress_pa": 55000000.0
+          }
+        },
+        "dolfinx_mapping": {
+          "linear_elastic": {
+            "E_pa": 1400000000.0,
+            "nu": 0.43
+          },
+          "small_strain_j2": {
+            "H_iso_pa": 0,
+            "sigma_y_pa": 55000000.0
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "protolabs_zytel_101l"
+        ],
+        "inferences": [
+          "Solid density 1140 kg/m3 is the commonly published PA66 value; the retrieved sheets listed only melt density."
         ]
       }
     }

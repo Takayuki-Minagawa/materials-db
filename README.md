@@ -5,14 +5,14 @@ GitHub Pages でホストされており、ブラウザからすぐに利用で�
 
 ## 収録データ
 
-874 件の材料を 11 カテゴリに分類して収録しています。
+877 件の材料を 11 カテゴリに分類して収録しています。
 
 | カテゴリ | 件数 |
 |---|---|
 | 木質 (Wood) | 247 |
 | 金属 (Metal) | 133 |
 | エラストマー (Elastomer) | 84 |
-| 高分子 (Polymer) | 81 |
+| 高分子 (Polymer) | 84 |
 | 地盤・土質 (Soil) | 79 |
 | 複合材料 (Composite) | 47 |
 | コンクリート・グラウト (Concrete and Grout) | 45 |
@@ -36,7 +36,7 @@ GitHub Pages でホストされており、ブラウザからすぐに利用で�
 - 木質: EN 338 強度クラス、WWPA 構造用製材等級
 - 地盤・岩石: FHWA / USACE インタクトロック、FHWA 深層混合処理土
 - 複合材料: Toray 炭素繊維、NASA / Toray / Hexcel / Gurit のラミナ参照値、Sika CarboDur 補強用 CFRP プレート
-- 高分子・エラストマー: BASF エンジニアリングプラスチック、Momentive / WACKER / Smooth-On シリコーン
+- 高分子・エラストマー: BASF エンジニアリングプラスチック、DuPont Delrin 500P / Zytel 101L、Momentive / WACKER / Smooth-On シリコーン
 - フォーム・接着剤: DIAB / Gurit / Evonik / Airex / Vespel 構造用フォーム、ASTM D6817 EPS ジオフォーム、3M / Sika / Plexus 構造用接着剤、構造用シリコーンシーラント
 - ガラス・セラミックス: SCHOTT / Corning / OHARA / NEG / EuroKera / Heraeus、CoorsTek / CeramTec / Morgan / Saint-Gobain / Kyocera / Surmet、等方性黒鉛
 
