@@ -5,7 +5,7 @@ GitHub Pages でホストされており、ブラウザからすぐに利用で�
 
 ## 収録データ
 
-877 件の材料を 11 カテゴリに分類して収録しています。
+883 件の材料を 11 カテゴリに分類して収録しています。
 
 | カテゴリ | 件数 |
 |---|---|
@@ -15,11 +15,11 @@ GitHub Pages でホストされており、ブラウザからすぐに利用で�
 | 高分子 (Polymer) | 84 |
 | 地盤・土質 (Soil) | 79 |
 | 複合材料 (Composite) | 47 |
-| コンクリート・グラウト (Concrete and Grout) | 45 |
+| コンクリート・グラウト (Concrete and Grout) | 49 |
 | 接着剤 (Adhesive) | 44 |
 | フォーム (Foam) | 42 |
 | セラミックス (Ceramics) | 40 |
-| ガラス (Glass) | 32 |
+| ガラス (Glass) | 34 |
 
 各材料について、以下の情報を含みます。
 
@@ -32,13 +32,13 @@ GitHub Pages でホストされており、ブラウザからすぐに利用で�
 主な構造解析向け系列は次のとおりです。
 
 - 金属: 構造用鋼 (ASTM A36 / A572 / A992 / A500 / A53 / A106 / A516 / A588 / A615、EN 10025-2 S235〜S355、JIS SS400 / SM490 / SD345 / SD390)、ASTM A240 ステンレス (304 / 304L / 316 / 347)、ASTM A536 ダクタイル鋳鉄、アルミ 5052-H32 / 5083-H116 / 3003-H14、SSAB Domex / Strenx、Outokumpu Forta / Ultra、Hydro 6005A / 6060 / 6063 / 6082
-- コンクリート・組積造: Eurocode 2 強度クラス (C12/15〜C90/105、軽量 LC20/22〜LC40/44)、Rapid Set / QUIKRETE 補修材・グラウト、CMU・れんが組積体
+- コンクリート・組積造: ACI 318 強度クラス (f'c 4000〜8000 psi、式による導出値)、Eurocode 2 強度クラス (C12/15〜C90/105、軽量 LC20/22〜LC40/44)、Rapid Set / QUIKRETE 補修材・グラウト、CMU・れんが組積体
 - 木質: EN 338 強度クラス、WWPA 構造用製材等級
 - 地盤・岩石: FHWA / USACE インタクトロック、FHWA 深層混合処理土
 - 複合材料: Toray 炭素繊維、NASA / Toray / Hexcel / Gurit のラミナ参照値、Sika CarboDur 補強用 CFRP プレート
 - 高分子・エラストマー: BASF エンジニアリングプラスチック、DuPont Delrin 500P / Zytel 101L、Momentive / WACKER / Smooth-On シリコーン
 - フォーム・接着剤: DIAB / Gurit / Evonik / Airex / Vespel 構造用フォーム、ASTM D6817 EPS ジオフォーム、3M / Sika / Plexus 構造用接着剤、構造用シリコーンシーラント
-- ガラス・セラミックス: SCHOTT / Corning / OHARA / NEG / EuroKera / Heraeus、CoorsTek / CeramTec / Morgan / Saint-Gobain / Kyocera / Surmet、等方性黒鉛
+- ガラス・セラミックス: SCHOTT / Corning (Gorilla Glass 3 / Victus 2 含む) / OHARA / NEG / EuroKera / Heraeus、CoorsTek / CeramTec / Morgan / Saint-Gobain / Kyocera / Surmet、等方性黒鉛
 
 標準強度クラスや製品系列のカードでは、値の成熟度を `validation_tier` で示しています。構成則の同定に必要な試験データが不足する場合は、既知の強度点や推奨モデル、未確定パラメータを明示し、不完全なソルバーカードを生成しない構成にしています。
 

@@ -6886,6 +6886,51 @@
       "info_used": [
         "ISO 527-2 dry: modulus 3100 MPa, yield 82 MPa; conditioned: 1400 MPa, 55 MPa; Poisson ratio 0.37 dry / 0.43 conditioned"
       ]
+    },
+    "corning_gorilla_glass_3_pi": {
+      "title": "Gorilla Glass 3 product information sheet",
+      "publisher": "Corning",
+      "url": "https://www.corning.com/microsites/csm/gorillaglass/PI_Sheets/2020/Gorilla_Glass_3_ProdSheet.pdf",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "Density 2.39 g/cm3, Young modulus 70 GPa, fracture toughness 0.66 MPa m^0.5"
+      ]
+    },
+    "corning_gorilla_glass_3_orient": {
+      "title": "Corning Gorilla Glass 3 sheet",
+      "publisher": "Orient Display (Corning data)",
+      "url": "https://www.orientdisplay.com/pdf/Corning-Gorilla-Glass-3.pdf",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "Young modulus 69.3 GPa, Poisson ratio 0.22"
+      ]
+    },
+    "corning_gorilla_glass_victus_2_pi": {
+      "title": "Gorilla Glass Victus 2 PI sheet",
+      "publisher": "Corning",
+      "url": "https://www.CORNING.com/microsites/csm/gorillaglass/PI_Sheets/Gorilla_Glass_Victus_2_PI_Sheet.pdf",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "Density 2.41 g/cm3, Young modulus 79 GPa, Poisson ratio 0.22"
+      ]
+    },
+    "aci_318_formulas_oasys": {
+      "title": "ACI 318 concrete formulas reference",
+      "publisher": "Oasys ADSEC",
+      "url": "https://docs.oasys-software.com/structural/adsec/references/aci/",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "Ec = 57,000 sqrt(f c) psi; fr = 7.5 lambda sqrt(f c) psi (ACI 318-14 19.2.2.1, 19.2.3.1)"
+      ]
+    },
+    "aci_318_quick_reference": {
+      "title": "ACI Quick Reference",
+      "publisher": "tadoeng",
+      "url": "https://tadoeng.pages.dev/tools/aci-reference",
+      "accessed_at": "2026-11-15",
+      "info_used": [
+        "Ec = 4700 sqrt(f c) MPa; modulus of rupture 7.5 sqrt(f c) psi"
+      ]
     }
   },
   "materials": [
@@ -82997,6 +83042,452 @@
         ],
         "inferences": [
           "Solid density 1140 kg/m3 is the commonly published PA66 value; the retrieved sheets listed only melt density."
+        ]
+      }
+    },
+    {
+      "id": "glass_corning_gorilla_glass_3_partial",
+      "name": "Corning Gorilla Glass 3",
+      "classification": {
+        "category_ja": "ガラス",
+        "category_en": "Glass",
+        "subcategory_ja": "ガラス",
+        "subcategory_en": "glass"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2390,
+          "poissons_ratio": 0.22,
+          "youngs_modulus_pa": 70000000000.0
+        },
+        "strength_data": {
+          "fracture_toughness_mpa_sqrt_m": 0.66
+        },
+        "nonlinear_models": {
+          "brittle_fracture_toughness_reference": {
+            "fracture_toughness_mpa_sqrt_m": 0.66,
+            "recommended": true,
+            "source_ids": [
+              "corning_gorilla_glass_3_pi",
+              "corning_gorilla_glass_3_orient"
+            ],
+            "notes": [
+              "Only fracture toughness is available; no flaw-statistics or failure-stress distribution is provided."
+            ]
+          }
+        }
+      },
+      "other": {
+        "condition": "chemically strengthened aluminosilicate cover glass",
+        "validation_tier": "official_source_partial_chemically_strengthened_glass_data",
+        "notes": [
+          "Elastic constants and density from the manufacturer product information sheet; strengthening depth/stress and failure statistics were not retrieved and are not stored.",
+          "Young modulus is 70 GPa on the product sheet and 69.3 GPa on another Corning-derived sheet; 70 GPa is stored."
+        ],
+        "physical_properties": {},
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 70000000000.0,
+            "nu": 0.22
+          },
+          "brittle_failure_reference": {
+            "fracture_toughness_mpa_sqrt_m": 0.66,
+            "missing_parameters": [
+              "failure_stress_distribution",
+              "damage_evolution"
+            ]
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "corning_gorilla_glass_3_pi",
+          "corning_gorilla_glass_3_orient"
+        ]
+      }
+    },
+    {
+      "id": "glass_corning_gorilla_glass_victus_2_partial",
+      "name": "Corning Gorilla Glass Victus 2",
+      "classification": {
+        "category_ja": "ガラス",
+        "category_en": "Glass",
+        "subcategory_ja": "ガラス",
+        "subcategory_en": "glass"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2410,
+          "poissons_ratio": 0.22,
+          "youngs_modulus_pa": 79000000000.0
+        }
+      },
+      "other": {
+        "condition": "chemically strengthened aluminosilicate cover glass",
+        "validation_tier": "official_source_partial_chemically_strengthened_glass_data",
+        "notes": [
+          "Elastic constants and density from the manufacturer product information sheet; strengthening depth/stress and failure statistics were not retrieved and are not stored.",
+          "Fracture toughness was not retrieved for this grade."
+        ],
+        "physical_properties": {},
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 79000000000.0,
+            "nu": 0.22
+          }
+        }
+      },
+      "sources": {
+        "source_ids": [
+          "corning_gorilla_glass_victus_2_pi"
+        ]
+      }
+    },
+    {
+      "id": "concrete_aci318_fc4000psi_normalweight_derived_reference",
+      "name": "ACI 318 normal-weight concrete f'c 4000 psi derived reference",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "普通構造用コンクリート",
+        "subcategory_en": "normal-weight structural concrete"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2400,
+          "poissons_ratio": 0.2,
+          "youngs_modulus_pa": 24855576134.933716
+        },
+        "strength_data": {
+          "compressive_strength_pa": 27579029.172672,
+          "modulus_of_rupture_pa": 3270470.5440702257
+        },
+        "nonlinear_models": {
+          "concrete_damage_partial_reference": {
+            "compressive_strength_pa": 27579029.172672,
+            "notes": [
+              "The strength class supplies elastic stiffness and uniaxial strength anchors, but not hardening, softening, or damage evolution.",
+              "Use fracture-energy regularization and project-specific compression/tension tests for mesh-objective nonlinear analysis."
+            ],
+            "source_ids": [
+              "aci_318_formulas_oasys",
+              "aci_318_quick_reference",
+              "abaqus_concrete_damaged_plasticity_2024"
+            ],
+            "model_family_recommended": true,
+            "solver_ready": false,
+            "usage_level": "screening_or_partial_reference",
+            "modulus_of_rupture_pa": 3270470.5440702257
+          }
+        }
+      },
+      "other": {
+        "condition": "Normal-weight concrete with specified compressive strength f'c = 4000 psi (27.6 MPa); Ec and fr derived from ACI 318 code equations",
+        "validation_tier": "code_equation_derived_class_properties_with_inferred_density_nu_and_partial_cdp_card",
+        "notes": [
+          "Ec = 57,000 sqrt(f'c) psi and fr = 7.5 sqrt(f'c) psi (lambda = 1.0) are code-equation estimates, not test results; Ec is a secant modulus.",
+          "Use project test data (ASTM C469) when available.",
+          "Density 2400 kg/m3 and Poisson ratio 0.20 are practical starter values and are identified as inferred."
+        ],
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 24855576134.933716,
+            "nu": 0.2
+          },
+          "concrete_damaged_plasticity_partial_reference": {
+            "known_response_points": {
+              "fc_prime_pa": 27579029.172672,
+              "modulus_of_rupture_pa": 3270470.5440702257
+            },
+            "missing_parameters": [
+              "plasticity_flow_parameters",
+              "compression_hardening_table",
+              "tension_stiffening_table",
+              "compression_damage_table",
+              "tension_damage_table"
+            ]
+          }
+        },
+        "lsdyna_mapping": {
+          "mat_159_partial_reference": {
+            "unconfined_compressive_strength_pa": 27579029.172672,
+            "missing_parameters": [
+              "maximum_aggregate_size",
+              "rate_calibration",
+              "damage_calibration"
+            ]
+          }
+        }
+      },
+      "sources": {
+        "inferences": [
+          "Density and Poisson ratio are inserted as common normal-weight-concrete starter values; they are not ACI code values.",
+          "Ec and fr are computed from the ACI 318 equations for the specified f'c."
+        ],
+        "source_ids": [
+          "aci_318_formulas_oasys",
+          "aci_318_quick_reference"
+        ]
+      }
+    },
+    {
+      "id": "concrete_aci318_fc5000psi_normalweight_derived_reference",
+      "name": "ACI 318 normal-weight concrete f'c 5000 psi derived reference",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "普通構造用コンクリート",
+        "subcategory_en": "normal-weight structural concrete"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2400,
+          "poissons_ratio": 0.2,
+          "youngs_modulus_pa": 27789378928.816635
+        },
+        "strength_data": {
+          "compressive_strength_pa": 34473786.46584,
+          "modulus_of_rupture_pa": 3656497.2274758727
+        },
+        "nonlinear_models": {
+          "concrete_damage_partial_reference": {
+            "compressive_strength_pa": 34473786.46584,
+            "notes": [
+              "The strength class supplies elastic stiffness and uniaxial strength anchors, but not hardening, softening, or damage evolution.",
+              "Use fracture-energy regularization and project-specific compression/tension tests for mesh-objective nonlinear analysis."
+            ],
+            "source_ids": [
+              "aci_318_formulas_oasys",
+              "aci_318_quick_reference",
+              "abaqus_concrete_damaged_plasticity_2024"
+            ],
+            "model_family_recommended": true,
+            "solver_ready": false,
+            "usage_level": "screening_or_partial_reference",
+            "modulus_of_rupture_pa": 3656497.2274758727
+          }
+        }
+      },
+      "other": {
+        "condition": "Normal-weight concrete with specified compressive strength f'c = 5000 psi (34.5 MPa); Ec and fr derived from ACI 318 code equations",
+        "validation_tier": "code_equation_derived_class_properties_with_inferred_density_nu_and_partial_cdp_card",
+        "notes": [
+          "Ec = 57,000 sqrt(f'c) psi and fr = 7.5 sqrt(f'c) psi (lambda = 1.0) are code-equation estimates, not test results; Ec is a secant modulus.",
+          "Use project test data (ASTM C469) when available.",
+          "Density 2400 kg/m3 and Poisson ratio 0.20 are practical starter values and are identified as inferred."
+        ],
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 27789378928.816635,
+            "nu": 0.2
+          },
+          "concrete_damaged_plasticity_partial_reference": {
+            "known_response_points": {
+              "fc_prime_pa": 34473786.46584,
+              "modulus_of_rupture_pa": 3656497.2274758727
+            },
+            "missing_parameters": [
+              "plasticity_flow_parameters",
+              "compression_hardening_table",
+              "tension_stiffening_table",
+              "compression_damage_table",
+              "tension_damage_table"
+            ]
+          }
+        },
+        "lsdyna_mapping": {
+          "mat_159_partial_reference": {
+            "unconfined_compressive_strength_pa": 34473786.46584,
+            "missing_parameters": [
+              "maximum_aggregate_size",
+              "rate_calibration",
+              "damage_calibration"
+            ]
+          }
+        }
+      },
+      "sources": {
+        "inferences": [
+          "Density and Poisson ratio are inserted as common normal-weight-concrete starter values; they are not ACI code values.",
+          "Ec and fr are computed from the ACI 318 equations for the specified f'c."
+        ],
+        "source_ids": [
+          "aci_318_formulas_oasys",
+          "aci_318_quick_reference"
+        ]
+      }
+    },
+    {
+      "id": "concrete_aci318_fc6000psi_normalweight_derived_reference",
+      "name": "ACI 318 normal-weight concrete f'c 6000 psi derived reference",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "普通構造用コンクリート",
+        "subcategory_en": "normal-weight structural concrete"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2400,
+          "poissons_ratio": 0.2,
+          "youngs_modulus_pa": 30441739396.743244
+        },
+        "strength_data": {
+          "compressive_strength_pa": 41368543.759008,
+          "modulus_of_rupture_pa": 4005492.025887269
+        },
+        "nonlinear_models": {
+          "concrete_damage_partial_reference": {
+            "compressive_strength_pa": 41368543.759008,
+            "notes": [
+              "The strength class supplies elastic stiffness and uniaxial strength anchors, but not hardening, softening, or damage evolution.",
+              "Use fracture-energy regularization and project-specific compression/tension tests for mesh-objective nonlinear analysis."
+            ],
+            "source_ids": [
+              "aci_318_formulas_oasys",
+              "aci_318_quick_reference",
+              "abaqus_concrete_damaged_plasticity_2024"
+            ],
+            "model_family_recommended": true,
+            "solver_ready": false,
+            "usage_level": "screening_or_partial_reference",
+            "modulus_of_rupture_pa": 4005492.025887269
+          }
+        }
+      },
+      "other": {
+        "condition": "Normal-weight concrete with specified compressive strength f'c = 6000 psi (41.4 MPa); Ec and fr derived from ACI 318 code equations",
+        "validation_tier": "code_equation_derived_class_properties_with_inferred_density_nu_and_partial_cdp_card",
+        "notes": [
+          "Ec = 57,000 sqrt(f'c) psi and fr = 7.5 sqrt(f'c) psi (lambda = 1.0) are code-equation estimates, not test results; Ec is a secant modulus.",
+          "The ACI equation tends to overestimate stiffness above about 6000 psi; use measured Ec for high-strength mixes.",
+          "Density 2400 kg/m3 and Poisson ratio 0.20 are practical starter values and are identified as inferred."
+        ],
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 30441739396.743244,
+            "nu": 0.2
+          },
+          "concrete_damaged_plasticity_partial_reference": {
+            "known_response_points": {
+              "fc_prime_pa": 41368543.759008,
+              "modulus_of_rupture_pa": 4005492.025887269
+            },
+            "missing_parameters": [
+              "plasticity_flow_parameters",
+              "compression_hardening_table",
+              "tension_stiffening_table",
+              "compression_damage_table",
+              "tension_damage_table"
+            ]
+          }
+        },
+        "lsdyna_mapping": {
+          "mat_159_partial_reference": {
+            "unconfined_compressive_strength_pa": 41368543.759008,
+            "missing_parameters": [
+              "maximum_aggregate_size",
+              "rate_calibration",
+              "damage_calibration"
+            ]
+          }
+        }
+      },
+      "sources": {
+        "inferences": [
+          "Density and Poisson ratio are inserted as common normal-weight-concrete starter values; they are not ACI code values.",
+          "Ec and fr are computed from the ACI 318 equations for the specified f'c."
+        ],
+        "source_ids": [
+          "aci_318_formulas_oasys",
+          "aci_318_quick_reference"
+        ]
+      }
+    },
+    {
+      "id": "concrete_aci318_fc8000psi_normalweight_derived_reference",
+      "name": "ACI 318 normal-weight concrete f'c 8000 psi derived reference",
+      "classification": {
+        "category_ja": "コンクリート・グラウト",
+        "category_en": "Concrete and Grout",
+        "subcategory_ja": "普通構造用コンクリート",
+        "subcategory_en": "normal-weight structural concrete"
+      },
+      "properties": {
+        "linear_elastic": {
+          "density_kg_m3": 2400,
+          "poissons_ratio": 0.2,
+          "youngs_modulus_pa": 35151092870.6203
+        },
+        "strength_data": {
+          "compressive_strength_pa": 55158058.345344,
+          "modulus_of_rupture_pa": 4625143.798765829
+        },
+        "nonlinear_models": {
+          "concrete_damage_partial_reference": {
+            "compressive_strength_pa": 55158058.345344,
+            "notes": [
+              "The strength class supplies elastic stiffness and uniaxial strength anchors, but not hardening, softening, or damage evolution.",
+              "Use fracture-energy regularization and project-specific compression/tension tests for mesh-objective nonlinear analysis."
+            ],
+            "source_ids": [
+              "aci_318_formulas_oasys",
+              "aci_318_quick_reference",
+              "abaqus_concrete_damaged_plasticity_2024"
+            ],
+            "model_family_recommended": true,
+            "solver_ready": false,
+            "usage_level": "screening_or_partial_reference",
+            "modulus_of_rupture_pa": 4625143.798765829
+          }
+        }
+      },
+      "other": {
+        "condition": "Normal-weight concrete with specified compressive strength f'c = 8000 psi (55.2 MPa); Ec and fr derived from ACI 318 code equations",
+        "validation_tier": "code_equation_derived_class_properties_with_inferred_density_nu_and_partial_cdp_card",
+        "notes": [
+          "Ec = 57,000 sqrt(f'c) psi and fr = 7.5 sqrt(f'c) psi (lambda = 1.0) are code-equation estimates, not test results; Ec is a secant modulus.",
+          "The ACI equation tends to overestimate stiffness above about 6000 psi; use measured Ec for high-strength mixes.",
+          "Density 2400 kg/m3 and Poisson ratio 0.20 are practical starter values and are identified as inferred."
+        ],
+        "abaqus_mapping": {
+          "elastic": {
+            "E_pa": 35151092870.6203,
+            "nu": 0.2
+          },
+          "concrete_damaged_plasticity_partial_reference": {
+            "known_response_points": {
+              "fc_prime_pa": 55158058.345344,
+              "modulus_of_rupture_pa": 4625143.798765829
+            },
+            "missing_parameters": [
+              "plasticity_flow_parameters",
+              "compression_hardening_table",
+              "tension_stiffening_table",
+              "compression_damage_table",
+              "tension_damage_table"
+            ]
+          }
+        },
+        "lsdyna_mapping": {
+          "mat_159_partial_reference": {
+            "unconfined_compressive_strength_pa": 55158058.345344,
+            "missing_parameters": [
+              "maximum_aggregate_size",
+              "rate_calibration",
+              "damage_calibration"
+            ]
+          }
+        }
+      },
+      "sources": {
+        "inferences": [
+          "Density and Poisson ratio are inserted as common normal-weight-concrete starter values; they are not ACI code values.",
+          "Ec and fr are computed from the ACI 318 equations for the specified f'c."
+        ],
+        "source_ids": [
+          "aci_318_formulas_oasys",
+          "aci_318_quick_reference"
         ]
       }
     }
